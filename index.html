@@ -292,11 +292,11 @@
     <p class="section-label">Questions first?</p>
     <h2>Have a question before you buy?</h2>
     <p class="sub" style="margin-left: auto; margin-right: auto;">Send a quick message — we personally read every one and reply within one business day.</p>
-    <form action="#" method="POST" style="text-align: left;">
-      <!-- TODO before launch: replace action="#" with a real Formspree (or equivalent) endpoint,
-           created against a live, routed hello@bookedandvisible.ca inbox. Not functional until then. -->
+    <form action="https://formspree.io/f/mljreaoj" method="POST" style="text-align: left;">
+      <input type="hidden" name="_next" value="https://bookedandvisible.ca/?sent=1#contact">
+           
       <label for="contact-honeypot" style="position:absolute; left:-9999px;">Leave this field blank</label>
-      <input type="text" id="contact-honeypot" name="_honeypot" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" id="contact-honeypot" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div style="margin-bottom: 16px;">
         <label for="contact-email" style="display:block; font-size:14px; font-weight:600; color: var(--navy); margin-bottom: 6px;">Email</label>
         <input type="email" id="contact-email" name="email" required style="width:100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: 15px; font-family: inherit;">
