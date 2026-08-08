@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Intake — Booked & Visible</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Tell us about your business so we can build your landing page.">
+<style>
+  :root {
+    --navy: #0f2942;
+    --navy-dark: #0a1c2e;
+    --amber: #b6531c;
+    --amber-dark: #9c521a;
+    --ink: #1c1c1c;
+    --gray: #5a6472;
+    --line: #e4e7eb;
+    --bg-light: #f7f8fa;
+    --good: #1c6b46;
+    --good-tint: #e6f4ec;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: var(--bg-light);
+  }
+  a { text-decoration: none; color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--amber); outline-offset: 2px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  header {
+    background: var(--navy);
+    padding: 28px 0;
+  }
+  .logo { font-size: 20px; font-weight: 700; color: #fff; text-align: center; }
+  .logo span { color: var(--amber); }
+  main { padding: 40px 0 80px; }
+  .intro {
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    padding: 28px; margin-bottom: 28px;
+  }
+  .intro h1 { font-size: 26px; color: var(--navy); margin-bottom: 12px; }
+  .intro p { color: var(--gray); font-size: 15px; margin-bottom: 8px; }
+  .intro .timeline {
+    display: flex; gap: 16px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line);
+    font-size: 14px; color: var(--navy); flex-wrap: wrap;
+  }
+  .intro .timeline span { font-weight: 700; color: var(--amber); }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    padding: 24px; margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--amber); margin-bottom: 18px; font-weight: 700;
+  }
+  .field { margin-bottom: 18px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label {
+    display: block; font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px;
+  }
+  .field .req { color: var(--amber); }
+  .field .help {
+    font-size: 13px; color: var(--gray); margin-bottom: 8px; margin-top: -2px;
+  }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field input[type="url"],
+  .field textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px;
+    font-size: 15px; font-family: inherit; color: var(--ink);
+  }
+  .field textarea { resize: vertical; }
+  .field input[type="file"] {
+    width: 100%; padding: 10px; border: 1px dashed var(--line); border-radius: 6px;
+    font-size: 14px; background: var(--bg-light);
+  }
+  .radio-group { display: flex; flex-direction: column; gap: 10px; }
+  .radio-option {
+    display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
+    border: 1px solid var(--line); border-radius: 6px; cursor: pointer;
+  }
+  .radio-option input { margin-top: 3px; }
+  .radio-option .radio-label { font-size: 15px; font-weight: 600; color: var(--navy); }
+  .radio-option .sub-field { margin-top: 10px; display: none; }
+  .radio-option.is-active { border-color: var(--amber); background: #fdf6f1; }
+  .btn-submit {
+    width: 100%; padding: 15px 24px; border-radius: 6px; border: none;
+    background: var(--amber); color: #fff; font-weight: 700; font-size: 16px; cursor: pointer;
+  }
+  .btn-submit:hover { background: var(--amber-dark); }
+  .btn-submit:disabled { opacity: 0.6; cursor: default; }
+  .reassure { font-size: 13px; color: var(--gray); text-align: center; margin-top: 12px; }
+  #intake-success {
+    display: none; text-align: center; padding: 40px 24px; background: #fff;
+    border: 1px solid var(--line); border-radius: 10px;
+  }
+  #intake-success h2 { color: var(--navy); font-size: 22px; margin-bottom: 10px; }
+  #intake-success p { color: var(--gray); font-size: 15px; }
+  #intake-error {
+    display: none; background: #fdeceb; border: 1px solid #f3b9b3; color: #b3261e;
+    padding: 14px 16px; border-radius: 6px; font-size: 14px; margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Booked<span>&</span>Visible</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="intro">
+      <h1>Let's build your landing page</h1>
+      <p>Thanks for your order! Fill out the details below so we can get started — it takes about 5–10 minutes. If you don't have something on hand (like photos or reviews), just leave it blank and skip ahead; we'll follow up or use a placeholder.</p>
+      <div class="timeline">
+        <div><span>Step 1</span> — You submit this form</div>
+        <div><span>Step 2</span> — We build your page</div>
+        <div><span>Step 3</span> — Live within 5 business days</div>
+      </div>
+    </div>
+
+    <div id="intake-error">Something went wrong submitting this form — please try again, or email your details directly to <a href="mailto:hello@bookedandvisible.ca" style="color:#b3261e; text-decoration:underline;">hello@bookedandvisible.ca</a>.</div>
+
+    <form id="intake-form" action="/api/intake" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="form_type" value="landing_page_intake">
+      <label for="intake-honeypot" style="position:absolute; left:-9999px;">Leave this field blank</label>
+      <input type="text" id="intake-honeypot" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="card">
+        <h2>Your contact info</h2>
+        <div class="field">
+          <label for="full-name">Your Full Name <span class="req">*</span></label>
+          <input type="text" id="full-name" name="full_name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Your business</h2>
+        <div class="field">
+          <label for="business-name">Business Name <span class="req">*</span></label>
+          <p class="help">Exactly how it should appear on the page and in the page title.</p>
+          <input type="text" id="business-name" name="business_name" required>
+        </div>
+        <div class="field">
+          <label for="service-area">Service Area / Cities You Serve <span class="req">*</span></label>
+          <p class="help">e.g. Maple Ridge, Pitt Meadows, Coquitlam — list every city or region you serve.</p>
+          <input type="text" id="service-area" name="service_area" required>
+        </div>
+        <div class="field">
+          <label for="services">Services to List on the Page <span class="req">*</span></label>
+          <p class="help">One per line, e.g. Drain cleaning, Water heater installation, Emergency repairs.</p>
+          <textarea id="services" name="services" rows="4" required></textarea>
+        </div>
+        <div class="field">
+          <label for="hours">Business Hours</label>
+          <p class="help">e.g. Mon–Fri 8am–6pm, closed weekends. Mention 24/7 or emergency availability if it applies.</p>
+          <textarea id="hours" name="business_hours" rows="2"></textarea>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Domain</h2>
+        <div class="field">
+          <label>Domain Preference <span class="req">*</span></label>
+          <div class="radio-group" id="domain-group">
+            <label class="radio-option" data-target="domain-existing">
+              <input type="radio" name="domain_preference" value="I already own a domain" required>
+              <span>
+                <span class="radio-label">I already own a domain</span>
+                <div class="sub-field" id="domain-existing">
+                  <p class="help">What's the domain? (e.g. yourbusiness.com)</p>
+                  <input type="text" name="existing_domain" placeholder="yourbusiness.com">
+                </div>
+              </span>
+            </label>
+            <label class="radio-option" data-target="domain-new">
+              <input type="radio" name="domain_preference" value="I need a new domain registered for me" required>
+              <span>
+                <span class="radio-label">I need a new domain registered for me</span>
+                <div class="sub-field" id="domain-new">
+                  <p class="help">Any preference for the domain name? We'll confirm availability with you before registering. Leave blank if you're not sure.</p>
+                  <input type="text" name="preferred_domain" placeholder="e.g. yourbusinessname.com">
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Branding & photos</h2>
+        <div class="field">
+          <label for="logo">Upload Your Logo</label>
+          <p class="help">PNG, JPG, or PDF, ideally on a transparent or white background, under 10MB. Don't have one? Leave this blank — we'll use clean text-based branding with your business name instead.</p>
+          <input type="file" id="logo" name="logo" accept="image/*,.pdf">
+        </div>
+        <div class="field">
+          <label for="photos">Photos for the Page</label>
+          <p class="help">2–4 of your best or most recent job photos, landscape orientation preferred, under 10MB each. Don't have any yet? Leave blank — we'll use professional stock photography instead.</p>
+          <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
+        </div>
+        <div class="field">
+          <label for="brand-colors">Brand Colors (optional)</label>
+          <p class="help">If your logo or truck already uses specific colors, tell us here. Otherwise we'll choose colors that match your industry and logo.</p>
+          <input type="text" id="brand-colors" name="brand_colors" placeholder="e.g. navy blue and orange">
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Reviews & anything else</h2>
+        <div class="field">
+          <label for="testimonials">Customer Reviews or Testimonials to Feature</label>
+          <p class="help">Paste 1–3 short quotes if you have them — a text message, email, or Google review works. Leave blank if you don't have any yet; we can add these later.</p>
+          <textarea id="testimonials" name="testimonials" rows="3"></textarea>
+        </div>
+        <div class="field">
+          <label for="notes">Anything Else We Should Know?</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit my details</button>
+      <p class="reassure">We personally review every submission. You'll hear from us within one business day to confirm we've got everything we need.</p>
+    </form>
+
+    <div id="intake-success">
+      <h2>Thanks — got it! ✓</h2>
+      <p>We've received your details and will be in touch within one business day. Your page will be live within 5 business days of us confirming everything's ready to build.</p>
+    </div>
+
+  </div>
+</main>
+
+<script>(function(){
+  var groupOptions = document.querySelectorAll('#domain-group .radio-option');
+  groupOptions.forEach(function(opt){
+    var radio = opt.querySelector('input[type="radio"]');
+    var sub = document.getElementById(opt.dataset.target);
+    radio.addEventListener('change', function(){
+      groupOptions.forEach(function(o){
+        o.classList.remove('is-active');
+        var s = document.getElementById(o.dataset.target);
+        if (s) s.style.display = 'none';
+      });
+      if (radio.checked) {
+        opt.classList.add('is-active');
+        if (sub) sub.style.display = 'block';
+      }
+    });
+  });
+})();</script>
+
+<script>(function(){
+  var form = document.getElementById('intake-form');
+  if (!form) return;
+  var successEl = document.getElementById('intake-success');
+  var errorEl = document.getElementById('intake-error');
+  var submitBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (errorEl) errorEl.style.display = 'none';
+    var originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form)
+    }).then(function(response){
+      if (response.ok) {
+        form.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('submit failed');
+      }
+    }).catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      if (errorEl) errorEl.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+})();</script>
+
+</body>
+</html>
