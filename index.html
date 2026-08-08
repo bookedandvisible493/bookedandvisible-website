@@ -33,6 +33,8 @@
     --gray: #5a6472;
     --line: #e4e7eb;
     --bg-light: #f7f8fa;
+    --good: #1c6b46;
+    --good-tint: #e6f4ec;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -69,6 +71,8 @@
   .btn-primary { background: var(--amber); color: #fff; }
   .btn-primary:hover { background: var(--amber-dark); }
   .btn-outline { background: transparent; border: 1.5px solid var(--navy); color: var(--navy); }
+  .btn-navy { background: var(--navy); color: #fff; }
+  .btn-navy:hover { background: var(--navy-dark); }
   .btn-outline-light { background: transparent; border: 1.5px solid #fff; color: #fff; }
   .btn-outline-light:hover { background: rgba(255,255,255,0.1); }
 
@@ -107,24 +111,25 @@
   .pricing { background: var(--bg-light); }
   .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
   .price-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 32px 28px; display: flex; flex-direction: column; }
-  .price-card.featured { border: 2px solid var(--amber); position: relative; }
-  .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--amber); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; }
+  .price-card.featured { border: 2px solid var(--navy); box-shadow: 0 10px 28px rgba(15,41,66,0.14); position: relative; padding-top: 46px; }
+  .badge { position: absolute; top: -1px; left: -1px; right: -1px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; padding: 9px 12px; border-radius: 11px 11px 0 0; }
   .price-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 4px; }
   .price-card .tag { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+  .price-card .bestif { font-size: 13px; color: var(--gray); font-style: italic; margin: 2px 0 18px; }
   .price-amount { font-size: 36px; font-weight: 700; color: var(--navy); }
   .price-amount .unit { font-size: 15px; font-weight: 500; color: var(--gray); }
   .price-cad { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
-  .price-save { display: inline-block; background: rgba(182,83,28,0.12); color: var(--amber-dark); font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 5px; margin: -12px 0 20px; }
+  .price-save { display: inline-block; background: var(--good-tint); color: var(--good); font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 5px; margin: -12px 0 20px; }
   .price-card ul { list-style: none; margin: 20px 0 28px; flex-grow: 1; }
   .price-card li { font-size: 14px; color: var(--ink); padding: 7px 0; padding-left: 22px; position: relative; }
-  .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--amber); font-weight: 700; }
+  .price-card li::before { content: "•"; position: absolute; left: 2px; top: 5px; color: var(--gray); font-weight: 700; font-size: 18px; line-height: 1; }
   .price-card .btn { width: 100%; text-align: center; }
 
   .billing-toggle { display: flex; justify-content: center; width: fit-content; margin: 0 auto 32px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px; gap: 2px; }
   .toggle-btn { appearance: none; border: 0; background: transparent; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--gray); cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 7px; transition: background .15s, color .15s; }
   .toggle-btn:hover { color: var(--navy); }
   .toggle-btn.is-active { background: var(--navy); color: #fff; }
-  .toggle-save { font-size: 11px; font-weight: 700; background: rgba(182,83,28,0.14); color: var(--amber-dark); padding: 1px 7px; border-radius: 999px; }
+  .toggle-save { font-size: 11px; font-weight: 700; background: var(--good-tint); color: var(--good); padding: 1px 7px; border-radius: 999px; }
   .toggle-btn.is-active .toggle-save { background: rgba(255,255,255,0.22); color: #fff; }
 
   .faq details { border-bottom: 1px solid var(--line); }
@@ -253,23 +258,23 @@
       <button type="button" class="toggle-btn" data-billing="annual" aria-pressed="false">Annual <span class="toggle-save">2 months free</span></button>
     </div>
     <div class="price-grid">
-      <div class="price-card featured">
-        <span class="badge">Start here</span>
+      <div class="price-card">
         <h3>Starter Kit</h3>
-        <p class="tag">One-time purchase</p>
-        <div class="price-amount">$129 CAD</div>
+        <p class="bestif">Best if you want to fix your profile yourself, once.</p>
+        <div class="price-amount"><span class="unit-amt">$129</span><span class="unit"> CAD, one-time</span></div>
         <p class="price-cad">≈$97 USD</p>
         <ul>
           <li>All 6 starter kit items</li>
           <li>Personalized onboarding report (within 24 hours)</li>
           <li>Lifetime access, no expiry</li>
         </ul>
-        <a href="https://payhip.com/b/gFj9f" class="btn btn-primary">Get the Starter Kit</a>
+        <a href="https://payhip.com/b/gFj9f" class="btn btn-outline">Get the Starter Kit</a>
         <p class="reassure">Free to cancel before your report is generated</p>
       </div>
-      <div class="price-card">
+      <div class="price-card featured">
+        <span class="badge">Most plumbers start here</span>
         <h3>Visible</h3>
-        <p class="tag">Monthly membership</p>
+        <p class="bestif">Best if you want to keep at it without thinking about what to post.</p>
         <div class="price-amount"><span class="unit-amt" data-monthly="$49" data-annual="$490">$49</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
         <p class="price-cad" data-monthly="≈$39 USD/mo" data-annual="≈$390 USD/yr">≈$39 USD/mo</p>
         <p class="price-save" data-annual-only hidden>Saves $98/yr vs. paying monthly</p>
@@ -280,12 +285,12 @@
           <li>Growing template library</li>
           <li>Quarterly outcomes report — real review, ranking, and lead numbers, tracked every quarter</li>
         </ul>
-                <a href="https://payhip.com/b/qe0ab" class="btn btn-outline">Start Visible</a>
+                <a href="https://payhip.com/b/qe0ab" class="btn btn-navy">Start Visible</a>
         <p class="reassure">Cancel any time, no contracts</p>
       </div>
       <div class="price-card">
         <h3>Booked</h3>
-        <p class="tag">Monthly membership</p>
+        <p class="bestif">Best if you don't have a website and don't want to build one.</p>
         <div class="price-amount"><span class="unit-amt" data-monthly="$119" data-annual="$1,190">$119</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
         <p class="price-cad" data-monthly="≈$89 USD/mo" data-annual="≈$890 USD/yr">≈$89 USD/mo</p>
         <p class="price-save" data-annual-only hidden>Saves $238/yr vs. paying monthly</p>
