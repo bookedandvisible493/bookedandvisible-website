@@ -112,12 +112,20 @@
   .price-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 4px; }
   .price-card .tag { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
   .price-amount { font-size: 36px; font-weight: 700; color: var(--navy); }
-  .price-amount span { font-size: 15px; font-weight: 500; color: var(--gray); }
+  .price-amount .unit { font-size: 15px; font-weight: 500; color: var(--gray); }
   .price-cad { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+  .price-save { display: inline-block; background: rgba(182,83,28,0.12); color: var(--amber-dark); font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 5px; margin: -12px 0 20px; }
   .price-card ul { list-style: none; margin: 20px 0 28px; flex-grow: 1; }
   .price-card li { font-size: 14px; color: var(--ink); padding: 7px 0; padding-left: 22px; position: relative; }
   .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--amber); font-weight: 700; }
   .price-card .btn { width: 100%; text-align: center; }
+
+  .billing-toggle { display: flex; justify-content: center; width: fit-content; margin: 0 auto 32px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px; gap: 2px; }
+  .toggle-btn { appearance: none; border: 0; background: transparent; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--gray); cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 7px; transition: background .15s, color .15s; }
+  .toggle-btn:hover { color: var(--navy); }
+  .toggle-btn.is-active { background: var(--navy); color: #fff; }
+  .toggle-save { font-size: 11px; font-weight: 700; background: rgba(182,83,28,0.14); color: var(--amber-dark); padding: 1px 7px; border-radius: 999px; }
+  .toggle-btn.is-active .toggle-save { background: rgba(255,255,255,0.22); color: #fff; }
 
   .faq details { border-bottom: 1px solid var(--line); }
   .faq summary { font-size: 16px; font-weight: 600; color: var(--navy); cursor: pointer; list-style: none; padding: 20px 0; min-height: 44px; display: flex; align-items: center; }
@@ -240,6 +248,10 @@
     <h2>Start with the kit. Grow into a membership.</h2>
     <p class="sub">Buy the kit and your six guides, scripts, and templates land in your inbox within minutes. Your personalized report follows within 24 hours. Prices shown in CAD, the currency you're actually charged. USD is shown alongside for reference only (marked ≈) — if your card is issued in a different currency, your card issuer converts at its own exchange rate, so the amount on your statement may differ slightly from what's shown here. <strong style="color: var(--navy);">Free to cancel any time before your report is generated. Once it's delivered, the sale is final.</strong></p>
     <p style="text-align:center; max-width: 640px; margin: 0 auto 8px; font-size: 15px; color: var(--gray);"><strong style="color: var(--navy);">Not another Angi. Not another Thumbtack.</strong> This isn't a per-lead directory and there's no contract to escape from. Booked membership runs less than the cost of a single lead on most pay-per-lead sites — and you keep your domain either way, even if you ever leave.</p>
+    <div class="billing-toggle" role="group" aria-label="Membership billing period">
+      <button type="button" class="toggle-btn is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
+      <button type="button" class="toggle-btn" data-billing="annual" aria-pressed="false">Annual <span class="toggle-save">2 months free</span></button>
+    </div>
     <div class="price-grid">
       <div class="price-card featured">
         <span class="badge">Start here</span>
@@ -258,8 +270,9 @@
       <div class="price-card">
         <h3>Visible</h3>
         <p class="tag">Monthly membership</p>
-        <div class="price-amount">$49<span>/mo CAD</span></div>
-        <p class="price-cad">or $490/yr CAD (2 months free) · ≈$39 USD/mo or ≈$390 USD/yr</p>
+        <div class="price-amount"><span class="unit-amt" data-monthly="$49" data-annual="$490">$49</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
+        <p class="price-cad" data-monthly="≈$39 USD/mo" data-annual="≈$390 USD/yr">≈$39 USD/mo</p>
+        <p class="price-save" data-annual-only hidden>Saves $98/yr vs. paying monthly</p>
         <ul>
           <li>Everything in Starter Kit — report arrives month 3 (right away on annual)</li>
           <li>6-month guided curriculum</li>
@@ -273,8 +286,9 @@
       <div class="price-card">
         <h3>Booked</h3>
         <p class="tag">Monthly membership</p>
-        <div class="price-amount">$119<span>/mo CAD</span></div>
-        <p class="price-cad">or $1,190/yr CAD (2 months free) · ≈$89 USD/mo or ≈$890 USD/yr</p>
+        <div class="price-amount"><span class="unit-amt" data-monthly="$119" data-annual="$1,190">$119</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
+        <p class="price-cad" data-monthly="≈$89 USD/mo" data-annual="≈$890 USD/yr">≈$89 USD/mo</p>
+        <p class="price-save" data-annual-only hidden>Saves $238/yr vs. paying monthly</p>
         <ul>
           <li>Everything in Visible</li>
           <li>A converting landing page, built for you and designed to turn visitors into booked jobs</li>
@@ -297,7 +311,7 @@
     <p class="sub" style="margin-left: auto; margin-right: auto;">Send a quick message — we personally read every one and reply within one business day.</p>
     <form id="contact-form" action="https://formspree.io/f/mljreaoj" method="POST" style="text-align: left;">
       <input type="hidden" name="_next" value="https://bookedandvisible.ca/?sent=1#contact">
-           
+
       <label for="contact-honeypot" style="position:absolute; left:-9999px;">Leave this field blank</label>
       <input type="text" id="contact-honeypot" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div style="margin-bottom: 16px;">
@@ -413,5 +427,7 @@
 }
 </script>
 
-<script>(function(){var toggle=document.getElementById('nav-toggle');var links=document.getElementById('nav-links');if(!toggle||!links)return;toggle.addEventListener('click',function(){var isOpen=links.classList.toggle('open');toggle.setAttribute('aria-expanded',isOpen?'true':'false');toggle.setAttribute('aria-label',isOpen?'Close menu':'Open menu');});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});});document.addEventListener('click',function(e){if(!links.classList.contains('open'))return;if(links.contains(e.target)||toggle.contains(e.target))return;links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});})();</script><script>(function(){var form=document.getElementById('contact-form');if(!form)return;var successEl=document.getElementById('contact-success');var errorEl=document.getElementById('contact-error');var submitBtn=form.querySelector('button[type="submit"]');form.addEventListener('submit',function(e){e.preventDefault();if(errorEl)errorEl.style.display='none';var originalText=submitBtn.textContent;submitBtn.disabled=true;submitBtn.textContent='Sending...';fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(response){if(response.ok){form.style.display='none';if(successEl)successEl.style.display='block';}else{throw new Error('submit failed');}}).catch(function(){submitBtn.disabled=false;submitBtn.textContent=originalText;if(errorEl)errorEl.style.display='block';});});})();</script></body>
+<script>(function(){var toggle=document.getElementById('nav-toggle');var links=document.getElementById('nav-links');if(!toggle||!links)return;toggle.addEventListener('click',function(){var isOpen=links.classList.toggle('open');toggle.setAttribute('aria-expanded',isOpen?'true':'false');toggle.setAttribute('aria-label',isOpen?'Close menu':'Open menu');});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});});document.addEventListener('click',function(e){if(!links.classList.contains('open'))return;if(links.contains(e.target)||toggle.contains(e.target))return;links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});})();</script><script>(function(){var form=document.getElementById('contact-form');if(!form)return;var successEl=document.getElementById('contact-success');var errorEl=document.getElementById('contact-error');var submitBtn=form.querySelector('button[type="submit"]');form.addEventListener('submit',function(e){e.preventDefault();if(errorEl)errorEl.style.display='none';var originalText=submitBtn.textContent;submitBtn.disabled=true;submitBtn.textContent='Sending...';fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(response){if(response.ok){form.style.display='none';if(successEl)successEl.style.display='block';}else{throw new Error('submit failed');}}).catch(function(){submitBtn.disabled=false;submitBtn.textContent=originalText;if(errorEl)errorEl.style.display='block';});});})();</script>
+<script>(function(){var buttons=document.querySelectorAll('.toggle-btn');if(!buttons.length)return;var swapEls=document.querySelectorAll('[data-monthly]');var annualOnlyEls=document.querySelectorAll('[data-annual-only]');function setBilling(period){buttons.forEach(function(btn){var active=btn.dataset.billing===period;btn.classList.toggle('is-active',active);btn.setAttribute('aria-pressed',String(active));});swapEls.forEach(function(el){var val=el.dataset[period];if(val!=null)el.textContent=val;});annualOnlyEls.forEach(function(el){el.hidden=period!=='annual';});}buttons.forEach(function(btn){btn.addEventListener('click',function(){setBilling(btn.dataset.billing);});});})();</script>
+</body>
 </html>
