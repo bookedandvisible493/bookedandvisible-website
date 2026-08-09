@@ -1,0 +1,62 @@
+# robots.txt for bookedandvisible.ca
+#
+# AI crawler policy (set by site owner, Aug 2026):
+# - AI crawlers that fetch content live to answer a specific user question or
+#   power search-style citations (ChatGPT search, Claude search, Perplexity)
+#   are ALLOWED, since this is a visibility/SEO business and being cited in
+#   AI answers is a discovery channel worth keeping open.
+# - AI crawlers used purely to bulk-scrape content for model training are
+#   DISALLOWED, since that's a separate use the site owner has not opted into.
+# Regular search engine crawlers (Googlebot, Bingbot, etc.) are unaffected and
+# remain fully allowed under the default rule below.
+
+User-agent: *
+Allow: /
+
+# --- AI search / answer crawlers (allowed) ---
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- AI training crawlers (disallowed) ---
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+Sitemap: https://bookedandvisible.ca/sitemap.xml
