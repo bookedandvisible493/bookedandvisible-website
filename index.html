@@ -122,6 +122,14 @@ h2 { font-size: 32px; font-weight: 700; color: var(--navy); margin-bottom: 16px;
 .price-cad { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
 .price-save { display: inline-block; background: var(--good-tint); color: var(--good); font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 5px; margin: -12px 0 20px; }
 .price-save[hidden] { display: none; }
+.compare-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+.compare-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.compare-table th, .compare-table td { padding: 14px 18px; text-align: left; font-size: 14px; border-bottom: 1px solid var(--line); }
+.compare-table thead th { background: var(--navy); color: #fff; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.compare-table tbody th { color: var(--navy); font-weight: 700; background: var(--bg-light); white-space: nowrap; }
+.compare-table tbody tr:last-child td, .compare-table tbody tr:last-child th { border-bottom: none; }
+.compare-table td.good { color: var(--good); font-weight: 600; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .price-card ul { list-style: none; margin: 20px 0 28px; flex-grow: 1; }
 .price-card li { font-size: 14px; color: var(--ink); padding: 7px 0; padding-left: 22px; position: relative; }
 .price-card li::before { content: "•"; position: absolute; left: 2px; top: 5px; color: var(--gray); font-weight: 700; font-size: 18px; line-height: 1; }
@@ -250,12 +258,55 @@ section { padding: 48px 0; }
 </div>
 </section>
 
+<section id="about">
+<div class="wrap" style="max-width: 640px; text-align: center;">
+<p class="section-label">Who you're dealing with</p>
+<h2>Not a call center. Not an agency with account managers.</h2>
+<p class="sub" style="margin-left: auto; margin-right: auto;">Booked & Visible is a small, independent operation based in British Columbia, Canada. Every message through this site is read and answered by the same person within one business day.</p>
+</div>
+</section>
+
+<section class="compare-section">
+<div class="wrap">
+<p class="section-label">Vs. lead directories</p>
+<h2>Not another lead directory.</h2>
+<p class="sub">The strongest reason to pick Booked &amp; Visible over a pay-per-lead directory isn't the price — it's what you actually get to keep.</p>
+<div class="compare-table-wrap">
+<table class="compare-table">
+<thead>
+<tr>
+<th scope="col"><span class="visually-hidden">Category</span></th>
+<th scope="col">Pay-per-lead directories</th>
+<th scope="col">Booked &amp; Visible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">What you pay</th>
+<td>$20–120 per lead, booked or not</td>
+<td class="good">One flat price, no per-lead fees</td>
+</tr>
+<tr>
+<th scope="row">What you own</th>
+<td>A listing you don't control</td>
+<td class="good">Your profile, your domain, your files — outright</td>
+</tr>
+<tr>
+<th scope="row">Getting out</th>
+<td>Contract, cancellation terms</td>
+<td class="good">Cancel any time, keep everything</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
 <section class="pricing" id="pricing">
 <div class="wrap">
 <p class="section-label">Pricing</p>
 <h2>Start with the kit. Grow into a membership.</h2>
-<p class="sub">Buy the kit and your six guides, scripts, and templates land in your inbox within minutes. Your personalized report follows within 24 hours. Prices shown in CAD, the currency you're actually charged. USD is shown alongside for reference only (marked ≈) — if your card is issued in a different currency, your card issuer converts at its own exchange rate, so the amount on your statement may differ slightly from what's shown here. <strong style="color: var(--navy);">Free to cancel any time before your report is generated. Once it's delivered, the sale is final.</strong></p>
-<p style="text-align:center; max-width: 640px; margin: 0 auto 8px; font-size: 15px; color: var(--gray);"><strong style="color: var(--navy);">Not another Angi. Not another Thumbtack.</strong> This isn't a per-lead directory and there's no contract to escape from. Booked membership runs less than the cost of a single lead on most pay-per-lead sites — and you keep your domain either way, even if you ever leave.</p>
+<p class="sub">Buy the kit and your six guides, scripts, and templates land in your inbox within minutes. Your personalized report follows within 24 hours. Prices shown in CAD, the currency you're actually charged. USD is shown alongside for reference only (marked ≈) — if your card is issued in a different currency, your card issuer converts at its own exchange rate, so the amount on your statement may differ slightly from what's shown here. <strong style="color: var(--navy);">Once your report is delivered, the sale is final.</strong></p>
 <div class="billing-toggle" role="group" aria-label="Membership billing period">
 <button type="button" class="toggle-btn is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
 <button type="button" class="toggle-btn" data-billing="annual" aria-pressed="false">Annual <span class="toggle-save">2 months free</span></button>
@@ -409,7 +460,7 @@ section { padding: 48px 0; }
 <section class="final-cta">
 <div class="wrap">
 <h2>Get found before the next burst pipe or no-hot-water call.</h2>
-<p>Start with the Starter Kit today — free to cancel before your personalized report is generated. Upgrade to a membership any time once you're ready for ongoing support.</p>
+<p>Start with the Starter Kit today. Upgrade to a membership any time once you're ready for ongoing support.</p>
 <a href="#pricing" class="btn btn-primary">Get the Starter Kit</a>
 </div>
 </section>
