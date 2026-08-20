@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J5GC9HRT7"></script>
+    <!-- Cookie consent defaults (Google Consent Mode v2) — must run before gtag.js
+       so Analytics respects the visitor's choice from the very first hit. -->
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J5GC9HRT7"></script>
+  <script>
       gtag('js', new Date());
       gtag('config', 'G-3J5GC9HRT7');
   </script>
+  <script src="/assets/consent.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service — Booked & Visible</title>
@@ -149,7 +163,7 @@
 <footer>
   <div class="footer-inner">
     <div>© 2026 Booked & Visible</div>
-    <div><a href="/terms.html">Terms of Service</a> · <a href="/refund-policy.html">Refund Policy</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="mailto:hello@bookedandvisible.ca">hello@bookedandvisible.ca</a></div>
+    <div><a href="/terms.html">Terms of Service</a> · <a href="/refund-policy.html">Refund Policy</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="#" data-cookie-preferences>Cookie Preferences</a> · <a href="mailto:hello@bookedandvisible.ca">hello@bookedandvisible.ca</a></div>
   </div>
 </footer>
 
