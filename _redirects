@@ -11,12 +11,7 @@
 /faq.html               /faq/               301
 /guides.html            /guides/            301
 
-# Catch-all: any URL that doesn't match a real file or one of the specific
-# redirects above would otherwise fall through to Cloudflare's generic 404
-# page. Send visitors to the homepage instead. This must stay LAST in this
-# file — Cloudflare Pages evaluates _redirects rules top to bottom and uses
-# the first match, so anything more specific above still takes priority.
-# 302 (temporary), not 301: these are broken/unknown links, not pages that
-# permanently moved to the homepage, so we don't want that signal cached
-# long-term by browsers or credited as a permanent move by search engines.
-/*   /   302
+# Unmatched URLs are handled by /404.html at the repo root, which Cloudflare
+# Pages serves automatically with a real 404 status code (no rule needed
+# here). We deliberately don't redirect unknown URLs to the homepage — a
+# real 404 with helpful navigation is better for SEO than a soft-404 redirect.
