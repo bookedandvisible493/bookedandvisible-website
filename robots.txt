@@ -12,26 +12,33 @@
 
 User-agent: *
 Allow: /
+Disallow: /archive/
 
 # --- AI search / answer crawlers (allowed) ---
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /archive/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /archive/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /archive/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /archive/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /archive/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /archive/
 
 # --- AI training crawlers (disallowed) ---
 
