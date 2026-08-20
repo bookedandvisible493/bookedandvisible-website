@@ -24,8 +24,48 @@ jobs:
           import glob, os, re, sys
 
           errors = []
-          html_files = sorted(glob.glob('*.html'))
-          existing_files = set(os.listdir('.'))
+
+          # Recursively find HTML pages, but skip the /archive/ folder: it holds
+          # frozen historical snapshots of old pages (kept for reference), so its
+          # internal links intentionally point at paths that no longer exist on
+          # the live site.
+          html_files = sorted(
+              p.replace(os.sep, '/') for p in glob.glob('**/*.html', recursive=True)
+              if not p.replace(os.sep, '/').startswith('archive/')
+          )
+
+          all_files = set()
+          all_dirs = set()
+          for root, dirs, files in os.walk('.'):
+              dirs[:] = [d for d in dirs if d not in ('.git', 'node_modules')]
+              for f in files:
+                  rel = os.path.relpath(os.path.join(root, f), '.').replace(os.sep, '/')
+                  all_files.add(rel)
+              for d in dirs:
+                  reld = os.path.relpath(os.path.join(root, d), '.').replace(os.sep, '/')
+                  all_dirs.add(reld)
+
+          def link_exists(href, page_path):
+              target = href.split('#')[0].split('?')[0]
+              if not target:
+                  return True
+              if target.startswith('/'):
+                  base = target.lstrip('/')
+              else:
+                  page_dir = os.path.dirname(page_path)
+                  base = os.path.normpath(os.path.join(page_dir, target)).replace(os.sep, '/')
+                  if base == '.':
+                      base = ''
+              if base == '':
+                  return True
+              if base.endswith('/'):
+                  base = base.rstrip('/')
+                  return (base + '/index.html') in all_files
+              if base in all_files:
+                  return True
+              if base in all_dirs and (base + '/index.html') in all_files:
+                  return True
+              return False
 
           for path in html_files:
               with open(path, encoding='utf-8') as f:
@@ -53,8 +93,7 @@ jobs:
                   elif href.startswith(('http://', 'https://', 'mailto:', 'tel:', '#')):
                       pass
                   else:
-                      target = href.split('#')[0].split('?')[0].lstrip('/')
-                      if target and target not in existing_files:
+                      if not link_exists(href, path):
                           errors.append(f"{path}: internal link points to missing file: {href}")
 
           if errors:
