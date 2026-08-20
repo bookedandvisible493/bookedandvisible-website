@@ -1,529 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J5GC9HRT7"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3J5GC9HRT7');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Booked & Visible — Get found. Get booked.</title>
-<meta name="description" content="A done-for-you Google Business Profile, review, and local SEO toolkit built specifically for independent plumbers — plus an ongoing membership to keep you found first when the next emergency call comes in.">
+<meta name="description" content="A done-for-you Google Business Profile, review, and local SEO toolkit for independent local businesses.">
+<link rel="canonical" href="https://bookedandvisible.ca/">
 <meta property="og:title" content="Booked & Visible — Get found. Get booked.">
-<meta property="og:description" content="A done-for-you digital toolkit and membership built specifically for independent plumbers, so the next emergency search finds you first.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://bookedandvisible.ca">
+<meta property="og:description" content="A done-for-you Google Business Profile, review, and local SEO toolkit for independent local businesses.">
 <meta property="og:image" content="https://bookedandvisible.ca/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bookedandvisible.ca/og-image.png">
-<meta name="twitter:title" content="Booked & Visible — Get found. Get booked.">
-<meta name="twitter:description" content="A done-for-you digital toolkit and membership built specifically for independent plumbers, so the next emergency search finds you first.">
-<link rel="canonical" href="https://bookedandvisible.ca">
-<style>
-:root {
---navy: #0f2942;
---navy-dark: #0a1c2e;
---amber: #b6531c;
---amber-dark: #9c521a;
---ink: #1c1c1c;
---gray: #5a6472;
---line: #e4e7eb;
---bg-light: #f7f8fa;
---good: #1c6b46;
---good-tint: #e6f4ec;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-color: var(--ink);
-line-height: 1.6;
-background: #fff;
-}
-a { text-decoration: none; color: inherit; }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
-outline: 3px solid var(--amber); outline-offset: 2px;
-}
-.skip-link {
-position: absolute; left: -9999px; top: 0; z-index: 100;
-background: var(--navy); color: #fff; padding: 12px 20px; border-radius: 0 0 6px 0;
-font-size: 15px; font-weight: 600;
-}
-.hero .hero-note { margin-top: 18px; font-size: 14px; color: #93a2b3; } .hero-badge { margin-top: 20px; display: flex; justify-content: center; }
-.skip-link:focus { left: 0; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-header {
-position: sticky; top: 0; z-index: 50;
-background: #fff; border-bottom: 1px solid var(--line);
-}
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; position: relative; }
-.logo { font-size: 20px; font-weight: 700; color: var(--navy); }
-.logo span { color: var(--amber); }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-links a { font-size: 15px; font-weight: 500; color: var(--navy); } .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; padding: 8px; flex-shrink: 0; } .nav-toggle span { display: block; width: 20px; height: 2px; background: var(--navy); border-radius: 2px; }
-.btn {
-display: inline-block; padding: 12px 24px; border-radius: 6px;
-font-weight: 600; font-size: 15px; cursor: pointer; border: none;
-}
-.btn-primary { background: var(--amber); color: #fff; }
-.btn-primary:hover { background: var(--amber-dark); }
-.btn-outline { background: transparent; border: 1.5px solid var(--navy); color: var(--navy); }
-.btn-navy { background: var(--navy); color: #fff; }
-.btn-navy:hover { background: var(--navy-dark); }
-.btn-outline-light { background: transparent; border: 1.5px solid #fff; color: #fff; }
-.btn-outline-light:hover { background: rgba(255,255,255,0.1); }
-
-.hero {
-background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
-color: #fff; padding: 90px 0 100px; text-align: center;
-}
-.hero h1 { font-size: 44px; font-weight: 700; line-height: 1.2; max-width: 720px; margin: 0 auto 20px; }
-.hero h1 em { color: var(--amber); font-style: normal; }
-.hero p { font-size: 19px; color: #c7d2de; max-width: 560px; margin: 0 auto 36px; }
-.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.hero-note { margin-top: 18px; font-size: 14px; color: #93a2b3; }
-
-section { padding: 80px 0; }
-.section-label { text-transform: uppercase; letter-spacing: 1px; font-size: 13px; font-weight: 700; color: var(--amber); margin-bottom: 12px; }
-h2 { font-size: 32px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
-.sub { font-size: 17px; color: var(--gray); max-width: 620px; margin-bottom: 48px; }
-
-.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.pain-card { padding: 28px; border: 1px solid var(--line); border-radius: 10px; }
-.pain-card h3 { font-size: 18px; margin-bottom: 10px; color: var(--navy); }
-.pain-card p { font-size: 15px; color: var(--gray); }
-
-.kit { background: var(--bg-light); }
-.kit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.kit-item { display: flex; gap: 16px; padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
-.kit-num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
-.kit-item h3 { font-size: 16px; margin-bottom: 4px; color: var(--navy); }
-.kit-item p { font-size: 14px; color: var(--gray); }
-
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
-.step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--amber); color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-.steps h3 { font-size: 17px; color: var(--navy); margin-bottom: 8px; }
-.steps p { font-size: 14px; color: var(--gray); }
-
-.pricing { background: var(--bg-light); }
-.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
-.price-grid.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin: 0 auto; }
-.price-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 32px 28px; display: flex; flex-direction: column; }
-.price-card.featured { border: 2px solid var(--navy); box-shadow: 0 10px 28px rgba(15,41,66,0.14); position: relative; padding-top: 46px; }
-.badge { position: absolute; top: -1px; left: -1px; right: -1px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; padding: 9px 12px; border-radius: 11px 11px 0 0; }
-.price-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 4px; }
-.price-card .tag { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
-.price-card .bestif { font-size: 13px; color: var(--gray); font-style: italic; margin: 2px 0 18px; }
-.price-amount { font-size: 36px; font-weight: 700; color: var(--navy); }
-.price-amount .unit { font-size: 15px; font-weight: 500; color: var(--gray); }
-.price-cad { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
-.price-save { display: inline-block; background: var(--good-tint); color: var(--good); font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 5px; margin: -12px 0 20px; }
-.price-save[hidden] { display: none; }
-.compare-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
-.compare-table { width: 100%; border-collapse: collapse; min-width: 560px; }
-.compare-table th, .compare-table td { padding: 14px 18px; text-align: left; font-size: 14px; border-bottom: 1px solid var(--line); }
-.compare-table thead th { background: var(--navy); color: #fff; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
-.compare-table tbody th { color: var(--navy); font-weight: 700; background: var(--bg-light); white-space: nowrap; }
-.compare-table tbody tr:last-child td, .compare-table tbody tr:last-child th { border-bottom: none; }
-.compare-table td.good { color: var(--good); font-weight: 600; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-.price-card ul { list-style: none; margin: 20px 0 28px; flex-grow: 1; }
-.price-card li { font-size: 14px; color: var(--ink); padding: 7px 0; padding-left: 22px; position: relative; }
-.price-card li::before { content: "•"; position: absolute; left: 2px; top: 5px; color: var(--gray); font-weight: 700; font-size: 18px; line-height: 1; }
-.price-card .btn { width: 100%; text-align: center; }
-
-.billing-toggle { display: flex; justify-content: center; width: fit-content; margin: 0 auto 32px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px; gap: 2px; }
-.toggle-btn { appearance: none; border: 0; background: transparent; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--gray); cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 7px; transition: background .15s, color .15s; }
-.toggle-btn:hover { color: var(--navy); }
-.toggle-btn.is-active { background: var(--navy); color: #fff; }
-.toggle-save { font-size: 11px; font-weight: 700; background: var(--good-tint); color: var(--good); padding: 1px 7px; border-radius: 999px; }
-.toggle-btn.is-active .toggle-save { background: rgba(255,255,255,0.22); color: #fff; }
-
-.faq details { border-bottom: 1px solid var(--line); }
-.faq summary { font-size: 16px; font-weight: 600; color: var(--navy); cursor: pointer; list-style: none; padding: 20px 0; min-height: 44px; display: flex; align-items: center; }
-.faq details[open] summary { padding-bottom: 8px; }
-.faq details p { padding-bottom: 20px; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; float: right; font-size: 20px; color: var(--amber); }
-.faq details[open] summary::after { content: "–"; }
-.faq p { font-size: 15px; color: var(--gray); margin-top: 12px; }
-
-.final-cta { background: var(--navy); color: #fff; text-align: center; }
-.final-cta h2 { color: #fff; }
-.final-cta p { color: #c7d2de; max-width: 500px; margin: 0 auto 32px; }
-
-footer { background: var(--navy-dark); color: #93a2b3; padding: 40px 0; font-size: 13px; }
-.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-
-@media (max-width: 800px) {
-.nav-links { gap: 14px; font-size: 13px; }
-.nav-links a { font-size: 13px; }
-.hero { padding: 44px 0 52px; }
-.hero h1 { font-size: 32px; }
-section { padding: 48px 0; }
-.pain-grid, .kit-grid, .steps, .price-grid { grid-template-columns: 1fr; }
-.footer-inner { flex-direction: column; }
-}
-@media (max-width: 800px) {
-.nav-toggle { display: flex; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; padding: 4px 24px 12px; box-shadow: 0 10px 20px rgba(15,41,66,0.08); } .nav-links.open { display: flex; } .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 15px; } .nav-links a:last-child { border-bottom: none; } .nav .btn-primary { padding: 9px 14px; font-size: 13px; }
-.logo { margin-left: 6px; }
-}
-.reassure { font-size: 15px; color: #46505c; margin-top: 10px; text-align: center; }
-</style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bookedandvisible.ca/">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<header>
-<div class="wrap nav">
-<div class="logo">Booked <span>&</span> Visible</div>
-<nav class="nav-links" id="nav-links">
-<a href="#kit">What's included</a>
-<a href="#pricing">Pricing</a>
-<a href="#landing-page">Landing page</a>
-<a href="#contact">Questions</a>
-<a href="#faq">FAQ</a>
-</nav><button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
-<a href="#pricing" class="btn btn-primary">Get the Starter Kit</a>
-</div>
-</header>
-
-<main id="main">
-
-<section class="hero">
 <div class="wrap">
-<h1>Stop losing jobs to the plumber who just shows up first on Google.</h1>
-<p>A done-for-you Google Business Profile, review, and local SEO toolkit built specifically for independent plumbers — so when a pipe bursts at 11pm, it's your name that shows up first, not a competitor's.</p>
-<div class="hero-ctas">
-<a href="#pricing" class="btn btn-primary">Get the Starter Kit</a>
-<a href="#kit" class="btn btn-outline-light">What's included</a>
-</div>
-<p class="hero-note">Free to cancel before your report is generated. No contracts, ever — kit or membership.</p><div class="hero-badge"><svg width="118" height="118" viewBox="0 0 200 200" role="img" aria-label="Proudly serving Red Seal certified trades"><defs><path id="heroSealTop" d="M 30,100 A 70,70 0 0 1 170,100" fill="none"/><path id="heroSealBottom" d="M 30,100 A 70,70 0 0 0 170,100" fill="none"/></defs><circle cx="100" cy="100" r="94" fill="none" stroke="#d97a3f" stroke-width="2.5"/><circle cx="100" cy="100" r="82" fill="none" stroke="#d97a3f" stroke-width="1.25"/><text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#c7d2de"><textPath href="#heroSealTop" startOffset="50%" text-anchor="middle">PROUDLY SERVING</textPath></text><text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#c7d2de"><textPath href="#heroSealBottom" startOffset="50%" text-anchor="middle">RED SEAL CERTIFIED TRADES</textPath></text><path d="M78 100 L93 116 L124 82" stroke="#d97a3f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
-</div>
-</section>
+  <header>
+    <div class="logo">B&amp;V</div>
+    <nav>
+      <a href="/" class="active">Home</a>
+      <a href="/whats-included/">Included</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/landing-pages/">Landing pages</a>
+      <a href="/about/">About</a>
+      <a href="/faq/">FAQ</a>
+    </nav>
+    <a href="/pricing/" class="btn btn-accent">Get the kit</a>
+  </header>
 
-<section>
-<div class="wrap">
-<p class="section-label">The problem</p>
-<h2>You're great at the work. Getting found is a different job entirely.</h2>
-<p class="sub">Most independent plumbers lose jobs not on price or quality, but on visibility — the next customer just calls whoever shows up first.</p>
-<div class="pain-grid">
-<div class="pain-card">
-<h3>Missed calls, missed jobs</h3>
-<p>A missed call during a water heater install or a drain job usually just sends the customer straight to the next plumber on Google — no voicemail beats an answered phone.</p>
-</div>
-<div class="pain-card">
-<h3>A half-finished online profile</h3>
-<p>Your Google Business Profile is doing less for you than it could — missing service categories like drain cleaning or water heater repair, no recent photos, no recent reviews.</p>
-</div>
-<div class="pain-card">
-<h3>No time to do marketing yourself</h3>
-<p>You're busy under sinks and in crawl spaces, not writing social posts or chasing reviews. This is built to take that off your plate.</p>
-</div>
-</div>
-<p style="margin-top: 32px; font-size: 15px; color: var(--gray); max-width: 620px;">We built this around one trade first, not ten — every item in the kit exists because it's what actually moves the needle for a plumbing business specifically, not generic "local services" advice.</p>
-<p style="margin-top: 16px; font-size: 15px; color: var(--gray); max-width: 620px;">And if you've been burned by pay-per-lead directories before — paying $20 to $120 a lead whether or not it ever became a job — this isn't that. Everything here, you own outright.</p>
-</div>
-</section>
+  <section style="padding:40px 0 56px;text-align:center;">
+    <h1 style="font-size:120px;line-height:0.9;">VISIBLE.</h1>
+    <p style="font-size:17px;color:var(--muted);max-width:520px;margin:20px auto 0;">A done-for-you Google Business Profile, review, and local SEO toolkit for independent local businesses.</p>
+  </section>
 
-<section class="kit" id="kit">
-<div class="wrap">
-<p class="section-label">The starter kit</p>
-<h2>Everything you need to look booked and visible, this week.</h2>
-<p class="sub">A one-time purchase, built to be usable the same week you get it — not a course to sit through first.</p>
-<div class="kit-grid">
-<div class="kit-item"><div class="kit-num">1</div><div><h3>Google Business Profile walkthrough</h3><p>Turn your profile into your best lead source for emergency and same-day plumbing calls, with a step-by-step optimization guide — including how to surface your Technical Safety BC license and Red Seal credentials where both customers and Google look for them first.</p></div></div>
-<div class="kit-item"><div class="kit-num">2</div><div><h3>Review-generation system</h3><p>Ready-to-send scripts plus a printable QR card that makes asking for reviews effortless.</p></div></div>
-<div class="kit-item"><div class="kit-num">3</div><div><h3>Social post templates</h3><p>Ready-made before/after and promo templates for jobs like water heater swaps and drain cleanings — no design skills needed.</p></div></div>
-<div class="kit-item"><div class="kit-num">4</div><div><h3>Local directory checklist</h3><p>Get your name, address, and phone number consistent everywhere customers look.</p></div></div>
-<div class="kit-item"><div class="kit-num">5</div><div><h3>Project photo guide</h3><p>Simple techniques for photos that make a finished repipe or water heater job look as good as it is.</p></div></div>
-<div class="kit-item"><div class="kit-num">6</div><div><h3>Follow-up & referral sequence</h3><p>A ready-to-send thank-you, review ask, and referral request for every completed job.</p></div></div>
-</div>
-</div>
-</section>
+  <section style="padding-bottom:8px;">
+    <div class="eyebrow">The Starter Kit — six pieces, one purchase</div>
+    <div class="grid" style="grid-template-columns:repeat(6,1fr);margin-bottom:2px;">
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">01</div><div style="font-size:13px;font-weight:600;">Google Business Profile walkthrough</div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">02</div><div style="font-size:13px;font-weight:600;">Review-generation system</div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">03</div><div style="font-size:13px;font-weight:600;">Social post templates</div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">04</div><div style="font-size:13px;font-weight:600;">Local directory checklist</div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">05</div><div style="font-size:13px;font-weight:600;">Project photo guide</div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div class="tile-num">06</div><div style="font-size:13px;font-weight:600;">Follow-up & referral sequence</div></div>
+    </div>
 
-<section>
-<div class="wrap">
-<p class="section-label">How it works</p>
-<h2>Three steps, start to finish.</h2>
-<div class="steps">
-<div><div class="step-num">1</div><h3>Get your kit</h3><p>Purchase once — every guide, script, and template lands in your inbox within minutes, ready to use the same day.</p></div>
-<div><div class="step-num">2</div><h3>Get your report</h3><p>Within 24 hours, a personalized look at where your online presence stands today: your Google Business Profile, reviews, and directory listings, with specific next steps.</p></div>
-<div><div class="step-num">3</div><h3>Get the next call</h3><p>Implement at your own pace, or join a membership for ongoing content and support.</p></div>
-</div>
-</div>
-</section>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:2px;">
+      <div class="tile" style="background:var(--accent);color:#fff;aspect-ratio:1/1;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.85;">Starter Kit</div><div><h3 style="font-size:40px;">$129</h3><div style="font-size:13px;opacity:0.85;">one-time</div></div></div>
+      <div class="tile" style="background:var(--panel);aspect-ratio:1/1;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);">Visible</div><div><h3 style="font-size:40px;">$49</h3><div style="font-size:13px;color:var(--muted);">per month</div></div></div>
+      <div class="tile" style="background:var(--ink);color:#fff;aspect-ratio:1/1;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;">Booked</div><div><h3 style="font-size:40px;">$119</h3><div style="font-size:13px;opacity:0.7;">per month</div></div></div>
+    </div>
 
-<section id="about">
-<div class="wrap" style="max-width: 640px; text-align: center;">
-<p class="section-label">Who you're dealing with</p>
-<h2>Not a call center. Not an agency with account managers.</h2>
-<p class="sub" style="margin-left: auto; margin-right: auto;">Booked & Visible is a small, independent operation based in British Columbia, Canada. Every message through this site is read and answered by the same person within one business day.</p>
-</div>
-</section>
+    <div style="background:var(--ink);color:#fff;padding:48px 40px;margin-bottom:2px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.6;margin-bottom:20px;">Not another lead directory</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+        <div><div style="font-size:13px;opacity:0.55;text-decoration:line-through;margin-bottom:6px;">$20–120 per lead, booked or not</div><h3 style="font-size:20px;color:var(--accent-light);">One flat price</h3></div>
+        <div><div style="font-size:13px;opacity:0.55;text-decoration:line-through;margin-bottom:6px;">A listing you don't control</div><h3 style="font-size:20px;color:var(--accent-light);">Your domain, outright</h3></div>
+        <div><div style="font-size:13px;opacity:0.55;text-decoration:line-through;margin-bottom:6px;">Contracts, cancellation terms</div><h3 style="font-size:20px;color:var(--accent-light);">Cancel any time</h3></div>
+      </div>
+    </div>
 
-<section class="compare-section">
-<div class="wrap">
-<p class="section-label">Vs. lead directories</p>
-<h2>Not another lead directory.</h2>
-<p class="sub">The strongest reason to pick Booked &amp; Visible over a pay-per-lead directory isn't the price — it's what you actually get to keep.</p>
-<div class="compare-table-wrap">
-<table class="compare-table">
-<thead>
-<tr>
-<th scope="col"><span class="visually-hidden">Category</span></th>
-<th scope="col">Pay-per-lead directories</th>
-<th scope="col">Booked &amp; Visible</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">What you pay</th>
-<td>$20–120 per lead, booked or not</td>
-<td class="good">One flat price, no per-lead fees</td>
-</tr>
-<tr>
-<th scope="row">What you own</th>
-<td>A listing you don't control</td>
-<td class="good">Your profile, your domain, your files — outright</td>
-</tr>
-<tr>
-<th scope="row">Getting out</th>
-<td>Contract, cancellation terms</td>
-<td class="good">Cancel any time, keep everything</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:2px;">
+      <div class="tile" style="background:var(--panel);"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);">Step 1</div><div style="font-size:15px;font-weight:700;">Get your kit — every guide lands within minutes.</div></div>
+      <div class="tile" style="background:var(--panel);"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);">Step 2</div><div style="font-size:15px;font-weight:700;">Get your report — a personalized look within 24 hours.</div></div>
+      <div class="tile" style="background:var(--panel);"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);">Step 3</div><div style="font-size:15px;font-weight:700;">Get the next call — implement, or join a membership.</div></div>
+    </div>
 
-<section class="pricing" id="pricing">
-<div class="wrap">
-<p class="section-label">Pricing</p>
-<h2>Start with the kit. Grow into a membership.</h2>
-<p class="sub">Buy the kit and your six guides, scripts, and templates land in your inbox within minutes. Your personalized report follows within 24 hours. Prices shown in CAD, the currency you're actually charged. USD is shown alongside for reference only (marked ≈) — if your card is issued in a different currency, your card issuer converts at its own exchange rate, so the amount on your statement may differ slightly from what's shown here. <strong style="color: var(--navy);">Once your report is delivered, the sale is final.</strong></p>
-<div class="billing-toggle" role="group" aria-label="Membership billing period">
-<button type="button" class="toggle-btn is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
-<button type="button" class="toggle-btn" data-billing="annual" aria-pressed="false">Annual <span class="toggle-save">2 months free</span></button>
-</div>
-<div class="price-grid">
-<div class="price-card">
-<h3>Starter Kit</h3>
-<p class="bestif">Best if you want to fix your profile yourself, once.</p>
-<div class="price-amount"><span class="unit-amt">$129</span><span class="unit"> CAD, one-time</span></div>
-<p class="price-cad">≈$97 USD</p>
-<ul>
-<li>All 6 starter kit items</li>
-<li>Personalized onboarding report (within 24 hours)</li>
-<li>Lifetime access, no expiry</li>
-</ul>
-<a href="https://payhip.com/b/gFj9f" class="btn btn-outline">Get the Starter Kit</a>
-<p class="reassure">Free to cancel before your report is generated</p>
-</div>
-<div class="price-card featured">
-<span class="badge">Most plumbers start here</span>
-<h3>Visible</h3>
-<p class="bestif">Best if you want to keep at it without thinking about what to post.</p>
-<div class="price-amount"><span class="unit-amt" data-monthly="$49" data-annual="$490">$49</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
-<p class="price-cad" data-monthly="≈$39 USD/mo" data-annual="≈$390 USD/yr">≈$39 USD/mo</p>
-<p class="price-save" data-annual-only hidden>Saves $98/yr vs. paying monthly</p>
-<ul>
-<li>Everything in Starter Kit — report arrives month 3 (right away on annual)</li>
-<li>6-month guided curriculum</li>
-<li>Evergreen seasonal content calendar</li>
-<li>Growing template library</li>
-<li>Quarterly outcomes report — real review, ranking, and lead numbers, tracked every quarter</li>
-</ul>
-<a href="https://payhip.com/b/qe0ab" class="btn btn-navy">Start Visible</a>
-<p class="reassure">Cancel any time, no contracts</p>
-</div>
-<div class="price-card">
-<h3>Booked</h3>
-<p class="bestif">Best if you don't have a website and don't want to build one.</p>
-<div class="price-amount"><span class="unit-amt" data-monthly="$119" data-annual="$1,190">$119</span><span class="unit" data-monthly="/mo CAD" data-annual="/yr CAD">/mo CAD</span></div>
-<p class="price-cad" data-monthly="≈$89 USD/mo" data-annual="≈$890 USD/yr">≈$89 USD/mo</p>
-<p class="price-save" data-annual-only hidden>Saves $238/yr vs. paying monthly</p>
-<ul>
-<li>Everything in Visible</li>
-<li>A converting landing page, built for you and designed to turn visitors into booked jobs</li>
-<li>Quarterly page content refresh</li>
-<li>Priority template access</li>
-</ul>
-<a href="https://payhip.com/b/p5EHo" class="btn btn-outline">Start Booked</a>
-<p class="reassure">Cancel any time, no contracts</p>
-</div>
-</div>
-<p style="text-align:center; margin-top: 32px; font-size: 14px;"><a href="/whats-included.html" style="color: var(--amber-dark);">See exactly what's included and when, for every product →</a></p>
-</div>
-</section>
+    <div class="grid" style="grid-template-columns:repeat(2,1fr);">
+      <a href="https://weathered-sunset-0831.wk99ydv27p.workers.dev/" class="tile" style="background:var(--panel);aspect-ratio:2/1;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);">Case — 5 days to launch</div><div><h3 style="font-size:30px;">Twin Creeks Ranch</h3><div style="font-size:13px;color:var(--muted);">Equestrian boarding, Aldergrove BC</div></div></a>
+      <a href="https://advanced-dentures-v3.pages.dev/" class="tile" style="background:var(--accent);color:#fff;aspect-ratio:2/1;"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.85;">Case — 70 reviews</div><div><h3 style="font-size:30px;">Advanced Dentures</h3><div style="font-size:13px;opacity:0.85;">Denture & implant clinic, Abbotsford BC</div></div></a>
+    </div>
 
-<section id="landing-page">
-<div class="wrap">
-<p class="section-label">Just need a landing page?</p>
-<h2>No website yet? Get one built for you.</h2>
-<p class="sub">A custom, mobile-ready landing page for your business — your logo and colors, services, service area, photos, and testimonials — live within 5 business days. No kit or membership required — Booked members get it at a discounted price after two months.</p>
-<div class="price-grid cols-2">
-<div class="price-card">
-<h3>Bring Your Own Domain</h3>
-<p class="bestif">Best if you already have a domain.</p>
-<div class="price-amount"><span class="unit-amt">$329</span><span class="unit"> CAD, one-time</span></div>
-<p class="price-cad">≈$249 USD</p>
-<ul>
-<li>Custom page built around your business</li>
-<li>We walk you through pointing your domain's DNS</li>
-<li>Live within 5 business days</li>
-<li>One round of revisions included</li>
-</ul>
-<a href="https://payhip.com/b/8JOZo" class="btn btn-outline">Get my landing page</a>
-</div>
-<div class="price-card featured">
-<span class="badge">Most popular</span>
-<h3>All-In, Domain Included</h3>
-<p class="bestif">Best if you don't have a domain yet.</p>
-<div class="price-amount"><span class="unit-amt">$389</span><span class="unit"> CAD, one-time</span></div>
-<p class="price-cad">≈$289 USD</p>
-<ul>
-<li>We register your domain (year 1 included)</li>
-<li>Full ownership transferred once live</li>
-<li>Live within 5-7 business days</li>
-<li>One round of revisions included</li>
-</ul>
-<a href="https://payhip.com/b/MkP9n" class="btn btn-navy">Get my landing page + domain</a>
-</div>
-</div>
-<p style="text-align:center; margin-top: 24px; font-size: 14px; color: var(--gray);">Discounted for <a href="#pricing" style="color: var(--amber-dark);">Booked members</a> ($199 CAD / ≈$150 USD) after two months (right away for annual) · <a href="/whats-included.html#landing-page" style="color: var(--amber-dark);">See exactly what's included →</a></p>
-</div>
-</section>
+    <div class="tile" style="background:var(--ink);color:#fff;aspect-ratio:4/1;margin-top:2px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;">Landing pages</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+        <div style="font-size:19px;font-weight:700;min-width:0;flex:1;">No website yet? We'll build one — live in 5 business days.</div>
+        <a href="/landing-pages/" style="font-size:13px;font-weight:700;text-decoration:underline;color:#fff;white-space:nowrap;">See plans →</a>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-<div class="wrap" style="max-width: 560px; text-align: center;">
-<p class="section-label">Questions first?</p>
-<h2>Have a question before you buy?</h2>
-<p class="sub" style="margin-left: auto; margin-right: auto;">Send a quick message — we personally read every one and reply within one business day.</p>
-<form id="contact-form" action="https://formspree.io/f/mljreaoj" method="POST" style="text-align: left;">
-<input type="hidden" name="_next" value="https://bookedandvisible.ca/?sent=1#contact">
+  <section style="padding:56px 0 64px;display:flex;justify-content:center;">
+    <a href="/pricing/" class="btn btn-dark" style="padding:18px 40px;font-size:16px;">Get the Starter Kit</a>
+  </section>
 
-<label for="contact-honeypot" style="position:absolute; left:-9999px;">Leave this field blank</label>
-<input type="text" id="contact-honeypot" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
-<div style="margin-bottom: 16px;">
-<label for="contact-email" style="display:block; font-size:14px; font-weight:600; color: var(--navy); margin-bottom: 6px;">Email</label>
-<input type="email" id="contact-email" name="email" required style="width:100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: 15px; font-family: inherit;">
+  <footer>
+    <div>© 2026 Booked & Visible</div>
+    <div style="display:flex;gap:20px;"><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refunds</a></div>
+  </footer>
 </div>
-<div style="margin-bottom: 20px;">
-<label for="contact-message" style="display:block; font-size:14px; font-weight:600; color: var(--navy); margin-bottom: 6px;">Your question</label>
-<textarea id="contact-message" name="message" required rows="4" style="width:100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: 15px; font-family: inherit;"></textarea>
-</div>
-<button type="submit" class="btn btn-primary" style="width:100%;">Send question</button>
-</form><p id="contact-error" class="reassure" style="display:none; color:#b3261e; margin-top:10px;">Something went wrong sending your message — please try again, or email us directly below.</p><div id="contact-success" style="display:none; text-align:center; padding: 12px 0;"><p style="font-size:18px; font-weight:700; color: var(--navy); margin-bottom: 8px;">Thanks — got it! ✓</p><p class="reassure" style="margin-top:0;">We personally read every message and reply within one business day.</p></div>
-<p class="reassure">Prefer email? Reach us directly at <a href="mailto:hello@bookedandvisible.ca" style="color: var(--amber-dark);">hello@bookedandvisible.ca</a></p>
-</div>
-</section>
-
-<section id="faq">
-<div class="wrap">
-<p class="section-label">FAQ</p>
-<h2>Questions you might have</h2>
-<div class="faq"><details><summary>Not a plumber?</summary><p>We're plumbing-only for now — the guides, credentials, and content are all built specifically around that trade. If you're in a different trade and think this could work for your business too, <a href="#contact" style="color: var(--amber-dark);">tell us</a> — we're tracking interest before deciding what's next.</p></details>
-<details open>
-<summary>Do I need any technical skills?</summary>
-<p>No. Everything is written in plain language with step-by-step instructions. If you can use a smartphone, you can implement this.</p>
-</details>
-<details>
-<summary>How long until I see results?</summary>
-<p>Most of the Starter Kit's items — like optimizing your Google Business Profile — can be done the same week. Visibility improvements typically build over the following weeks as reviews and photos accumulate.</p>
-</details>
-<details>
-<summary>What if I don't have a website?</summary>
-<p>That's fine — the Starter Kit doesn't require one. You can add a custom landing page to any purchase: $329 CAD (≈$249 USD) if you already have (or get) your own domain, or $389 CAD (≈$289 USD) if you'd rather we register a domain and hand it fully over to you. Booked members get it at a discounted price ($199 CAD / ≈$150 USD) after two months of membership (right away for annual members). Full details: <a href="/whats-included.html" style="color: var(--amber-dark);">What's Included</a>.</p>
-</details>
-<details>
-<summary>How is this different from Angi, Thumbtack, or a directory listing?</summary>
-<p>Nothing is ever held hostage — any page we build for you ends up on a domain you own outright, even on our top tier, and you can leave any time. Compare that to Angi, Thumbtack, and similar directories: they charge per lead, often $20-120 each whether or not the job actually books, and typically lock you into a listing you don't control. Booked & Visible is a flat, predictable price with no per-lead fees.</p>
-</details>
-<details>
-<summary>Can I cancel my membership?</summary>
-<p>Yes, any time — no contracts, no cancellation fees.</p>
-</details>
-<details>
-<summary>Can I get a refund?</summary>
-<p>Yes, any time before your personalized report has been generated — usually within 24 hours of purchase. Once your report is delivered, the purchase is final, since at that point you've received the personalized analysis. If a file is missing or broken, or your report never arrives, contact us and we'll fix it or refund it — no exceptions there. Full details in our <a href="/refund-policy.html" style="color: var(--amber-dark);">Refund Policy</a>.</p>
-</details>
-</div>
-</div>
-</section>
-
-<section class="final-cta">
-<div class="wrap">
-<h2>Get found before the next burst pipe or no-hot-water call.</h2>
-<p>Start with the Starter Kit today. Upgrade to a membership any time once you're ready for ongoing support.</p>
-<a href="#pricing" class="btn btn-primary">Get the Starter Kit</a>
-</div>
-</section>
-
-</main>
-
-<footer>
-<div class="wrap footer-inner">
-<div>© 2026 Booked & Visible</div>
-<div><a href="/terms.html">Terms of Service</a> · <a href="/refund-policy.html">Refund Policy</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="mailto:hello@bookedandvisible.ca">hello@bookedandvisible.ca</a></div>
-</div>
-<div class="wrap" style="margin-top: 16px; font-size: 12px; color: #93a2b3;">We aim to meet WCAG 2.1 AA accessibility guidelines. If you run into a barrier using this site, email <a href="mailto:hello@bookedandvisible.ca" style="color: #93a2b3; text-decoration: underline;">hello@bookedandvisible.ca</a> and we'll fix it.</div>
-</footer>
-
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "Organization",
-"name": "Booked & Visible",
-"url": "https://bookedandvisible.ca",
-"description": "A self-serve marketing toolkit and membership built for independent plumbing businesses, focused on Google Business Profile optimization, review generation, and local search visibility."
-}
-</script>
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "FAQPage",
-"mainEntity": [{"@type": "Question", "name": "Not a plumber?", "acceptedAnswer": { "@type": "Answer", "text": "We're plumbing-only for now — the guides, credentials, and content are all built specifically around that trade. If you're in a different trade and think this could work for your business too, tell us — we're tracking interest before deciding what's next." } },
-{
-"@type": "Question",
-"name": "Do I need any technical skills?",
-"acceptedAnswer": { "@type": "Answer", "text": "No. Everything is written in plain language with step-by-step instructions. If you can use a smartphone, you can implement this." }
-},
-{
-"@type": "Question",
-"name": "How long until I see results?",
-"acceptedAnswer": { "@type": "Answer", "text": "Most of the Starter Kit's items — like optimizing your Google Business Profile — can be done the same week. Visibility improvements typically build over the following weeks as reviews and photos accumulate." }
-},
-{
-"@type": "Question",
-"name": "What if I don't have a website?",
-"acceptedAnswer": { "@type": "Answer", "text": "That's fine — the Starter Kit doesn't require one. You can add a custom landing page to any purchase: $329 CAD (≈$249 USD) if you already have or get your own domain, or $389 CAD (≈$289 USD) if you'd rather we register a domain and hand it fully over to you. Booked members get it at a discounted price ($199 CAD / ≈$150 USD) after two months of membership (right away for annual members)." }
-},
-{
-"@type": "Question",
-"name": "How is this different from Angi, Thumbtack, or a directory listing?",
-"acceptedAnswer": { "@type": "Answer", "text": "Nothing is ever held hostage — any page we build for you ends up on a domain you own outright, even on our top tier, and you can leave any time. Compare that to Angi, Thumbtack, and similar directories: they charge per lead, often $20-120 each whether or not the job actually books, and typically lock you into a listing you don't control. Booked & Visible is a flat, predictable price with no per-lead fees." }
-},
-{
-"@type": "Question",
-"name": "Can I cancel my membership?",
-"acceptedAnswer": { "@type": "Answer", "text": "Yes, any time — no contracts, no cancellation fees." }
-},
-{
-"@type": "Question",
-"name": "Can I get a refund?",
-"acceptedAnswer": { "@type": "Answer", "text": "Yes, any time before your personalized report has been generated — usually within 24 hours of purchase. Once your report is delivered, the purchase is final. If a file is missing or broken, or your report never arrives, contact us and we'll fix it or refund it." }
-}
-]
-}
-</script>
-
-<script>(function(){var toggle=document.getElementById('nav-toggle');var links=document.getElementById('nav-links');if(!toggle||!links)return;toggle.addEventListener('click',function(){var isOpen=links.classList.toggle('open');toggle.setAttribute('aria-expanded',isOpen?'true':'false');toggle.setAttribute('aria-label',isOpen?'Close menu':'Open menu');});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});});document.addEventListener('click',function(e){if(!links.classList.contains('open'))return;if(links.contains(e.target)||toggle.contains(e.target))return;links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');});})();</script><script>(function(){var form=document.getElementById('contact-form');if(!form)return;var successEl=document.getElementById('contact-success');var errorEl=document.getElementById('contact-error');var submitBtn=form.querySelector('button[type="submit"]');form.addEventListener('submit',function(e){e.preventDefault();if(errorEl)errorEl.style.display='none';var originalText=submitBtn.textContent;submitBtn.disabled=true;submitBtn.textContent='Sending...';fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(response){if(response.ok){form.style.display='none';if(successEl)successEl.style.display='block';}else{throw new Error('submit failed');}}).catch(function(){submitBtn.disabled=false;submitBtn.textContent=originalText;if(errorEl)errorEl.style.display='block';});});})();</script>
-<script>(function(){var buttons=document.querySelectorAll('.toggle-btn');if(!buttons.length)return;var swapEls=document.querySelectorAll('[data-monthly]');var annualOnlyEls=document.querySelectorAll('[data-annual-only]');function setBilling(period){buttons.forEach(function(btn){var active=btn.dataset.billing===period;btn.classList.toggle('is-active',active);btn.setAttribute('aria-pressed',String(active));});swapEls.forEach(function(el){var val=el.dataset[period];if(val!=null)el.textContent=val;});annualOnlyEls.forEach(function(el){el.hidden=period!=='annual';});}buttons.forEach(function(btn){btn.addEventListener('click',function(){setBilling(btn.dataset.billing);});});})();</script>
 </body>
 </html>
