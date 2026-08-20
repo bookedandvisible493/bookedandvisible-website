@@ -39,3 +39,42 @@ p{line-height:1.6;}
 .post-nav{display:flex;justify-content:space-between;gap:16px;padding:24px 0;border-top:1px solid var(--line);margin-top:8px;font-size:14px;font-weight:700;}
 .post-nav a{color:var(--ink);}
 .post-nav a:hover{color:var(--accent);}
+
+/* Grid column variants (paired with inline grid-template-columns previously hardcoded per-page) */
+.grid-1{grid-template-columns:repeat(1,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-6{grid-template-columns:repeat(6,1fr);}
+
+/* Responsive breakpoints — the layout above had none, so anything narrower
+   than ~1024px was forced through fixed 2/3/4/6-column grids and desktop-only
+   type sizes. These collapse the grids and scale text down for tablet/phone. */
+@media (max-width: 860px){
+  .wrap{padding:0 24px;}
+  .grid-6{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width: 640px){
+  .wrap{padding:0 20px;}
+  header{gap:10px 16px;}
+  nav{gap:10px 16px;font-size:13px;}
+  .grid-2,.grid-3,.grid-4,.grid-6{grid-template-columns:1fr;}
+  .tile{aspect-ratio:auto !important;}
+
+  /* Large fixed inline font-sizes used for hero/heading/price numerals across
+     pages — none were fluid, so they're scaled down here rather than editing
+     every page. (The homepage "VISIBLE." hero uses clamp() directly instead,
+     since it's a single unbreakable word that needs to shrink continuously.) */
+  [style*="font-size:46px"]{font-size:32px !important;}
+  [style*="font-size:44px"]{font-size:32px !important;}
+  [style*="font-size:40px"]{font-size:30px !important;}
+  [style*="font-size:36px"]{font-size:28px !important;}
+  [style*="font-size:34px"]{font-size:26px !important;}
+  [style*="font-size:30px"]{font-size:24px !important;}
+}
+
+@media (max-width: 420px){
+  nav{font-size:12px;gap:8px 12px;}
+}
