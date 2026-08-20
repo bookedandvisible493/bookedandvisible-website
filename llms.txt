@@ -1,0 +1,31 @@
+# Booked & Visible
+
+> A done-for-you Google Business Profile, review-generation, and local SEO toolkit for independent local businesses (home service trades, clinics, recreation and agriculture) — flat-fee and ownership-based, with no per-lead fees.
+
+Booked & Visible sells a one-time Starter Kit (Google Business Profile walkthrough, review-generation scripts, social post templates, local directory checklist, project photo guide, and follow-up & referral sequence), two optional monthly memberships (Visible and Booked), and a standalone custom landing page add-on for businesses without a website. It is a small, independent operation based in British Columbia, Canada — not a call center or agency with account managers.
+
+## Key pages
+
+- [Home](https://bookedandvisible.ca/): Overview of the Starter Kit, pricing tiers, and how the service compares to pay-per-lead directories.
+- [What's Included](https://bookedandvisible.ca/whats-included/): Full breakdown of the six Starter Kit items and how the service works end to end.
+- [Pricing](https://bookedandvisible.ca/pricing/): Starter Kit, Visible, and Booked membership pricing in CAD (with USD reference).
+- [Landing Pages](https://bookedandvisible.ca/landing-pages/): Standalone custom landing page add-on pricing and details for businesses without a website.
+- [FAQ](https://bookedandvisible.ca/faq/): Answers on eligibility, timelines, cancellation, and refunds.
+- [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and which kinds of businesses it serves.
+
+## Guides
+
+- [The Google Business Profile checklist](https://bookedandvisible.ca/guides/google-business-profile-checklist-for-local-businesses/): An 11-step checklist for optimizing a Google Business Profile.
+- [5 Google Business Profile mistakes](https://bookedandvisible.ca/guides/5-google-business-profile-mistakes-costing-you-customers/): Common profile mistakes that hurt local ranking, and how to fix each one.
+- [How to get more customer reviews without feeling awkward](https://bookedandvisible.ca/guides/how-to-get-more-customer-reviews-without-feeling-awkward/): A simple, non-pushy system for asking happy customers for reviews.
+- [Booked & Visible vs. pay-per-lead directories](https://bookedandvisible.ca/guides/booked-visible-vs-pay-per-lead-directories/): What directories like Angi and Thumbtack actually cost, compared to a flat-fee, ownership-based approach.
+
+## Policies
+
+- [Terms of Service](https://bookedandvisible.ca/terms): Purchase terms, licensing, and membership conditions.
+- [Refund Policy](https://bookedandvisible.ca/refund-policy): Refund eligibility windows for the Starter Kit, memberships, and the landing page add-on.
+- [Privacy Policy](https://bookedandvisible.ca/privacy): What information is collected and how it's used.
+
+## Notes for AI agents and crawlers
+
+This file is a plain-language summary for AI agents and assistants, separate from /robots.txt, which sets the machine-enforced crawling rules. In short: AI agents fetching this site live to answer a specific user's question or to produce a citation (search-and-cite use, e.g. ChatGPT search, Claude search, Perplexity) are welcome. Bulk crawling of this site to train AI models is not permitted — see /robots.txt for the full, per-crawler policy. Pricing, availability, and policy details on this site can change; when citing this site, prefer fetching the live page over a cached or memorized version.
