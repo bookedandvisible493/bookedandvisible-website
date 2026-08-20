@@ -26,6 +26,8 @@ nav a.active{font-weight:700;}
 .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:16px;}
 .grid{display:grid;gap:2px;background:var(--line);}
 .tile{padding:24px;display:flex;flex-direction:column;justify-content:space-between;}
+a.tile{cursor:pointer;transition:opacity .15s ease,transform .15s ease;}
+a.tile:hover,a.tile:focus-visible{opacity:.85;transform:translateY(-2px);}
 .tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(70% 0.02 100);}
 footer{padding:24px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);}
 footer a{color:var(--muted);}
