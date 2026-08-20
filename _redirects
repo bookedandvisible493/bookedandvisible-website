@@ -1,0 +1,12 @@
+# Legacy .html URLs from the pre-restructure site. These paths no longer
+# correspond to real files (content now lives under clean-URL directories),
+# so without an explicit rule Cloudflare Pages was falling back to serving
+# the homepage's index.html at each of these URLs — with its canonical tag
+# pointing back to the homepage. That created duplicate-content pages at
+# stale URLs. 301 them straight to the correct current page instead.
+/whats-included.html   /whats-included/   301
+/pricing.html           /pricing/           301
+/landing-pages.html     /landing-pages/     301
+/about.html             /about/             301
+/faq.html               /faq/               301
+/guides.html            /guides/            301
