@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap');
-
 :root{
-  --ink: oklch(12% 0.005 100);
-  --paper: oklch(99% 0.002 100);
-  --panel: oklch(94% 0.008 100);
-  --line: oklch(88% 0.005 100);
-  --muted: oklch(45% 0.005 100);
-  --accent: oklch(55% 0.19 255);
-  --accent-light: oklch(75% 0.14 250);
-  --white: #fff;
+    --ink: oklch(12% 0.005 100);
+    --paper: oklch(99% 0.002 100);
+    --panel: oklch(94% 0.008 100);
+    --line: oklch(88% 0.005 100);
+    --muted: oklch(45% 0.005 100);
+    --accent: oklch(55% 0.19 255);
+    --accent-light: oklch(75% 0.14 250);
+    --accent-dark: oklch(48% 0.19 255);
+    --white: #fff;
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
@@ -28,7 +27,7 @@ nav a.active{font-weight:700;}
 .tile{padding:24px;display:flex;flex-direction:column;justify-content:space-between;}
 a.tile{cursor:pointer;transition:opacity .15s ease,transform .15s ease;}
 a.tile:hover,a.tile:focus-visible{opacity:.85;transform:translateY(-2px);}
-.tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(70% 0.02 100);}
+.tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(50% 0.02 100);}
 .tile-desc,.tile-bullets{display:none;}
 footer{padding:24px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);}
 footer a{color:var(--muted);}
@@ -52,41 +51,41 @@ p{line-height:1.6;}
    than ~1024px was forced through fixed 2/3/4/6-column grids and desktop-only
    type sizes. These collapse the grids and scale text down for tablet/phone. */
 @media (max-width: 860px){
-  .wrap{padding:0 24px;}
-  .grid-6{grid-template-columns:repeat(3,1fr);}
-  .grid-4{grid-template-columns:repeat(2,1fr);}
+    .wrap{padding:0 24px;}
+    .grid-6{grid-template-columns:repeat(3,1fr);}
+    .grid-4{grid-template-columns:repeat(2,1fr);}
 }
 
 @media (max-width: 640px){
-  .wrap{padding:0 20px;}
-  header{gap:10px 16px;}
-  nav{gap:10px 16px;font-size:13px;}
-  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
-  /* The 6-item Starter Kit grid stays 2-up rather than collapsing all the
-     way to 1 column — a full-width row per item read as "just gray blocks"
-     with too much scrolling for how little each one said. 2 columns plus
-     the descriptions below fits more per screen and reads as a checklist. */
+    .wrap{padding:0 20px;}
+    header{gap:10px 16px;}
+    nav{gap:10px 16px;font-size:13px;}
+    .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+    /* The 6-item Starter Kit grid stays 2-up rather than collapsing all the
+       way to 1 column — a full-width row per item read as "just gray blocks"
+       with too much scrolling for how little each one said. 2 columns plus
+       the descriptions below fits more per screen and reads as a checklist. */
   .grid-6{grid-template-columns:repeat(2,1fr);}
-  .tile{aspect-ratio:auto !important;padding:16px;}
+    .tile{aspect-ratio:auto !important;padding:16px;}
 
   /* Short supporting copy that's hidden on desktop (where the surrounding
-     grid position/number gives enough context) but shown on mobile, where
-     each tile is its own scroll stop and a title alone reads as empty. */
+       grid position/number gives enough context) but shown on mobile, where
+       each tile is its own scroll stop and a title alone reads as empty. */
   .tile-desc{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4;}
-  .tile-bullets{display:block;margin:10px 0 0;padding-left:16px;font-size:11px;line-height:1.6;}
+    .tile-bullets{display:block;margin:10px 0 0;padding-left:16px;font-size:11px;line-height:1.6;}
 
   /* Large fixed inline font-sizes used for hero/heading/price numerals across
-     pages — none were fluid, so they're scaled down here rather than editing
-     every page. (The homepage "VISIBLE." hero uses clamp() directly instead,
-     since it's a single unbreakable word that needs to shrink continuously.) */
+       pages — none were fluid, so they're scaled down here rather than editing
+       every page. (The homepage "VISIBLE." hero uses clamp() directly instead,
+       since it's a single unbreakable word that needs to shrink continuously.) */
   [style*="font-size:46px"]{font-size:32px !important;}
-  [style*="font-size:44px"]{font-size:32px !important;}
-  [style*="font-size:40px"]{font-size:30px !important;}
-  [style*="font-size:36px"]{font-size:28px !important;}
-  [style*="font-size:34px"]{font-size:26px !important;}
-  [style*="font-size:30px"]{font-size:24px !important;}
+    [style*="font-size:44px"]{font-size:32px !important;}
+    [style*="font-size:40px"]{font-size:30px !important;}
+    [style*="font-size:36px"]{font-size:28px !important;}
+    [style*="font-size:34px"]{font-size:26px !important;}
+    [style*="font-size:30px"]{font-size:24px !important;}
 }
 
 @media (max-width: 420px){
-  nav{font-size:12px;gap:8px 12px;}
+    nav{font-size:12px;gap:8px 12px;}
 }
