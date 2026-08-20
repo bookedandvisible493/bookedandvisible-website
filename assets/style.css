@@ -29,6 +29,7 @@ nav a.active{font-weight:700;}
 a.tile{cursor:pointer;transition:opacity .15s ease,transform .15s ease;}
 a.tile:hover,a.tile:focus-visible{opacity:.85;transform:translateY(-2px);}
 .tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(70% 0.02 100);}
+.tile-desc,.tile-bullets{display:none;}
 footer{padding:24px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);}
 footer a{color:var(--muted);}
 p{line-height:1.6;}
@@ -60,8 +61,19 @@ p{line-height:1.6;}
   .wrap{padding:0 20px;}
   header{gap:10px 16px;}
   nav{gap:10px 16px;font-size:13px;}
-  .grid-2,.grid-3,.grid-4,.grid-6{grid-template-columns:1fr;}
-  .tile{aspect-ratio:auto !important;}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+  /* The 6-item Starter Kit grid stays 2-up rather than collapsing all the
+     way to 1 column — a full-width row per item read as "just gray blocks"
+     with too much scrolling for how little each one said. 2 columns plus
+     the descriptions below fits more per screen and reads as a checklist. */
+  .grid-6{grid-template-columns:repeat(2,1fr);}
+  .tile{aspect-ratio:auto !important;padding:16px;}
+
+  /* Short supporting copy that's hidden on desktop (where the surrounding
+     grid position/number gives enough context) but shown on mobile, where
+     each tile is its own scroll stop and a title alone reads as empty. */
+  .tile-desc{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4;}
+  .tile-bullets{display:block;margin:10px 0 0;padding-left:16px;font-size:11px;line-height:1.6;}
 
   /* Large fixed inline font-sizes used for hero/heading/price numerals across
      pages — none were fluid, so they're scaled down here rather than editing
