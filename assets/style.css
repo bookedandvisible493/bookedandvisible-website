@@ -31,6 +31,12 @@ a.tile:hover,a.tile:focus-visible{opacity:.85;transform:translateY(-2px);}
 .tile-desc,.tile-bullets{display:none;}
 footer{padding:24px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);}
 footer a{color:var(--muted);}
+/* The footer's link-row div (the second child) sets its own display:flex
+   inline per-page but never wraps — on narrow phones its 6-7 links overflow
+   the viewport horizontally even though the outer <footer> above already
+   wraps fine. This single rule fixes every page site-wide without touching
+   each page's inline footer markup. */
+footer > div:last-child{flex-wrap:wrap;row-gap:8px;}
 p{line-height:1.6;}
 
 .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
