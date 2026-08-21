@@ -41,17 +41,17 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 .pricing[data-domain="own"] [data-when="included"]{display:none;}
 .pricing[data-domain="included"] [data-when="own"]{display:none;}
 .tier-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
-.tier-desc{font-size:13px;margin:0 0 16px;}
-.tier-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
-.tier-chip{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;padding:4px 9px;border-radius:999px;background:var(--line);color:var(--ink);}
-.tile.tile-featured .tier-chip{background:rgba(255,255,255,0.22);color:#fff;}
-.tier-price{font-size:32px;margin-bottom:2px;}
-.tier-price span{font-size:13px;font-weight:400;}
-.tier-usd{font-size:12px;margin-bottom:18px;}
+.tier-desc{font-size:13px;margin:0 0 12px;}
+.tier-price{font-size:34px;margin-bottom:2px;}
+.tier-price span{font-size:14px;font-weight:400;}
+.tier-usd{font-size:12px;margin-bottom:16px;}
+.tier-list{font-size:13px;padding-left:18px;margin:0;}
 .tile-featured{background:var(--accent);color:#fff;}
-.tile-featured .tier-desc,.tile-featured .tier-usd{color:rgba(255,255,255,0.8);}
+.tile-featured .tier-desc{color:rgba(255,255,255,1);}
+.tile-featured .tier-usd{color:rgba(255,255,255,0.8);}
 .tile:not(.tile-featured) .tier-name{color:var(--accent-dark);}
 .tile:not(.tile-featured) .tier-desc,.tile:not(.tile-featured) .tier-usd{color:var(--muted);}
+.tile:not(.tile-featured) .tier-list{color:var(--ink);}
 .tier-cta{display:block;text-align:center;padding:11px 18px;border-radius:4px;font-size:14px;font-weight:700;}
 .tile:not(.tile-featured) .tier-cta{background:var(--ink);color:#fff;}
 .tile.tile-featured .tier-cta{background:#fff;color:var(--ink);}
@@ -107,11 +107,11 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 <div>
 <div class="tier-name">Single Page</div>
 <p class="tier-desc">One page covering everything — best for a focused, single-service business.</p>
-<div class="tier-meta"><span class="tier-chip">1 page</span><span class="tier-chip">3 business days</span></div>
 <h2 class="tier-price" data-when="own">$329 <span>CAD</span></h2>
 <h2 class="tier-price" data-when="included">$389 <span>CAD</span></h2>
-<div class="tier-usd" data-when="own">≈$249 USD · your own domain</div>
-<div class="tier-usd" data-when="included">≈$289 USD · we register &amp; hand over your domain</div>
+<div class="tier-usd" data-when="own">Your own domain</div>
+<div class="tier-usd" data-when="included">We register &amp; hand over your domain</div>
+<ul class="tier-list"><li>1 page included</li><li>Live within 3 business days</li><li>One round of revisions</li></ul>
 </div>
 <a href="https://payhip.com/b/8JOZo" class="tier-cta" data-when="own">Get my landing page</a>
 <a href="https://payhip.com/b/MkP9n" class="tier-cta" data-when="included">Get my landing page</a>
@@ -121,11 +121,11 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 <div>
 <div class="tier-name">Small Business Site — most popular</div>
 <p class="tier-desc">3 pages — room for services, about, and a dedicated contact page.</p>
-<div class="tier-meta"><span class="tier-chip">3 pages</span><span class="tier-chip">5 business days</span></div>
 <h2 class="tier-price" data-when="own">$429 <span>CAD</span></h2>
 <h2 class="tier-price" data-when="included">$489 <span>CAD</span></h2>
-<div class="tier-usd" data-when="own">≈$319 USD · your own domain</div>
-<div class="tier-usd" data-when="included">≈$359 USD · domain included</div>
+<div class="tier-usd" data-when="own">Your own domain</div>
+<div class="tier-usd" data-when="included">Domain included</div>
+<ul class="tier-list"><li>3 pages included</li><li>Live within 5 business days</li><li>One round of revisions</li></ul>
 </div>
 <a href="https://payhip.com/b/Ep5af" class="tier-cta" data-when="own">Get my landing page</a>
 <a href="https://payhip.com/b/4YaJw" class="tier-cta" data-when="included">Get my landing page</a>
@@ -135,11 +135,11 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 <div>
 <div class="tier-name">Full Website</div>
 <p class="tier-desc">5 pages — home, services, about, reviews/FAQ, and contact.</p>
-<div class="tier-meta"><span class="tier-chip">5 pages</span><span class="tier-chip">7 business days</span></div>
 <h2 class="tier-price" data-when="own">$529 <span>CAD</span></h2>
 <h2 class="tier-price" data-when="included">$589 <span>CAD</span></h2>
-<div class="tier-usd" data-when="own">≈$389 USD · your own domain</div>
-<div class="tier-usd" data-when="included">≈$429 USD · domain included</div>
+<div class="tier-usd" data-when="own">Your own domain</div>
+<div class="tier-usd" data-when="included">Domain included</div>
+<ul class="tier-list"><li>5 pages included</li><li>Live within 7 business days</li><li>One round of revisions</li></ul>
 </div>
 <a href="https://payhip.com/b/UL7Pl" class="tier-cta" data-when="own">Get my landing page</a>
 <a href="https://payhip.com/b/FJ10D" class="tier-cta" data-when="included">Get my landing page</a>
@@ -147,7 +147,7 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 
 </div>
 
-<p class="pricing-note">Need a different number of pages? Additional pages are $50 CAD each on any tier — just tell us how many in your intake form. Discounted for Booked members ($199 CAD / ≈$150 USD single page) after two months of membership (right away on annual).</p>
+<p class="pricing-note">Need a different number of pages? Additional pages are $50 CAD each on any tier — just tell us how many in your intake form. Discounted for Booked members ($199 CAD single page) after two months of membership (right away on annual).</p>
 
 <div class="care-wrap">
 <div class="care-card">
