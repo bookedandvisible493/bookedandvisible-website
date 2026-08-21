@@ -33,6 +33,44 @@ gtag('config', 'G-3J5GC9HRT7');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="../assets/style.css?v=20260820">
+<style>
+/* Page-scoped styles for the tier pricing cards and Site Care card below.
+Only used on this page, so kept local rather than added to the shared
+stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
+(already used on the Guides page) for the domain switch. */
+.pricing[data-domain="own"] [data-when="included"]{display:none;}
+.pricing[data-domain="included"] [data-when="own"]{display:none;}
+.tier-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+.tier-desc{font-size:13px;margin:0 0 16px;}
+.tier-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.tier-chip{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;padding:4px 9px;border-radius:999px;background:var(--line);color:var(--ink);}
+.tile.tile-featured .tier-chip{background:rgba(255,255,255,0.18);color:#fff;}
+.tier-price{font-size:32px;margin-bottom:2px;}
+.tier-price span{font-size:13px;font-weight:400;}
+.tier-usd{font-size:12px;margin-bottom:18px;}
+.tile-featured{background:var(--ink);color:#fff;}
+.tile-featured .tier-desc,.tile-featured .tier-usd{color:rgba(255,255,255,0.65);}
+.tile:not(.tile-featured) .tier-name{color:var(--accent-dark);}
+.tile:not(.tile-featured) .tier-desc,.tile:not(.tile-featured) .tier-usd{color:var(--muted);}
+.tier-cta{display:block;text-align:center;padding:11px 18px;border-radius:4px;font-size:14px;font-weight:700;}
+.tile:not(.tile-featured) .tier-cta{background:var(--ink);color:#fff;}
+.tile.tile-featured .tier-cta{background:var(--accent);color:#fff;}
+.pricing-note{font-size:13px;color:var(--muted);margin-top:18px;}
+.care-wrap{display:flex;justify-content:center;margin-top:32px;}
+.care-card{width:100%;max-width:460px;border:1px solid var(--line);border-radius:10px;padding:26px 30px 24px;text-align:center;background:var(--paper);}
+.care-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;}
+.care-title{font-size:19px;font-weight:700;font-family:'Inter Tight',sans-serif;margin-bottom:8px;}
+.care-desc{font-size:13px;color:var(--muted);margin:0 auto 16px;max-width:360px;}
+.care-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+.care-chip{font-size:11px;font-weight:600;color:var(--muted);background:var(--panel);border:1px solid var(--line);padding:4px 10px;border-radius:999px;}
+.care-divider{height:1px;background:var(--line);margin:0 0 18px;}
+.care-price{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.care-price strong{color:var(--ink);font-size:16px;}
+.care-card .btn{width:100%;padding:11px 18px;border:none;cursor:pointer;font-family:'Inter',sans-serif;}
+@media (max-width: 640px){
+.care-card{max-width:100%;}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -57,48 +95,76 @@ gtag('config', 'G-3J5GC9HRT7');
 </section>
 
 <section style="padding:32px 0 8px;">
-<div class="grid grid-3">
-<div class="tile" style="background:var(--panel);min-height:320px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;">Single Page</div><p style="font-size:13px;color:var(--muted);margin:0 0 12px;">One page covering everything — best for a focused, single-service business.</p>
-<h2 style="font-size:28px;">$329 <span style="font-size:13px;font-weight:400;color:var(--muted);">CAD</span></h2><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">≈$249 USD, own domain</div>
-<div style="font-size:12px;color:var(--muted);margin-bottom:14px;">or $389 CAD (≈$289 USD) if we register &amp; hand over your domain</div>
-<ul style="font-size:13px;padding-left:18px;margin:0;"><li>1 page included</li><li>Live within 5 business days</li><li>One round of revisions</li></ul></div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-<a href="https://payhip.com/b/8JOZo" class="btn btn-dark" style="text-align:center;">Bring your own domain</a>
-<a href="https://payhip.com/b/MkP9n" class="btn" style="background:var(--accent);color:#fff;text-align:center;">Domain included</a>
-</div>
-</div>
-<div class="tile" style="background:var(--ink);color:#fff;min-height:320px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;margin-bottom:6px;">Small Business Site</div><p style="font-size:13px;opacity:0.8;margin:0 0 12px;">3 pages — room for services, about, and a dedicated contact page.</p>
-<h2 style="font-size:28px;">$429 <span style="font-size:13px;font-weight:400;opacity:0.6;">CAD</span></h2><div style="font-size:12px;opacity:0.6;margin-bottom:2px;">≈$319 USD, own domain</div>
-<div style="font-size:12px;opacity:0.6;margin-bottom:14px;">or $489 CAD (≈$359 USD) with domain included</div>
-<ul style="font-size:13px;padding-left:18px;margin:0;"><li>3 pages included</li><li>Live within 7 business days</li><li>One round of revisions</li></ul></div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-<a href="https://payhip.com/b/Ep5af" class="btn" style="background:#fff;color:var(--ink);text-align:center;">Bring your own domain</a>
-<a href="https://payhip.com/b/4YaJw" class="btn" style="background:var(--accent);color:#fff;text-align:center;">Domain included</a>
-</div>
-</div>
-<div class="tile" style="background:var(--panel);min-height:320px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;">Full Website</div><p style="font-size:13px;color:var(--muted);margin:0 0 12px;">5 pages — home, services, about, reviews/FAQ, and contact.</p>
-<h2 style="font-size:28px;">$529 <span style="font-size:13px;font-weight:400;color:var(--muted);">CAD</span></h2><div style="font-size:12px;color:var(--muted);margin-bottom:2px;">≈$389 USD, own domain</div>
-<div style="font-size:12px;color:var(--muted);margin-bottom:14px;">or $589 CAD (≈$429 USD) with domain included</div>
-<ul style="font-size:13px;padding-left:18px;margin:0;"><li>5 pages included</li><li>Live within 10 business days</li><li>One round of revisions</li></ul></div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-<a href="https://payhip.com/b/UL7Pl" class="btn btn-dark" style="text-align:center;">Bring your own domain</a>
-<a href="https://payhip.com/b/FJ10D" class="btn" style="background:var(--accent);color:#fff;text-align:center;">Domain included</a>
-</div>
-</div>
-</div>
-<p style="font-size:13px;color:var(--muted);margin-top:16px;">Need a different number of pages? Additional pages are $50 CAD each on any tier — just tell us how many in your intake form. Discounted for Booked members ($199 CAD / ≈$150 USD single page) after two months of membership (right away on annual).</p>
-</section>
 
-<section style="padding:16px 0 8px;">
-<div class="tile" style="background:var(--panel);">
-<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Ongoing updates — Site Care</div>
-<p style="font-size:14px;color:var(--muted);max-width:600px;margin:0 0 10px;">Keep your page current after launch: up to 2 content update requests a month (photos, testimonials, hours, pricing), 3-business-day turnaround, and new pages any time at $35 CAD instead of $50. Cancel any time.</p>
-<p style="font-size:13px;color:var(--muted);max-width:600px;margin:0 0 14px;">$39 CAD/mo (≈$29 USD), or $390 CAD/yr — 2 months free. Already a Booked member? Site Care is already included — no need to add it separately.</p>
-<a href="https://payhip.com/b/wuleH" class="btn" style="background:var(--accent);color:#fff;display:inline-block;">Subscribe to Site Care</a>
+<div class="filter-row" role="group" aria-label="Domain option">
+<button type="button" class="filter-pill active-filter" data-domain="own">Bring your own domain</button>
+<button type="button" class="filter-pill" data-domain="included">I need a domain</button>
 </div>
+
+<div class="pricing grid grid-3" data-domain="own" id="pricing">
+
+<div class="tile" style="background:var(--panel);min-height:320px;">
+<div>
+<div class="tier-name">Single Page</div>
+<p class="tier-desc">One page covering everything — best for a focused, single-service business.</p>
+<div class="tier-meta"><span class="tier-chip">1 page</span><span class="tier-chip">5 business days</span></div>
+<h2 class="tier-price" data-when="own">$329 <span>CAD</span></h2>
+<h2 class="tier-price" data-when="included">$389 <span>CAD</span></h2>
+<div class="tier-usd" data-when="own">≈$249 USD · your own domain</div>
+<div class="tier-usd" data-when="included">≈$289 USD · we register &amp; hand over your domain</div>
+</div>
+<a href="https://payhip.com/b/8JOZo" class="tier-cta" data-when="own">Get my landing page</a>
+<a href="https://payhip.com/b/MkP9n" class="tier-cta" data-when="included">Get my landing page</a>
+</div>
+
+<div class="tile tile-featured" style="min-height:320px;">
+<div>
+<div class="tier-name">Small Business Site — most popular</div>
+<p class="tier-desc">3 pages — room for services, about, and a dedicated contact page.</p>
+<div class="tier-meta"><span class="tier-chip">3 pages</span><span class="tier-chip">7 business days</span></div>
+<h2 class="tier-price" data-when="own">$429 <span>CAD</span></h2>
+<h2 class="tier-price" data-when="included">$489 <span>CAD</span></h2>
+<div class="tier-usd" data-when="own">≈$319 USD · your own domain</div>
+<div class="tier-usd" data-when="included">≈$359 USD · domain included</div>
+</div>
+<a href="https://payhip.com/b/Ep5af" class="tier-cta" data-when="own">Get my landing page</a>
+<a href="https://payhip.com/b/4YaJw" class="tier-cta" data-when="included">Get my landing page</a>
+</div>
+
+<div class="tile" style="background:var(--panel);min-height:320px;">
+<div>
+<div class="tier-name">Full Website</div>
+<p class="tier-desc">5 pages — home, services, about, reviews/FAQ, and contact.</p>
+<div class="tier-meta"><span class="tier-chip">5 pages</span><span class="tier-chip">10 business days</span></div>
+<h2 class="tier-price" data-when="own">$529 <span>CAD</span></h2>
+<h2 class="tier-price" data-when="included">$589 <span>CAD</span></h2>
+<div class="tier-usd" data-when="own">≈$389 USD · your own domain</div>
+<div class="tier-usd" data-when="included">≈$429 USD · domain included</div>
+</div>
+<a href="https://payhip.com/b/UL7Pl" class="tier-cta" data-when="own">Get my landing page</a>
+<a href="https://payhip.com/b/FJ10D" class="tier-cta" data-when="included">Get my landing page</a>
+</div>
+
+</div>
+
+<p class="pricing-note">Need a different number of pages? Additional pages are $50 CAD each on any tier — just tell us how many in your intake form. Discounted for Booked members ($199 CAD / ≈$150 USD single page) after two months of membership (right away on annual).</p>
+
+<div class="care-wrap">
+<div class="care-card">
+<div class="care-eyebrow">Ongoing updates</div>
+<div class="care-title">Site Care</div>
+<p class="care-desc">Keep it current after launch — send in content edits or new photos, live within days. No rebuilding from scratch.</p>
+<div class="care-chips">
+<span class="care-chip">2 updates / month</span>
+<span class="care-chip">3-day turnaround</span>
+<span class="care-chip">$35 CAD per new page</span>
+</div>
+<div class="care-divider"></div>
+<div class="care-price"><strong>$39 CAD</strong> / mo · or $390 CAD / yr</div>
+<a href="https://payhip.com/b/wuleH" class="btn btn-dark">Subscribe to Site Care</a>
+</div>
+</div>
+
 </section>
 
 <!-- Case studies hidden for now (client references not yet cleared for public use). Re-enable by removing this comment wrapper.
@@ -117,5 +183,19 @@ gtag('config', 'G-3J5GC9HRT7');
 <div style="display:flex;gap:20px;"><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refunds</a><a href="#" data-cookie-preferences>Cookie Preferences</a></div>
 </footer>
 </div>
+
+<script>
+(function(){
+var pricing = document.getElementById('pricing');
+var pills = document.querySelectorAll('.filter-pill');
+pills.forEach(function(p){
+p.addEventListener('click', function(){
+pills.forEach(function(o){ o.classList.remove('active-filter'); });
+p.classList.add('active-filter');
+pricing.setAttribute('data-domain', p.getAttribute('data-domain'));
+});
+});
+})();
+</script>
 </body>
 </html>
