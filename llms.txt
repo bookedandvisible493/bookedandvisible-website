@@ -8,7 +8,7 @@ Booked & Visible sells a one-time Starter Kit (Google Business Profile walkthrou
 
 - [Home](https://bookedandvisible.ca/): Overview of the Starter Kit, pricing tiers, and how the service compares to pay-per-lead directories.
 - [What's Included](https://bookedandvisible.ca/whats-included/): Full breakdown of the six Starter Kit items and how the service works end to end.
-- [Pricing](https://bookedandvisible.ca/pricing/): Starter Kit, Visible, and Booked membership pricing in CAD (with USD reference).
+- [Pricing](https://bookedandvisible.ca/pricing/): Starter Kit, Visible, and Booked membership pricing in CAD.
 - [Landing Pages](https://bookedandvisible.ca/landing-pages/): Standalone custom landing page add-on pricing and details for businesses without a website.
 - [FAQ](https://bookedandvisible.ca/faq/): Answers on eligibility, timelines, cancellation, and refunds.
 - [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and which kinds of businesses it serves.
