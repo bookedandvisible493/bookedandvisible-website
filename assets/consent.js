@@ -11,11 +11,10 @@
 * 3. Exposes a way to reopen the banner later (any element with a
 * data-cookie-preferences attribute) so a choice can be changed.
 *
-* Self-contained on purpose: the pages that currently load gtag.js don't
-* share one CSS system (privacy.html/terms.html/refund-policy.html use
-* their own inline navy/amber styles; the archive pages use an older
-* stylesheet), so this injects its own scoped styles rather than relying
-* on assets/style.css.
+* Self-contained on purpose: not every page that loads gtag.js is guaranteed
+* to share the main assets/style.css system (e.g. the archive pages use an
+* older stylesheet), so this injects its own scoped styles rather than
+* relying on the host page's CSS.
 */
 (function () {
 "use strict";
