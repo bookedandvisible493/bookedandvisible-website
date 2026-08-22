@@ -80,12 +80,26 @@ jobs:
                           f"({opens} open vs {closes} close)"
                       )
 
-              for href in re.findall(r'href="([^"]*)"', content):
+              # Scan whole <a ...> tags (not just bare href="..." attributes) so an
+              # href="#" can be told apart from a real placeholder link by whether
+              # the same tag carries a data-* attribute — e.g. the site-wide
+              # <a href="#" data-cookie-preferences>Cookie Preferences</a> control,
+              # which assets/consent.js intercepts via a click listener and never
+              # actually navigates. href="#" is the correct, accessible fallback
+              # for a JS-driven control like that (no-op without JS, rather than a
+              # broken link), so it isn't a placeholder and shouldn't fail the check.
+              for tag in re.findall(r'<a\b[^>]*>', content):
+                  href_match = re.search(r'href="([^"]*)"', tag)
+                  if not href_match:
+                      continue
+                  href = href_match.group(1)
                   stripped = href.strip()
+                  has_data_attr = bool(re.search(r'\sdata-[\w-]+', tag))
                   if stripped == '':
                       errors.append(f"{path}: empty href")
                   elif stripped == '#':
-                      errors.append(f"{path}: placeholder href=#")
+                      if not has_data_attr:
+                          errors.append(f"{path}: placeholder href=#")
                   elif 'TODO' in href or 'PLACEHOLDER' in href.upper():
                       errors.append(f"{path}: placeholder/TODO href: {href}")
                   elif 'payhip.com/order?' in href:
