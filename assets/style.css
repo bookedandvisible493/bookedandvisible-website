@@ -38,7 +38,8 @@ a.tile:hover,a.tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 2
 /* item 05 — recommended-plan badge (adds emphasis to Visible without
    taking the accent blue away from Starter Kit's primary-CTA tile) */
 .badge-popular{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
-.tile-popular{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 34px -18px color-mix(in oklch, var(--accent) 55%, transparent);border:1.5px solid var(--accent);}
+.tile-popular{border:1.5px solid var(--accent);transition:transform .18s ease, box-shadow .18s ease;}
+.tile-popular:hover,.tile-popular:focus-visible{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 34px -18px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
 
 /* item 06 — comparison table */
 .cmp-table{width:100%;border-collapse:collapse;font-size:14px;}
@@ -135,11 +136,6 @@ p{line-height:1.6;}
     [style*="font-size:36px"]{font-size:28px !important;}
     [style*="font-size:34px"]{font-size:26px !important;}
     [style*="font-size:30px"]{font-size:24px !important;}
-
-    /* Stacked single-column tiles: the desktop lift/scale on the recommended
-       pricing card would nudge it into the tile above it, so keep only the
-       border + badge as the "most popular" signal on narrow screens. */
-    .tile-popular{transform:none;}
 }
 
 @media (max-width: 420px){
