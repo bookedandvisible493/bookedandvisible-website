@@ -25,10 +25,55 @@ nav a.active{font-weight:700;}
 .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:16px;}
 .grid{display:grid;gap:2px;background:var(--line);}
 .tile{padding:24px;display:flex;flex-direction:column;justify-content:space-between;}
-a.tile{cursor:pointer;transition:opacity .15s ease,transform .15s ease;}
-a.tile:hover,a.tile:focus-visible{opacity:.85;transform:translateY(-2px);}
+a.tile{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;position:relative;}
+a.tile:hover,a.tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px -14px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
 .tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(50% 0.02 100);}
 .tile-desc,.tile-bullets{display:none;}
+
+/* item 04 — kit item icons */
+.tile-icon{width:34px;height:34px;border-radius:8px;background:color-mix(in oklch, var(--accent) 12%, var(--paper));color:var(--accent-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.tile-icon svg{width:17px;height:17px;}
+.tile-icon-row{display:flex;align-items:center;gap:10px;}
+
+/* item 05 — recommended-plan badge (adds emphasis to Visible without
+   taking the accent blue away from Starter Kit's primary-CTA tile) */
+.badge-popular{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
+.tile-popular{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 34px -18px color-mix(in oklch, var(--accent) 55%, transparent);border:1.5px solid var(--accent);}
+
+/* item 06 — comparison table */
+.cmp-table{width:100%;border-collapse:collapse;font-size:14px;}
+.cmp-table th{text-align:left;padding:12px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid var(--line);}
+.cmp-table td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--ink);}
+.cmp-table tr:last-child td{border-bottom:none;}
+.cmp-table th.cmp-brand{color:var(--accent-dark);background:color-mix(in oklch, var(--accent) 8%, var(--paper));}
+.cmp-table td.cmp-brand{background:color-mix(in oklch, var(--accent) 8%, var(--paper));font-weight:600;}
+.cmp-no::before{content:"✕ ";color:var(--muted);}
+.cmp-yes::before{content:"✓ ";color:var(--accent-dark);font-weight:700;}
+
+/* item 07 — connected-step timeline */
+.stepper{display:flex;gap:0;}
+.step{flex:1;padding-right:24px;}
+.step:last-child{padding-right:0;}
+.step-node-row{display:flex;align-items:center;margin-bottom:14px;}
+.step-node{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:900;font-size:14px;flex-shrink:0;}
+.step-line{flex:1;height:2px;margin-left:10px;background:linear-gradient(90deg,var(--accent),var(--accent-light));}
+.step:last-child .step-line{display:none;}
+.step-label{font-size:15px;font-weight:700;line-height:1.4;}
+@media (max-width:680px){
+  .stepper{flex-direction:column;gap:20px;}
+  .step{padding-right:0;}
+  .step-line{display:none;}
+}
+
+/* item 08 — FAQ accordion */
+.faq-accordion{max-width:680px;}
+.faq-accordion details{border-bottom:1px solid var(--line);padding:16px 0;}
+.faq-accordion details:first-child{padding-top:0;}
+.faq-accordion summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:700;font-size:15px;color:var(--ink);}
+.faq-accordion summary::-webkit-details-marker{display:none;}
+.faq-accordion summary::after{content:"+";font-family:'Inter Tight',sans-serif;font-weight:900;font-size:19px;color:var(--accent);flex-shrink:0;}
+.faq-accordion details[open] summary::after{content:"–";}
+.faq-accordion p{font-size:14px;color:var(--muted);margin:10px 0 0;max-width:60ch;}
 footer{padding:24px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);}
 footer a{color:var(--muted);}
 /* The footer's link-row div (the second child) sets its own display:flex
@@ -90,6 +135,11 @@ p{line-height:1.6;}
     [style*="font-size:36px"]{font-size:28px !important;}
     [style*="font-size:34px"]{font-size:26px !important;}
     [style*="font-size:30px"]{font-size:24px !important;}
+
+    /* Stacked single-column tiles: the desktop lift/scale on the recommended
+       pricing card would nudge it into the tile above it, so keep only the
+       border + badge as the "most popular" signal on narrow screens. */
+    .tile-popular{transform:none;}
 }
 
 @media (max-width: 420px){
