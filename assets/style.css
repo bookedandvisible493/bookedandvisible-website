@@ -26,7 +26,6 @@ nav a.active{font-weight:700;}
 .grid{display:grid;gap:2px;background:var(--line);}
 .tile{padding:24px;display:flex;flex-direction:column;justify-content:space-between;}
 a.tile{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;position:relative;}
-a.tile:hover,a.tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px -14px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
 .tile-num{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;color:oklch(50% 0.02 100);}
 .tile-desc,.tile-bullets{display:none;}
 
@@ -39,11 +38,22 @@ a.tile:hover,a.tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 2
    taking the accent blue away from Starter Kit's primary-CTA tile) */
 .badge-popular{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
 .badge-popular.on-accent{background:#fff;color:var(--accent-dark);}
-.tile-popular{border:1.5px solid var(--accent);transition:transform .18s ease, box-shadow .18s ease;}
-.tile-popular:hover,.tile-popular:focus-visible{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 34px -18px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
+.tile-popular{border:1.5px solid var(--accent);}
 /* .tile-featured tiles already fill the tile with accent blue — a
    same-color border on top of that is invisible, so drop it there. */
 .tile-featured.tile-popular{border-color:transparent;}
+
+/* Every tile in a "pick one of these" row (pricing tiers, product tiers)
+   gets the same lift-on-hover, not just the recommended one — applied to
+   both <a> and <div> tiles, and to non-interactive divs via :focus-within
+   so keyboard focus on their CTA button underneath still shows it.
+   Restricted to real hover-capable pointers so it doesn't get stuck "on"
+   after a tap on touch devices. */
+.tile-select{position:relative;transition:transform .18s ease,box-shadow .18s ease;}
+@media (hover:hover) and (pointer:fine){
+  a.tile:hover,a.tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 24px -14px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
+  .tile.tile-select:hover,.tile.tile-select:focus-visible,.tile.tile-select:focus-within{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 34px -18px color-mix(in oklch, var(--accent) 55%, transparent);z-index:1;}
+}
 
 /* item 06 — comparison table */
 .cmp-table{width:100%;border-collapse:collapse;font-size:14px;}
