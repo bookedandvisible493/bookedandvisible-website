@@ -21,12 +21,28 @@ All subscription/membership framing (Visible $49/mo, Booked $119/mo, Site Care $
 
 Local clone was reset to match `origin/main` (`fa4d0f9`) since these 9 commits were pushed via the GitHub web editor (direct git push to this repo is blocked in this environment) — local git history had a stale single-commit version of the same edits that is now superseded.
 
-**Payhip (3 subscription products retired to Draft — no live subscribers, so retired outright rather than wound down):**
-
-- Visible Membership (`qe0ab`) — Draft
-- Booked Membership (`p5EHo`) — Draft
-- Site Care (`wuleH`) — Draft
+**Payhip (3 subscription products retired to Draft — no live subscribers, so retired outright rather than wound down): Visible Membership (`qe0ab`), Booked Membership (`p5EHo`), and Site Care (`wuleH`) are all now Draft.**
 
 All three confirmed via the Products list showing status `DRAFT`. Nobody can purchase or enroll; existing product pages remain in the account (not deleted).
 
 **Next (Phase 3, not started):** new Payhip SKUs — Bundle ($189), Quarterly AI Visibility Re-Check ($39), Content Refresh Pack ($59/2 updates).
+
+***
+
+## 2026-09-05 22:35 UTC — Materials QA audit + Gap fixes (Gap 2 done, Gap 1 content done, Gap 3 done, Payhip file-swap blocked)
+
+Ran a full QA pass across the live site, Payhip catalog, and the actual Starter Kit deliverable content (see `claude/32-materials-qa-audit-2026-09-05.md` in the Project). Found 3 gaps; user approved fixing all of them.
+
+**Gap 2, Payhip landing-page visibility and naming, fixed and live:** `MkP9n` (All-In) was renamed to "...(Single Page, Domain Included)" with Visibility set to Unlisted, and `8JOZo` (BYOD) was renamed to "...(Single Page, Bring Your Own Domain)" with Visibility also set to Unlisted.
+
+**Gap 1, Starter Kit guides still plumbing-specific, content fixed and pushed to the Project, not yet live on Payhip:** All 6 guides plus the master checklist were rewritten trade-neutral (trades, clinics, and recreation/agriculture examples throughout) and pushed to the Claude Project as the new source-of-truth .md files. 00-start-here.md was already neutral, so no change was needed there. PDFs were regenerated via pandoc with the wkhtmltopdf engine, verified for content completeness, and renamed to match the live Payhip filenames exactly (1 through 7).
+
+**Gap 3, landing-page order-confirmation docs describing the old 2-tier model, fixed and pushed to the Project, not yet live on Payhip:** Checked the attached confirmation files on all 6 landing-page tier products. Turned out only the two Single Page tier products (MkP9n at $389, 8JOZo at $329) still had the stale generic confirmation PDFs, with a 5-day turnaround and no tier framing. The other 4 tiers (4YaJw, Ep5af, UL7Pl, FJ10D) already have correct, tier-specific confirmation PDFs and up-to-date descriptions from the August 3-tier restructure. Rewrote lp-allin-confirmation.md and lp-byod-confirmation.md for the Single Page tier (3 business days, not 5, plus the $50/page add-on and a pointer to the other tiers), pushed to the Project, and regenerated as LP-AllIn-Confirm.pdf and LP-BYOD-Confirm.pdf.
+
+**New gap found, not yet fixed:** the live Starter Kit product (gFj9f) is missing the QR-Review-Card-Template.pdf and Social-Post-Graphic-Template.png attachments that its own guides and product description promise are included.
+
+**Blocker, Payhip file replacement cannot be automated from this session:** browser automation (Claude in Chrome) can click Payhip's "Delete" on an attached file, but "Upload another product file" opens a native OS file picker that automation cannot see or drive. This was confirmed with two separate approaches this session, a cloud-sandbox file, and a file placed directly in the connected bookedandvisible-website/payhip-updates folder on the user's Mac. Mid-fix, this deleted "1 - Google Business Profile Walkthrough.pdf" from the live Starter Kit product without being able to re-upload it. Flagged to the user immediately and told to hold off touching anything else on that product until they do the one manual upload. All 9 corrected files (7 guides plus 2 confirmation docs) are staged in bookedandvisible-website/payhip-updates on the user's Mac and were also sent to them in-chat, ready for manual upload.
+
+**Housekeeping:** the working .md sources, generated PDFs, and the QA audit doc for this pass were temporarily created inside this git-tracked website repo by mistake, and have been moved out to /home/claude/payhip-content/ (outside git) since they're Payhip and Project deliverables, not site content, and don't belong in bookedandvisible-website version control.
+
+**Still open:** the user needs to manually upload the 9 corrected files to their respective Payhip products (Starter Kit x7, MkP9n, 8JOZo); the user, or a future session, needs to source and attach QR-Review-Card-Template.pdf and Social-Post-Graphic-Template.png to the Starter Kit; and the not-yet-tested list from the original audit (Payhip images beyond Starter Kit, full site link crawl, mobile rendering) has not been started.
