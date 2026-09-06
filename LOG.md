@@ -46,3 +46,33 @@ Ran a full QA pass across the live site, Payhip catalog, and the actual Starter 
 **Housekeeping:** the working .md sources, generated PDFs, and the QA audit doc for this pass were temporarily created inside this git-tracked website repo by mistake, and have been moved out to /home/claude/payhip-content/ (outside git) since they're Payhip and Project deliverables, not site content, and don't belong in bookedandvisible-website version control.
 
 **Still open:** the user needs to manually upload the 9 corrected files to their respective Payhip products (Starter Kit x7, MkP9n, 8JOZo); the user, or a future session, needs to source and attach QR-Review-Card-Template.pdf and Social-Post-Graphic-Template.png to the Starter Kit; and the not-yet-tested list from the original audit (Payhip images beyond Starter Kit, full site link crawl, mobile rendering) has not been started.
+
+***
+
+## 2026-09-06 16:56 UTC — Missing Starter Kit template files created (QR card + social graphic)
+
+Built the two files the Starter Kit description and guides promise but that were never attached to the live product: QR-Review-Card-Template.pdf and Social-Post-Graphic-Template.png.
+
+QR-Review-Card-Template.pdf is new — generated with reportlab, matching the brand's navy/amber palette. Two pages: business-card size (3.5x2 in, two copies with cut marks) and countertop/stand size (4x6 in), each with a dashed placeholder box labeled to paste in a customer's own Google-review QR code. Rendered to PNG and visually checked for text overflow and layout balance before finalizing (first draft had text slightly overrunning the QR placeholder box, and the 4x6 version had an unbalanced gap at the bottom, both fixed).
+
+Social-Post-Graphic-Template.png already existed in the Project (uploaded 2026-08-06) and just needed the exact filename and a final look, confirmed it's a real, finished 1080x1080 template with a photo box, headline box, and business-name/phone line, exactly as described in the guides. No changes needed, just staged for upload.
+
+Both files pushed to bookedandvisible-website/payhip-updates on the user's Mac (now 11 files total in that folder) and sent in-chat. Same upload blocker as before applies, these are new attachments, not replacements, so they just need "Upload another product file" clicked twice on the Starter Kit product, no delete step required.
+
+**Full list of files now staged and ready for manual upload (11 total):**
+
+| # | File | Destination Payhip product | Action |
+|---|---|---|---|
+| 1 | `1 - Google Business Profile Walkthrough.pdf` | Starter Kit (`gFj9f`) | Re-upload, currently MISSING from the live product |
+| 2 | `2 - Review-Generation System.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 3 | `3 - Social Post Templates.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 4 | `4 - Local Directory and NAP Checklist.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 5 | `5 - Project Photo Guide.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 6 | `6 - Follow-Up and Referral Sequence.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 7 | `7 - Master Checklist.pdf` | Starter Kit (`gFj9f`) | Delete old, upload new |
+| 8 | `QR-Review-Card-Template.pdf` | Starter Kit (`gFj9f`) | New attachment, add |
+| 9 | `Social-Post-Graphic-Template.png` | Starter Kit (`gFj9f`) | New attachment, add |
+| 10 | `LP-AllIn-Confirm.pdf` | Landing Page, Single Page/Domain Included (`MkP9n`) | Delete old, upload new |
+| 11 | `LP-BYOD-Confirm.pdf` | Landing Page, Single Page/BYOD (`8JOZo`) | Delete old, upload new |
+
+All 11 files live in `bookedandvisible-website/payhip-updates/` on the user's Mac and were sent in-chat. File #1 is the most urgent since the live product is currently missing it entirely.
