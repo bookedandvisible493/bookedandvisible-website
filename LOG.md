@@ -76,3 +76,13 @@ Both files pushed to bookedandvisible-website/payhip-updates on the user's Mac (
 | 11 | `LP-BYOD-Confirm.pdf` | Landing Page, Single Page/BYOD (`8JOZo`) | Delete old, upload new |
 
 All 11 files live in `bookedandvisible-website/payhip-updates/` on the user's Mac and were sent in-chat. File #1 is the most urgent since the live product is currently missing it entirely.
+
+***
+
+## 2026-09-06 — Homepage kit tile 04 restored (regression from Phase 1)
+
+User reported "Step 4 on the website is missing." Traced with `git log -p -- index.html` to commit `203a2a1` ("Retire subscription framing on homepage (Phase 1)") — an unrelated diff accidentally dropped the entire "04 — Local directory checklist" tile from the homepage's 6-tile Starter Kit grid (`grid-6`), leaving it numbered 01, 02, 03, 05, 06 while the eyebrow still read "six pieces." `whats-included/index.html` was never affected — item 04 was intact there the whole time, which is what made this a homepage-only regression rather than a content decision.
+
+Fixed by re-inserting the exact original tile markup (icon SVG, copy) between 03 and 05, restoring the sequential 01–06 grid. Verified locally via static server: page text now lists 01 through 06 in order, and the 6-column grid renders without a gap. Local clone was 13 commits behind `origin/main` at the start of this session (the Phase 1 batch above, plus 3 more `LOG.md`/template commits) — reset to `origin/main` before touching anything, per the repo's `CLAUDE.md` sync-check workflow.
+
+Pushed directly via `git push` (this session has `gh auth login` configured as `bookedandvisible493`, wired to git via `gh auth setup-git`, so no web-editor workaround was needed here).
