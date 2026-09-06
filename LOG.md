@@ -86,3 +86,16 @@ User reported "Step 4 on the website is missing." Traced with `git log -p -- ind
 Fixed by re-inserting the exact original tile markup (icon SVG, copy) between 03 and 05, restoring the sequential 01–06 grid. Verified locally via static server: page text now lists 01 through 06 in order, and the 6-column grid renders without a gap. Local clone was 13 commits behind `origin/main` at the start of this session (the Phase 1 batch above, plus 3 more `LOG.md`/template commits) — reset to `origin/main` before touching anything, per the repo's `CLAUDE.md` sync-check workflow.
 
 Pushed directly via `git push` (this session has `gh auth login` configured as `bookedandvisible493`, wired to git via `gh auth setup-git`, so no web-editor workaround was needed here).
+
+
+***
+
+## 2026-09-06 17:50 UTC — All 11 Payhip files confirmed live, mixed-upload mistake caught and corrected
+
+The user completed the manual upload pass. Checking the three affected products directly found the batch had landed in one place instead of three: all 11 files, including the two landing page confirmation docs, were attached to the Starter Kit product, and 0 - Start Here.pdf was dropped from the Starter Kit in the process, while the two landing page products still carried their old stale 5kb confirmation files untouched.
+
+Deleted LP-AllIn-Confirm.pdf and LP-BYOD-Confirm.pdf from the Starter Kit using browser automation, since Payhip's delete confirmation is a page-rendered modal rather than a native dialog and is safe to automate. 0 - Start Here.pdf did not exist anywhere as a real file, only as extracted text from an old upload, so it was regenerated from scratch using the same pandoc plus wkhtmltopdf pipeline and shared stylesheet as the other seven guides, sourced from the 00-start-here.md content the original audit had already confirmed did not need any content changes. The user then re-uploaded 0 - Start Here.pdf to the Starter Kit and the two confirmation docs to their correct landing page products.
+
+Final state verified directly on all three product edit pages: the Starter Kit (gFj9f) carries exactly the ten files it should, 0 - Start Here.pdf through 7 - Master Checklist.pdf plus QR-Review-Card-Template.pdf and Social-Post-Graphic-Template.png, with nothing extra. MkP9n carries the corrected 30kb LP-AllIn-Confirm.pdf, and 8JOZo carries the corrected 26kb LP-BYOD-Confirm.pdf. Every gap from the 2026-09-05 audit is now resolved and live.
+
+Still open, carried over from the original audit: Payhip product images beyond the Starter Kit, a full site link crawl, and mobile rendering checks.
