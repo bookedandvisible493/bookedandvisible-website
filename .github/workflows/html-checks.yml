@@ -104,7 +104,7 @@ jobs:
                       errors.append(f"{path}: placeholder/TODO href: {href}")
                   elif 'payhip.com/order?' in href:
                       errors.append(f"{path}: dead Payhip order-link pattern: {href}")
-                  elif href.startswith(('http://', 'https://', 'mailto:', 'tel:', '#')):
+                  elif href.startswith(('http://', 'https://', 'mailto:', 'tel:', 'sms:', '#')):
                       pass
                   else:
                       if not link_exists(href, path):
