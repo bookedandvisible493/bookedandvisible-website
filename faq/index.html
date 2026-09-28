@@ -71,7 +71,7 @@ gtag('config', 'G-3MJ8SD8MRE');
     {
       "@type": "Question",
       "name": "Can I get a refund?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, any time before your personalized report has been generated — usually within 1 business day of receiving your intake form. Once your report is delivered, the purchase is final." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can cancel for a full refund any time before we send your first deliverable, and if we ever miss a stated delivery time you choose a refund or a free fix. Full details are in our Refund Policy." }
     }
   ]
 }
@@ -112,16 +112,23 @@ gtag('config', 'G-3MJ8SD8MRE');
 <div><h2 style="font-size:16px;margin-bottom:6px;">How many pages do I get?</h2><p style="font-size:14px;color:var(--muted);margin:0;">Our Landing Page tiers start at 1 page and go up to 5 (Single Page, Small Business Site, or Full Website — see the <a href="/landing-pages/" style="color:var(--accent);">Landing Pages</a> page for details). Need a different number? Additional pages are $99 CAD each on any tier — just tell us how many in your intake form.</p></div>
 <div><h2 style="font-size:16px;margin-bottom:6px;">Can I add pages or make changes after my page is live?</h2><p style="font-size:14px;color:var(--muted);margin:0;">Yes. Every tier includes one round of revisions within 7 days of delivery. After that, you can add a page any time for $99 CAD, or email us for a quote on a one-off content update.</p></div>
 <div><h2 style="font-size:16px;margin-bottom:6px;">How is this different from a lead directory?</h2><p style="font-size:14px;color:var(--muted);margin:0;">Nothing is ever held hostage — any page we build for you ends up on a domain you own outright, and you can leave any time. Directories charge per lead, often $20–120 each, and typically lock you into a listing you don't control. See our <a href="/guides/booked-visible-vs-pay-per-lead-directories/" style="color:var(--accent);">full cost comparison</a>.</p></div>
-<div><h2 style="font-size:16px;margin-bottom:6px;">Can I get a refund?</h2><p style="font-size:14px;color:var(--muted);margin:0;">Yes, any time before your personalized report has been generated — usually within 1 business day of receiving your intake form. Once your report is delivered, the purchase is final. Full details in our <a href="/refund-policy.html" style="color:var(--accent);">Refund Policy</a>.</p></div>
+<div><h2 style="font-size:16px;margin-bottom:6px;">Can I get a refund?</h2><p style="font-size:14px;color:var(--muted);margin:0;">Yes — you can cancel for a full refund any time before we send your first deliverable, and if we ever miss a stated delivery time you choose a refund or a free fix. Full details are in our Refund Policy. Full details in our <a href="/refund-policy.html" style="color:var(--accent);">Refund Policy</a>.</p></div>
 </div>
 </section>
 
 <section style="padding:48px 0;border-top:1px solid var(--line);max-width:520px;">
 <div class="eyebrow" style="margin-top:32px;">Questions first?</div>
 <h2 style="font-size:22px;margin-bottom:20px;">Have a question before you buy?</h2>
-<form style="display:flex;flex-direction:column;gap:14px;">
-<input type="email" placeholder="Email">
-<textarea rows="4" placeholder="Your question"></textarea>
+<form action="https://formsubmit.co/hello@bookedandvisible.ca" method="POST" style="display:flex;flex-direction:column;gap:14px;">
+<input type="hidden" name="_subject" value="New question from bookedandvisible.ca">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://bookedandvisible.ca/faq/?sent=1">
+<input type="text" name="_honey" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label for="q-email" class="sr-only">Your email</label>
+<input type="email" id="q-email" name="email" placeholder="Email" required>
+<label for="q-text" class="sr-only">Your question</label>
+<textarea id="q-text" name="Question" rows="4" placeholder="Your question" required></textarea>
 <button type="submit" class="btn btn-dark" style="border:none;cursor:pointer;">Send question</button>
 </form>
 <p style="font-size:13px;color:var(--muted);margin-top:14px;">We personally read every message and reply within one business day.</p>
