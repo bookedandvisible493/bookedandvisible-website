@@ -2,13 +2,15 @@
 
 > A done-for-you Google Business Profile, review-generation, and local SEO toolkit for independent local businesses (home service trades, clinics, recreation and agriculture) — flat-fee and ownership-based, with no per-lead fees.
 
-Booked & Visible sells a one-time Starter Kit (Google Business Profile walkthrough, review-generation scripts, social post templates, local directory checklist, project photo guide, and follow-up & referral sequence), two optional monthly memberships (Visible and Booked), and a standalone custom landing page add-on for businesses without a website. It is a small, independent operation based in British Columbia, Canada — not a call center or agency with account managers.
+Booked & Visible sells one-time, flat-price products — no subscriptions or contracts: an AI & Local Visibility Report ($79 CAD), an AI Visibility Boost that fixes how AI assistants understand a business ($199 CAD founding rate, regular $299), a done-for-you SEO Improvement Package covering Google Business Profile, on-page SEO, Canadian directory listings, reviews, and AI search ($449 CAD founding rate, regular $599), a do-it-yourself Starter Kit ($129 CAD), and custom landing pages for businesses without a website (from $329 CAD). It is a small, independent operation based in British Columbia, Canada — not a call center or agency with account managers.
 
 ## Key pages
 
 - [Home](https://bookedandvisible.ca/): Overview of the Starter Kit, pricing tiers, and how the service compares to pay-per-lead directories.
 - [What's Included](https://bookedandvisible.ca/whats-included/): Full breakdown of the six Starter Kit items and how the service works end to end.
-- [Pricing](https://bookedandvisible.ca/pricing/): Starter Kit, Visible, and Booked membership pricing in CAD.
+- [Pricing](https://bookedandvisible.ca/pricing/): All one-time prices in CAD — Visibility Report, AI Visibility Boost, SEO Improvement Package, and Starter Kit.
+- [SEO Improvement Package](https://bookedandvisible.ca/seo-package/): Done-for-you local SEO — Google Business Profile, website pages, directories, reviews, and AI search, for one flat price.
+- [AI Visibility](https://bookedandvisible.ca/ai-visibility/): How ChatGPT, Perplexity, Gemini, and Google AI Overviews see a local business, and the Report and Boost that fix it.
 - [Landing Pages](https://bookedandvisible.ca/landing-pages/): Standalone custom landing page add-on pricing and details for businesses without a website.
 - [FAQ](https://bookedandvisible.ca/faq/): Answers on eligibility, timelines, cancellation, and refunds.
 - [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and which kinds of businesses it serves.
@@ -22,8 +24,8 @@ Booked & Visible sells a one-time Starter Kit (Google Business Profile walkthrou
 
 ## Policies
 
-- [Terms of Service](https://bookedandvisible.ca/terms): Purchase terms, licensing, and membership conditions.
-- [Refund Policy](https://bookedandvisible.ca/refund-policy): Refund eligibility windows for the Starter Kit, memberships, and the landing page add-on.
+- [Terms of Service](https://bookedandvisible.ca/terms): Purchase terms, licensing, and landing page conditions.
+- [Refund Policy](https://bookedandvisible.ca/refund-policy): Refund eligibility for the Starter Kit, AI Visibility products, SEO Improvement Package, and landing pages.
 - [Privacy Policy](https://bookedandvisible.ca/privacy): What information is collected and how it's used.
 
 ## Notes for AI agents and crawlers

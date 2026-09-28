@@ -15,3 +15,8 @@
 # Pages serves automatically with a real 404 status code (no rule needed
 # here). We deliberately don't redirect unknown URLs to the homepage — a
 # real 404 with helpful navigation is better for SEO than a soft-404 redirect.
+
+# The AI Visibility intake form became the site-wide order form for every
+# product (2026-09). Old links in receipts and emails still land on it.
+/ai-visibility/order/                /order/                301
+/ai-visibility/order/thank-you.html  /order/thank-you.html  301

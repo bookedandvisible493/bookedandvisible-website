@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Cookie consent defaults (Google Consent Mode v2) — must run before gtag.js
+so Analytics respects the visitor's choice from the very first hit. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'analytics_storage': 'denied',
+'ad_storage': 'denied',
+'ad_user_data': 'denied',
+'ad_personalization': 'denied',
+'functionality_storage': 'granted',
+'security_storage': 'granted',
+'wait_for_update': 500
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ8SD8MRE"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-3MJ8SD8MRE');
+</script>
+<script src="/assets/consent.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start Your Order — Booked &amp; Visible</title>
+<meta name="description" content="Already purchased from Booked & Visible? Tell us about your business here so we can get started.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bookedandvisible.ca/order/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/style.css?v=20260820">
+<style>
+.form-shell{max-width:640px;margin:0 auto;}
+.field{margin-bottom:20px;}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;}
+.field .hint{display:block;font-size:12px;color:var(--muted);margin-top:6px;}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="url"],
+.field select,
+.field textarea{
+width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:6px;
+font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);background:var(--paper);
+}
+.field textarea{resize:vertical;min-height:84px;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.required-mark{color:var(--accent-dark);}
+fieldset{border:1px solid var(--line);border-radius:10px;padding:20px;margin:0 0 24px;}
+fieldset legend{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);padding:0 6px;}
+.submit-row{margin-top:8px;}
+.submit-row button{
+width:100%;padding:14px 20px;border-radius:4px;font-size:15px;font-weight:700;
+background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inter',sans-serif;
+}
+.submit-row button:hover{opacity:.9;}
+.honey{position:absolute;left:-9999px;top:-9999px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo"><a href="/" style="color:inherit;">B&amp;V</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/whats-included/">Included</a>
+<a href="/pricing/">Pricing</a>
+<a href="/landing-pages/">Landing pages</a>
+<a href="/ai-visibility/">AI Visibility</a>
+<a href="/about/">About</a>
+<a href="/faq/">FAQ</a>
+<a href="/guides/">Guides</a>
+</nav>
+</header>
+
+<main>
+<section class="form-shell" style="padding:40px 0 8px;">
+<div class="eyebrow">Already purchased? Start here</div>
+<h1 style="font-size:32px;margin-bottom:10px;">Tell us about your business</h1>
+<p style="font-size:15px;color:var(--muted);margin-bottom:32px;">Takes about 5 minutes. This is what we use to prepare your order — the more accurate it is, the better your results. We'll match it to your payment using the email or receipt number you paid with, and we won't start work until we receive it.</p>
+</section>
+
+<section class="form-shell" style="padding:0 0 64px;">
+<form id="order-form" action="https://formsubmit.co/hello@bookedandvisible.ca" method="POST">
+<input type="hidden" name="_subject" value="New order intake">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://bookedandvisible.ca/order/thank-you.html">
+<input type="hidden" name="_autoresponse" value="Thanks — we've received your intake form for Booked & Visible. We'll confirm your payment and get started within one business day. If anything changes, just reply to this email.">
+<input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+<input type="hidden" id="stripe-session" name="Stripe checkout session" value="">
+
+<fieldset>
+<legend>Your order</legend>
+<div class="field">
+<label for="product">What did you purchase? <span class="required-mark">*</span></label>
+<select id="product" name="Product purchased" required>
+<option value="">Select one</option>
+<option value="Visibility Report" data-key="report">Visibility Report</option>
+<option value="AI Visibility Boost" data-key="boost">AI Visibility Boost</option>
+<option value="SEO Improvement Package" data-key="seo">SEO Improvement Package</option>
+<option value="Landing Page — Single Page" data-key="lp-1">Landing Page — Single Page</option>
+<option value="Landing Page — Small Business Site (3 pages)" data-key="lp-3">Landing Page — Small Business Site (3 pages)</option>
+<option value="Landing Page — Full Website (5 pages)" data-key="lp-5">Landing Page — Full Website (5 pages)</option>
+<option value="Starter Kit (personalized report)" data-key="kit">Starter Kit (personalized report)</option>
+</select>
+</div>
+<div class="field" id="payment-ref-field">
+<label for="payment-ref">Payment email or receipt number <span class="required-mark">*</span></label>
+<input type="text" id="payment-ref" name="Payment reference" required placeholder="The email you paid with, or the number on your receipt">
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Your contact info</legend>
+<div class="field">
+<label for="customer-name">Your name <span class="required-mark">*</span></label>
+<input type="text" id="customer-name" name="Customer name" required>
+</div>
+<div class="field">
+<label for="email">Email <span class="required-mark">*</span></label>
+<input type="email" id="email" name="email" required>
+<span class="hint">We'll send your confirmation and results here.</span>
+</div>
+<div class="field">
+<label for="phone">Phone (optional)</label>
+<input type="tel" id="phone" name="Phone">
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Your business</legend>
+<div class="field">
+<label for="business-name">Business name, exactly as customers see it <span class="required-mark">*</span></label>
+<input type="text" id="business-name" name="Business name" required>
+</div>
+<div class="field">
+<label for="category">Type of business <span class="required-mark">*</span></label>
+<select id="category" name="Category" required>
+<option value="">Select one</option>
+<option>Plumber</option>
+<option>Electrician</option>
+<option>HVAC</option>
+<option>Contractor / Renovator</option>
+<option>Cleaner</option>
+<option>Landscaper</option>
+<option>Dental / Denture clinic</option>
+<option>Health / Wellness clinic</option>
+<option>Salon / Spa</option>
+<option>Farm / Equestrian / Recreation</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field">
+<label for="service-area">Main city and the areas you serve <span class="required-mark">*</span></label>
+<input type="text" id="service-area" name="Service area" required placeholder="e.g. Langley, Surrey, Abbotsford">
+</div>
+<div class="field">
+<label for="biz-phone">Business phone, as customers should see it <span class="required-mark">*</span></label>
+<input type="tel" id="biz-phone" name="Business phone" required>
+</div>
+<div class="field">
+<label for="address">Business address (optional)</label>
+<input type="text" id="address" name="Business address" placeholder="Street, city, postal code">
+<span class="hint">Only if customers visit you there. Leave blank if you travel to customers or work from home.</span>
+</div>
+<div class="field">
+<label for="hours">Business hours (optional)</label>
+<input type="text" id="hours" name="Business hours" placeholder="e.g. Mon–Fri 8–5, Sat 9–1">
+</div>
+<div class="field">
+<label for="website">Website URL</label>
+<input type="url" id="website" name="Website URL" placeholder="https://">
+<span class="hint">Leave blank if you don't have one.</span>
+</div>
+<div class="field" data-show="report boost seo kit">
+<label for="gbp">Google Business Profile link <span class="required-mark">*</span></label>
+<input type="url" id="gbp" name="Google Business Profile URL" data-required placeholder="Share link from Google Maps">
+<span class="hint">Search your business on Google Maps, tap Share, and paste that link here. No profile yet? Type "none" in the notes below and we'll help you set one up.</span>
+</div>
+</fieldset>
+
+<fieldset data-show="report boost seo kit">
+<legend>How customers find you</legend>
+<div class="field">
+<label for="queries">What would a customer type or ask to find you? <span class="required-mark">*</span></label>
+<textarea id="queries" name="Target searches" data-required placeholder="e.g. best plumber in Langley&#10;emergency electrician near me&#10;denture clinic Abbotsford"></textarea>
+<span class="hint">List 2–5 phrases, one per line. We test these on Google, ChatGPT, Perplexity, Gemini, and Google AI Overviews.</span>
+</div>
+<div class="field">
+<label for="services">Your main services <span class="required-mark">*</span></label>
+<textarea id="services" name="Main services" data-required placeholder="One per line — the services you most want more customers for"></textarea>
+</div>
+<div class="field">
+<label for="competitors">Competitors you'd like to compare against (optional)</label>
+<textarea id="competitors" name="Competitors" placeholder="Up to 3 business names or websites"></textarea>
+</div>
+</fieldset>
+
+<fieldset data-show="boost seo">
+<legend>Your website</legend>
+<div class="field">
+<label for="platform">What is your website built on?</label>
+<select id="platform" name="Website platform">
+<option value="">Not sure</option>
+<option>WordPress</option>
+<option>Squarespace</option>
+<option>Wix</option>
+<option>Shopify</option>
+<option>GoDaddy</option>
+<option>Built by Booked &amp; Visible</option>
+<option>No website</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field">
+<label for="site-manager">Who will add the changes we send you?</label>
+<select id="site-manager" name="Who updates the website">
+<option value="">Select one</option>
+<option>I will</option>
+<option>My web developer / someone else</option>
+<option>Booked &amp; Visible built my site — please do it for me</option>
+</select>
+<span class="hint">We never need your website login. Changes arrive ready to paste in.</span>
+</div>
+<div class="field" data-show="seo">
+<label for="pages">The pages you most want to rank (up to 5) <span class="required-mark">*</span></label>
+<textarea id="pages" name="Pages to optimize" data-required placeholder="Paste one page link per line — usually your homepage and main service pages"></textarea>
+</div>
+</fieldset>
+
+<fieldset data-show="seo">
+<legend>Google Business Profile access</legend>
+<p style="font-size:13px;color:var(--muted);margin:0 0 16px;">To update your profile, add us as a <strong>Manager</strong> (not Owner) from your own account — you never share a password, and you can remove us any time. In Google Search, search your business name → tap <strong>⋮ → Business Profile settings → People and access → Add</strong> → enter <strong>hello@bookedandvisible.ca</strong> → choose <strong>Manager</strong>.</p>
+<div class="field">
+<label for="gbp-access">Have you added us as a Manager? <span class="required-mark">*</span></label>
+<select id="gbp-access" name="GBP manager access" data-required>
+<option value="">Select one</option>
+<option>Yes, done</option>
+<option>I'll do it within 24 hours</option>
+<option>I need help with this</option>
+<option>I don't have a profile yet</option>
+</select>
+</div>
+<div class="field">
+<label for="gbp-photos">Link to photos for your profile (optional)</label>
+<input type="url" id="gbp-photos" name="Photo folder link" placeholder="Google Drive, Dropbox, or iCloud shared folder">
+<span class="hint">Your work, team, storefront, or vehicles. Or reply to your confirmation email with photos attached.</span>
+</div>
+</fieldset>
+
+<fieldset data-show="lp-1 lp-3 lp-5">
+<legend>Your new website</legend>
+<div class="field">
+<label for="domain">Domain <span class="required-mark">*</span></label>
+<select id="domain" name="Domain" data-required>
+<option value="">Select one</option>
+<option>I already own a domain</option>
+<option>Please register one for me (domain-included tier)</option>
+</select>
+</div>
+<div class="field">
+<label for="domain-name">Your domain, or 3 domains you'd like in order of preference <span class="required-mark">*</span></label>
+<input type="text" id="domain-name" name="Domain name(s)" data-required placeholder="e.g. smithplumbing.ca, smithplumbingbc.ca">
+</div>
+<div class="field">
+<label for="lp-services">Services to feature, with a line about each <span class="required-mark">*</span></label>
+<textarea id="lp-services" name="Services to feature" data-required></textarea>
+</div>
+<div class="field">
+<label for="about">About your business <span class="required-mark">*</span></label>
+<textarea id="about" name="About the business" data-required placeholder="How long you've been in business, what makes you different, licences or certifications"></textarea>
+</div>
+<div class="field">
+<label for="testimonials">Customer testimonials (optional)</label>
+<textarea id="testimonials" name="Testimonials" placeholder="Paste 2–5 reviews with the customer's first name"></textarea>
+</div>
+<div class="field">
+<label for="brand">Logo, colours, and photos</label>
+<input type="url" id="brand" name="Logo and photos link" placeholder="Shared folder link (Google Drive, Dropbox, iCloud)">
+<span class="hint">No link? Reply to your confirmation email with your logo and photos attached. No logo? We'll design a simple text logo.</span>
+</div>
+<div class="field">
+<label for="colours">Colours or websites you like (optional)</label>
+<input type="text" id="colours" name="Colours and style" placeholder="e.g. navy and orange, like example.com">
+</div>
+<div class="field">
+<label for="contact-method">How should customers contact you from the site? <span class="required-mark">*</span></label>
+<select id="contact-method" name="Contact method" data-required>
+<option value="">Select one</option>
+<option>Call or text</option>
+<option>Contact form to my email</option>
+<option>Online booking link</option>
+<option>All of the above</option>
+</select>
+</div>
+<div class="field">
+<label for="socials">Social media links (optional)</label>
+<textarea id="socials" name="Social links" placeholder="Facebook, Instagram, etc. — one per line"></textarea>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Anything else?</legend>
+<div class="field">
+<label for="notes">Notes (optional)</label>
+<textarea id="notes" name="Notes" placeholder="Anything else we should know"></textarea>
+</div>
+</fieldset>
+
+<div class="submit-row">
+<button type="submit">Submit my intake form</button>
+</div>
+<p style="font-size:12px;color:var(--muted);margin-top:14px;">By submitting, you agree to our <a href="/terms.html" style="color:var(--accent);">Terms</a> and <a href="/privacy.html" style="color:var(--accent);">Privacy Policy</a>. We only use this information to prepare your order.</p>
+</form>
+</section>
+</main>
+<script src="/assets/order-form.js" defer></script>
+
+<footer>
+<div>© 2026 Booked & Visible</div>
+<div style="display:flex;gap:20px;"><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/guides/">Guides</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refunds</a><a href="#" data-cookie-preferences>Cookie Preferences</a></div>
+</footer>
+</div>
+</body>
+</html>
