@@ -217,3 +217,31 @@ p{line-height:1.6;}
 .related-guides-grid a:hover{color:var(--accent-dark);background:color-mix(in srgb, var(--accent) 8%, var(--paper));}
 .related-guides-all{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--accent-dark);text-decoration:underline;}
 @media (max-width:640px){.guide-cta-grid,.related-guides-grid{grid-template-columns:1fr;}}
+
+/* Site-wide "Connect with us" button + question panel (assets/contact.js) */
+#bv-contact{--bvc-lift:0px;position:fixed;right:20px;bottom:calc(20px + var(--bvc-lift));z-index:99990;display:flex;flex-direction:column;align-items:flex-end;gap:12px;font-family:'Inter',sans-serif;transition:bottom .2s ease;}
+.bvc-btn{display:flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 10px 24px -10px color-mix(in srgb, var(--accent) 70%, transparent);}
+.bvc-btn:hover{background:var(--accent-dark);}
+.bvc-btn:focus-visible,.bvc-close:focus-visible,.bvc-send:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+.bvc-panel{width:320px;max-width:calc(100vw - 32px);background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:18px;box-shadow:0 18px 40px -18px color-mix(in srgb, var(--ink) 45%, transparent);}
+.bvc-panel[hidden]{display:none;}
+.bvc-head{display:flex;justify-content:space-between;align-items:center;}
+.bvc-head h2{font-size:18px;letter-spacing:-0.02em;}
+.bvc-close{background:none;border:none;font-size:24px;line-height:1;color:var(--muted);cursor:pointer;padding:0 4px;}
+.bvc-sub{font-size:13px;color:var(--muted);margin:4px 0 12px;}
+.bvc-form{display:flex;flex-direction:column;gap:4px;}
+.bvc-form label{font-size:12px;font-weight:700;margin-top:6px;}
+.bvc-form input,.bvc-form textarea{width:100%;box-sizing:border-box;padding:9px 11px;border:1.5px solid var(--line);border-radius:6px;font:inherit;font-size:14px;background:var(--paper);color:var(--ink);}
+.bvc-form input:focus,.bvc-form textarea:focus{border-color:var(--accent);outline:none;}
+.bvc-honey{position:absolute;left:-9999px;top:-9999px;}
+.bvc-send{margin-top:10px;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:11px;font-size:14px;font-weight:700;cursor:pointer;}
+.bvc-send:hover{background:var(--accent-dark);}
+.bvc-fine{font-size:11px;color:var(--muted);margin:8px 0 0;}
+.bvc-fine a{text-decoration:underline;}
+.bvc-toast{background:var(--ink);color:#fff;font-size:13px;padding:12px 14px;border-radius:6px;max-width:300px;}
+@media (max-width:640px){
+  #bv-contact{right:14px;bottom:calc(14px + var(--bvc-lift));}
+  .bvc-btn{padding:14px;}
+  .bvc-btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+}
+@media print{#bv-contact{display:none;}}
