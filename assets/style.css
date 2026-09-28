@@ -245,3 +245,12 @@ p{line-height:1.6;}
   .bvc-btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 }
 @media print{#bv-contact{display:none;}}
+
+/* Guide article body (new-format guides) */
+.guide-body p,.guide-body li{font-size:15px;line-height:1.65;color:var(--muted);max-width:720px;}
+.guide-body p{margin:0 0 12px;}
+.guide-body ul,.guide-body ol{padding-left:22px;margin:0 0 12px;max-width:720px;}
+.guide-body li{margin-bottom:8px;}
+.guide-body strong{color:var(--ink);}
+.guide-body a{color:var(--accent-dark);text-decoration:underline;}
+.guide-faq .faq-accordion details p{font-size:15px;line-height:1.6;color:var(--muted);margin:10px 0 0;}
