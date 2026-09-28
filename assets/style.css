@@ -183,3 +183,19 @@ p{line-height:1.6;}
   .lp-promo{grid-template-columns:1fr;padding:32px 20px;gap:28px;}
   .lp-title{font-size:26px;}
 }
+
+/* Landing pages: Recent work case card (replaces the black 3:1 tile) */
+.work-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:36px;align-items:center;background:var(--panel);padding:32px;}
+.work-shot{display:block;background:var(--paper);border:1.5px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 18px 34px -22px color-mix(in srgb, var(--ink) 45%, transparent);transition:transform .18s ease;}
+.work-shot img{display:block;width:100%;height:auto;}
+@media (hover:hover) and (pointer:fine){.work-shot:hover{transform:translateY(-3px);}}
+.work-title{font-size:26px;margin-bottom:4px;}
+.work-meta{font-size:13px;color:var(--muted);margin-bottom:16px;}
+.work-list{list-style:none;padding:0;margin:0 0 18px;font-size:14px;line-height:1.5;}
+.work-list li{position:relative;padding-left:24px;margin-bottom:8px;}
+.work-list li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700;}
+.work-link{font-size:14px;font-weight:700;color:var(--accent-dark);text-decoration:underline;}
+@media (max-width:760px){
+  .work-card{grid-template-columns:1fr;padding:20px;gap:20px;}
+  .work-title{font-size:22px;}
+}

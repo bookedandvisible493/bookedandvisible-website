@@ -32,7 +32,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"></noscript>
-<link rel="stylesheet" href="../assets/style.css?v=20260928b">
+<link rel="stylesheet" href="../assets/style.css?v=20260928c">
 <style>
 /* Page-scoped styles for the tier pricing cards below.
 Only used on this page, so kept local rather than added to the shared
@@ -152,13 +152,23 @@ stylesheet. Reuses the site's existing .filter-row/.filter-pill toggle
 
 <section style="padding:32px 0 8px;">
 <div class="eyebrow">Recent work</div>
-<a href="https://ellevenhair.ca" target="_blank" rel="noopener" class="tile" style="background:var(--ink);color:#fff;aspect-ratio:3/1;display:block;">
-<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;">See a live example</div>
-<div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
-<div><h3 style="font-size:28px;margin:0;">Elleven Hair</h3><div style="font-size:13px;opacity:0.75;margin-top:4px;">A full website we built for a real hair salon client.</div></div>
-<span style="font-size:13px;font-weight:700;text-decoration:underline;white-space:nowrap;">Visit ellevenhair.ca →</span>
-</div>
+<div class="work-card">
+<a href="https://ellevenhair.ca" target="_blank" rel="noopener" class="work-shot" aria-label="Visit ellevenhair.ca (opens in a new tab)">
+<div class="lp-bar" aria-hidden="true"><span></span><span></span><span></span><em>ellevenhair.ca</em></div>
+<img src="/assets/work/elleven-hair.jpg" width="1200" height="481" loading="lazy" alt="Homepage of Elleven Hair Studio: Keratin, Balayage and Hair Extensions in Langley, BC, with Book consultation and Get in touch buttons">
 </a>
+<div class="work-copy">
+<h3 class="work-title">Elleven Hair Studio</h3>
+<div class="work-meta">Appointment-only hair salon, Langley BC</div>
+<ul class="work-list">
+<li>A page for each service: keratin, balayage and hair extensions</li>
+<li>A book-a-consultation button on every service page</li>
+<li>A local page for Willoughby, Langley</li>
+<li>Structured data that tells Google it's a hair salon, with its services and hours</li>
+</ul>
+<a href="https://ellevenhair.ca" target="_blank" rel="noopener" class="work-link">Visit the live site →</a>
+</div>
+</div>
 </section>
 </main>
 
