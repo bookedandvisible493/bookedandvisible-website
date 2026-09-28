@@ -91,7 +91,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_next" value="https://bookedandvisible.ca/order/thank-you.html">
-<input type="hidden" name="_autoresponse" value="Thanks — we've received your intake form for Booked & Visible. We'll confirm your payment and get started within one business day, and email you if we need anything else. If anything changes, just reply to this email.">
+<!-- No _autoresponse: with it FormSubmit silently drops submissions (tested 2026-09-28). The operator drafts the confirmation (T1) for Viktor instead. -->
 <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
 <input type="hidden" id="stripe-session" name="Stripe checkout session" value="">
 
