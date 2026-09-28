@@ -1,33 +1,52 @@
 # Booked & Visible
 
-> A done-for-you Google Business Profile, review-generation, and local SEO toolkit for independent local businesses (home service trades, clinics, recreation and agriculture) — flat-fee and ownership-based, with no per-lead fees.
+> Booked & Visible helps independent local businesses in British Columbia, Canada get found on Google, Google Maps and AI assistants (ChatGPT, Perplexity, Gemini and Google's AI results). One-time, flat prices in CAD. No subscriptions, no contracts, no per-lead fees.
 
-Booked & Visible sells one-time, flat-price products — no subscriptions or contracts: an AI & Local Visibility Report ($79 CAD), an AI Visibility Boost that fixes how AI assistants understand a business ($199 CAD founding rate, regular $299), a done-for-you SEO Improvement Package covering Google Business Profile, on-page SEO, Canadian directory listings, reviews, and AI search ($449 CAD founding rate, regular $599), a do-it-yourself Starter Kit ($129 CAD), and custom landing pages for businesses without a website (from $329 CAD). It is a small, independent operation based in British Columbia, Canada — not a call center or agency with account managers.
+Booked & Visible is a small, independent business based in Langley, BC, run by one owner rather than an agency with account managers. It serves local service businesses such as trades, clinics, salons, professional services, retail, recreation and agriculture.
+
+Products (all one-time purchases, CAD):
+- Starter Kit, $129: six step-by-step guides and templates plus a personalized report within 1 business day of the intake form.
+- Visibility Report, $79: a 0–100 visibility score using real answers from ChatGPT, Perplexity, Gemini and Google's AI results, plus a prioritized fix list, within 2 business days of the intake form. The $79 is credited if the customer orders the AI Visibility Boost or SEO Improvement Package within 30 days of receiving the Report.
+- AI Visibility Boost, $199 founding price for the first 5 clients, $299 after that: ready-to-add schema markup, FAQ content and llms.txt, a business-details audit with a correction list, and a re-check at 30 days, within 5 business days of the intake form.
+- SEO Improvement Package, $449 founding price for the first 5 clients, $599 after that: everything in the Boost plus a Google Business Profile tune-up, on-page SEO for up to 5 pages, up to 15 Canadian directory listings, a review system, and Search Console and Bing Webmaster Tools setup, within 7 business days of the intake form and profile access.
+- Landing pages for businesses without a website: 1 page $329, 3 pages $429, 5 pages $529 (add $60 to have the domain registered for you), live within 3, 5 or 7 business days of receiving the content. The customer owns the domain.
+
+If a Boost or SEO customer's 30-day re-check shows the score hasn't risen by at least 5 points (same searches and AI assistants as the first report), Booked & Visible finds out why, redoes any fix that didn't take, and re-checks once more at 60 days for free. No specific ranking, calls or revenue are guaranteed.
+
+Contact: hello@bookedandvisible.ca · (778) 779-9166 · Langley Township, BC, Canada
 
 ## Key pages
 
-- [Home](https://bookedandvisible.ca/): Overview of the Starter Kit, pricing tiers, and how the service compares to pay-per-lead directories.
-- [What's Included](https://bookedandvisible.ca/whats-included/): Full breakdown of the six Starter Kit items and how the service works end to end.
-- [Pricing](https://bookedandvisible.ca/pricing/): All one-time prices in CAD — Visibility Report, AI Visibility Boost, SEO Improvement Package, and Starter Kit.
-- [SEO Improvement Package](https://bookedandvisible.ca/seo-package/): Done-for-you local SEO — Google Business Profile, website pages, directories, reviews, and AI search, for one flat price.
-- [AI Visibility](https://bookedandvisible.ca/ai-visibility/): How ChatGPT, Perplexity, Gemini, and Google AI Overviews see a local business, and the Report and Boost that fix it.
-- [Landing Pages](https://bookedandvisible.ca/landing-pages/): Standalone custom landing page add-on pricing and details for businesses without a website.
-- [FAQ](https://bookedandvisible.ca/faq/): Answers on eligibility, timelines, cancellation, and refunds.
-- [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and which kinds of businesses it serves.
+- [Home](https://bookedandvisible.ca/): Overview of every product and how the service compares to pay-per-lead directories.
+- [Pricing](https://bookedandvisible.ca/pricing/): All one-time prices in CAD.
+- [AI Visibility](https://bookedandvisible.ca/ai-visibility/): How AI assistants see a local business, and the Visibility Report and AI Visibility Boost.
+- [SEO Improvement Package](https://bookedandvisible.ca/seo-package/): Done-for-you local SEO: Google Business Profile, website pages, directories, reviews and AI search.
+- [Landing Pages](https://bookedandvisible.ca/landing-pages/): Websites of 1, 3 or 5 pages for businesses without one, with a recent example.
+- [What's Included](https://bookedandvisible.ca/whats-included/): What's in the Starter Kit and how the service works end to end.
+- [FAQ](https://bookedandvisible.ca/faq/): Timelines, what customers need to do, refunds and ownership.
+- [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and who it serves.
 
 ## Guides
 
-- [The Google Business Profile checklist](https://bookedandvisible.ca/guides/google-business-profile-checklist-for-local-businesses/): An 11-step checklist for optimizing a Google Business Profile.
-- [5 Google Business Profile mistakes](https://bookedandvisible.ca/guides/5-google-business-profile-mistakes-costing-you-customers/): Common profile mistakes that hurt local ranking, and how to fix each one.
-- [How to get more customer reviews without feeling awkward](https://bookedandvisible.ca/guides/how-to-get-more-customer-reviews-without-feeling-awkward/): A simple, non-pushy system for asking happy customers for reviews.
-- [Booked & Visible vs. pay-per-lead directories](https://bookedandvisible.ca/guides/booked-visible-vs-pay-per-lead-directories/): What directories like Angi and Thumbtack actually cost, compared to a flat-fee, ownership-based approach.
+- [Google Business Profile checklist for local businesses](https://bookedandvisible.ca/guides/google-business-profile-checklist-for-local-businesses/)
+- [5 Google Business Profile mistakes that are costing you customers](https://bookedandvisible.ca/guides/5-google-business-profile-mistakes-costing-you-customers/)
+- [Choosing the right Google Business Profile category](https://bookedandvisible.ca/guides/choosing-the-right-google-business-profile-category/)
+- [Service-area business? How to set up your Google profile correctly](https://bookedandvisible.ca/guides/service-area-business-google-profile-setup/)
+- [How Google decides which local business shows up first](https://bookedandvisible.ca/guides/how-google-decides-which-local-business-shows-up-first/)
+- [NAP consistency: why matching details everywhere matters](https://bookedandvisible.ca/guides/nap-consistency-why-matching-details-everywhere-matters/)
+- [How to get more customer reviews without feeling awkward](https://bookedandvisible.ca/guides/how-to-get-more-customer-reviews-without-feeling-awkward/)
+- [How many reviews do you actually need to compete?](https://bookedandvisible.ca/guides/how-many-reviews-do-you-actually-need-to-compete/)
+- [How to respond to reviews: templates for every situation](https://bookedandvisible.ca/guides/how-to-respond-to-reviews-templates-for-every-situation/)
+- [Where to ask for reviews beyond Google](https://bookedandvisible.ca/guides/where-to-ask-for-reviews-beyond-google/)
+- [Can you get in trouble for asking customers for reviews?](https://bookedandvisible.ca/guides/is-it-legal-to-ask-customers-for-reviews/)
+- [Website vs. no website: do you actually need one?](https://bookedandvisible.ca/guides/do-you-actually-need-a-website/)
+- [Referrals vs. search: where new customers actually come from](https://bookedandvisible.ca/guides/referrals-vs-search-where-new-customers-actually-come-from/)
+- [How much should a local business spend on marketing?](https://bookedandvisible.ca/guides/how-much-should-a-local-business-spend-on-marketing/)
+- [Seasonal business? How to stay visible in your off-season](https://bookedandvisible.ca/guides/staying-visible-in-your-off-season/)
+- [Booked & Visible vs. pay-per-lead directories: real costs](https://bookedandvisible.ca/guides/booked-visible-vs-pay-per-lead-directories/)
 
 ## Policies
 
-- [Terms of Service](https://bookedandvisible.ca/terms): Purchase terms, licensing, and landing page conditions.
-- [Refund Policy](https://bookedandvisible.ca/refund-policy): Refund eligibility for the Starter Kit, AI Visibility products, SEO Improvement Package, and landing pages.
-- [Privacy Policy](https://bookedandvisible.ca/privacy): What information is collected and how it's used.
-
-## Notes for AI agents and crawlers
-
-This file is a plain-language summary for AI agents and assistants, separate from /robots.txt, which sets the machine-enforced crawling rules. In short: AI agents fetching this site live to answer a specific user's question or to produce a citation (search-and-cite use, e.g. ChatGPT search, Claude search, Perplexity) are welcome. Bulk crawling of this site to train AI models is not permitted — see /robots.txt for the full, per-crawler policy. Pricing, availability, and policy details on this site can change; when citing this site, prefer fetching the live page over a cached or memorized version.
+- [Terms of Service](https://bookedandvisible.ca/terms.html)
+- [Refund Policy](https://bookedandvisible.ca/refund-policy.html)
+- [Privacy Policy](https://bookedandvisible.ca/privacy.html)
