@@ -143,18 +143,52 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <label for="category">Type of business <span class="required-mark">*</span></label>
 <select id="category" name="Category" required>
 <option value="">Select one</option>
-<option>Plumber</option>
-<option>Electrician</option>
-<option>HVAC</option>
-<option>Contractor / Renovator</option>
-<option>Cleaner</option>
-<option>Landscaper</option>
+<optgroup label="Home &amp; property services">
+<option>Plumbing / Heating / HVAC</option>
+<option>Electrical</option>
+<option>Contractor / Renovation / Roofing</option>
+<option>Painting / Flooring / Handyman</option>
+<option>Cleaning / Janitorial</option>
+<option>Landscaping / Snow removal</option>
+<option>Pest control</option>
+<option>Moving / Junk removal</option>
+</optgroup>
+<optgroup label="Health &amp; wellness">
 <option>Dental / Denture clinic</option>
-<option>Health / Wellness clinic</option>
-<option>Salon / Spa</option>
+<option>Physio / Chiro / Massage</option>
+<option>Medical / Health clinic</option>
+<option>Counselling / Therapy</option>
+<option>Fitness / Yoga / Personal training</option>
+</optgroup>
+<optgroup label="Beauty &amp; personal care">
+<option>Hair salon / Barber</option>
+<option>Spa / Nails / Aesthetics</option>
+</optgroup>
+<optgroup label="Food, retail &amp; hospitality">
+<option>Restaurant / Café / Bakery</option>
+<option>Catering / Food truck</option>
+<option>Retail shop / Boutique</option>
+<option>Accommodation / B&amp;B</option>
+</optgroup>
+<optgroup label="Professional services">
+<option>Accounting / Bookkeeping / Tax</option>
+<option>Legal / Notary</option>
+<option>Real estate / Mortgage / Insurance</option>
+<option>Consulting / Marketing / IT</option>
+</optgroup>
+<optgroup label="Auto, pets, family &amp; recreation">
+<option>Auto repair / Detailing</option>
+<option>Pet grooming / Boarding / Vet</option>
+<option>Childcare / Tutoring / Lessons</option>
+<option>Photography / Events / Weddings</option>
 <option>Farm / Equestrian / Recreation</option>
-<option>Other</option>
+</optgroup>
+<option>Other (describe below)</option>
 </select>
+</div>
+<div class="field">
+<label for="category-detail">Describe your business in a few words (optional)</label>
+<input type="text" id="category-detail" name="Business description" placeholder="e.g. mobile dog grooming, kitchen cabinet refinishing">
 </div>
 <div class="field">
 <label for="service-area">Main city and the areas you serve <span class="required-mark">*</span></label>
@@ -175,13 +209,13 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 </div>
 <div class="field">
 <label for="website">Website URL</label>
-<input type="url" id="website" name="Website URL" placeholder="https://">
+<input type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" id="website" name="Website URL" placeholder="e.g. yourbusiness.ca">
 <span class="hint">Leave blank if you don't have one.</span>
 </div>
 <div class="field" data-show="report boost seo kit">
 <label for="gbp">Google Business Profile link <span class="required-mark">*</span></label>
-<input type="url" id="gbp" name="Google Business Profile URL" data-required placeholder="Share link from Google Maps">
-<span class="hint">Search your business on Google Maps, tap Share, and paste that link here. No profile yet? Type "none" in the notes below and we'll help you set one up.</span>
+<input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="gbp" name="Google Business Profile URL" data-required placeholder="Share link from Google Maps, or type none">
+<span class="hint">Search your business on Google Maps, tap Share, and paste that link here. No profile yet? Type "none" here and we'll help you set one up.</span>
 </div>
 </fieldset>
 
@@ -249,7 +283,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 </div>
 <div class="field">
 <label for="gbp-photos">Link to photos for your profile (optional)</label>
-<input type="url" id="gbp-photos" name="Photo folder link" placeholder="Google Drive, Dropbox, or iCloud shared folder">
+<input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="gbp-photos" name="Photo folder link" placeholder="Google Drive, Dropbox, or iCloud shared folder">
 <span class="hint">Your work, team, storefront, or vehicles. Or reply to your confirmation email with photos attached.</span>
 </div>
 </fieldset>
@@ -282,7 +316,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 </div>
 <div class="field">
 <label for="brand">Logo, colours, and photos</label>
-<input type="url" id="brand" name="Logo and photos link" placeholder="Shared folder link (Google Drive, Dropbox, iCloud)">
+<input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="brand" name="Logo and photos link" placeholder="Shared folder link (Google Drive, Dropbox, iCloud)">
 <span class="hint">No link? Reply to your confirmation email with your logo and photos attached. No logo? We'll design a simple text logo.</span>
 </div>
 <div class="field">
