@@ -254,3 +254,9 @@ p{line-height:1.6;}
 .guide-body strong{color:var(--ink);}
 .guide-body a{color:var(--accent-dark);text-decoration:underline;}
 .guide-faq .faq-accordion details p{font-size:15px;line-height:1.6;color:var(--muted);margin:10px 0 0;}
+
+/* Guides: "Quick answer" summary under the title (option A) */
+.guide-summary-wrap{padding:8px 0 8px;}
+.guide-summary{max-width:720px;background:color-mix(in srgb, var(--accent) 8%, var(--paper));border-left:3px solid var(--accent);padding:16px 20px;}
+.guide-summary-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;}
+.guide-summary p{margin:0;font-size:16px;line-height:1.6;color:var(--ink);}
