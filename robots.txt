@@ -7,6 +7,9 @@
 #   AI answers is a discovery channel worth keeping open.
 # - AI crawlers used purely to bulk-scrape content for model training are
 #   DISALLOWED, since that's a separate use the site owner has not opted into.
+# - Google-Extended is ALLOWED (changed 2026-09-28, owner's decision): it also
+#   governs whether Gemini can use these pages when answering, and being named
+#   by Gemini is part of what this business sells.
 # Regular search engine crawlers (Googlebot, Bingbot, etc.) are unaffected and
 # remain fully allowed under the default rule below.
 
@@ -40,15 +43,16 @@ User-agent: Perplexity-User
 Allow: /
 Disallow: /archive/
 
+User-agent: Google-Extended
+Allow: /
+Disallow: /archive/
+
 # --- AI training crawlers (disallowed) ---
 
 User-agent: GPTBot
 Disallow: /
 
 User-agent: ClaudeBot
-Disallow: /
-
-User-agent: Google-Extended
 Disallow: /
 
 User-agent: Applebot-Extended
