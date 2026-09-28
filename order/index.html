@@ -91,7 +91,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_next" value="https://bookedandvisible.ca/order/thank-you.html">
-<input type="hidden" name="_autoresponse" value="Thanks — we've received your intake form for Booked & Visible. We'll confirm your payment and get started within one business day. If anything changes, just reply to this email.">
+<input type="hidden" name="_autoresponse" value="Thanks — we've received your intake form for Booked & Visible. We'll confirm your payment and get started within one business day, and email you if we need anything else. If anything changes, just reply to this email.">
 <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
 <input type="hidden" id="stripe-session" name="Stripe checkout session" value="">
 
@@ -236,13 +236,13 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 
 <fieldset data-show="seo">
 <legend>Google Business Profile access</legend>
-<p style="font-size:13px;color:var(--muted);margin:0 0 16px;">To update your profile, add us as a <strong>Manager</strong> (not Owner) from your own account — you never share a password, and you can remove us any time. In Google Search, search your business name → tap <strong>⋮ → Business Profile settings → People and access → Add</strong> → enter <strong>hello@bookedandvisible.ca</strong> → choose <strong>Manager</strong>.</p>
+<p style="font-size:13px;color:var(--muted);margin:0 0 16px;">To update your profile, add us as a <strong>Manager</strong> (not Owner) from your own account — you never share a password, and you can remove us any time. In Google Search, search your business name → tap <strong>⋮ → Business Profile settings → People and access → Add</strong> → enter <strong>bookednvisible@gmail.com</strong> → choose <strong>Manager</strong>. We'll accept the invite within one business day.</p>
 <div class="field">
 <label for="gbp-access">Have you added us as a Manager? <span class="required-mark">*</span></label>
 <select id="gbp-access" name="GBP manager access" data-required>
 <option value="">Select one</option>
 <option>Yes, done</option>
-<option>I'll do it within 24 hours</option>
+<option>I'll do it today</option>
 <option>I need help with this</option>
 <option>I don't have a profile yet</option>
 </select>
@@ -307,6 +307,16 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 
 <fieldset>
 <legend>Anything else?</legend>
+<div class="field" data-show="boost seo">
+<label for="results-consent">Founding rate: may we share your before/after results? <span class="required-mark">*</span></label>
+<select id="results-consent" name="Results sharing consent" data-required>
+<option value="">Select one</option>
+<option>Yes, with my business name</option>
+<option>Yes, but without my business name</option>
+<option>No (I didn't buy at the founding rate)</option>
+</select>
+<span class="hint">Founding-rate prices are offered in exchange for letting us share your before/after score as an example. We never share your contact details.</span>
+</div>
 <div class="field">
 <label for="notes">Notes (optional)</label>
 <textarea id="notes" name="Notes" placeholder="Anything else we should know"></textarea>
