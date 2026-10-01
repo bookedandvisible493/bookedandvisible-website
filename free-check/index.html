@@ -42,6 +42,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 .mc-row{margin-bottom:16px;}
 .mc-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 @media (max-width:600px){.mc-grid2{grid-template-columns:1fr;}}
+.mc-select{width:100%;box-sizing:border-box;padding:11px 12px;font-size:16px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);}
 .mc-hint{font-size:12px;color:var(--muted);margin-top:4px;}
 .mc-err{color:#b42318;font-size:14px;margin:10px 0 0;}
 .mc-cands label{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:4px;margin-bottom:8px;background:#fff;font-weight:400;cursor:pointer;}
@@ -88,6 +89,71 @@ gtag('config', 'G-3MJ8SD8MRE');
 <h2 style="font-size:22px;margin-bottom:8px;">The free check is almost ready</h2>
 <p style="margin:0 0 16px;color:var(--muted);">We're switching it on shortly. Want the full picture now? The <a href="/ai-visibility/" style="color:var(--accent-dark);font-weight:700;">$79 Visibility Report</a> shows exactly what each AI assistant says about you, within 2 business days.</p>
 </div>
+
+<form class="mc-card" id="mc-self" hidden>
+<div class="mc-grid2">
+<div class="mc-row">
+<label for="mc-s-name">Business name</label>
+<input type="text" id="mc-s-name" autocomplete="organization" placeholder="e.g. Elleven Hair Studio" required minlength="2" maxlength="80">
+</div>
+<div class="mc-row">
+<label for="mc-s-city">Main city you serve</label>
+<input type="text" id="mc-s-city" placeholder="e.g. Langley" required minlength="2" maxlength="40">
+</div>
+<div class="mc-row">
+<label for="mc-s-service">What do you do?</label>
+<input type="text" id="mc-s-service" list="mc-services" placeholder="e.g. plumber, hair salon" required minlength="3" maxlength="40">
+<div class="mc-hint">The word customers would search for.</div>
+</div>
+<div class="mc-row">
+<label for="mc-s-web">Website (optional)</label>
+<input type="text" id="mc-s-web" inputmode="url" autocapitalize="off" spellcheck="false" placeholder="e.g. yourbusiness.ca" maxlength="200">
+</div>
+</div>
+<p style="font-weight:600;margin:8px 0 12px;">Your Google Business Profile <span style="font-weight:400;color:var(--muted);font-size:13px;">(the listing on Google Maps)</span></p>
+<div class="mc-grid2">
+<div class="mc-row">
+<label for="mc-s-reviews">How many Google reviews?</label>
+<select id="mc-s-reviews" required class="mc-select">
+<option value="">Select one</option>
+<option value="0">None yet</option>
+<option value="1-9">1–9</option>
+<option value="10-24">10–24</option>
+<option value="25+">25 or more</option>
+<option value="unsure">Not sure</option>
+<option value="none">I don't have a Google profile</option>
+</select>
+</div>
+<div class="mc-row">
+<label for="mc-s-rating">Average star rating</label>
+<select id="mc-s-rating" class="mc-select">
+<option value="unsure">Not sure</option>
+<option value="4.5+">4.5 or higher</option>
+<option value="4.0-4.4">4.0–4.4</option>
+<option value="under-4">Below 4.0</option>
+<option value="none">No reviews yet</option>
+</select>
+</div>
+<div class="mc-row">
+<label for="mc-s-photos">Photos on your profile</label>
+<select id="mc-s-photos" class="mc-select">
+<option value="unsure">Not sure</option>
+<option value="0">None</option>
+<option value="1-9">1–9</option>
+<option value="10+">10 or more</option>
+</select>
+</div>
+<div class="mc-row">
+<label>Filled in on your profile</label>
+<label class="mc-check" style="margin-top:0;"><input type="checkbox" id="mc-s-hours"> Opening hours</label>
+<label class="mc-check" style="margin-top:4px;"><input type="checkbox" id="mc-s-phone"> Phone number</label>
+<label class="mc-check" style="margin-top:4px;"><input type="checkbox" id="mc-s-cat"> Business category</label>
+</div>
+</div>
+<div id="mc-turnstile-self" class="mc-row"></div>
+<button class="btn btn-accent" type="submit" id="mc-self-btn">Run my free check</button>
+<p class="mc-err" id="mc-self-err" hidden></p>
+</form>
 
 <form class="mc-card" id="mc-find" hidden>
 <div class="mc-row">
@@ -194,7 +260,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <a href="/ai-visibility/" class="btn btn-dark">See the full $79 Report</a>
 <button class="btn" type="button" id="mc-again" style="border:1px solid var(--line);">Check another business</button>
 </div>
-<p class="mc-note" style="margin-top:20px;">Automated quick check using Google business data and the assistants' developer APIs. AI answers vary between sessions, so treat it as a snapshot. It isn't the same as the paid Report's score, which uses live answers captured from the apps. No one can guarantee rankings, calls or revenue. Business data from Google.</p>
+<p class="mc-note" style="margin-top:20px;">Automated quick check using Google business data and the assistants' developer APIs. AI answers vary between sessions, so treat it as a snapshot. It isn't the same as the paid Report's score, which uses live answers captured from the apps. No one can guarantee rankings, calls or revenue.<span id="mc-attrib"></span></p>
 </div>
 </section>
 
@@ -207,7 +273,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 </details>
 <details>
 <summary><h2 style="font-size:16px;">How is this different from the $79 Visibility Report?</h2></summary>
-<p>The free check is automatic: it reads your Google listing and homepage and asks an AI assistant (Gemini) three typical customer searches through its developer tools. The <a href="/ai-visibility/" style="color:var(--accent);">Visibility Report</a> is done by a person: real answers captured from ChatGPT, Perplexity, Gemini and Google's AI, your business details checked on the main directories, a full 0–100 score, a prioritized fix list and a 90-day plan.</p>
+<p>The free check is automatic: it scores your Google profile from your answers, checks your homepage, and asks an AI assistant (Gemini) three typical customer searches through its developer tools. The <a href="/ai-visibility/" style="color:var(--accent);">Visibility Report</a> is done by a person: real answers captured from ChatGPT, Perplexity, Gemini and Google's AI, your business details checked on the main directories, a full 0–100 score, a prioritized fix list and a 90-day plan.</p>
 </details>
 <details>
 <summary><h2 style="font-size:16px;">What do you do with my email?</h2></summary>

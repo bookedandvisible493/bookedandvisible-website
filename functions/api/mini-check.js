@@ -2,8 +2,12 @@
  * Free mini-check API (Cloudflare Pages Function) for /free-check/.
  *
  *   GET  /api/mini-check                  → config (is it switched on, Turnstile site key, engines)
- *   POST /api/mini-check {step:"lookup"}      Turnstile + rate limit → Google Places candidates + ticket
- *   POST /api/mini-check {step:"foundation"}  Google listing details + homepage check → place ticket
+ *   Two ways to read the Google listing, chosen by config:
+ *   - listing "places" (GOOGLE_PLACES_API_KEY set):
+ *     POST {step:"lookup"}      Turnstile + rate limit → Google Places candidates + ticket
+ *     POST {step:"foundation"}  Google listing details + homepage check → place ticket
+ *   - listing "self" (no Places key; launched this way 2026-10, no Google billing):
+ *     POST {step:"start"}       Turnstile + rate limit + visitor's answers + homepage check → place ticket
  *   POST /api/mini-check {step:"ai", engine}  3 searches on one engine (ChatGPT | Perplexity | Gemini)
  *   POST /api/mini-check {step:"finish"}      Airtable lead row + optional results email
  *
@@ -12,17 +16,17 @@
  * and only for a place the visitor picked after passing Turnstile (signed tickets).
  *
  * Fails closed: without its required settings it reports itself as switched off.
- * Required: GOOGLE_PLACES_API_KEY, TURNSTILE_SITE_KEY, TURNSTILE_SECRET, TICKET_SECRET,
+ * Required: TURNSTILE_SITE_KEY, TURNSTILE_SECRET, TICKET_SECRET,
  *   KV binding MINICHECK_KV, and at least one of OPENAI_API_KEY / PERPLEXITY_API_KEY / GEMINI_API_KEY.
  *   Launched 2026-10 with GEMINI_API_KEY only (free tier); add the other two keys to switch those engines on.
- * Optional: RESEND_API_KEY + MAIL_FROM (results email), AIRTABLE_TOKEN (lead row),
+ * Optional: GOOGLE_PLACES_API_KEY (switches the listing from visitor answers to Google data), RESEND_API_KEY + MAIL_FROM (results email), AIRTABLE_TOKEN (lead row),
  *   OPENAI_MODEL, PERPLEXITY_MODEL, GEMINI_MODEL, DAILY_CHECK_CAP (default 150).
  * Local only: MINICHECK_MOCK=1 on localhost returns canned data, no keys, no network.
  * Setup and costs: Operations/21_Mini_Check_Runbook.md.
  */
 import {
   cleanWords, buildQueries, enginePrompt, matchBusiness, namedInstead,
-  parseOpenAI, parsePerplexity, parseGemini, analyzeHtml,
+  parseOpenAI, parsePerplexity, parseGemini, analyzeHtml, profileFromAnswers, normalizeUrl,
   foundationLite, presenceLite, quickScore, signTicket, verifyTicket, sha256Hex,
 } from "../_lib/minicheck-core.js";
 
@@ -53,12 +57,13 @@ function isMock(env, request) {
 function config(env, request) {
   if (isMock(env, request)) {
     const only = String(env.MINICHECK_MOCK_ENGINES || "").split(",").map((e) => e.trim()).filter((e) => ENGINES[e]);
-    return { enabled: true, mock: true, siteKey: "", engines: only.length ? only : Object.keys(ENGINES) };
+    return { enabled: true, mock: true, siteKey: "", listing: env.MINICHECK_MOCK_LISTING === "places" ? "places" : "self",
+      engines: only.length ? only : Object.keys(ENGINES) };
   }
   const engines = Object.keys(ENGINES).filter((e) => env[ENGINES[e].key]);
-  const enabled = Boolean(env.GOOGLE_PLACES_API_KEY && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET &&
-    env.TICKET_SECRET && env.MINICHECK_KV && engines.length);
-  return { enabled, mock: false, siteKey: enabled ? env.TURNSTILE_SITE_KEY : "", engines: enabled ? engines : [] };
+  const enabled = Boolean(env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET && env.TICKET_SECRET && env.MINICHECK_KV && engines.length);
+  return { enabled, mock: false, siteKey: enabled ? env.TURNSTILE_SITE_KEY : "",
+    listing: env.GOOGLE_PLACES_API_KEY ? "places" : "self", engines: enabled ? engines : [] };
 }
 
 export async function onRequestGet({ env, request }) {
@@ -79,8 +84,9 @@ export async function onRequestPost({ env, request }) {
   const ctx = { env, mock: cfg.mock, ipHash, ip, secret: env.TICKET_SECRET || "mock-secret" };
   try {
     switch (body.step) {
-      case "lookup": return await stepLookup(body, ctx);
-      case "foundation": return await stepFoundation(body, ctx);
+      case "lookup": return cfg.listing === "places" ? await stepLookup(body, ctx) : fail(400, "Unknown step.");
+      case "foundation": return cfg.listing === "places" ? await stepFoundation(body, ctx) : fail(400, "Unknown step.");
+      case "start": return cfg.listing === "self" ? await stepStart(body, ctx) : fail(400, "Unknown step.");
       case "ai": return await stepAi(body, ctx);
       case "finish": return await stepFinish(body, ctx);
       default: return fail(400, "Unknown step.");
@@ -107,18 +113,53 @@ async function bump(ctx, key, limit) {
   return true;
 }
 
+async function turnstileOk(ctx, token) {
+  if (ctx.mock) return true;
+  const v = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    body: new URLSearchParams({ secret: ctx.env.TURNSTILE_SECRET, response: String(token || ""), remoteip: ctx.ip }),
+  }).then((r) => r.json()).catch(() => ({ success: false }));
+  return Boolean(v.success);
+}
+
+async function runLimitMessage(ctx) {
+  if (!(await bump(ctx, `run:${ctx.ipHash}`, LIMITS.runsPerIp))) {
+    return "You've reached today's limit of free checks. Try again tomorrow, or get the full $79 Report.";
+  }
+  const cap = parseInt(ctx.env.DAILY_CHECK_CAP || "150", 10);
+  if (!(await bump(ctx, "run:global", cap))) {
+    return "We've hit today's limit of free checks. Please try again tomorrow, or get the full $79 Report.";
+  }
+  return "";
+}
+
+// ---------- listing "self": the visitor's answers + homepage, in one step ----------
+
+async function stepStart(body, ctx) {
+  const name = cleanWords(body.name, 80);
+  const city = cleanWords(body.city, 40);
+  const service = cleanWords(body.service, 40);
+  if (name.length < 2 || city.length < 2 || service.length < 3) return fail(400, "Please fill in your business name, what you do and your city.");
+  const website = normalizeUrl(body.website);
+  if (body.website && !website) return fail(400, "That website address doesn't look right. Check it, or leave it blank.");
+  if (!(await turnstileOk(ctx, body.turnstileToken))) return fail(403, "Please complete the 'I'm human' check and try again.");
+  const limited = await runLimitMessage(ctx);
+  if (limited) return fail(429, limited);
+
+  const profile = { ...profileFromAnswers(body.answers, website), name, city, region: "" };
+  const site = website ? await checkWebsite(website, ctx.mock) : null;
+  const foundation = foundationLite(profile, site);
+  const placeTicket = await signTicket({ k: "place", ip: ctx.ipHash, placeId: "", name, website,
+    exp: Date.now() + TICKET_MINUTES * 60000, n: crypto.randomUUID() }, ctx.secret);
+  return json({ ok: true, profile, site, foundation, placeTicket });
+}
+
 // ---------- step 1: find the business ----------
 
 async function stepLookup(body, ctx) {
   const query = cleanWords(body.query, 80);
   if (query.length < 3) return fail(400, "Type your business name and city.");
-  if (!ctx.mock) {
-    const v = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-      method: "POST",
-      body: new URLSearchParams({ secret: ctx.env.TURNSTILE_SECRET, response: String(body.turnstileToken || ""), remoteip: ctx.ip }),
-    }).then((r) => r.json()).catch(() => ({ success: false }));
-    if (!v.success) return fail(403, "Please complete the 'I'm human' check and try again.");
-  }
+  if (!(await turnstileOk(ctx, body.turnstileToken))) return fail(403, "Please complete the 'I'm human' check and try again.");
   if (!(await bump(ctx, `lookup:${ctx.ipHash}`, LIMITS.lookupsPerIp))) {
     return fail(429, "You've reached today's limit of searches. Try again tomorrow, or get the full $79 Report.");
   }
@@ -150,13 +191,8 @@ async function stepFoundation(body, ctx) {
   if (!t || t.k !== "lookup" || t.ip !== ctx.ipHash) return fail(403, "This check expired. Please start again.");
   const placeId = String(body.placeId || "");
   if (!/^[A-Za-z0-9_-]{5,300}$/.test(placeId)) return fail(400, "Pick your business from the list.");
-  if (!(await bump(ctx, `run:${ctx.ipHash}`, LIMITS.runsPerIp))) {
-    return fail(429, "You've reached today's limit of free checks. Try again tomorrow, or get the full $79 Report.");
-  }
-  const cap = parseInt(ctx.env.DAILY_CHECK_CAP || "150", 10);
-  if (!(await bump(ctx, "run:global", cap))) {
-    return fail(429, "We've hit today's limit of free checks. Please try again tomorrow, or get the full $79 Report.");
-  }
+  const limited = await runLimitMessage(ctx);
+  if (limited) return fail(429, limited);
 
   const profile = ctx.mock ? mockProfile(placeId) : await placeDetails(placeId, ctx.env.GOOGLE_PLACES_API_KEY);
   const site = profile.website ? await checkWebsite(profile.website, ctx.mock) : null;
@@ -310,14 +346,14 @@ async function stepFinish(body, ctx) {
   let emailed = false;
   if (wantsEmail && !ctx.mock && ctx.env.RESEND_API_KEY && ctx.env.MAIL_FROM) {
     if (await bump(ctx, `email:${await sha256Hex(email.toLowerCase())}`, LIMITS.emailsPerAddress)) {
-      emailed = await sendResults(ctx.env, email, t.name, quick, presence, top3);
+      emailed = await sendResults(ctx.env, email, t.name, quick, presence, top3, Boolean(body.profile?.selfReported));
     }
   }
 
   // One Airtable row per check: the first finish call creates it, the email call updates it.
   if (!ctx.mock && ctx.env.AIRTABLE_TOKEN) {
     const fields = {
-      [F.search]: cleanWords(body.searchText, 80), [F.at]: new Date().toISOString(), [F.place]: t.placeId,
+      [F.search]: cleanWords(body.searchText, 80), [F.at]: new Date().toISOString(), [F.place]: t.placeId || "(visitor answers)",
       [F.trade]: cleanWords(body.service, 40), [F.city]: cleanWords(body.city, 40), [F.quick]: quick.score,
       [F.found]: foundation.score, [F.engines]: presence.engines.join(", "),
       [F.issues]: top3.map((i, n) => `${n + 1}. ${i.title}`).join("\n"),
@@ -346,8 +382,8 @@ async function stepFinish(body, ctx) {
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-async function sendResults(env, to, name, quick, presence, top3) {
-  const label = quick.foundationOnly ? "Quick score (Google and website only)" : "Quick score";
+async function sendResults(env, to, name, quick, presence, top3, selfReported) {
+  const label = quick.foundationOnly ? "Quick score (Google profile and website only)" : "Quick score";
   const html = `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#16181d;max-width:560px">
 <p>Here are the results of your free check for <strong>${esc(name)}</strong>.</p>
 <p style="font-size:28px;font-weight:700;margin:8px 0">${quick.score}/100 <span style="font-size:15px;font-weight:400">${esc(label)} · ${esc(quick.band)}</span></p>
@@ -355,7 +391,7 @@ ${presence.score !== null ? `<p>${presence.engines.length === 1 ? esc(presence.e
 <h3 style="margin:20px 0 6px">Your 3 most useful fixes</h3>
 ${top3.map((i, n) => `<p><strong>${n + 1}. ${esc(i.title)}</strong><br>${esc(i.fix)}</p>`).join("")}
 <p>Want to see exactly what ChatGPT, Perplexity, Gemini and Google's AI say about you, with a full 0–100 score and a 90-day plan? The <a href="https://bookedandvisible.ca/ai-visibility/">$79 Visibility Report</a> is delivered within 2 business days.</p>
-<p style="font-size:12px;color:#5b6170">This was an automated quick check using Google business data and the assistants' developer APIs. AI answers vary between sessions, so treat it as a snapshot. It is not the same as the paid Report's score, and no one can guarantee rankings, calls or revenue.</p>
+<p style="font-size:12px;color:#5b6170">This was an automated quick check using ${selfReported ? "your answers about your Google profile" : "Google business data"} and the assistants' developer APIs. AI answers vary between sessions, so treat it as a snapshot. It is not the same as the paid Report's score, and no one can guarantee rankings, calls or revenue.</p>
 <p>Viktor, Booked &amp; Visible · hello@bookedandvisible.ca · (778) 779-9166 · Langley, BC</p></div>`;
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",

@@ -147,6 +147,43 @@ export function analyzeHtml(html) {
   return { schemaAny, schemaLocal, faq };
 }
 
+// ---------- visitor answers (no Google Places key) ----------
+
+export const ANSWERS = {
+  reviews: { "0": 0, "1-9": 5, "10-24": 12, "25+": 30, "unsure": 0, "none": 0 },
+  rating: { "4.5+": 4.7, "4.0-4.4": 4.2, "under-4": 3.5, "none": 0, "unsure": 0 },
+  photos: { "0": 0, "1-9": 5, "10+": 10, "unsure": 0 },
+};
+
+/** Builds the profile foundationLite expects from the visitor's own answers. */
+export function profileFromAnswers(a, website) {
+  const x = a || {};
+  const pick = (map, v) => (Object.prototype.hasOwnProperty.call(map, v) ? map[v] : 0);
+  return {
+    selfReported: true,
+    noProfile: x.reviews === "none",
+    website: website || "",
+    reviewCount: pick(ANSWERS.reviews, x.reviews),
+    rating: pick(ANSWERS.rating, x.rating),
+    photoCount: pick(ANSWERS.photos, x.photos),
+    hasHours: Boolean(x.hours),
+    hasPhone: Boolean(x.phone),
+    category: x.category ? "set" : "",
+  };
+}
+
+export function normalizeUrl(u) {
+  const s = String(u || "").trim().slice(0, 200);
+  if (!s) return "";
+  try {
+    const url = new URL(/^https?:\/\//i.test(s) ? s : `https://${s}`);
+    if (!/^https?:$/.test(url.protocol) || !url.hostname.includes(".")) return "";
+    return url.toString();
+  } catch {
+    return "";
+  }
+}
+
 // ---------- scoring ----------
 
 /*
@@ -161,7 +198,7 @@ export function foundationLite(profile, site) {
 
   parts.schema = !hasSite ? 0 : site?.schemaLocal ? 20 : site?.schemaAny ? 8 : 0;
   if (!hasSite) {
-    issues.push({ lost: 30, key: "no-website", title: "No website on your Google profile",
+    issues.push({ lost: 30, key: "no-website", title: p.selfReported ? "No website" : "No website on your Google profile",
       fix: "Google and AI assistants have no website to confirm what you do and where. Add your site to your Google profile, or get a simple one built (Landing Pages from $329)." });
   } else if (parts.schema < 20) {
     issues.push({ lost: 20 - parts.schema, key: "schema", title: "Your website doesn't tell Google and AI tools who you are",
@@ -172,6 +209,15 @@ export function foundationLite(profile, site) {
   if (hasSite && !site?.faq) {
     issues.push({ lost: 10, key: "faq", title: "No FAQ answers on your website",
       fix: "Add 6–10 short questions and answers about your services, area and how to book. AI assistants often quote exactly this kind of text." });
+  }
+
+  if (p.noProfile) {
+    parts.profile = 0;
+    parts.reviews = 0;
+    issues.push({ lost: 70, key: "no-profile", title: "No Google Business Profile",
+      fix: "Without one you can't appear on Google Maps, and AI assistants have far less to go on. Creating it is free: business.google.com. Our SEO Improvement Package sets it up and fills it in for you." });
+    const score = Math.round(parts.schema + parts.faq);
+    return { score, parts, issues };
   }
 
   let prof = 0;
@@ -197,7 +243,8 @@ export function foundationLite(profile, site) {
   parts.reviews = rCount + rRating;
   if (parts.reviews < 35) {
     issues.push({ lost: 35 - parts.reviews, key: "reviews",
-      title: count === 0 ? "No Google reviews yet" : `${count} Google review${count === 1 ? "" : "s"}, ${rating.toFixed(1)}★`,
+      title: p.selfReported ? (count === 0 ? "Few or no Google reviews" : "Your Google reviews could be stronger")
+        : count === 0 ? "No Google reviews yet" : `${count} Google review${count === 1 ? "" : "s"}, ${rating.toFixed(1)}★`,
       fix: "Ask every customer for a review with your Google review link or a QR card, and reply to each one. 25+ recent reviews is the level where most local businesses start to compete." });
   }
 

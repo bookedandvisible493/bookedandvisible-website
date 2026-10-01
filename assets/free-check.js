@@ -1,7 +1,10 @@
 /*
  * Free visibility check (/free-check/): drives the steps of /api/mini-check.
- * 1 find (Turnstile) → 2 pick listing + service + city → 3 foundation + 3 AI engines
- * in parallel → 4 result, optional email. Scores are computed by the API's shared core.
+ * The API's config says how the Google listing is read:
+ *   listing "self"   (no Google Places key): one form with the visitor's answers → start
+ *   listing "places" (Places key set):       find (Turnstile) → pick listing → foundation
+ * Then each AI engine in parallel → finish → result, optional email.
+ * Scores are computed by the API's shared core (functions/_lib/minicheck-core.js).
  */
 (function () {
   "use strict";
@@ -12,7 +15,7 @@
   var widgetId = null;
 
   function show(id) {
-    ["mc-off", "mc-find", "mc-pick", "mc-progress", "mc-result"].forEach(function (s) { $(s).hidden = s !== id; });
+    ["mc-off", "mc-self", "mc-find", "mc-pick", "mc-progress", "mc-result"].forEach(function (s) { $(s).hidden = s !== id; });
   }
   function err(id, msg) { var el = $(id); el.textContent = msg || ""; el.hidden = !msg; }
   function post(body) {
@@ -21,10 +24,15 @@
   }
   function text(el, s) { el.textContent = s; return el; }
   function track(name, params) { if (window.gtag) window.gtag("event", name, params || {}); }
+  function token() {
+    if (state.cfg.mock) return "";
+    return (window.turnstile && widgetId !== null && window.turnstile.getResponse(widgetId)) || "";
+  }
+  function resetTurnstile() { if (window.turnstile && widgetId !== null) window.turnstile.reset(widgetId); }
 
-  function loadTurnstile(siteKey) {
+  function loadTurnstile(siteKey, target) {
     window.mcTurnstileReady = function () {
-      widgetId = window.turnstile.render("#mc-turnstile", { sitekey: siteKey, theme: "light" });
+      widgetId = window.turnstile.render(target, { sitekey: siteKey, theme: "light" });
     };
     var s = document.createElement("script");
     s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=mcTurnstileReady";
@@ -35,22 +43,97 @@
   fetch(API).then(function (r) { return r.json(); }).then(function (cfg) {
     state.cfg = cfg;
     if (!cfg.enabled) return show("mc-off");
-    if (!cfg.mock) loadTurnstile(cfg.siteKey);
-    show("mc-find");
+    var self = cfg.listing !== "places";
+    if (!cfg.mock) loadTurnstile(cfg.siteKey, self ? "#mc-turnstile-self" : "#mc-turnstile");
+    if (!self) $("mc-attrib").textContent = " Business data from Google.";
+    show(self ? "mc-self" : "mc-find");
   }).catch(function () { show("mc-off"); });
 
-  // Step 1: find the business
+  // ---------- progress list ----------
+  function stepRow(key, label) {
+    var li = document.createElement("li");
+    li.id = "mc-step-" + key;
+    li.appendChild(text(document.createElement("b"), label));
+    li.appendChild(text(document.createElement("span"), "waiting"));
+    $("mc-steps").appendChild(li);
+  }
+  function stepDone(key, msg) {
+    var li = $("mc-step-" + key);
+    if (!li) return;
+    li.className = "done";
+    li.lastChild.textContent = msg;
+  }
+  function startProgress(name, selfReported) {
+    $("mc-pname").textContent = name || "your business";
+    $("mc-steps").textContent = "";
+    stepRow("google", selfReported ? "Your Google profile (your answers)" : "Your Google listing");
+    stepRow("website", "Your website");
+    state.cfg.engines.forEach(function (eng) { stepRow(eng, eng); });
+    show("mc-progress");
+  }
+  function foundationDone(f) {
+    var p = f.profile;
+    stepDone("google", p.noProfile ? "no profile yet" : p.selfReported ? "scored" : p.reviewCount + " reviews, " + (p.rating || 0).toFixed(1) + "★");
+    stepDone("website", !p.website ? "none given" : f.site && f.site.reached ? "checked" : "couldn't load it");
+  }
+
+  // ---------- AI engines, then finish ----------
+  function runEngines(f) {
+    return Promise.all(state.cfg.engines.map(function (eng) {
+      return post({ step: "ai", placeTicket: f.placeTicket, engine: eng, service: state.service, city: state.city, region: f.profile.region })
+        .then(function (a) {
+          var named = a.ok && a.status === "ok" ? a.cells.filter(function (c) { return c.cell > 0; }).length : null;
+          stepDone(eng, named === null ? "unavailable" : "named you in " + named + " of " + a.cells.length);
+          return a.ok ? { engine: eng, status: a.status, cells: a.cells } : { engine: eng, status: "unavailable", cells: [] };
+        })
+        .catch(function () { stepDone(eng, "unavailable"); return { engine: eng, status: "unavailable", cells: [] }; });
+    })).then(function (ai) {
+      state.ai = ai;
+      return finish("");
+    });
+  }
+
+  // ---------- listing "self": one form ----------
+  $("mc-self").addEventListener("submit", function (e) {
+    e.preventDefault();
+    err("mc-self-err");
+    var t = token();
+    if (!state.cfg.mock && !t) return err("mc-self-err", "Please complete the 'I'm human' check first.");
+    var btn = $("mc-self-btn");
+    btn.disabled = true;
+    var name = $("mc-s-name").value;
+    state.service = $("mc-s-service").value;
+    state.city = $("mc-s-city").value;
+    state.searchText = name + ", " + state.city;
+    var answers = {
+      reviews: $("mc-s-reviews").value, rating: $("mc-s-rating").value, photos: $("mc-s-photos").value,
+      hours: $("mc-s-hours").checked, phone: $("mc-s-phone").checked, category: $("mc-s-cat").checked,
+    };
+    startProgress(name, true);
+    track("free_check_started", { service: state.service, listing: "self" });
+    post({ step: "start", turnstileToken: t, name: name, city: state.city, service: state.service,
+      website: $("mc-s-web").value, answers: answers }).then(function (f) {
+      btn.disabled = false;
+      resetTurnstile();
+      if (!f.ok) { show("mc-self"); return err("mc-self-err", f.message); }
+      state.f = f;
+      foundationDone(f);
+      return runEngines(f);
+    }).catch(function () { btn.disabled = false; show("mc-self"); err("mc-self-err", "Network problem. Please try again."); });
+  });
+
+  // ---------- listing "places": find, then pick ----------
   $("mc-find").addEventListener("submit", function (e) {
     e.preventDefault();
     err("mc-find-err");
-    var token = state.cfg.mock ? "" : (window.turnstile && window.turnstile.getResponse(widgetId)) || "";
-    if (!state.cfg.mock && !token) return err("mc-find-err", "Please complete the 'I'm human' check first.");
+    var t = token();
+    if (!state.cfg.mock && !t) return err("mc-find-err", "Please complete the 'I'm human' check first.");
     var btn = $("mc-find-btn");
     btn.disabled = true;
     state.searchText = $("mc-query").value;
-    post({ step: "lookup", query: state.searchText, turnstileToken: token }).then(function (res) {
+    post({ step: "lookup", query: state.searchText, turnstileToken: t }).then(function (res) {
       btn.disabled = false;
-      if (window.turnstile && widgetId !== null) window.turnstile.reset(widgetId);
+      resetTurnstile();
       if (!res.ok) return err("mc-find-err", res.message);
       if (!res.candidates.length) return err("mc-find-err", "We couldn't find that business on Google. Try the exact name and city as shown on Google Maps.");
       state.ticket = res.ticket;
@@ -87,56 +170,23 @@
   $("mc-back").addEventListener("click", function () { show("mc-find"); });
   $("mc-again").addEventListener("click", function () { location.reload(); });
 
-  function stepRow(key, label) {
-    var li = document.createElement("li");
-    li.id = "mc-step-" + key;
-    li.appendChild(text(document.createElement("b"), label));
-    li.appendChild(text(document.createElement("span"), "waiting"));
-    $("mc-steps").appendChild(li);
-  }
-  function stepDone(key, msg) {
-    var li = $("mc-step-" + key);
-    if (!li) return;
-    li.className = "done";
-    li.lastChild.textContent = msg;
-  }
-
-  // Step 2–3: run the check
   $("mc-pick").addEventListener("submit", function (e) {
     e.preventDefault();
     err("mc-pick-err");
     var picked = document.querySelector("input[name=mc-place]:checked");
-    state.placeId = picked && picked.value;
     state.service = $("mc-service").value;
     state.city = $("mc-city").value;
-    $("mc-pname").textContent = picked ? picked.parentNode.querySelector("span").firstChild.textContent : "your business";
-    $("mc-steps").textContent = "";
-    stepRow("google", "Your Google listing");
-    stepRow("website", "Your website");
-    state.cfg.engines.forEach(function (eng) { stepRow(eng, eng); });
-    show("mc-progress");
-    track("free_check_started", { service: state.service });
-
-    post({ step: "foundation", ticket: state.ticket, placeId: state.placeId }).then(function (f) {
+    startProgress(picked ? picked.parentNode.querySelector("span").firstChild.textContent : "", false);
+    track("free_check_started", { service: state.service, listing: "places" });
+    post({ step: "foundation", ticket: state.ticket, placeId: picked && picked.value }).then(function (f) {
       if (!f.ok) { show("mc-pick"); return err("mc-pick-err", f.message); }
       state.f = f;
-      stepDone("google", f.profile.reviewCount + " reviews, " + (f.profile.rating || 0).toFixed(1) + "★");
-      stepDone("website", !f.profile.website ? "no website listed" : f.site && f.site.reached ? "checked" : "couldn't load it");
-      return Promise.all(state.cfg.engines.map(function (eng) {
-        return post({ step: "ai", placeTicket: f.placeTicket, engine: eng, service: state.service, city: state.city, region: f.profile.region })
-          .then(function (a) {
-            var named = a.ok && a.status === "ok" ? a.cells.filter(function (c) { return c.cell > 0; }).length : null;
-            stepDone(eng, named === null ? "unavailable" : "named you in " + named + " of " + a.cells.length);
-            return a.ok ? { engine: eng, status: a.status, cells: a.cells } : { engine: eng, status: "unavailable", cells: [] };
-          })
-          .catch(function () { stepDone(eng, "unavailable"); return { engine: eng, status: "unavailable", cells: [] }; });
-      })).then(function (ai) {
-        state.ai = ai;
-        return finish("");
-      });
+      foundationDone(f);
+      return runEngines(f);
     }).catch(function () { show("mc-pick"); err("mc-pick-err", "Network problem. Please try again."); });
   });
 
+  // ---------- result ----------
   function finish(email, consent) {
     return post({ step: "finish", placeTicket: state.f.placeTicket, profile: state.f.profile, site: state.f.site, ai: state.ai,
       email: email, consent: !!consent, searchText: state.searchText, service: state.service, city: state.city })
@@ -147,16 +197,19 @@
   }
 
   function render(res) {
-    if (!res.ok) { show("mc-pick"); return err("mc-pick-err", res.message); }
-    $("mc-r-label").textContent = res.quick.foundationOnly ? "Quick score (Google and website only)" : "Quick score";
+    var back = state.cfg.listing === "places" ? "mc-pick" : "mc-self";
+    if (!res.ok) { show(back); return err(back + "-err", res.message); }
+    var selfReported = state.f.profile.selfReported;
+    $("mc-r-label").textContent = res.quick.foundationOnly ? "Quick score (Google profile and website only)" : "Quick score";
     $("mc-r-score").textContent = res.quick.score;
     $("mc-r-band").textContent = res.quick.band;
     var answered = state.ai.filter(function (a) { return a.status === "ok"; });
     var cells = [].concat.apply([], answered.map(function (a) { return a.cells; }));
     var named = cells.filter(function (c) { return c.cell > 0; }).length;
+    var listing = (selfReported ? "Google profile (from your answers)" : "Google listing") + " and website: " + state.f.foundation.score + "/100.";
     $("mc-r-summary").textContent = answered.length
-      ? (answered.length === 1 ? answered[0].engine : "AI assistants") + " named you in " + named + " of " + cells.length + " answers. Google listing and website: " + state.f.foundation.score + "/100."
-      : "The AI assistant didn't answer this time, so this score covers your Google listing and website only.";
+      ? (answered.length === 1 ? answered[0].engine : "AI assistants") + " named you in " + named + " of " + cells.length + " answers. " + listing
+      : "The AI assistant didn't answer this time, so this score covers your Google profile and website only. " + listing;
     var t = $("mc-r-ai");
     t.textContent = "";
     if (answered.length) {
