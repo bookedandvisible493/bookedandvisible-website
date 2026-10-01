@@ -14,6 +14,7 @@
  * Fails closed: without its required settings it reports itself as switched off.
  * Required: GOOGLE_PLACES_API_KEY, TURNSTILE_SITE_KEY, TURNSTILE_SECRET, TICKET_SECRET,
  *   KV binding MINICHECK_KV, and at least one of OPENAI_API_KEY / PERPLEXITY_API_KEY / GEMINI_API_KEY.
+ *   Launched 2026-10 with GEMINI_API_KEY only (free tier); add the other two keys to switch those engines on.
  * Optional: RESEND_API_KEY + MAIL_FROM (results email), AIRTABLE_TOKEN (lead row),
  *   OPENAI_MODEL, PERPLEXITY_MODEL, GEMINI_MODEL, DAILY_CHECK_CAP (default 150).
  * Local only: MINICHECK_MOCK=1 on localhost returns canned data, no keys, no network.
@@ -50,7 +51,10 @@ function isMock(env, request) {
 }
 
 function config(env, request) {
-  if (isMock(env, request)) return { enabled: true, mock: true, siteKey: "", engines: Object.keys(ENGINES) };
+  if (isMock(env, request)) {
+    const only = String(env.MINICHECK_MOCK_ENGINES || "").split(",").map((e) => e.trim()).filter((e) => ENGINES[e]);
+    return { enabled: true, mock: true, siteKey: "", engines: only.length ? only : Object.keys(ENGINES) };
+  }
   const engines = Object.keys(ENGINES).filter((e) => env[ENGINES[e].key]);
   const enabled = Boolean(env.GOOGLE_PLACES_API_KEY && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET &&
     env.TICKET_SECRET && env.MINICHECK_KV && engines.length);
@@ -347,7 +351,7 @@ async function sendResults(env, to, name, quick, presence, top3) {
   const html = `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#16181d;max-width:560px">
 <p>Here are the results of your free check for <strong>${esc(name)}</strong>.</p>
 <p style="font-size:28px;font-weight:700;margin:8px 0">${quick.score}/100 <span style="font-size:15px;font-weight:400">${esc(label)} · ${esc(quick.band)}</span></p>
-${presence.score !== null ? `<p>AI assistants named you in ${presence.named} of ${presence.total} answers (${esc(presence.engines.join(", "))}).</p>` : ""}
+${presence.score !== null ? `<p>${presence.engines.length === 1 ? esc(presence.engines[0]) : "AI assistants"} named you in ${presence.named} of ${presence.total} answers (${esc(presence.engines.join(", "))}).</p>` : ""}
 <h3 style="margin:20px 0 6px">Your 3 most useful fixes</h3>
 ${top3.map((i, n) => `<p><strong>${n + 1}. ${esc(i.title)}</strong><br>${esc(i.fix)}</p>`).join("")}
 <p>Want to see exactly what ChatGPT, Perplexity, Gemini and Google's AI say about you, with a full 0–100 score and a 90-day plan? The <a href="https://bookedandvisible.ca/ai-visibility/">$79 Visibility Report</a> is delivered within 2 business days.</p>

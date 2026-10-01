@@ -155,8 +155,8 @@
     var cells = [].concat.apply([], answered.map(function (a) { return a.cells; }));
     var named = cells.filter(function (c) { return c.cell > 0; }).length;
     $("mc-r-summary").textContent = answered.length
-      ? "AI assistants named you in " + named + " of " + cells.length + " answers. Google listing and website: " + state.f.foundation.score + "/100."
-      : "The AI assistants didn't answer this time, so this score covers your Google listing and website only.";
+      ? (answered.length === 1 ? answered[0].engine : "AI assistants") + " named you in " + named + " of " + cells.length + " answers. Google listing and website: " + state.f.foundation.score + "/100."
+      : "The AI assistant didn't answer this time, so this score covers your Google listing and website only.";
     var t = $("mc-r-ai");
     t.textContent = "";
     if (answered.length) {

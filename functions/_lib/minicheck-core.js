@@ -218,7 +218,10 @@ export function presenceLite(results) {
   const issues = [];
   if (score < 100) {
     issues.push({ lost: (100 - score), key: "presence",
-      title: named === 0 ? "No AI assistant named you for your searches" : `AI assistants named you in ${named} of ${cells.length} answers`,
+      title: (() => {
+        const who = answered.length === 1 ? answered[0].engine : "AI assistants";
+        return named === 0 ? `${who} didn't name you for your searches` : `${who} named you in ${named} of ${cells.length} answers`;
+      })(),
       fix: "Assistants recommend businesses whose details match everywhere and who have pages and reviews that answer the exact question. The $79 Visibility Report shows what each assistant says about you and why." });
   }
   return { score, engines: answered.map((r) => r.engine), named, total: cells.length, issues };
