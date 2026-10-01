@@ -62,8 +62,13 @@ function config(env, request) {
   }
   const engines = Object.keys(ENGINES).filter((e) => env[ENGINES[e].key]);
   const enabled = Boolean(env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET && env.TICKET_SECRET && env.MINICHECK_KV && engines.length);
+  // When off, name (never show) the missing settings, so setup problems are easy to spot.
+  const missing = enabled ? [] : [
+    ...["TURNSTILE_SITE_KEY", "TURNSTILE_SECRET", "TICKET_SECRET", "MINICHECK_KV"].filter((k) => !env[k]),
+    ...(engines.length ? [] : ["GEMINI_API_KEY (or another engine key)"]),
+  ];
   return { enabled, mock: false, siteKey: enabled ? env.TURNSTILE_SITE_KEY : "",
-    listing: env.GOOGLE_PLACES_API_KEY ? "places" : "self", engines: enabled ? engines : [] };
+    listing: env.GOOGLE_PLACES_API_KEY ? "places" : "self", engines: enabled ? engines : [], missing };
 }
 
 export async function onRequestGet({ env, request }) {
