@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Cookie consent defaults (Google Consent Mode v2) — must run before gtag.js
+so Analytics respects the visitor's choice from the very first hit. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'analytics_storage': 'denied',
+'ad_storage': 'denied',
+'ad_user_data': 'denied',
+'ad_personalization': 'denied',
+'functionality_storage': 'granted',
+'security_storage': 'granted',
+'wait_for_update': 500
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MJ8SD8MRE"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-3MJ8SD8MRE');
+</script>
+<script src="/assets/consent.js" defer></script>
+<script src="/assets/contact.js?v=2" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Visibility Check — Booked & Visible</title>
+<meta name="description" content="Free, instant check: can Google and AI assistants like ChatGPT, Perplexity and Gemini find and recommend your local business? A quick score and your biggest fix in about a minute.">
+<link rel="canonical" href="https://bookedandvisible.ca/free-check/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/style.css?v=20260928g">
+<link rel="stylesheet" href="../assets/style.css?v=20260928g">
+<style>
+.mc-card{background:var(--panel);padding:28px;max-width:760px;margin:0 auto;}
+.mc-card label{display:block;font-size:14px;font-weight:600;margin:0 0 6px;}
+.mc-card input[type=text],.mc-card input[type=email]{width:100%;box-sizing:border-box;padding:12px 14px;font-size:16px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);}
+.mc-row{margin-bottom:16px;}
+.mc-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:600px){.mc-grid2{grid-template-columns:1fr;}}
+.mc-hint{font-size:12px;color:var(--muted);margin-top:4px;}
+.mc-err{color:#b42318;font-size:14px;margin:10px 0 0;}
+.mc-cands label{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:4px;margin-bottom:8px;background:#fff;font-weight:400;cursor:pointer;}
+.mc-cands small{display:block;color:var(--muted);}
+.mc-steps{list-style:none;padding:0;margin:0;}
+.mc-steps li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;font-size:15px;}
+.mc-steps li span{color:var(--muted);}
+.mc-steps li.done span{color:var(--accent-dark);font-weight:600;}
+.mc-score{font-size:64px;font-weight:900;line-height:1;font-family:"Inter Tight",sans-serif;}
+.mc-score small{font-size:20px;color:var(--muted);font-weight:500;}
+.mc-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;}
+.mc-table th,.mc-table td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top;}
+.mc-issue{border-left:3px solid var(--accent);padding:6px 0 6px 14px;margin:16px 0;}
+.mc-note{font-size:12px;color:var(--muted);}
+.mc-check{display:flex;gap:8px;align-items:flex-start;font-size:13px;font-weight:400 !important;margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo"><a href="/" style="color:inherit;">B&amp;V</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/whats-included/">Included</a>
+<a href="/pricing/">Pricing</a>
+<a href="/landing-pages/">Landing pages</a>
+<a href="/ai-visibility/">AI Visibility</a>
+<a href="/about/">About</a>
+<a href="/faq/">FAQ</a>
+<a href="/guides/">Guides</a>
+</nav>
+<a href="#check" class="btn btn-accent">Check my business</a>
+</header>
+
+<main>
+<section style="padding:40px 0 8px;text-align:center;">
+<div class="eyebrow" style="text-align:center;">Free visibility check</div>
+<h1 style="font-size:clamp(40px,10vw,84px);line-height:0.95;">ARE YOU FOUND?</h1>
+<p style="font-size:17px;color:var(--muted);max-width:600px;margin:20px auto 0;">See in about a minute whether Google and AI assistants like ChatGPT, Perplexity and Gemini can find and recommend your business. Free, no sign-up.</p>
+</section>
+
+<section id="check" style="padding:40px 0 8px;">
+<div class="mc-card" id="mc-off" hidden>
+<h2 style="font-size:22px;margin-bottom:8px;">The free check is almost ready</h2>
+<p style="margin:0 0 16px;color:var(--muted);">We're switching it on shortly. Want the full picture now? The <a href="/ai-visibility/" style="color:var(--accent-dark);font-weight:700;">$79 Visibility Report</a> shows exactly what each AI assistant says about you, within 2 business days.</p>
+</div>
+
+<form class="mc-card" id="mc-find" hidden>
+<div class="mc-row">
+<label for="mc-query">Your business name and city</label>
+<input type="text" id="mc-query" autocomplete="organization" placeholder="e.g. Elleven Hair Studio Langley" required minlength="3" maxlength="80">
+</div>
+<div id="mc-turnstile" class="mc-row"></div>
+<button class="btn btn-accent" type="submit" id="mc-find-btn">Find my business</button>
+<p class="mc-err" id="mc-find-err" hidden></p>
+</form>
+
+<form class="mc-card" id="mc-pick" hidden>
+<div class="mc-row">
+<label>Which one is you?</label>
+<div class="mc-cands" id="mc-cands"></div>
+</div>
+<div class="mc-grid2">
+<div class="mc-row">
+<label for="mc-service">What do you do?</label>
+<input type="text" id="mc-service" list="mc-services" placeholder="e.g. plumber, hair salon" required minlength="3" maxlength="40">
+<datalist id="mc-services">
+<option value="plumber">
+<option value="electrician">
+<option value="HVAC contractor">
+<option value="roofer">
+<option value="renovation contractor">
+<option value="painter">
+<option value="handyman">
+<option value="cleaning service">
+<option value="landscaper">
+<option value="pest control">
+<option value="moving company">
+<option value="dentist">
+<option value="denture clinic">
+<option value="physiotherapist">
+<option value="chiropractor">
+<option value="massage therapist">
+<option value="medical clinic">
+<option value="counsellor">
+<option value="personal trainer">
+<option value="yoga studio">
+<option value="hair salon">
+<option value="barber">
+<option value="nail salon">
+<option value="spa">
+<option value="restaurant">
+<option value="cafe">
+<option value="bakery">
+<option value="boutique">
+<option value="accountant">
+<option value="bookkeeper">
+<option value="lawyer">
+<option value="notary">
+<option value="realtor">
+<option value="mortgage broker">
+<option value="auto repair shop">
+<option value="car detailing">
+<option value="dog groomer">
+<option value="veterinarian">
+<option value="daycare">
+<option value="tutor">
+<option value="photographer">
+<option value="wedding venue">
+<option value="horse riding lessons">
+<option value="farm market">
+</datalist>
+<div class="mc-hint">The word customers would search for.</div>
+</div>
+<div class="mc-row">
+<label for="mc-city">Main city you serve</label>
+<input type="text" id="mc-city" placeholder="e.g. Langley" required minlength="2" maxlength="40">
+</div>
+</div>
+<button class="btn btn-accent" type="submit">Run my free check</button>
+<button class="btn btn-dark" type="button" id="mc-back" style="margin-left:8px;">Search again</button>
+<p class="mc-err" id="mc-pick-err" hidden></p>
+</form>
+
+<div class="mc-card" id="mc-progress" hidden>
+<h2 style="font-size:20px;margin-bottom:12px;">Checking <span id="mc-pname"></span>…</h2>
+<ul class="mc-steps" id="mc-steps"></ul>
+<p class="mc-note" style="margin-top:12px;">This usually takes 20–60 seconds while the assistants answer.</p>
+</div>
+
+<div class="mc-card" id="mc-result" hidden>
+<div class="eyebrow" id="mc-r-label">Quick score</div>
+<div class="mc-score"><span id="mc-r-score"></span><small>/100</small></div>
+<p style="font-weight:700;margin:6px 0 16px;" id="mc-r-band"></p>
+<p id="mc-r-summary" style="margin:0 0 8px;"></p>
+<table class="mc-table" id="mc-r-ai"></table>
+<div class="mc-issue"><div style="font-weight:700;" id="mc-r-issue-title"></div><div id="mc-r-issue-fix" style="font-size:14px;"></div></div>
+
+<form id="mc-email" style="margin-top:24px;">
+<label for="mc-email-in">Email me my 3 most useful fixes</label>
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<input type="email" id="mc-email-in" placeholder="you@yourbusiness.ca" maxlength="120" style="flex:1;min-width:220px;">
+<button class="btn btn-accent" type="submit">Send</button>
+</div>
+<label class="mc-check"><input type="checkbox" id="mc-consent"> Also send me occasional tips and offers from Booked &amp; Visible (unsubscribe any time).</label>
+<p class="mc-note" id="mc-email-msg" hidden></p>
+</form>
+
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+<a href="/ai-visibility/" class="btn btn-dark">See the full $79 Report</a>
+<button class="btn" type="button" id="mc-again" style="border:1px solid var(--line);">Check another business</button>
+</div>
+<p class="mc-note" style="margin-top:20px;">Automated quick check using Google business data and the assistants' developer APIs. AI answers vary between sessions, so treat it as a snapshot. It isn't the same as the paid Report's score, which uses live answers captured from the apps. No one can guarantee rankings, calls or revenue. Business data from Google.</p>
+</div>
+</section>
+
+<section style="padding:56px 0 8px;">
+<div class="eyebrow">Common questions</div>
+<div class="faq-accordion" style="max-width:760px;">
+<details open>
+<summary><h2 style="font-size:16px;">Is it really free?</h2></summary>
+<p>Yes. No card, no sign-up. You can run up to 3 checks a day.</p>
+</details>
+<details>
+<summary><h2 style="font-size:16px;">How is this different from the $79 Visibility Report?</h2></summary>
+<p>The free check is automatic: it reads your Google listing and homepage and asks three AI assistants three searches through their developer tools. The <a href="/ai-visibility/" style="color:var(--accent);">Visibility Report</a> is done by a person: real answers captured from ChatGPT, Perplexity, Gemini and Google's AI, your business details checked on the main directories, a full 0–100 score, a prioritized fix list and a 90-day plan.</p>
+</details>
+<details>
+<summary><h2 style="font-size:16px;">What do you do with my email?</h2></summary>
+<p>We use it to send your results. We only send tips or offers if you tick the box, and you can unsubscribe any time. See our <a href="/privacy.html" style="color:var(--accent);">Privacy Policy</a>.</p>
+</details>
+</div>
+</section>
+</main>
+
+<footer>
+<div>© 2026 Booked & Visible</div>
+<div style="display:flex;gap:20px;"><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/guides/">Guides</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refunds</a><a href="#" data-cookie-preferences>Cookie Preferences</a></div>
+</footer>
+</div>
+<script src="/assets/free-check.js" defer></script>
+</body>
+</html>
