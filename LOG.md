@@ -144,3 +144,8 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Refund Policy and Terms "Last updated" set to October 15, 2026. Unused credit CSS removed; stylesheet re-versioned (`fp1`).
 - **Unchanged / still open:** Stripe links already charge these prices; "Check my score" header button on /ai-visibility/ and the "Most popular" badge on /landing-pages/ untouched; Stripe-side steps from the purchase audit (after-payment intake link, Payhip redirect, customer portal, extra-page link) still to do by the owner.
 
+## 2026-10-15 — Two copy fixes (branch `small-fixes`, not merged)
+
+- `/ai-visibility/` header button "Check my score" changed to "See the options": it scrolls to the Report and Boost tiles, and the old label implied an instant scan.
+- `/landing-pages/` Small Business Site badge "Most popular" changed to "Recommended": no sales data supports a popularity claim.
+
