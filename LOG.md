@@ -135,3 +135,12 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Checked in a browser (desktop + 375px) on the homepage and a sample of other pages; not checked: Safari/Firefox, real phones, every page.
 
 ***
+
+## 2026-10-15 — Fixed prices: $79 Report credit and founding pricing removed (branch `fixed-prices`, not merged)
+
+- **Decision:** one set price per product, no fluctuation. Report $79, Boost $199, SEO Package $449, Stay Visible $79/month, Starter Kit $129, landing pages $329/$429/$529 (extra page $99, domain +$60). No clients yet (test purchases only), so no promise to honor.
+- **Removed:** the $79 Report credit (homepage toggle, product pages, pricing, FAQ, Refund Policy "Report credit" section, llms.txt) and every "founding price / first 5 / first 20 clients / $299 / $599 / $99 after" reference (pages, JSON-LD offers and FAQ, Terms Stay Visible clause, comparison guide, llms.txt).
+- **Added:** plain guidance that Boost and the SEO Package already include the Report (homepage FAQ "Should I start with the Report or go straight to Boost?", price-section lede, SEO page note, AI Visibility heading).
+- Refund Policy and Terms "Last updated" set to October 15, 2026. Unused credit CSS removed; stylesheet re-versioned (`fp1`).
+- **Unchanged / still open:** Stripe links already charge these prices; "Check my score" header button on /ai-visibility/ and the "Most popular" badge on /landing-pages/ untouched; Stripe-side steps from the purchase audit (after-payment intake link, Payhip redirect, customer portal, extra-page link) still to do by the owner.
+

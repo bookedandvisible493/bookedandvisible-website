@@ -263,7 +263,7 @@ p{line-height:1.6;}
 
 /* =====================================================================
    R3-02 Climb: evolution layer (tokens, a11y, motion, hero climb, pills,
-   price ladder, credit toggle). Light only. Appended to the live sheet.
+   price ladder). Light only. Appended to the live sheet.
    ===================================================================== */
 :root{
   --sun:oklch(86% .15 95);
@@ -364,14 +364,6 @@ nav a[aria-current="page"]{font-weight:700;box-shadow:inset 0 -3px 0 var(--accen
 .glance dt a{color:var(--accent-dark);text-decoration:underline;text-underline-offset:3px}
 .glance dd{margin:0;font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
 .glance dd small{display:block;font-weight:500;color:var(--muted);font-size:12px}
-.credit{display:flex;gap:14px;align-items:flex-start;background:var(--wash);border:1.5px solid color-mix(in oklch,var(--accent) 35%,var(--paper));padding:14px 18px;margin-bottom:2px}
-.credit input{width:24px;height:24px;margin:2px 0 0;flex:none;accent-color:var(--accent-dark);cursor:pointer}
-.credit label{font-weight:700;font-size:15px;cursor:pointer}
-.credit p{margin:4px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
-@supports not selector(:has(*)){.credit{display:none}}
-.p-net{display:none}
-.ladder:has(#credit:checked) .p-full{display:none}
-.ladder:has(#credit:checked) .p-net{display:inline}
 .ladder .tier-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-dark)}
 .ladder .tier{background:var(--panel);padding:28px 26px;display:flex;flex-direction:column;gap:0;position:relative}
 .tier h3{font-size:clamp(36px,4vw,48px);line-height:1;margin:10px 0 4px;font-variant-numeric:tabular-nums}
