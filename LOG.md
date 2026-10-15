@@ -123,3 +123,15 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - **Google Analytics:** old tag `G-3J5GC9HRT7` (owned by a different Google account) replaced on every page with `G-3MJ8SD8MRE`, a new GA4 property owned by bookednvisible@gmail.com.
 - **CSP (`_headers`):** now allows the Meta Pixel and Cloudflare Web Analytics beacon, both of which were being blocked on every page. Verify on the deployed site's console after push.
 - **Other:** `llms.txt` no longer advertises the retired memberships; Organization schema gains `addressLocality: Langley` and the Google Business Profile `sameAs`; terms, refund and privacy policies cover the SEO package, Report credit and Stripe.
+
+## 2026-10-15 — Homepage redesign (Climb) + site-wide nav, on branch `redesign/quiet-lift` (NOT merged, not live)
+
+- **Homepage** rebuilt from the Round 3 "Climb" mock: descriptive H1 + title/meta/OG/twitter, `en-CA`, ladder-first with "not included", fictional search-result climb demo (labelled, with Pause), fix-it pills, CSS-only $79 credit toggle, JSON-LD graph (Service+Offer, FAQPage matching visible Q&A), analytics loader kept.
+- **Contact:** all `tel:`/call links removed site-wide. Homepage offers "Text (778) 779-9166" (`sms:`), email, and a new inline question form (same FormSubmit backend as the FAQ form and the "Connect with us" button; `_next` is `/?sent=1`).
+- **Nav:** 41 other pages now use the new nav (Services menu with SEO Package and Stay Visible, `aria-current`); their logos and buttons untouched. `style.css` and `consent.js` URLs are version-tagged so cached visitors pick up the new files. Added `assets/motion.js`.
+- **Cookie banner** restyled to the site palette (light, equal Decline/Accept), via `assets/consent.js`.
+- **Hidden on purpose:** case studies (client consent not cleared); owner photo placeholder removed.
+- **Open:** the $79 credit is not automatic (Stripe links charge list price); `Most popular` badge still on /landing-pages/; Starter Kit "personalized report" wording vs the paid Report; archive/ pages untouched.
+- Checked in a browser (desktop + 375px) on the homepage and a sample of other pages; not checked: Safari/Firefox, real phones, every page.
+
+***

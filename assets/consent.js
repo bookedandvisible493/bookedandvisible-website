@@ -76,17 +76,18 @@ var style = document.createElement("style");
 style.id = "bv-cookie-consent-style";
 style.textContent =
 ".bv-cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;" +
-"max-width:640px;margin:0 auto;background:#14181f;color:#fff;padding:20px 24px;" +
-"border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.28);display:flex;flex-wrap:wrap;" +
+"max-width:640px;margin:0 auto;background:var(--paper,#fcfcfb);color:var(--ink,#141413);padding:20px 24px;" +
+"border:1.5px solid var(--line,#dcdcd8);border-radius:12px;box-shadow:0 12px 32px rgba(20,20,19,.14);display:flex;flex-wrap:wrap;" +
 "gap:16px;align-items:center;justify-content:space-between;" +
-"font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}" +
-".bv-cookie-banner p{margin:0;font-size:13px;line-height:1.5;color:rgba(255,255,255,.85);flex:1;min-width:220px;}" +
-".bv-cookie-banner a{color:#9fc4ff;text-decoration:underline;}" +
+"font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}" +
+".bv-cookie-banner p{margin:0;font-size:13px;line-height:1.5;color:var(--muted,#5b5b57);flex:1;min-width:220px;}" +
+".bv-cookie-banner a{color:var(--accent-dark,#1a4fc0);text-decoration:underline;}" +
 ".bv-cookie-actions{display:flex;gap:10px;flex-shrink:0;}" +
-".bv-cookie-actions button{padding:10px 18px;font-size:13px;font-weight:700;border-radius:4px;" +
+".bv-cookie-actions button{min-height:44px;padding:10px 18px;font-size:13px;font-weight:700;border-radius:6px;" +
 "border:none;cursor:pointer;font-family:inherit;}" +
-".bv-cookie-decline{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);}" +
-".bv-cookie-accept{background:#3b7cf0;color:#fff;}" +
+".bv-cookie-decline{background:transparent;color:var(--ink,#141413);box-shadow:inset 0 0 0 1.5px var(--line,#cfcfca);}" +
+".bv-cookie-accept{background:var(--accent,#1f5fe0);color:#fff;}" +
+".bv-cookie-actions button:focus-visible{outline:3px solid var(--accent,#1f5fe0);outline-offset:2px;}" +
 "@media (max-width:480px){.bv-cookie-banner{flex-direction:column;align-items:stretch;}" +
 ".bv-cookie-actions{justify-content:flex-end;}}";
 document.head.appendChild(style);

@@ -22,7 +22,7 @@ gtag('consent', 'default', {
 gtag('js', new Date());
 gtag('config', 'G-3MJ8SD8MRE');
 </script>
-<script src="/assets/consent.js" defer></script>
+<script src="/assets/consent.js?v=2" defer></script>
 <script src="/assets/contact.js?v=2" defer></script>
 <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('bv-motion')==='off')document.documentElement.dataset.motion='off'}catch(e){}</script>
 <meta charset="utf-8">
@@ -47,7 +47,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="/assets/style.css?v=cl2">
+<link rel="stylesheet" href="/assets/style.css?v=cl3">
 <script src="/assets/motion.js?v=cl1" defer></script>
 <script type="application/ld+json">
 {
@@ -298,8 +298,24 @@ gtag('config', 'G-3MJ8SD8MRE');
 
 <section class="sec-tight" aria-labelledby="h-people">
 <h2 class="h2" id="h-people">Who you deal with</h2>
-<div class="people" style="grid-template-columns:1fr;max-width:640px">
-<div><h3>One person, replies personally</h3><p>You work with the person who does the work, not a call centre. Every message gets a personal reply within one business day.</p><p><a class="u" href="sms:+17787799166">Text (778) 779-9166</a><br><a class="u" href="mailto:hello@bookedandvisible.ca">hello@bookedandvisible.ca</a></p></div>
+<div class="people people-one">
+<div><h3>One person, replies personally</h3><p>You work with the person who does the work, not a call centre. Every message gets a personal reply within one business day.</p>
+<p><a class="u" href="sms:+17787799166">Text (778) 779-9166</a><br><a class="u" href="mailto:hello@bookedandvisible.ca">hello@bookedandvisible.ca</a></p></div>
+<div class="ask" id="ask">
+<h3>Or ask a question here</h3>
+<form action="https://formsubmit.co/hello@bookedandvisible.ca" method="POST">
+<input type="hidden" name="_subject" value="New question from bookedandvisible.ca">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://bookedandvisible.ca/?sent=1">
+<input type="hidden" name="Page" value="/">
+<input type="text" name="_honey" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label for="ask-name">Your name</label><input id="ask-name" type="text" name="name" autocomplete="name" required>
+<label for="ask-email">Email</label><input id="ask-email" type="email" name="email" autocomplete="email" required>
+<label for="ask-q">Your question</label><textarea id="ask-q" name="Question" rows="4" required></textarea>
+<button type="submit" class="btn btn-dark">Send question</button>
+<p class="ask-fine">By sending, you agree to our <a class="u" href="/privacy.html">Privacy Policy</a>. We reply within one business day.</p>
+</form></div>
 </div>
 <!-- Case studies hidden for now (client references not yet cleared for public use): Twin Creeks Ranch, equestrian, Aldergrove BC; Advanced Dentures, Abbotsford BC. -->
 </section>
