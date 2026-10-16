@@ -149,3 +149,17 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - `/ai-visibility/` header button "Check my score" changed to "See the options": it scrolls to the Report and Boost tiles, and the old label implied an instant scan.
 - `/landing-pages/` Small Business Site badge "Most popular" changed to "Recommended": no sales data supports a popularity claim.
 
+## 2026-10-15/16 — Order-flow audit against live Stripe and Payhip dashboards; fixes (branch `order-flow`, not merged)
+
+**Checked in the dashboards (read-only unless noted):** all 10 Stripe payment links (prices match the site; each redirects to `/order/?product=<key>&session_id={CHECKOUT_SESSION_ID}` with the right key; tax collection off; terms agreement on). Stripe has no coupons and no real payments (only two $0.50 own-card tests on Aug 31). Payhip: Starter Kit active at $129 with all 10 files incl. QR card and social graphic; 1 $0.50 test order; 11 other products hidden/draft.
+
+**Changed in Stripe (done in the dashboard):**
+- Promotion codes switched off on the Boost and SEO links (all 10 links now off).
+- Product descriptions edited to remove "founding price / $299 / $599" (Boost, SEO) and the $79-credit sentence (Report). These show on the customer checkout page.
+
+**Changed in Payhip (done in the dashboard):** success redirect enabled for the Starter Kit only, to `https://bookedandvisible.ca/order/?product=kit`. Payhip warns buyers then download via the emailed link, not on the checkout page; the order page now says so.
+
+**Changed on the site:** order page shows a "your guides are on their way (check spam)" note for kit buyers; the form now sets the thank-you link per product and the thank-you page shows only that product's timeline (all shown if no product); "Starter Kit (personalized report)" renamed "personalized profile review" on the order form, thank-you, pricing and llms.txt; order-form.js version-tagged.
+
+**Not changed, needs owner decision:** Stripe support email is bookedandvisible@hotmail.com (site uses hello@bookedandvisible.ca; the Google Manager invite address is bookednvisible@gmail.com); Stripe refund emails are off; Stripe customer portal link not activated (Stay Visible cancel is by email); 10 retired subscription products still Active in the Stripe catalog; Payhip still has 11 hidden products incl. old $49 Report and $99 Boost; Payhip analytics still uses the old GA ID; Payhip product text, Terms, Privacy and Refund Policy still say "personalized (onboarding) report".
+

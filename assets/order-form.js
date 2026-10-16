@@ -54,6 +54,15 @@ ref.required = false;
 ref.disabled = true;
 }
 
-select.addEventListener("change", update);
+// Send the customer to a thank-you page that shows only their product.
+function setNext() {
+var next = form.querySelector('input[name="_next"]');
+var opt = select.options[select.selectedIndex];
+var key = (opt && opt.getAttribute("data-key")) || "";
+if (next) next.value = "https://bookedandvisible.ca/order/thank-you.html" + (key ? "?product=" + encodeURIComponent(key) : "");
+}
+
+select.addEventListener("change", function () { update(); setNext(); });
 update();
+setNext();
 })();
