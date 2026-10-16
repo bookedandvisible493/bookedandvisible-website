@@ -161,7 +161,7 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 
 **Changed on the site:** order page shows a "your guides are on their way (check spam)" note for kit buyers; the form now sets the thank-you link per product and the thank-you page shows only that product's timeline (all shown if no product); "Starter Kit (personalized report)" renamed "personalized profile review" on the order form, thank-you, pricing and llms.txt; order-form.js version-tagged.
 
-**Not changed, needs owner decision:** Stripe support email is bookedandvisible@hotmail.com (site uses hello@bookedandvisible.ca; the Google Manager invite address is bookednvisible@gmail.com); Stripe refund emails are off; Stripe customer portal link not activated (Stay Visible cancel is by email); 10 retired subscription products still Active in the Stripe catalog; Payhip still has 11 hidden products incl. old $49 Report and $99 Boost; Payhip analytics still uses the old GA ID; Payhip product text, Terms, Privacy and Refund Policy still say "personalized (onboarding) report".
+**Not changed, needs owner decision:** Stripe support email fell back to the account holder's personal email address (the site uses hello@bookedandvisible.ca); Stripe refund emails are off; Stripe customer portal link not activated (Stay Visible cancel is by email); 10 retired subscription products still Active in the Stripe catalog; Payhip still has 11 hidden products incl. old $49 Report and $99 Boost; Payhip analytics still uses the old GA ID; Payhip product text, Terms, Privacy and Refund Policy still say "personalized (onboarding) report".
 
 ## 2026-10-16 — Follow-up to the order-flow audit (same branch `order-flow`)
 
@@ -169,4 +169,9 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 **Payhip (done in the dashboard):** analytics ID changed from the old G-3J5GC9HRT7 to the site's G-3MJ8SD8MRE; Starter Kit description reworded from "personalized onboarding report" to "personalized profile review" (files and visibility unchanged). The 8 hidden products were checked: all are set to Invisible (not purchasable), so nothing was archived; the earlier "stale price" concern was incorrect.
 **Website:** "personalized onboarding report" replaced with "personalized profile review" in Terms (definition and section 4), Privacy (data use) and Refund Policy (Starter Kit paragraph, now also says buyers go straight to the intake form after checkout); Terms, Privacy and Refund Policy dated October 15, 2026. No legal substance changed; owner to have a professional review if desired.
 **Left as is / owner decisions:** Stripe refund emails stay off; customer portal link (Stay Visible self-cancel) not activated; Payhip drafts (Site Care, memberships) untouched.
+
+## 2026-10-16 — Stripe customer portal link activated; log scrubbed
+
+- **Stripe customer portal link activated** (Stay Visible self-service cancel). Portal settings checked and left as they were: cancellation on, takes effect at the end of the billing period (matches the Terms), cancellation reason collected. The link is not yet shown on the site; adding it to the Stay Visible page and Terms is deferred by the owner.
+- **Privacy note:** this log, CLAUDE.md and scripts/check-sync.sh are served publicly by the site. A personal email address added to this log earlier today was removed here. Do not put personal emails, account identifiers or credentials in this file.
 
