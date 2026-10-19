@@ -54,7 +54,10 @@ gtag('config', 'G-3MJ8SD8MRE');
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization","ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://bookedandvisible.ca/#org",
       "name": "Booked & Visible",
       "url": "https://bookedandvisible.ca/",
@@ -62,26 +65,196 @@ gtag('config', 'G-3MJ8SD8MRE');
       "email": "hello@bookedandvisible.ca",
       "telephone": "+1-778-779-9166",
       "priceRange": "$79-$529 CAD",
-      "address": {"@type": "PostalAddress","addressLocality": "Langley","addressRegion": "BC","addressCountry": "CA"},
-      "areaServed": [{"@type":"City","name":"Langley"},{"@type":"AdministrativeArea","name":"British Columbia"},{"@type":"Country","name":"Canada"}],
-      "sameAs": ["https://maps.google.com/?cid=8035192425770088943"]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Langley",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Langley"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "British Columbia"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "sameAs": [
+        "https://maps.google.com/?cid=8035192425770088943"
+      ]
     },
-    {"@type": "WebSite","@id": "https://bookedandvisible.ca/#website","url": "https://bookedandvisible.ca/","name": "Booked & Visible","publisher": {"@id": "https://bookedandvisible.ca/#org"},"inLanguage": "en-CA"},
-    {"@type": "WebPage","@id": "https://bookedandvisible.ca/#webpage","url": "https://bookedandvisible.ca/","name": "Local SEO & AI Visibility, from $79 CAD","isPartOf": {"@id": "https://bookedandvisible.ca/#website"},"about": {"@id": "https://bookedandvisible.ca/#org"},"inLanguage": "en-CA"},
-    {"@type": "Service","name": "AI Visibility Report","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "Offer","price": "79","priceCurrency": "CAD","url": "https://bookedandvisible.ca/ai-visibility/"}},
-    {"@type": "Service","name": "AI Visibility Boost","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "Offer","price": "199","priceCurrency": "CAD","url": "https://bookedandvisible.ca/ai-visibility/"}},
-    {"@type": "Service","name": "SEO Improvement Package","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "Offer","price": "449","priceCurrency": "CAD","url": "https://bookedandvisible.ca/seo-package/"}},
-    {"@type": "Service","name": "Starter Kit","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "Offer","price": "129","priceCurrency": "CAD","url": "https://bookedandvisible.ca/pricing/"}},
-    {"@type": "Service","name": "Stay Visible","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "Offer","priceCurrency": "CAD","url": "https://bookedandvisible.ca/stay-visible/","priceSpecification": {"@type": "UnitPriceSpecification","price": "79","priceCurrency": "CAD","unitText": "MON"}}},
-    {"@type": "Service","name": "Landing pages","provider": {"@id": "https://bookedandvisible.ca/#org"},"areaServed": "CA","offers": {"@type": "AggregateOffer","lowPrice": "329","highPrice": "529","priceCurrency": "CAD","url": "https://bookedandvisible.ca/landing-pages/"}},
-    {"@type": "FAQPage","mainEntity": [
-      {"@type":"Question","name":"What is in the $79 AI Visibility Report?","acceptedAnswer":{"@type":"Answer","text":"A 0-100 score built from real ChatGPT, Perplexity, Gemini and Google AI answers about your business, a prioritized fix list and a 90-day plan, delivered within 2 business days of your intake form."}},
-      {"@type":"Question","name":"Should I start with the Report or go straight to Boost?","acceptedAnswer":{"@type":"Answer","text":"Boost and the SEO Package both include the Report. If you already know you want the fixes, start with Boost or the SEO Package and you will not pay for a Report separately. If you would rather see your score first, start with the $79 Report."}},
-      {"@type":"Question","name":"What if my score does not go up?","acceptedAnswer":{"@type":"Answer","text":"If your Boost or SEO 30-day re-check score has not risen by at least 5 points, we redo what did not take and re-check free at 60 days. We do not guarantee rankings, calls or revenue."}},
-      {"@type":"Question","name":"Do I need a website for the SEO Package?","acceptedAnswer":{"@type":"Answer","text":"Yes, the SEO Package works on an existing website. If you have none, landing pages start at $329 for one page."}},
-      {"@type":"Question","name":"How long does each project take?","acceptedAnswer":{"@type":"Answer","text":"The Report takes 2 business days from your intake form, Boost 5 business days, the SEO Package 7 business days from intake and profile access. Landing pages go live 3, 5 or 7 business days after we receive your content."}},
-      {"@type":"Question","name":"Are there contracts or refunds?","acceptedAnswer":{"@type":"Answer","text":"No contracts and no per-lead fees. Every project is refundable before the first deliverable, and if we miss a delivery time you get a refund or a free fix. Stay Visible is month to month."}}
-    ]}
+    {
+      "@type": "WebSite",
+      "@id": "https://bookedandvisible.ca/#website",
+      "url": "https://bookedandvisible.ca/",
+      "name": "Booked & Visible",
+      "publisher": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bookedandvisible.ca/#webpage",
+      "url": "https://bookedandvisible.ca/",
+      "name": "Local SEO & AI Visibility, from $79 CAD",
+      "isPartOf": {
+        "@id": "https://bookedandvisible.ca/#website"
+      },
+      "about": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Service",
+      "name": "AI Visibility Report",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "Offer",
+        "price": "79",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/ai-visibility/"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "AI Visibility Boost",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/ai-visibility/"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "SEO Improvement Package",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "Offer",
+        "price": "449",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/seo-package/"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Starter Kit",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "Offer",
+        "price": "129",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/pricing/"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Stay Visible",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/stay-visible/",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "79",
+          "priceCurrency": "CAD",
+          "unitText": "MON"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Landing pages",
+      "provider": {
+        "@id": "https://bookedandvisible.ca/#org"
+      },
+      "areaServed": "CA",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "329",
+        "highPrice": "529",
+        "priceCurrency": "CAD",
+        "url": "https://bookedandvisible.ca/landing-pages/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is in the $79 AI Visibility Report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 0-100 score built from real ChatGPT, Perplexity, Gemini and Google AI answers about your business, a prioritized fix list and a 90-day plan, delivered within 2 business days of your intake form."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I start with the Report or go straight to Boost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boost and the SEO Package both include the Report. If you already know you want the fixes, start with Boost or the SEO Package and you will not pay for a Report separately. If you would rather see your score first, start with the $79 Report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my score does not go up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your Boost or SEO 30-day re-check score has not risen by at least 5 points, we redo what did not take and re-check free at 60 days. We do not guarantee rankings, calls or revenue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a website for the SEO Package?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the SEO Package works on an existing website. If you have none, landing pages start at $329 for one page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does each project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Report takes 2 business days from your intake form, Boost 5 business days, the SEO Package 7 business days from intake and profile access. Landing pages go live 3, 5 or 7 business days after we receive your content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there contracts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No contracts and no per-lead fees. Every project is a one-time price, and Stay Visible is month to month, so you can stop any time."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -218,7 +391,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <div class="rv"><b>2 days</b><span>Report delivered within 2 business days of your intake form.</span></div>
 <div class="rv"><b>$0</b><span>Per-lead fees and contract fees. Flat one-time prices; Stay Visible is month to month.</span></div>
 <div class="rv"><b>+5 pts</b><span>Boost or SEO 30-day re-check score rises by 5, or we redo what did not take and re-check free at 60 days.</span></div>
-<div class="rv"><b>Refund</b><span>Before the first deliverable. Miss a delivery time and it is a refund or a free fix.</span></div>
+<div class="rv"><b>Yours</b><span>Your domain, Google profile and files stay yours. No lock-in, no contract.</span></div>
 </div>
 </section>
 
@@ -342,7 +515,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <details><summary>What if my score does not go up?</summary><p>If your Boost or SEO 30-day re-check score has not risen by at least 5 points, we redo what did not take and re-check free at 60 days. We do not guarantee rankings, calls or revenue.</p></details>
 <details><summary>Do I need a website for the SEO Package?</summary><p>Yes, the SEO Package works on an existing website. If you have none, landing pages start at $329 for one page.</p></details>
 <details><summary>How long does each project take?</summary><p>The Report takes 2 business days from your intake form, Boost 5 business days, the SEO Package 7 business days from intake and profile access. Landing pages go live 3, 5 or 7 business days after we receive your content.</p></details>
-<details><summary>Are there contracts or refunds?</summary><p>No contracts and no per-lead fees. Every project is refundable before the first deliverable, and if we miss a delivery time you get a refund or a free fix. Stay Visible is month to month.</p></details>
+<details><summary>Are there contracts?</summary><p>No contracts and no per-lead fees. Every project is a one-time price, and Stay Visible is month to month, so you can stop any time.</p></details>
 </div>
 </section>
 

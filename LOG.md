@@ -187,3 +187,9 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Fresh 1200x720 screenshot of the current ellevenhair.ca (77 KB) replaces the old image on both the homepage and /landing-pages/; the old file was removed.
 - Checked in a browser at desktop and 375px (no overflow). Not checked: Safari/Firefox. Client consent for any further projects is needed before they are added.
 
+## 2026-10-18 — Less refund emphasis (branch `less-refund`, stacked on `work-block`; not merged)
+
+- Reduced promotional refund messaging; the policy itself is unchanged. Kept: Refund Policy page, Terms section 10, the "Refunds" link in every footer, and one "Can I get a refund?" answer on /faq/.
+- Removed or reworded: homepage "Refund" tile (now "Yours: your domain, profile and files stay yours") and FAQ (now "Are there contracts?"); pricing intro sentence; pricing FAQ (now "Is there a contract?"); the "Can I get a refund?" FAQ on AI Visibility, SEO Package and Stay Visible (structured data updated to match).
+- Not touched: Payhip's product text and Stripe checkout still show the refund/cancellation terms at the point of purchase. Refund terms must stay easy to find (BC consumer rules on online sales); this change only lowers prominence.
+
