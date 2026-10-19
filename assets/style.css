@@ -349,12 +349,21 @@ nav a[aria-current="page"]{font-weight:700;box-shadow:inset 0 -3px 0 var(--accen
 .sk i:nth-child(1){width:38%}.sk i:nth-child(2){width:24%}.sk i:nth-child(3){width:16%}
 .me .sk i{background:color-mix(in oklch,var(--ink) 25%,var(--sun))}
 .rank{flex:none;min-width:40px;padding:5px 10px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
-.serp-cap{margin:12px 0 0;font-size:14px;font-weight:600;line-height:1.4;min-height:2.8em}
-.serp-ctl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.seg{min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:6px;background:var(--paper);font:600 13px 'Inter',sans-serif;color:var(--ink);cursor:pointer;transition:transform var(--d-fast) var(--ease-out),background-color var(--d-fast)}
-.seg:hover{border-color:var(--accent)}
-.seg:active{transform:scale(.97)}
-.seg[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.serp-cap{margin:12px 0 0;font-size:14px;font-weight:600;line-height:1.4;display:flex;align-items:center;gap:10px;min-height:1.6em}
+.serp-cap .ba{color:var(--muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color var(--d-med) var(--ease-out),border-color var(--d-med) var(--ease-out)}
+.serp-cap .ba[aria-current="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.serp-cap .ba-arrow{color:var(--muted)}
+.lp-bar .ic{appearance:none;border:0;background:none;padding:0;width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;position:relative;flex:none;transition:background var(--d-fast) var(--ease-out),color var(--d-fast) var(--ease-out),transform var(--d-fast) var(--ease-out)}
+.lp-bar .ic::after{content:"";position:absolute;inset:-8px}
+.lp-bar .ic svg{width:16px;height:16px;display:block}
+.lp-bar .ic-first{margin-left:auto}
+.lp-bar .ic:hover{background:var(--panel);color:var(--ink)}
+.lp-bar .ic:active{transform:scale(.94)}
+.lp-bar .ic:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.lp-bar .ic[aria-pressed="true"]{color:var(--accent-dark)}
+.lp-bar .ic .i-play{display:none}
+.lp-bar .ic[aria-pressed="true"] .i-play{display:block}
+.lp-bar .ic[aria-pressed="true"] .i-pause{display:none}
 .noscript-note{display:none}
 
 /* price ladder */

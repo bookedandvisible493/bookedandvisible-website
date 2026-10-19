@@ -174,3 +174,10 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 
 - Removed the duplicate "Pause animations" button from the homepage footer (and its unused `.pause` CSS). The Pause button inside the search-result demo card remains, so there is still a visible way to stop the motion.
 
+## 2026-10-18 — Climb demo controls simplified (branch `climb-controls`, includes `footer-pause`; not merged)
+
+- Removed the four-button row under the search-result demo (Before, After, Replay, Pause). Before/After are no longer clickable.
+- Replay and Pause are now two small icon buttons in the card's title bar (28px visible, 44px tap area, labelled "Replay animation" / "Pause animations", Pause swaps to "Resume animations" and a play icon).
+- A non-clickable indicator under the results ("Before: 3rd place" then "After: 1st place") follows the animation; screen readers get one static sentence instead of repeated announcements.
+- Checked in a browser: replay sequence, pause/resume, replay while paused, 375px width (no overflow). Not checked: Safari/Firefox, a real phone.
+

@@ -11,16 +11,15 @@ setTimeout(function(){rv.forEach(show)},2500);
 /* climb: DOM holds the final order (you 1st); "before" = transforms */
 var pk=d.getElementById('pack');
 if(pk){var R={};[].forEach.call(pk.children,function(r){R[r.dataset.k]=r});
-var rank=d.getElementById('rank'),cap=d.getElementById('cap'),bB=d.getElementById('bBefore'),bA=d.getElementById('bAfter'),st='after',tm=[];
+var rank=d.getElementById('rank'),baB=d.getElementById('ba-before'),baA=d.getElementById('ba-after'),st='after',tm=[];
 var T=function(s){var p=R.a.offsetTop-R.me.offsetTop;return s==='before'?{me:'translateY('+2*p+'px)',a:'translateY('+-p+'px)',b:'translateY('+-p+'px)'}:{me:'none',a:'none',b:'none'}};
 var go=function(s,an){var t=T(s),mv=an&&!off();st=s;
 Object.keys(R).forEach(function(k){var r=R[k],f=getComputedStyle(r).transform;r.style.transform=t[k];if(mv)r.animate([{transform:f},{transform:t[k]}],{duration:700,easing:'cubic-bezier(.65,0,.35,1)'})});
 rank.textContent=s==='after'?'1st':'3rd';if(s==='after'&&mv)rank.animate([{transform:'scale(.8)'},{transform:'none'}],{duration:400,delay:500,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
-bB.setAttribute('aria-pressed',s==='before');bA.setAttribute('aria-pressed',s==='after');
-cap.textContent=s==='after'?'Illustration: your business moves from 3rd to 1st.':'Illustration: your business sits in 3rd place.'};
+if(s==='after'){baA.setAttribute('aria-current','true');baB.removeAttribute('aria-current')}else{baB.setAttribute('aria-current','true');baA.removeAttribute('aria-current')}};
 var clr=function(){tm.forEach(clearTimeout);tm=[]};
 var play=function(){clr();if(off()){go('after');return}go('before');tm.push(setTimeout(function(){go('after',1)},1000))};
-bB.onclick=function(){clr();go('before',1)};bA.onclick=function(){clr();go('after',1)};d.getElementById('replay').onclick=play;
+d.getElementById('replay').onclick=play;
 if(!off())go('before');
 var vis=new IntersectionObserver(function(es){if(es[0].isIntersecting){vis.disconnect();play()}},{threshold:.5});vis.observe(pk);
 setTimeout(function(){if(!clr.done&&st==='before'&&!tm.length)go('after',1)},7000);
@@ -28,7 +27,7 @@ var rs;addEventListener('resize',function(){clearTimeout(rs);rs=setTimeout(funct
 /* pause toggle (all [data-pause] buttons) */
 var pb=[].slice.call(d.querySelectorAll('[data-pause]'));
 var setP=function(v){if(v)h.dataset.motion='off';else delete h.dataset.motion;S('bv-motion',v?'off':'on');
-pb.forEach(function(b){b.setAttribute('aria-pressed',v);b.textContent=v?'Resume animations':'Pause animations'});if(v&&pk){clr();go('after')}};
+pb.forEach(function(b){b.setAttribute('aria-pressed',v);var l=v?'Resume animations':'Pause animations';b.setAttribute('aria-label',l);b.title=l});if(v&&pk){clr();go('after')}};
 pb.forEach(function(b){b.onclick=function(){setP(h.dataset.motion!=='off')}});setP(S('bv-motion')==='off');
 /* fix-it pills: jump to the offer, tag it "Fits you" (text + outline) */
 var pills=[].slice.call(d.querySelectorAll('.pill'));
