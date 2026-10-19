@@ -195,18 +195,44 @@ gtag('config', 'G-3MJ8SD8MRE');
 <p style="font-size:13px;color:var(--muted);text-align:center;margin:14px 0 0;">Every product above is a flat, one-time price — no contracts, no per-lead fees.</p>
 </section>
 
-<section id="stay-visible" style="padding:32px 0 8px;">
-<div class="tile" style="background:var(--panel);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;">Want it kept up? Optional monthly plan</div><h2 style="font-size:22px;margin-bottom:6px;">Stay Visible — $79 CAD / month</h2><p style="font-size:14px;color:var(--muted);margin:0;max-width:520px;">4 Google posts a month, every review answered, a monthly profile check and score report, and a 90-day plan refreshed each quarter. Month to month, cancel any time.</p></div>
-<a href="/stay-visible/" class="btn btn-dark" style="white-space:nowrap;">See Stay Visible</a>
-</div>
-</section>
-
-<section id="kit" style="padding:32px 0 8px;">
-<div class="tile" style="background:var(--panel);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:6px;">Prefer to do it yourself?</div><h2 style="font-size:22px;margin-bottom:6px;">Starter Kit — $129 CAD</h2><p style="font-size:14px;color:var(--muted);margin:0;max-width:520px;">Six step-by-step guides, scripts, and templates plus a personalized profile review within 1 business day of your intake form. Yours to keep, one-time payment.</p></div>
-<a href="https://payhip.com/b/gFj9f" class="btn btn-accent" style="white-space:nowrap;">Get the Starter Kit</a>
-</div>
+<style>
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);margin:32px 0 8px}
+.more-card{background:var(--panel);padding:28px;display:flex;flex-direction:column;gap:14px}
+.more-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-dark);margin-bottom:6px}
+.more-name{font-size:24px;margin:0 0 6px}
+.more-price{margin:0;font-size:14px;color:var(--muted)}
+.more-price b{font-size:34px;line-height:1;color:var(--ink);font-weight:900;letter-spacing:-.02em;margin-right:4px}
+.more-lede{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+.more-list{list-style:none;margin:0;padding:0;font-size:14px;line-height:1.5}
+.more-list li{position:relative;padding-left:24px;margin-bottom:8px}
+.more-list li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}
+.more-card .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:760px){.more-grid{grid-template-columns:1fr}.more-card{padding:22px}}
+</style>
+<section class="more-grid" aria-label="Optional monthly plan and do-it-yourself kit">
+<article id="stay-visible" class="more-card">
+<div><div class="more-eyebrow">Want it kept up? Optional monthly plan</div><h2 class="more-name">Stay Visible</h2><p class="more-price"><b>$79</b> CAD / month</p></div>
+<p class="more-lede">Your Google profile and AI visibility, looked after every month. Month to month, cancel any time.</p>
+<ul class="more-list">
+<li>4 Google Business Profile posts a month, published for you</li>
+<li>A reply to every new Google review within 2 business days</li>
+<li>A monthly profile check and one-page score report</li>
+<li>A 90-day plan refreshed each quarter</li>
+</ul>
+<a href="/stay-visible/" class="btn btn-dark">See Stay Visible</a>
+</article>
+<article id="kit" class="more-card">
+<div><div class="more-eyebrow">Prefer to do it yourself?</div><h2 class="more-name">Starter Kit</h2><p class="more-price"><b>$129</b> CAD, one-time</p></div>
+<p class="more-lede">Six step-by-step guides and templates, plus a personalized profile review within 1 business day of your intake form. Yours to keep.</p>
+<ul class="more-list">
+<li>Google Business Profile walkthrough</li>
+<li>Review-generation system with a printable QR card</li>
+<li>Social post templates</li>
+<li>Local directory checklist</li>
+<li>Project photo guide, and a follow-up and referral sequence</li>
+</ul>
+<a href="https://payhip.com/b/gFj9f" class="btn btn-accent">Get the Starter Kit</a>
+</article>
 </section>
 
 <section style="padding:48px 0;border-top:1px solid var(--line);">

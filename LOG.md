@@ -193,3 +193,9 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Removed or reworded: homepage "Refund" tile (now "Yours: your domain, profile and files stay yours") and FAQ (now "Are there contracts?"); pricing intro sentence; pricing FAQ (now "Is there a contract?"); the "Can I get a refund?" FAQ on AI Visibility, SEO Package and Stay Visible (structured data updated to match).
 - Not touched: Payhip's product text and Stripe checkout still show the refund/cancellation terms at the point of purchase. Refund terms must stay easy to find (BC consumer rules on online sales); this change only lowers prominence.
 
+## 2026-10-18 — Pricing page: Stay Visible and Starter Kit blocks redesigned (branch `pricing-blocks`, stacked on `less-refund`; not merged)
+
+- Replaced the two stretched full-width gray bars with two matching cards side by side (stacked on phones): eyebrow, name, large price, one-line summary, a short checklist of what is included, and the button. Facts only, taken from the Stay Visible page and the Starter Kit's contents.
+- Anchors `#stay-visible` and `#kit` and both button links are unchanged (the homepage links to `/pricing/#kit`). Styles are inline on the page, so no shared-CSS change.
+- Checked in a browser at desktop and phone widths (no overflow). Not checked: Safari/Firefox.
+
