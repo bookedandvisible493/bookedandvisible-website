@@ -181,3 +181,9 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - A non-clickable indicator under the results ("Before: 3rd place" then "After: 1st place") follows the animation; screen readers get one static sentence instead of repeated announcements.
 - Checked in a browser: replay sequence, pause/resume, replay while paused, 375px width (no overflow). Not checked: Safari/Firefox, a real phone.
 
+## 2026-10-18 — "Recent work" case-study card on the homepage (branch `work-block`, stacked on `climb-controls`; not merged)
+
+- Added a "Recent work" section after the landing-pages block: a repeatable list (`ul.work-stack`), one `<li class="work-card">` per project, newest first. To add a project, copy one `<li>` and change the name, details, link and screenshot; cards alternate sides on desktop and stack on phones. Currently one project: Elleven Hair Studio (redesign, SEO optimization, additional pages), described only with facts already on the site.
+- Fresh 1200x720 screenshot of the current ellevenhair.ca (77 KB) replaces the old image on both the homepage and /landing-pages/; the old file was removed.
+- Checked in a browser at desktop and 375px (no overflow). Not checked: Safari/Firefox. Client consent for any further projects is needed before they are added.
+

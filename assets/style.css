@@ -520,3 +520,13 @@ footer a{padding:11px 0}.foot-note a{padding:10px 0}
 .ask .btn{align-self:flex-start;border:none;cursor:pointer;margin-top:4px}
 .ask-fine{font-size:12px;color:var(--muted);margin:4px 0 0}
 @media (max-width:760px){.people-one{grid-template-columns:1fr}}
+
+/* ---------------- recent work (repeatable case-study cards) ---------------- */
+.work-stack{list-style:none;margin:0;padding:0;display:grid;gap:2px;background:var(--line)}
+.work-stack>.work-card:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+.work-stack>.work-card:nth-child(even) .work-shot{order:2}
+.work-copy{min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 16px}
+.chips li{font-size:12px;font-weight:600;padding:4px 12px;border:1.5px solid var(--line);background:var(--paper);border-radius:999px}
+@media (max-width:760px){.work-stack>.work-card:nth-child(even){grid-template-columns:1fr}.work-stack>.work-card:nth-child(even) .work-shot{order:0}}
+
