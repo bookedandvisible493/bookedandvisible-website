@@ -430,7 +430,6 @@ ol.stepper{list-style:none;margin:0;padding:0}
 footer{align-items:flex-start}
 footer a{display:inline-block;padding:6px 0}
 .foot-note{font-size:13px;color:var(--muted);max-width:42ch;margin:6px 0 0}
-.pause{min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:6px;background:var(--paper);font:600 13px 'Inter',sans-serif;cursor:pointer;color:var(--ink)}
 
 .lp-tiers a{min-height:44px;display:inline-flex;align-items:center}
 .lp-promo{margin-top:var(--sec)}

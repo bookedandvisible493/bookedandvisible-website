@@ -170,3 +170,7 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 **Website:** "personalized onboarding report" replaced with "personalized profile review" in Terms (definition and section 4), Privacy (data use) and Refund Policy (Starter Kit paragraph, now also says buyers go straight to the intake form after checkout); Terms, Privacy and Refund Policy dated October 15, 2026. No legal substance changed; owner to have a professional review if desired.
 **Left as is / owner decisions:** Stripe refund emails stay off; customer portal link (Stay Visible self-cancel) not activated; Payhip drafts (Site Care, memberships) untouched.
 
+## 2026-10-18 — Footer Pause button removed (branch `footer-pause`, not merged)
+
+- Removed the duplicate "Pause animations" button from the homepage footer (and its unused `.pause` CSS). The Pause button inside the search-result demo card remains, so there is still a visible way to stop the motion.
+
