@@ -15,7 +15,7 @@ wrap.innerHTML =
 '<div class="bvc-panel" id="bvc-panel" role="dialog" aria-modal="false" aria-labelledby="bvc-title" hidden>' +
   '<div class="bvc-head"><h2 id="bvc-title">Ask us anything</h2>' +
   '<button type="button" class="bvc-close" aria-label="Close">&times;</button></div>' +
-  '<p class="bvc-sub">Viktor replies personally within one business day.</p>' +
+  '<p class="bvc-sub">Victor replies personally within one business day.</p>' +
   '<form class="bvc-form" action="https://formsubmit.co/hello@bookedandvisible.ca" method="POST">' +
     '<input type="hidden" name="_subject" value="New question from bookedandvisible.ca">' +
     '<input type="hidden" name="_template" value="table">' +
