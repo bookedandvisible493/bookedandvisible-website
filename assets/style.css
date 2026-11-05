@@ -37,7 +37,7 @@ a.tile{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;positi
 
 /* item 05 — recommended-plan badge (adds emphasis to Visible without
    taking the accent blue away from Starter Kit's primary-CTA tile) */
-.badge-popular{position:absolute;top:14px;right:14px;background:var(--accent);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
+.badge-popular{position:absolute;top:14px;right:14px;background:var(--accent);color:var(--white);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
 .badge-popular.on-accent{background:var(--white);color:var(--accent-dark);}
 .tile-popular{border:1.5px solid var(--accent);}
 /* .tile-featured tiles already fill the tile with accent blue — a
@@ -215,7 +215,7 @@ p{line-height:1.6;}
 .related-guides-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;}
 .related-guides-grid a{background:var(--panel);padding:16px 18px;font-size:15px;font-weight:700;}
 .related-guides-grid a:hover{color:var(--accent-dark);background:color-mix(in srgb, var(--accent) 8%, var(--paper));}
-.related-guides-all{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--accent-dark);text-decoration:underline;}
+.related-guides-all{display:inline-block;margin-top:9px;padding:5px 0;font-size:14px;font-weight:700;color:var(--accent-dark);text-decoration:underline;}
 @media (max-width:640px){.guide-cta-grid,.related-guides-grid{grid-template-columns:1fr;}}
 
 /* Site-wide "Connect with us" button + question panel (assets/contact.js) */
@@ -550,3 +550,10 @@ footer a{padding:14px 0}.foot-note a{padding:12px 0}
 .bp img{width:100%;height:auto;border:0;border-radius:0}
 .work-before:hover .bp,.work-before:focus-within .bp,.work-before.open .bp{opacity:1;visibility:visible;transform:none;transition-delay:0s}
 @media (prefers-reduced-motion:reduce){.bp{transition:none;transform:none}}
+/* touch targets: 24px+ standalone links, 44px nav/footer/pills on touch */
+.eyebrow a{display:inline-block;padding:5px 0}
+@media (pointer:coarse),(max-width:760px){
+nav a,nav summary{min-width:44px;justify-content:center}
+footer a{min-width:44px}
+.filter-pill{min-height:44px}
+}
