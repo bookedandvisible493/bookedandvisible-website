@@ -38,6 +38,7 @@ d.querySelectorAll('.is-fit').forEach(function(x){x.classList.remove('is-fit')})
 var sv=d.querySelector('.svc');if(sv){d.addEventListener('click',function(e){if(!sv.contains(e.target))sv.open=false});d.addEventListener('keydown',function(e){if(e.key==='Escape')sv.open=false})}
 /* Before peek: tap toggles on touch; tap outside / Esc closes (hover and focus are pure CSS) */
 [].slice.call(d.querySelectorAll('.work-before')).forEach(function(f){var b=f.querySelector('.bp-btn');if(!b)return;
+var big=f.querySelector('.bp img[data-src]'),load=function(){if(big){big.src=big.dataset.src;big.removeAttribute('data-src');big=null}};['mouseenter','focusin','touchstart'].forEach(function(t){f.addEventListener(t,load,{passive:true,once:true})});
 var set=function(v){f.classList.toggle('open',v);b.setAttribute('aria-expanded',v)};
 b.addEventListener('click',function(){set(!f.classList.contains('open'))});
 d.addEventListener('click',function(e){if(!f.contains(e.target))set(false)});
