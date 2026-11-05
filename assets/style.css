@@ -540,6 +540,8 @@ footer a{padding:14px 0}.foot-note a{padding:12px 0}
 .guide-related ul{list-style:none;margin:0;padding:0;max-width:720px;}
 .guide-related a{display:inline-block;padding:13px 0;font-size:16px;font-weight:600;color:var(--accent-dark);text-decoration:underline;}
 .work-before{margin:0 0 18px;display:flex;gap:12px;align-items:center}
+.work-before a{flex:none;display:block}
+.work-before figcaption a{font-weight:700;color:var(--accent-dark);white-space:nowrap}
 .work-before img{width:168px;height:auto;flex:none;border:1.5px solid var(--line);border-radius:6px;display:block}
 .work-before figcaption{font-size:13px;line-height:1.4;color:var(--muted)}
 .work-before b{color:var(--ink)}
