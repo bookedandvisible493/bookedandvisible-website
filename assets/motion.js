@@ -36,4 +36,10 @@ pills.forEach(function(x){x.removeAttribute('aria-current')});p.setAttribute('ar
 d.querySelectorAll('.is-fit').forEach(function(x){x.classList.remove('is-fit')});if(t)t.classList.add('is-fit')})});
 /* Services menu closes on outside click / Esc */
 var sv=d.querySelector('.svc');if(sv){d.addEventListener('click',function(e){if(!sv.contains(e.target))sv.open=false});d.addEventListener('keydown',function(e){if(e.key==='Escape')sv.open=false})}
+/* Before peek: tap toggles on touch; tap outside / Esc closes (hover and focus are pure CSS) */
+[].slice.call(d.querySelectorAll('.work-before')).forEach(function(f){var b=f.querySelector('.bp-btn');if(!b)return;
+var set=function(v){f.classList.toggle('open',v);b.setAttribute('aria-expanded',v)};
+b.addEventListener('click',function(){set(!f.classList.contains('open'))});
+d.addEventListener('click',function(e){if(!f.contains(e.target))set(false)});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);if(f.contains(d.activeElement))d.activeElement.blur()}})});
 })();
