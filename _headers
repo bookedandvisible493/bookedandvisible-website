@@ -12,3 +12,7 @@
 # or reaches a page through a stray external link.
 /archive/*
   X-Robots-Tag: noindex, nofollow
+
+# Work screenshots rarely change; cache 30 days (JS/CSS stay on default revalidation)
+/assets/work/*
+  Cache-Control: public, max-age=2592000
