@@ -204,3 +204,10 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Anchors `#stay-visible` and `#kit` and both button links are unchanged (the homepage links to `/pricing/#kit`). Styles are inline on the page, so no shared-CSS change.
 - Checked in a browser at desktop and phone widths (no overflow). Not checked: Safari/Firefox.
 
+
+## 2026-11-09 — Case study pages (branch `case-studies`; not merged)
+
+- New pages `/work/elleven-hair-studio/` and `/work/impeccable-clean-magic/`, in the guide layout: at a glance, challenge, what we did, before/after table, takeaways, CTA. Article + BreadcrumbList schema. Only facts from project records; no rankings or traffic claims. Both clients gave written permission.
+- Recent work cards (blocks/recent-work.inc, synced to the homepage and /landing-pages/) now link to each case study as well as the live site.
+- Added both pages to sitemap.xml and a "Case studies" section to llms.txt.
+- Checked in a browser at desktop and 375px (no horizontal overflow, no console errors). Not checked: Safari/Firefox, a real phone.

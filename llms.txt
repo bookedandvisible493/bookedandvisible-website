@@ -28,6 +28,11 @@ Contact: hello@bookedandvisible.ca · (778) 779-9166 · Langley Township, BC, Ca
 - [FAQ](https://bookedandvisible.ca/faq/): Timelines, what customers need to do, refunds and ownership.
 - [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and who it serves.
 
+## Case studies
+
+- [Elleven Hair Studio (Langley hair salon)](https://bookedandvisible.ca/work/elleven-hair-studio/): sitemap and indexing fixes, structured data, service and Willoughby pages, 56 reviews on site, 7 new directory listings.
+- [Impeccable Clean Magic (Langley cleaning company)](https://bookedandvisible.ca/work/impeccable-clean-magic/): one-page image site replaced with a 15-page website on its own domain, Google Business Profile cleanup, first directory listings.
+
 ## Guides
 
 - [Google Business Profile checklist for local businesses](https://bookedandvisible.ca/guides/google-business-profile-checklist-for-local-businesses/)
