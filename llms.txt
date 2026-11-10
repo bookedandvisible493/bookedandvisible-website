@@ -11,7 +11,7 @@ Products (all one-time purchases, CAD):
 - SEO Improvement Package, $449: everything in the Boost (which includes the Report) plus a Google Business Profile tune-up, on-page SEO for up to 5 pages, help with key Canadian directory listings (we set up what we can and guide you through any step only the owner can do), a review system, and Search Console and Bing Webmaster Tools setup, within 7 business days of the intake form and profile access.
 - Stay Visible monthly plan, $79/month, month to month with no contract: 4 Google Business Profile posts a month, a reply to every new Google review within 3 business days, a monthly profile and business-details check, a monthly 0–100 score (full AI check every 3 months), a one-page monthly report, and a 90-day plan refreshed every quarter.
 - Landing pages for businesses without a website: 1 page $329, 3 pages $429, 5 pages $529 (add $60 to have the domain registered for you), live within 3, 5 or 7 business days of receiving the content. The customer owns the domain.
-- Business card design, $99: 5 original front-and-back designs within 1 business day of the intake form, one round of changes on the chosen design, a QR code with a tracking tag, contact details matched to the Google Business Profile and website, and print-ready files (PDF and 300 dpi PNG with bleed) set up for the printer the customer chooses. Printing is not included; the customer owns the files.
+- Business card design, $99: 5 original front-and-back designs within 1 business day of the intake form, one round of changes on the chosen design, a scan-tested QR code (links to the customer's website carry a tracking tag so visits show in their analytics as card / print; Google review links cannot be tracked), contact details matched to the Google Business Profile and website, and print-ready files (PDF and 300 dpi PNG with bleed) set up for the printer the customer chooses. Printing is not included; the customer owns the files.
 
 Every Boost or SEO customer gets a 30-day re-check (same searches and AI assistants as the first report), with the before-and-after shown in their report. No specific point increase, ranking, calls or revenue is guaranteed.
 
@@ -25,7 +25,7 @@ Contact: hello@bookedandvisible.ca · (778) 779-9166 · Langley Township, BC, Ca
 - [Stay Visible](https://bookedandvisible.ca/stay-visible/): Optional month-to-month upkeep for a Google Business Profile and AI visibility.
 - [SEO Improvement Package](https://bookedandvisible.ca/seo-package/): Done-for-you local SEO: Google Business Profile, website pages, directories, reviews and AI search.
 - [Landing Pages](https://bookedandvisible.ca/landing-pages/): Websites of 1, 3 or 5 pages for businesses without one, with a recent example.
-- [Business Card Design](https://bookedandvisible.ca/business-card-design/): Custom business cards for $99 CAD, with 5 concepts, a tracked QR code and print-ready files, and examples.
+- [Business Card Design](https://bookedandvisible.ca/business-card-design/): Custom business cards for $99 CAD, with 5 concepts, a QR code and print-ready files, and examples.
 - [What's Included](https://bookedandvisible.ca/whats-included/): What's in the Starter Kit and how the service works end to end.
 - [FAQ](https://bookedandvisible.ca/faq/): Timelines, what customers need to do, refunds and ownership.
 - [About](https://bookedandvisible.ca/about/): Who runs Booked & Visible and who it serves.
