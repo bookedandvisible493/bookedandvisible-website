@@ -42,6 +42,9 @@ gtag('config', 'G-3MJ8SD8MRE');
 .form-shell{max-width:640px;margin:0 auto;}
 .field{margin-bottom:20px;}
 .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;}
+.field .label-like{display:block;font-size:13px;font-weight:700;margin-bottom:8px;}
+.check-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;}
+@media (max-width:520px){.check-group{grid-template-columns:1fr;}}
 .field .hint{display:block;font-size:12px;color:var(--muted);margin-top:6px;}
 .field input[type="text"],
 .field input[type="email"],
@@ -363,29 +366,40 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 </fieldset>
 
 <fieldset data-show="cards">
-<legend>Your business cards</legend>
+<legend>Your business cards: what goes on them</legend>
 <div class="field">
 <label for="card-name">Name and title to print (optional)</label>
 <input type="text" id="card-name" name="Card name and title" placeholder="e.g. Jordan Ellis, Owner. Leave blank for a business-only card">
 </div>
 <div class="field">
 <label for="card-details">Contact details to print, exactly as they should appear <span class="required-mark">*</span></label>
-<textarea id="card-details" name="Card contact details" data-required placeholder="Phone, email, website, address (if customers visit you), social handle"></textarea>
+<textarea id="card-details" name="Card contact details" data-required placeholder="Phone, email, website, address (only if customers visit you), social handle"></textarea>
 <span class="hint">We'll check these against your Google profile and website and flag anything that doesn't match.</span>
 </div>
 <div class="field">
-<label for="card-printer">Where will you print the cards? <span class="required-mark">*</span></label>
-<select id="card-printer" name="Printer" data-required>
-<option value="">Select one</option>
-<option>Vistaprint</option>
-<option>Staples</option>
-<option>A local print shop (name it in the notes)</option>
-<option>MOO</option>
-<option>Other online printer (name it in the notes)</option>
-<option>Not sure yet, please recommend one</option>
-</select>
-<span class="hint">We set up the files for that printer's card size and bleed.</span>
+<label for="card-extras">Anything else to include? (optional)</label>
+<textarea id="card-extras" name="Card extras" placeholder="e.g. a tagline, 3 main services, licence number, 'Licensed &amp; insured', languages spoken"></textarea>
+<span class="hint">Less is more on a card: we'll suggest what to keep if the list is long.</span>
 </div>
+<div class="field">
+<label for="card-qr">Where should the QR code go? <span class="required-mark">*</span></label>
+<select id="card-qr" name="QR destination" data-required>
+<option value="">Select one</option>
+<option>My website</option>
+<option>My online booking page</option>
+<option>My Google review link</option>
+<option>No QR code</option>
+</select>
+<span class="hint">Website and booking links get a tracking tag so visits show in your website statistics as card / print. Google review links can't be tracked.</span>
+</div>
+<div class="field">
+<label for="card-qr-link">Link for the QR code, if it isn't your website (optional)</label>
+<input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="card-qr-link" name="QR link" placeholder="Paste your booking page or Google review link">
+</div>
+</fieldset>
+
+<fieldset data-show="cards">
+<legend>Your business cards: the look</legend>
 <div class="field">
 <label for="card-logo">Your logo <span class="required-mark">*</span></label>
 <select id="card-logo" name="Logo situation" data-required>
@@ -398,23 +412,78 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 </select>
 </div>
 <div class="field">
-<label for="card-materials">Logo, photos, old card or examples you like (optional)</label>
+<label for="card-materials">Logo, photos, old card or cards you like (optional)</label>
 <input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="card-materials" name="Card materials link" placeholder="Shared folder link (Google Drive, Dropbox, iCloud)">
 <span class="hint">No link? Reply to your confirmation email with the files attached.</span>
 </div>
 <div class="field">
-<label for="card-qr">Where should the QR code go? <span class="required-mark">*</span></label>
-<select id="card-qr" name="QR destination" data-required>
-<option value="">Select one</option>
-<option>My website</option>
-<option>My online booking page</option>
-<option>My Google review link</option>
-<option>No QR code</option>
-</select>
+<span class="label-like" id="card-feel-label">How should your card feel? Pick up to 3 (optional)</span>
+<div class="check-group" role="group" aria-labelledby="card-feel-label">
+<label class="check"><input type="checkbox" name="Card feel" value="Clean and minimal"><span>Clean and minimal</span></label>
+<label class="check"><input type="checkbox" name="Card feel" value="Bold and modern"><span>Bold and modern</span></label>
+<label class="check"><input type="checkbox" name="Card feel" value="Warm and friendly"><span>Warm and friendly</span></label>
+<label class="check"><input type="checkbox" name="Card feel" value="Premium and elegant"><span>Premium and elegant</span></label>
+<label class="check"><input type="checkbox" name="Card feel" value="Classic and trustworthy"><span>Classic and trustworthy</span></label>
+<label class="check"><input type="checkbox" name="Card feel" value="Fun and playful"><span>Fun and playful</span></label>
+</div>
 </div>
 <div class="field">
-<label for="card-style">Colours, style or a tagline you'd like (optional)</label>
-<textarea id="card-style" name="Card style" placeholder="e.g. keep our navy and orange, modern and bold, include 'Licensed &amp; insured'"></textarea>
+<label for="card-words">3 words your customers would use to describe you (optional)</label>
+<input type="text" id="card-words" name="Three words" placeholder="e.g. reliable, friendly, fast">
+</div>
+<div class="field">
+<label for="card-colours">Colours to use (optional)</label>
+<input type="text" id="card-colours" name="Card colours" placeholder="e.g. navy and orange, or 'same as my website'">
+</div>
+<div class="field">
+<label for="card-avoid">Anything to avoid? (optional)</label>
+<input type="text" id="card-avoid" name="Card avoid" placeholder="e.g. no pink, nothing too busy, no photos">
+</div>
+<div class="field">
+<label for="card-orientation">Card direction</label>
+<select id="card-orientation" name="Orientation">
+<option>No preference</option>
+<option>Horizontal (landscape)</option>
+<option>Vertical (portrait)</option>
+<option>Show me some of each</option>
+</select>
+</div>
+</fieldset>
+
+<fieldset data-show="cards">
+<legend>Your business cards: printing</legend>
+<div class="field">
+<label for="card-printer">Where will you print the cards? <span class="required-mark">*</span></label>
+<select id="card-printer" name="Printer" data-required>
+<option value="">Select one</option>
+<option>Vistaprint</option>
+<option>Staples</option>
+<option>A local print shop (name it below)</option>
+<option>MOO</option>
+<option>Other online printer (name it below)</option>
+<option>Not sure yet, please recommend one</option>
+</select>
+<span class="hint">We set up the files for that printer's card size and bleed.</span>
+</div>
+<div class="field">
+<label for="card-printer-name">Print shop name or link (optional)</label>
+<input type="text" id="card-printer-name" name="Printer name" placeholder="e.g. a local shop in Langley">
+</div>
+<div class="field">
+<label for="card-finish">Paper or finish you're planning (optional)</label>
+<select id="card-finish" name="Card finish">
+<option>Not sure yet</option>
+<option>Standard matte</option>
+<option>Glossy</option>
+<option>Thick or premium paper</option>
+<option>Rounded corners</option>
+</select>
+<span class="hint">Rounded corners change where text can safely sit, so it helps to know.</span>
+</div>
+<div class="field">
+<label for="card-deadline">Need the cards by a certain date? (optional)</label>
+<input type="text" id="card-deadline" name="Needed by" placeholder="e.g. trade show on March 12">
+<span class="hint">Printers usually need 3 to 7 business days after you upload the files.</span>
 </div>
 </fieldset>
 
