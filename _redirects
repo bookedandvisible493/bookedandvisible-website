@@ -20,3 +20,6 @@
 # product (2026-09). Old links in receipts and emails still land on it.
 /ai-visibility/order/                /order/                301
 /ai-visibility/order/thank-you.html  /order/thank-you.html  301
+
+# One canonical host: send www to the bare domain (2026-11-09 SEO audit).
+https://www.bookedandvisible.ca/* https://bookedandvisible.ca/:splat 301

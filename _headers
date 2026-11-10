@@ -16,3 +16,10 @@
 # Work screenshots rarely change; cache 30 days (JS/CSS stay on default revalidation)
 /assets/work/*
   Cache-Control: public, max-age=2592000
+
+# Keep the Cloudflare Pages platform URLs and branch previews out of search
+# (they serve the same site; the canonical domain is bookedandvisible.ca).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
