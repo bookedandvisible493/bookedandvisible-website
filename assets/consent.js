@@ -104,6 +104,7 @@ injectStyles();
 
 var banner = document.createElement("div");
 banner.className = "bv-cookie-banner";
+banner.setAttribute("data-nosnippet", "");
 banner.setAttribute("role", "dialog");
 banner.setAttribute("aria-label", "Cookie consent");
 banner.innerHTML =

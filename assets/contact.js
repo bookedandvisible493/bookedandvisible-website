@@ -11,6 +11,7 @@ if (document.getElementById("bv-contact")) return;
 var here = location.origin + location.pathname;
 var wrap = document.createElement("div");
 wrap.id = "bv-contact";
+wrap.setAttribute("data-nosnippet", "");
 wrap.innerHTML =
 '<div class="bvc-panel" id="bvc-panel" role="dialog" aria-modal="false" aria-labelledby="bvc-title" hidden>' +
   '<div class="bvc-head"><h2 id="bvc-title">Ask us anything</h2>' +
