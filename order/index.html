@@ -81,6 +81,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <a href="/seo-package/">SEO Package<small>Most complete</small></a>
 <a href="/stay-visible/">Stay Visible<small>Month-to-month upkeep</small></a>
 <a href="/landing-pages/">Landing pages<small>A website, from $329</small></a>
+<a href="/business-card-design/">Business cards<small>5 custom designs, $99</small></a>
 <a href="/whats-included/">Starter Kit<small>Do it yourself, $129</small></a>
 </div>
 </details>
@@ -124,6 +125,7 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <option value="Landing Page — Full Website (5 pages)" data-key="lp-5">Landing Page — Full Website (5 pages)</option>
 <option value="Starter Kit (personalized profile review)" data-key="kit">Starter Kit (personalized profile review)</option>
 <option value="Stay Visible monthly plan" data-key="stay">Stay Visible monthly plan</option>
+<option value="Business Card Design" data-key="cards">Business Card Design</option>
 </select>
 </div>
 <p data-show="kit" hidden style="font-size:14px;line-height:1.5;color:var(--ink);background:var(--panel);border-left:3px solid var(--accent);padding:12px 14px;margin:0 0 16px;"><strong>Your guides are on their way.</strong> Payhip emails your six guides and templates within minutes of purchase. Check your spam folder if you do not see them. This form is for your personalized profile review.</p>
@@ -357,6 +359,62 @@ background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Inte
 <div class="field">
 <label for="socials">Social media links (optional)</label>
 <textarea id="socials" name="Social links" placeholder="Facebook, Instagram, etc. — one per line"></textarea>
+</div>
+</fieldset>
+
+<fieldset data-show="cards">
+<legend>Your business cards</legend>
+<div class="field">
+<label for="card-name">Name and title to print (optional)</label>
+<input type="text" id="card-name" name="Card name and title" placeholder="e.g. Jordan Ellis, Owner. Leave blank for a business-only card">
+</div>
+<div class="field">
+<label for="card-details">Contact details to print, exactly as they should appear <span class="required-mark">*</span></label>
+<textarea id="card-details" name="Card contact details" data-required placeholder="Phone, email, website, address (if customers visit you), social handle"></textarea>
+<span class="hint">We'll check these against your Google profile and website and flag anything that doesn't match.</span>
+</div>
+<div class="field">
+<label for="card-printer">Where will you print the cards? <span class="required-mark">*</span></label>
+<select id="card-printer" name="Printer" data-required>
+<option value="">Select one</option>
+<option>Vistaprint</option>
+<option>Staples</option>
+<option>A local print shop (name it in the notes)</option>
+<option>MOO</option>
+<option>Other online printer (name it in the notes)</option>
+<option>Not sure yet, please recommend one</option>
+</select>
+<span class="hint">We set up the files for that printer's card size and bleed.</span>
+</div>
+<div class="field">
+<label for="card-logo">Your logo <span class="required-mark">*</span></label>
+<select id="card-logo" name="Logo situation" data-required>
+<option value="">Select one</option>
+<option>I have a logo (link below or reply to the confirmation email with it)</option>
+<option>No logo: make a clean text logo from my business name</option>
+<option>No logo: work from an image I have (sign, storefront, social picture)</option>
+<option>No logo yet: I'm getting one made, start when it's ready</option>
+<option>Not sure, show me the options</option>
+</select>
+</div>
+<div class="field">
+<label for="card-materials">Logo, photos, old card or examples you like (optional)</label>
+<input type="text" inputmode="url" autocapitalize="off" spellcheck="false" id="card-materials" name="Card materials link" placeholder="Shared folder link (Google Drive, Dropbox, iCloud)">
+<span class="hint">No link? Reply to your confirmation email with the files attached.</span>
+</div>
+<div class="field">
+<label for="card-qr">Where should the QR code go? <span class="required-mark">*</span></label>
+<select id="card-qr" name="QR destination" data-required>
+<option value="">Select one</option>
+<option>My website</option>
+<option>My online booking page</option>
+<option>My Google review link</option>
+<option>No QR code</option>
+</select>
+</div>
+<div class="field">
+<label for="card-style">Colours, style or a tagline you'd like (optional)</label>
+<textarea id="card-style" name="Card style" placeholder="e.g. keep our navy and orange, modern and bold, include 'Licensed &amp; insured'"></textarea>
 </div>
 </fieldset>
 
