@@ -24,6 +24,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 </script>
 <script src="/assets/consent.js?v=3" defer></script>
 <script src="/assets/track.js?v=1" defer></script>
+<script src="/assets/guides.js?v=1" defer></script>
 <script src="/assets/contact.js?v=3" defer></script>
 <script src="/assets/motion.js?v=cl1" defer></script>
 <meta charset="utf-8">
@@ -50,6 +51,7 @@ gtag('config', 'G-3MJ8SD8MRE');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="../assets/style.css?v=fpd">
+<link rel="stylesheet" href="/assets/guides.css?v=1">
 </head>
 <body>
 <div class="wrap">
@@ -80,154 +82,48 @@ gtag('config', 'G-3MJ8SD8MRE');
 </header>
 
 <main>
-<section style="padding:48px 0 8px;">
+<section class="gm-hero">
 <div class="eyebrow">Guides</div>
-<h1 style="font-size:40px;max-width:700px;margin-bottom:16px;">Practical guides for getting found locally</h1>
-<p style="font-size:16px;color:var(--muted);max-width:680px;">Straight answers on Google Business Profile, local search, reviews, and what it actually costs to get found — for independent local businesses of any kind.</p>
+<h1>Practical guides for getting found locally</h1>
+<p>Straight answers on Google Business Profile, local search, reviews, and what it actually costs to get found, for independent local businesses of any kind.</p>
 </section>
-
-<section style="padding:24px 0 8px;">
-<div class="filter-row">
-<button type="button" class="filter-pill active-filter" data-filter="all">All</button>
-<button type="button" class="filter-pill" data-filter="local-seo">Local SEO</button>
-<button type="button" class="filter-pill" data-filter="reviews">Reviews</button>
-<button type="button" class="filter-pill" data-filter="strategy">Strategy</button>
-<button type="button" class="filter-pill" data-filter="ai-search">AI search</button>
-<button type="button" class="filter-pill" data-filter="directories">Directories</button>
-<button type="button" class="filter-pill" data-filter="websites">Websites</button>
+<div class="gm-bar" id="gm-bar" role="search" hidden>
+<div class="gm-search"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><input id="gm-q" type="search" placeholder="Search guides, e.g. QR code" aria-label="Search guides" autocomplete="off"><kbd aria-hidden="true">/</kbd><button type="button" class="gm-clear" id="gm-clear" aria-label="Clear search" hidden>&times;</button></div>
+<div class="gm-chips" id="gm-chips" role="group" aria-label="Filter by topic"></div>
 </div>
-</section>
-
-<section style="padding:8px 0 64px;">
-<div class="grid grid-2" id="guides-grid">
-<a href="/guides/google-local-services-ads-canada-worth-it/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Google Local Services Ads in Canada: are they worth it?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Local Services Ads charge per lead instead of per click — how the Google Verified badge works in Canada and whether the cost is worth it for your business.</p></div>
-</a>
-<a href="/guides/how-to-get-recommended-by-chatgpt-and-ai-assistants/" class="tile" data-category="ai-search" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">AI search</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How to get your business recommended by ChatGPT, Gemini and other AI assistants</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">What AI assistants look at before they name a local business, and the steps that make yours easier to find and trust.</p></div>
-</a>
-<a href="/guides/google-ai-overviews-local-business/" class="tile" data-category="ai-search" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">AI search</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Google AI Overviews: what they mean for a local business</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">What Google&#x27;s AI summaries are, how they change local searches, and what helps your business get mentioned in them.</p></div>
-</a>
-<a href="/guides/google-business-profile-suspended/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Google Business Profile suspended? Why it happens and how to get it back</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">The usual reasons Google suspends a profile, how to tell which kind of suspension you have, and how to appeal properly.</p></div>
-</a>
-<a href="/guides/how-to-handle-fake-or-unfair-google-reviews/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How to handle a fake or unfair Google review</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">How to report a review that breaks Google&#x27;s rules, reply to one that doesn&#x27;t, and keep a single bad review from defining you.</p></div>
-</a>
-<a href="/guides/google-review-link-and-qr-code/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How to get your Google review link and QR code (and where to use them)</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Where to find your direct review link and QR code in your Google profile, and the easiest places to put them.</p></div>
-</a>
-<a href="/guides/bing-places-and-apple-business-connect/" class="tile" data-category="directories" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Directories</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Bing Places and Apple Business: the free listings most BC businesses skip</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Two free listings that feed Bing, Microsoft Copilot, Apple Maps and Siri (Apple Business was formerly Apple Business Connect), and how to set them up.</p></div>
-</a>
-<a href="/guides/canadian-business-directories-that-matter/" class="tile" data-category="directories" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Directories</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Which Canadian business directories actually matter?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">A short, prioritized list of the listings that help a Canadian local business, and which ones aren&#x27;t worth your time.</p></div>
-</a>
-<a href="/guides/small-business-website-cost-canada/" class="tile" data-category="websites" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Websites</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How much does a small business website cost in Canada?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Realistic price ranges for DIY, freelancer and agency websites in Canada, plus the ongoing costs people forget.</p></div>
-</a>
-<a href="/guides/google-business-profile-checklist-for-local-businesses/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">The Google Business Profile checklist every local business should run through</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">11 steps to stop losing customers to a competitor who's filled out their profile more completely than you did.</p></div>
-</a>
-<a href="/guides/5-google-business-profile-mistakes-costing-you-customers/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">5 Google Business Profile mistakes that are costing you customers</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">The most common reasons a profile underperforms — and how to fix each one in an afternoon.</p></div>
-</a>
-<a href="/guides/how-to-get-more-customer-reviews-without-feeling-awkward/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How to get more customer reviews without feeling awkward</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">A simple, non-pushy system for asking happy customers for reviews — timing, scripts, and where to send them.</p></div>
-</a>
-<a href="/guides/booked-visible-vs-pay-per-lead-directories/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Booked &amp; Visible vs. pay-per-lead directories: what it actually costs</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">What Angi, Thumbtack, and similar platforms really charge, compared to a flat-fee, ownership-based approach.</p></div>
-</a>
-<a href="/guides/how-google-decides-which-local-business-shows-up-first/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How Google decides which local business shows up first</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">A plain-language look at the three factors behind Google's local map pack — relevance, distance, and prominence — and which ones an independent business can actually influence.</p></div>
-</a>
-<a href="/guides/how-many-reviews-do-you-actually-need-to-compete/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How many reviews do you actually need to compete?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">A practical way to figure out how many Google reviews are actually enough to compete in your local market, instead of chasing an arbitrary round number.</p></div>
-</a>
-<a href="/guides/referrals-vs-search-where-new-customers-actually-come-from/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Referrals vs. search: where new customers actually come from</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Why referrals and Google search visibility aren't competing strategies for an independent local business — and how a strong profile actually makes word-of-mouth work harder.</p></div>
-</a>
-<a href="/guides/nap-consistency-why-matching-details-everywhere-matters/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">NAP consistency: why matching details everywhere actually matters</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Why your business name, address, and phone number need to match exactly across your website, Google profile, and directories — and how to find and fix the mismatches.</p></div>
-</a>
-<a href="/guides/how-to-respond-to-reviews-templates-for-every-situation/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How to respond to reviews: templates for every situation</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Ready-to-adapt templates for responding to five-star reviews, lukewarm reviews, and negative reviews — without sounding robotic, defensive, or like you're not paying attention.</p></div>
-</a>
-<a href="/guides/how-much-should-a-local-business-spend-on-marketing/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">How much should a local business actually spend on marketing?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">A simple framework for setting a marketing budget as an independent local business — without guessing, or copying a percentage rule that doesn't fit your situation.</p></div>
-</a>
-<a href="/guides/choosing-the-right-google-business-profile-category/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Choosing the right Google Business Profile category</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">How your primary and secondary Google Business Profile categories affect which searches you show up for — and a simple process for choosing them correctly.</p></div>
-</a>
-<a href="/guides/where-to-ask-for-reviews-beyond-google/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Where to ask for reviews beyond Google</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Google should come first, but it isn't always the only review platform worth building. A practical guide to when a second platform is worth the effort — and how to avoid spreading requests too thin.</p></div>
-</a>
-<a href="/guides/do-you-actually-need-a-website/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Do you actually need a website?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">Whether an independent local business needs a full website, a single landing page, or can rely on a Google Business Profile alone — a practical framework for deciding.</p></div>
-</a>
-<a href="/guides/service-area-business-google-profile-setup/" class="tile" data-category="local-seo" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Local SEO</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Service-area business? Here's how to set up your Google profile correctly</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">How to correctly configure a Google Business Profile as a service-area business when you work from a home office or don't want your address public — and what it means for ranking.</p></div>
-</a>
-<a href="/guides/is-it-legal-to-ask-customers-for-reviews/" class="tile" data-category="reviews" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Reviews</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Can you get in trouble for asking customers for reviews?</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">What Google's policies actually allow when it comes to asking for reviews — and the specific practices, like review-gating or paying for reviews, that can get a profile penalized.</p></div>
-</a>
-<a href="/guides/staying-visible-in-your-off-season/" class="tile" data-category="strategy" style="background:var(--panel);min-height:200px;">
-<div><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:8px;">Strategy</div>
-<h2 style="font-size:22px;margin-bottom:10px;">Staying visible in your off-season</h2>
-<p style="font-size:14px;color:var(--muted);margin:0;">How independent local businesses with a seasonal demand curve can stay visible and keep building their Google profile during slow months, so they're ahead when demand returns.</p></div>
-</a>
-</div>
-<p id="guides-empty" style="display:none;font-size:14px;color:var(--muted);margin-top:24px;">No guides in this category yet.</p>
-</section>
+<section class="gm-most" id="gm-most" aria-labelledby="gm-most-h"><h2 id="gm-most-h">Start with these</h2><div class="gm-most-grid"><a href="/guides/google-review-link-and-qr-code/"><b>Start here</b><span>How to get your Google review link and QR code (and where to use them)</span></a><a href="/guides/small-business-website-cost-canada/"><b>Start here</b><span>How much does a small business website cost in Canada?</span></a><a href="/guides/how-google-decides-which-local-business-shows-up-first/"><b>Start here</b><span>How Google decides which local business shows up first</span></a></div></section>
+<div class="gm-countrow"><p class="gm-count" id="gm-count" aria-live="polite"></p><label class="gm-sort" id="gm-sortwrap" hidden>Sort <select id="gm-sort"><option value="new">Newest</option><option value="topic">By topic</option><option value="az">A to Z</option></select></label></div>
+<h2 class="sr-only">All guides</h2>
+<ul class="gm-list" id="gm-list">
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-10-03" data-title="Google Local Services Ads in Canada: are they worth it?"><a class="gm-row" href="/guides/google-local-services-ads-canada-worth-it/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>6 min</span><span class="gm-date">Oct 3, 2026</span></span></div><h3>Google Local Services Ads in Canada: are they worth it?</h3><p>Local Services Ads charge per lead instead of per click — how the Google Verified badge works in Canada and whether the cost is worth it for your business.</p></a></li>
+<li class="gm-item" data-cat="ai-search" data-label="AI search" data-date="2026-09-28" data-title="How to get your business recommended by ChatGPT, Gemini and other AI assistants"><a class="gm-row" href="/guides/how-to-get-recommended-by-chatgpt-and-ai-assistants/"><div class="gm-top"><span class="gm-cat">AI search</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>How to get your business recommended by ChatGPT, Gemini and other AI assistants</h3><p>What AI assistants look at before they name a local business, and the steps that make yours easier to find and trust.</p></a></li>
+<li class="gm-item" data-cat="ai-search" data-label="AI search" data-date="2026-09-28" data-title="Google AI Overviews: what they mean for a local business"><a class="gm-row" href="/guides/google-ai-overviews-local-business/"><div class="gm-top"><span class="gm-cat">AI search</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>Google AI Overviews: what they mean for a local business</h3><p>What Google&#x27;s AI summaries are, how they change local searches, and what helps your business get mentioned in them.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-09-28" data-title="Google Business Profile suspended? Why it happens and how to get it back"><a class="gm-row" href="/guides/google-business-profile-suspended/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>Google Business Profile suspended? Why it happens and how to get it back</h3><p>The usual reasons Google suspends a profile, how to tell which kind of suspension you have, and how to appeal properly.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-09-28" data-title="How to handle a fake or unfair Google review"><a class="gm-row" href="/guides/how-to-handle-fake-or-unfair-google-reviews/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>How to handle a fake or unfair Google review</h3><p>How to report a review that breaks Google&#x27;s rules, reply to one that doesn&#x27;t, and keep a single bad review from defining you.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-09-28" data-title="How to get your Google review link and QR code (and where to use them)"><a class="gm-row" href="/guides/google-review-link-and-qr-code/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>How to get your Google review link and QR code (and where to use them)</h3><p>Where to find your direct review link and QR code in your Google profile, and the easiest places to put them.</p></a></li>
+<li class="gm-item" data-cat="directories" data-label="Directories" data-date="2026-09-28" data-title="Bing Places and Apple Business: the free listings most BC businesses skip"><a class="gm-row" href="/guides/bing-places-and-apple-business-connect/"><div class="gm-top"><span class="gm-cat">Directories</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>Bing Places and Apple Business: the free listings most BC businesses skip</h3><p>Two free listings that feed Bing, Microsoft Copilot, Apple Maps and Siri (Apple Business was formerly Apple Business Connect), and how to set them up.</p></a></li>
+<li class="gm-item" data-cat="directories" data-label="Directories" data-date="2026-09-28" data-title="Which Canadian business directories actually matter?"><a class="gm-row" href="/guides/canadian-business-directories-that-matter/"><div class="gm-top"><span class="gm-cat">Directories</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>Which Canadian business directories actually matter?</h3><p>A short, prioritized list of the listings that help a Canadian local business, and which ones aren&#x27;t worth your time.</p></a></li>
+<li class="gm-item" data-cat="websites" data-label="Websites" data-date="2026-09-28" data-title="How much does a small business website cost in Canada?"><a class="gm-row" href="/guides/small-business-website-cost-canada/"><div class="gm-top"><span class="gm-cat">Websites</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Sep 28, 2026</span></span></div><h3>How much does a small business website cost in Canada?</h3><p>Realistic price ranges for DIY, freelancer and agency websites in Canada, plus the ongoing costs people forget.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-21" data-title="How Google decides which local business shows up first"><a class="gm-row" href="/guides/how-google-decides-which-local-business-shows-up-first/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>How Google decides which local business shows up first</h3><p>A plain-language look at the three factors behind Google's local map pack — relevance, distance, and prominence — and which ones an independent business can actually influence.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-08-21" data-title="How many reviews do you actually need to compete?"><a class="gm-row" href="/guides/how-many-reviews-do-you-actually-need-to-compete/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>3 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>How many reviews do you actually need to compete?</h3><p>A practical way to figure out how many Google reviews are actually enough to compete in your local market, instead of chasing an arbitrary round number.</p></a></li>
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-08-21" data-title="Referrals vs. search: where new customers actually come from"><a class="gm-row" href="/guides/referrals-vs-search-where-new-customers-actually-come-from/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Referrals vs. search: where new customers actually come from</h3><p>Why referrals and Google search visibility aren't competing strategies for an independent local business — and how a strong profile actually makes word-of-mouth work harder.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-21" data-title="NAP consistency: why matching details everywhere actually matters"><a class="gm-row" href="/guides/nap-consistency-why-matching-details-everywhere-matters/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>NAP consistency: why matching details everywhere actually matters</h3><p>Why your business name, address, and phone number need to match exactly across your website, Google profile, and directories — and how to find and fix the mismatches.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-08-21" data-title="How to respond to reviews: templates for every situation"><a class="gm-row" href="/guides/how-to-respond-to-reviews-templates-for-every-situation/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>How to respond to reviews: templates for every situation</h3><p>Ready-to-adapt templates for responding to five-star reviews, lukewarm reviews, and negative reviews — without sounding robotic, defensive, or like you're not paying attention.</p></a></li>
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-08-21" data-title="How much should a local business actually spend on marketing?"><a class="gm-row" href="/guides/how-much-should-a-local-business-spend-on-marketing/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>How much should a local business actually spend on marketing?</h3><p>A simple framework for setting a marketing budget as an independent local business — without guessing, or copying a percentage rule that doesn't fit your situation.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-21" data-title="Choosing the right Google Business Profile category"><a class="gm-row" href="/guides/choosing-the-right-google-business-profile-category/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Choosing the right Google Business Profile category</h3><p>How your primary and secondary Google Business Profile categories affect which searches you show up for — and a simple process for choosing them correctly.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-08-21" data-title="Where to ask for reviews beyond Google"><a class="gm-row" href="/guides/where-to-ask-for-reviews-beyond-google/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Where to ask for reviews beyond Google</h3><p>Google should come first, but it isn't always the only review platform worth building. A practical guide to when a second platform is worth the effort — and how to avoid spreading requests too thin.</p></a></li>
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-08-21" data-title="Do you actually need a website?"><a class="gm-row" href="/guides/do-you-actually-need-a-website/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Do you actually need a website?</h3><p>Whether an independent local business needs a full website, a single landing page, or can rely on a Google Business Profile alone — a practical framework for deciding.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-21" data-title="Service-area business? Here&#x27;s how to set up your Google profile correctly"><a class="gm-row" href="/guides/service-area-business-google-profile-setup/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Service-area business? Here's how to set up your Google profile correctly</h3><p>How to correctly configure a Google Business Profile as a service-area business when you work from a home office or don't want your address public — and what it means for ranking.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-08-21" data-title="Can you get in trouble for asking customers for reviews?"><a class="gm-row" href="/guides/is-it-legal-to-ask-customers-for-reviews/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Can you get in trouble for asking customers for reviews?</h3><p>What Google's policies actually allow when it comes to asking for reviews — and the specific practices, like review-gating or paying for reviews, that can get a profile penalized.</p></a></li>
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-08-21" data-title="Staying visible in your off-season"><a class="gm-row" href="/guides/staying-visible-in-your-off-season/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 21, 2026</span></span></div><h3>Staying visible in your off-season</h3><p>How independent local businesses with a seasonal demand curve can stay visible and keep building their Google profile during slow months, so they're ahead when demand returns.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-20" data-title="5 Google Business Profile mistakes that are costing you customers"><a class="gm-row" href="/guides/5-google-business-profile-mistakes-costing-you-customers/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 20, 2026</span></span></div><h3>5 Google Business Profile mistakes that are costing you customers</h3><p>The most common reasons a profile underperforms — and how to fix each one in an afternoon.</p></a></li>
+<li class="gm-item" data-cat="reviews" data-label="Reviews" data-date="2026-08-20" data-title="How to get more customer reviews without feeling awkward"><a class="gm-row" href="/guides/how-to-get-more-customer-reviews-without-feeling-awkward/"><div class="gm-top"><span class="gm-cat">Reviews</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>2 min</span><span class="gm-date">Aug 20, 2026</span></span></div><h3>How to get more customer reviews without feeling awkward</h3><p>A simple, non-pushy system for asking happy customers for reviews — timing, scripts, and where to send them.</p></a></li>
+<li class="gm-item" data-cat="local-seo" data-label="Local SEO" data-date="2026-08-19" data-title="The Google Business Profile checklist every local business should run through"><a class="gm-row" href="/guides/google-business-profile-checklist-for-local-businesses/"><div class="gm-top"><span class="gm-cat">Local SEO</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Aug 19, 2026</span></span></div><h3>The Google Business Profile checklist every local business should run through</h3><p>11 steps to stop losing customers to a competitor who's filled out their profile more completely than you did.</p></a></li>
+<li class="gm-item" data-cat="strategy" data-label="Strategy" data-date="2026-08-19" data-title="Booked &amp; Visible vs. pay-per-lead directories: what it actually costs"><a class="gm-row" href="/guides/booked-visible-vs-pay-per-lead-directories/"><div class="gm-top"><span class="gm-cat">Strategy</span><span class="gm-meta"><span class="gm-tag gm-new" hidden>New</span><span>4 min</span><span class="gm-date">Aug 19, 2026</span></span></div><h3>Booked &amp; Visible vs. pay-per-lead directories: what it actually costs</h3><p>What Angi, Thumbtack, and similar platforms really charge, compared to a flat-fee, ownership-based approach.</p></a></li>
+</ul>
+<div id="gm-groups" hidden></div>
+<div class="gm-empty" id="gm-empty" hidden><p></p><button type="button">Clear filters</button></div>
+<div style="height:64px"></div>
 </main>
 
 <footer>
@@ -235,26 +131,5 @@ gtag('config', 'G-3MJ8SD8MRE');
 <div data-nosnippet style="display:flex;gap:20px;"><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refunds</a><a href="#" data-cookie-preferences>Cookie Preferences</a></div>
 </footer>
 </div>
-<script>
-(function(){
-var buttons = document.querySelectorAll('.filter-pill');
-var tiles = document.querySelectorAll('#guides-grid [data-category]');
-var empty = document.getElementById('guides-empty');
-buttons.forEach(function(btn){
-btn.addEventListener('click', function(){
-buttons.forEach(function(b){ b.classList.remove('active-filter'); });
-btn.classList.add('active-filter');
-var cat = btn.getAttribute('data-filter');
-var visibleCount = 0;
-tiles.forEach(function(t){
-var show = (cat === 'all' || t.getAttribute('data-category') === cat);
-t.style.display = show ? '' : 'none';
-if (show) visibleCount++;
-});
-empty.style.display = visibleCount === 0 ? '' : 'none';
-});
-});
-})();
-</script>
 </body>
 </html>
