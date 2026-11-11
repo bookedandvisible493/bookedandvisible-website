@@ -19,7 +19,25 @@ rank.textContent=s==='after'?'1st':'3rd';if(s==='after'&&mv)rank.animate([{trans
 if(s==='after'){baA.setAttribute('aria-current','true');baB.removeAttribute('aria-current')}else{baB.setAttribute('aria-current','true');baA.removeAttribute('aria-current')}};
 var clr=function(){tm.forEach(clearTimeout);tm=[]};
 var play=function(){clr();if(off()){go('after');return}go('before');tm.push(setTimeout(function(){go('after',1)},1000))};
-d.getElementById('replay').onclick=play;
+/* industry rotation: the search is retyped for a new trade, rival names swap, you climb again */
+var IND=[{q:'plumber near me',a:'Sample Plumbing Co.',b:'Example Heating &amp; Drains'},{q:'HVAC repair near me',a:'Sample HVAC Co.',b:'Example Heating &amp; Air'},{q:'dentist near me',a:'Sample Dental Clinic',b:'Example Family Dentistry'},{q:'house cleaner near me',a:'Sample Cleaning Co.',b:'Example Maid Service'},{q:'hair salon near me',a:'Sample Hair Studio',b:'Example Beauty Bar'}];
+var qt=d.querySelector('.q-text'),nA=R.a.querySelector('b'),nB=R.b.querySelector('b'),ix=0,tok=0,inView=false,caret=d.createElement('span');caret.className='caret';caret.setAttribute('aria-hidden','true');
+var sl=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+var setInd=function(i){var o=IND[i];qt.textContent=o.q;nA.innerHTML=o.a;nB.innerHTML=o.b};
+var fade=function(n){n.animate([{opacity:0,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:350,easing:'ease-out'})};
+var stop=function(){if(!tok&&!qt)return;tok++;caret.remove();setInd(ix)};
+var loop=async function(t){await sl(2800);
+while(t===tok&&!off()&&inView&&!d.hidden){ix=(ix+1)%IND.length;var o=IND[ix],s=qt.textContent;if(!caret.isConnected)qt.after(caret);
+while(s.length&&t===tok){s=s.slice(0,-1);qt.textContent=s;await sl(14)}
+if(t!==tok)return;await sl(80);nA.innerHTML=o.a;nB.innerHTML=o.b;fade(nA);fade(nB);go('before');
+for(var c=1;c<=o.q.length&&t===tok;c++){qt.textContent=o.q.slice(0,c);await sl(26)}
+if(t!==tok)return;await sl(150);go('after',1);await sl(2900)}
+if(t===tok)caret.remove()};
+var arm=function(){tok++;if(!off()&&inView)loop(tok)};
+var halt=function(){stop();if(st!=='after')go('after')};
+d.getElementById('replay').onclick=function(){tok++;caret.remove();setInd(ix);play();arm()};
+new IntersectionObserver(function(es){inView=es[0].isIntersecting;inView?arm():halt()},{threshold:.35}).observe(pk);
+d.addEventListener('visibilitychange',function(){d.hidden?halt():arm()});
 if(!off())go('before');
 var vis=new IntersectionObserver(function(es){if(es[0].isIntersecting){vis.disconnect();play()}},{threshold:.5});vis.observe(pk);
 setTimeout(function(){if(!clr.done&&st==='before'&&!tm.length)go('after',1)},7000);
@@ -27,7 +45,7 @@ var rs;addEventListener('resize',function(){clearTimeout(rs);rs=setTimeout(funct
 /* pause toggle (all [data-pause] buttons) */
 var pb=[].slice.call(d.querySelectorAll('[data-pause]'));
 var setP=function(v){if(v)h.dataset.motion='off';else delete h.dataset.motion;S('bv-motion',v?'off':'on');
-pb.forEach(function(b){b.setAttribute('aria-pressed',v);var l=v?'Resume animations':'Pause animations';b.setAttribute('aria-label',l);b.title=l});if(v&&pk){clr();go('after')}};
+pb.forEach(function(b){b.setAttribute('aria-pressed',v);var l=v?'Resume animations':'Pause animations';b.setAttribute('aria-label',l);b.title=l});if(v&&pk){clr();halt()}else if(pk)arm()};
 pb.forEach(function(b){b.onclick=function(){setP(h.dataset.motion!=='off')}});setP(S('bv-motion')==='off');
 /* fix-it pills: jump to the offer, tag it "Fits you" (text + outline) */
 var pills=[].slice.call(d.querySelectorAll('.pill'));
