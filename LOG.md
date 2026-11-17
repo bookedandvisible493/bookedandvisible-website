@@ -211,3 +211,9 @@ Pushed directly via the GitHub web editor, since direct git push is still blocke
 - Recent work cards (blocks/recent-work.inc, synced to the homepage and /landing-pages/) now link to each case study as well as the live site.
 - Added both pages to sitemap.xml and a "Case studies" section to llms.txt.
 - Checked in a browser at desktop and 375px (no horizontal overflow, no console errors). Not checked: Safari/Firefox, a real phone.
+
+## 2026-11-17 — Footer: Instagram and Facebook links (branch `footer-social`)
+
+- Added "Instagram" (https://www.instagram.com/bookedandvisible/) and "Facebook" (the Page, profile.php?id=61592803361165, same URL as the homepage schema) to the footer link row on all 46 live pages, before "Cookie Preferences". `rel="me noopener"`. The 3 pages in `archive/` keep their old footer.
+- Homepage Organization schema `sameAs` now also lists the Instagram profile. JSON-LD still parses.
+- Checked locally at 1024px and 375px: links render, no horizontal overflow. Not checked: Safari/Firefox, a real phone.
