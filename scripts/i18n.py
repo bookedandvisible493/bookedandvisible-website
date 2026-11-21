@@ -6,6 +6,8 @@ HTML plus a per-language translation memory (i18n/<lang>.json: English segment -
 so structure, links, prices and structured data cannot drift. Run from the repo root.
 
   python3 scripts/i18n.py extract        refresh i18n/segments.json (ids are permanent; new strings are appended)
+  python3 scripts/i18n.py extract-pending <slug> <guide.html> [card.html]   register an unpublished guide's strings
+  python3 scripts/i18n.py pending-work|pending-review|pending-status <slug>   per-guide translator/reviewer files and readiness
   python3 scripts/i18n.py extract-lang <lang...>   work chunks for new languages without regenerating segment ids
   python3 scripts/i18n.py merge <lang> <file.json>   merge {english: translation} into the memory
   python3 scripts/i18n.py merge-ids <lang> <file.json>  merge {id: translation} (ids from i18n/work/<lang>-N.json)
@@ -437,7 +439,9 @@ def cmd_build(check=False):
     global CORE, CORE_URLS
     CORE = all_pages()
     CORE_URLS = {page_url(p) for p in CORE}
-    collect()
+    cur_keys = list(collect())
+    if not check:
+        run_autofill(cur_keys)
     stale_pages = {}
     for l in LANGS:
         mem = load_mem(l)
@@ -500,16 +504,211 @@ def patch_llms(s):
     return s.rstrip("\n") + "\n" + "\n".join(lines) + "\n"
 
 
+
+# ---------------------------------------------------------------- dates and counts that change at release time
+EN_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+EN_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+_ABBR = {
+    "es": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+    "ru": ["янв.", "февр.", "мар.", "апр.", "мая", "июн.", "июл.", "авг.", "сент.", "окт.", "нояб.", "дек."],
+    "fr": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
+    "pt": ["jan.", "fev.", "mar.", "abr.", "mai.", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."],
+}
+_FULL = {
+    "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+    "ru": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+    "fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+}
+
+
+def fmt_date(lang, y, m, d, style):
+    """style 'short' = guide-index card date, 'long' = byline date. Mirrors the formats already in the translation memory."""
+    if lang in ("ko",):
+        return "%d년 %d월 %d일" % (y, m, d)
+    if lang in ("zh-hant", "ja"):
+        return "%d年%d月%d日" % (y, m, d)
+    if style == "short":
+        if lang == "pt":
+            return "%d de %s de %d" % (d, _ABBR["pt"][m - 1], y)
+        return "%d %s %d" % (d, _ABBR[lang][m - 1], y)
+    if lang == "pt":
+        return "%d de %s de %d" % (d, _FULL["pt"][m - 1], y)
+    if lang == "es":
+        return "%d de %s de %d" % (d, _FULL["es"][m - 1], y)
+    return "%d %s %d" % (d, _FULL[lang][m - 1], y)
+
+
+_CARD = re.compile(r"^([A-Z][a-z]{2}) (\d{1,2}), (20\d\d)$")
+_BYL = re.compile(r"^(By <a href=\"/about/\">Viktor</a>, founder of Booked &amp; Visible · Published )([A-Z][a-z]+) (\d{1,2}), (20\d\d)$")
+_SEEALL = re.compile(r"^See all (\d+) guides(.*)$")
+
+
+def autofill(lang, mem, keys):
+    """Fill release-day-dependent strings (dates, 'See all N guides') from existing translations. Returns number filled."""
+    filled = 0
+    have = [k for k in keys if mem.get(k)]
+    for k in keys:
+        if mem.get(k):
+            continue
+        m = _CARD.match(k)
+        if m and m.group(1) in EN_ABBR:
+            mem[k] = fmt_date(lang, int(m.group(3)), EN_ABBR.index(m.group(1)) + 1, int(m.group(2)), "short")
+            filled += 1
+            continue
+        m = _BYL.match(k)
+        if m and m.group(2) in EN_MONTHS:
+            y, mo, d = int(m.group(4)), EN_MONTHS.index(m.group(2)) + 1, int(m.group(3))
+            for k0 in have:
+                m0 = _BYL.match(k0)
+                if m0 and m0.group(2) in EN_MONTHS:
+                    old = fmt_date(lang, int(m0.group(4)), EN_MONTHS.index(m0.group(2)) + 1, int(m0.group(3)), "long")
+                    if old in mem[k0]:
+                        mem[k] = mem[k0].replace(old, fmt_date(lang, y, mo, d, "long"))
+                        filled += 1
+                        break
+            continue
+        m = _SEEALL.match(k)
+        if m:
+            for k0 in have:
+                m0 = _SEEALL.match(k0)
+                if m0 and m0.group(2) == m.group(2) and m0.group(1) != m.group(1) and mem[k0].count(m0.group(1)) == 1:
+                    mem[k] = mem[k0].replace(m0.group(1), m.group(1))
+                    filled += 1
+                    break
+    return filled
+
+
+def run_autofill(keys):
+    total = 0
+    for lang in LANGS:
+        mem = load_mem(lang)
+        n = autofill(lang, mem, keys)
+        if n:
+            save_mem(lang, mem)
+            total += n
+    if total:
+        print("Auto-filled %d date/count strings" % total)
+
+
+# ---------------------------------------------------------------- pending (not yet published) guides
+PENDING_PATH = os.path.join(I18N, "pending.json")
+
+
+def load_pending():
+    return json.load(open(PENDING_PATH, encoding="utf-8")) if os.path.exists(PENDING_PATH) else {}
+
+
+def save_pending(d):
+    json.dump(d, open(PENDING_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+def keys_of_html(src, where_page):
+    out = {}
+
+    def fn(kind, key, where):
+        out.setdefault(key, {"kind": kind, "where": where, "pages": [where_page]})
+        return None
+    transform(strip_i18n(src), fn)
+    return out
+
+
+def cmd_extract_pending(slug, html_path, card_path):
+    """Register the segments of a guide that is not published yet (its page + its guides-index card)."""
+    path = os.path.join(I18N, "segments.json")
+    seg = json.load(open(path, encoding="utf-8"))
+    found = keys_of_html(open(html_path, encoding="utf-8").read(), "pending:" + slug)
+    if card_path and os.path.exists(card_path):
+        for k, v in keys_of_html(open(card_path, encoding="utf-8").read(), "pending:" + slug).items():
+            found.setdefault(k, v)
+    new = [k for k in found if k not in seg]
+    for k in new:
+        seg[k] = found[k]
+    json.dump(seg, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    pend = load_pending()
+    pend[slug] = {"keys": list(found), "new": new}
+    save_pending(pend)
+    run_autofill(list(found))
+    print("%s: %d segments (%d new)" % (slug, len(found), len(new)))
+    return 0
+
+
+def _slug_ids(slug, only_new=True):
+    pend = load_pending()[slug]
+    seg = json.load(open(os.path.join(I18N, "segments.json"), encoding="utf-8"))
+    keys = list(seg)
+    return keys, seg, [keys.index(k) for k in (pend["new"] if only_new else pend["keys"])]
+
+
+def cmd_pending_work(slug):
+    """Translator work files for one pending guide: i18n/work/pend-<slug>-<lang>.json"""
+    keys, seg, ids = _slug_ids(slug)
+    os.makedirs(os.path.join(I18N, "work"), exist_ok=True)
+    for lang in LANGS:
+        mem = load_mem(lang)
+        todo = [i for i in ids if not mem.get(keys[i])]
+        path = os.path.join(I18N, "work", "pend-%s-%s.json" % (slug, lang))
+        if os.path.exists(path):
+            os.remove(path)
+        if todo:
+            json.dump({str(i): {"en": keys[i], "kind": seg[keys[i]]["kind"], "where": seg[keys[i]]["where"]} for i in todo},
+                      open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print("%s: %d to translate" % (lang, len(todo)))
+    return 0
+
+
+def cmd_pending_review(slug):
+    keys, seg, ids = _slug_ids(slug)
+    for lang in LANGS:
+        mem = load_mem(lang)
+        path = os.path.join(I18N, "work", "pendrev-%s-%s.json" % (slug, lang))
+        if os.path.exists(path):
+            os.remove(path)
+        todo = [i for i in ids if mem.get(keys[i])]
+        json.dump({str(i): {"en": keys[i], "tr": mem[keys[i]], "kind": seg[keys[i]]["kind"], "where": seg[keys[i]]["where"]} for i in todo},
+                  open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print("%s: %d to review" % (lang, len(todo)))
+    return 0
+
+
+def cmd_pending_status(slug):
+    """Exit 0 only when every segment of the pending guide is translated in every language and passes the tag/number check."""
+    keys, seg, ids = _slug_ids(slug, only_new=False)
+    bad = 0
+    for lang in LANGS:
+        mem = load_mem(lang)
+        miss = [keys[i] for i in ids if not mem.get(keys[i])]
+        probs = 0
+        for i in ids:
+            k = keys[i]
+            v = mem.get(k)
+            if not v:
+                continue
+            if seg[k]["kind"] == "text" and skeleton(k) != skeleton(v):
+                probs += 1
+            if not numbers_ok(k, v):
+                probs += 1
+            if "[[CHECK" in v:
+                probs += 1
+        print("%s: %d missing, %d problems" % (lang, len(miss), probs))
+        bad += len(miss) + probs
+    return 1 if bad else 0
+
+
 # ---------------------------------------------------------------- extract / merge / check
 def cmd_extract():
     """Refresh segments.json. Ids are permanent: existing keys keep their position, new keys are appended."""
     cur = collect()
     path = os.path.join(I18N, "segments.json")
     old = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+    pend = load_pending()
+    pending_keys = {k for p in pend.values() for k in p["keys"]}
     merged = {}
     for k, v in old.items():
         if k in cur:
             merged[k] = cur[k]
+        elif k in pending_keys:
+            merged[k] = v
         else:
             v = dict(v)
             v["stale"] = True
@@ -519,6 +718,12 @@ def cmd_extract():
         merged[k] = cur[k]
     os.makedirs(I18N, exist_ok=True)
     json.dump(merged, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    done = [slug for slug, p in pend.items() if all(k in cur for k in p["keys"] if k in pending_keys) and os.path.exists(os.path.join(ROOT, "guides", slug, "index.html"))]
+    for slug in done:
+        del pend[slug]
+    if done:
+        save_pending(pend)
+    run_autofill(list(cur))
     keys = list(merged)
     print("%d segments (%d current, %d new, %d stale)" % (len(merged), len(cur), len(added), len(merged) - len(cur)))
     for k in added:
@@ -632,6 +837,7 @@ def numbers_ok(en, tr):
 
 def cmd_check():
     seg = collect()
+    run_autofill(list(seg))
     bad = 0
     for lang in LANGS:
         mem = load_mem(lang)
@@ -660,6 +866,14 @@ def main():
         return cmd_extract()
     if a[0] == "merge":
         return cmd_merge(a[1], a[2])
+    if a[0] == "extract-pending":
+        return cmd_extract_pending(a[1], a[2], a[3] if len(a) > 3 else None)
+    if a[0] == "pending-work":
+        return cmd_pending_work(a[1])
+    if a[0] == "pending-review":
+        return cmd_pending_review(a[1])
+    if a[0] == "pending-status":
+        return cmd_pending_status(a[1])
     if a[0] == "extract-lang":
         return cmd_extract_lang(a[1:])
     if a[0] == "review-prep":
