@@ -71,13 +71,13 @@ Contact: hello@bookedandvisible.ca · (778) 779-9166 · Langley Township, BC, Ca
 
 ## Languages (i18n)
 
-The main pages are also available in 한국어, 繁體中文, Español, 日本語, Русский, Français, Português. Reports, support, checkout and legal documents are in English.
+The main pages and guides are also available in 한국어, 繁體中文, Español, 日本語, Русский, Français, Português. Reports, support, checkout and legal documents are in English.
 
-- 한국어: https://bookedandvisible.ca/ko/
-- 繁體中文: https://bookedandvisible.ca/zh-hant/
-- Español: https://bookedandvisible.ca/es/
-- 日本語: https://bookedandvisible.ca/ja/
-- Русский: https://bookedandvisible.ca/ru/
-- Français: https://bookedandvisible.ca/fr/
-- Português: https://bookedandvisible.ca/pt/
+- 한국어: https://bookedandvisible.ca/ko/ (guides: https://bookedandvisible.ca/ko/guides/)
+- 繁體中文: https://bookedandvisible.ca/zh-hant/ (guides: https://bookedandvisible.ca/zh-hant/guides/)
+- Español: https://bookedandvisible.ca/es/ (guides: https://bookedandvisible.ca/es/guides/)
+- 日本語: https://bookedandvisible.ca/ja/ (guides: https://bookedandvisible.ca/ja/guides/)
+- Русский: https://bookedandvisible.ca/ru/ (guides: https://bookedandvisible.ca/ru/guides/)
+- Français: https://bookedandvisible.ca/fr/ (guides: https://bookedandvisible.ca/fr/guides/)
+- Português: https://bookedandvisible.ca/pt/ (guides: https://bookedandvisible.ca/pt/guides/)
 <!-- /i18n -->

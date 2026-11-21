@@ -62,7 +62,7 @@ When the English UI says `Get the SEO Package, $449` the button text is: transla
 - **Business card concept names stay in English** (`Clean Classic`, `After Dark`, `Blue Panel`, `Top Result`, `Pin Field`): they label card designs that stay English. Add a short translated gloss only if the English segment itself has one.
 - **Punctuation after prices and numbers follows the target language** (full-width `，。` in Chinese/Japanese, normal Korean/Russian/Spanish punctuation). The checker only compares digits, so there is no need for ASCII punctuation next to a price.
 - Cited source titles, the street address and the footer address stay in English.
-- Owner name stays `Victor` in Latin script in every language.
+- Owner name stays `Viktor` in Latin script in every language.
 
 ## 6. French (fr, Canadian French) and Portuguese (pt, Brazilian) added 2026-11-20
 Same hard rules as sections 2 and 5. Registers: French uses formal «vous», Canadian usage (courriel, texto, jours ouvrables; avoid France-only slang). Portuguese is Brazilian (pt-BR) with «você», plain business tone, Brazilian spelling (e-mail, usuário, "equipe").
@@ -94,3 +94,13 @@ French typography: put a non-breaking space (`&nbsp;`) before `:` `;` `?` `!` an
 | email / text message | courriel / texto | e-mail / mensagem de texto |
 | intake form | formulaire d'information | formulário de informações |
 Place names: Langley (unchanged), Fraser Valley = vallée du Fraser / Vale do Fraser, Surrey, Abbotsford, Vancouver (unchanged), British Columbia = Colombie-Britannique (C.-B.) / Colúmbia Britânica (BC), Canada = Canada / Canadá. In titles, H1s and meta descriptions keep "Langley" once as written.
+
+## 7. Guides (added 2026-11-20): rules for the 25 guide articles and the guides index
+- Guides are plain-language explainers for local business owners. Same hard rules as sections 2, 5 and 6. Keep the explanatory tone: clear, practical, no hype.
+- **Legal and policy content stays exact.** References to Canadian law and regulators (CASL, the Competition Act, BC consumer protection, the Competition Bureau, PIPEDA, CRA), Google/Bing/Apple policies and what is or is not allowed must be translated faithfully. Never add legal advice, never remove a disclaimer or a "this is not legal advice" line, never turn "may" into "will" or "is" into "must".
+- **Titles, H1s and meta descriptions** should read like what a person in that language would type into a search engine or ask an AI assistant (a natural question or topic phrase), keeping the English meaning. Titles about 60 characters or fewer (CJK about 30); meta descriptions about 160 (CJK about 75).
+- **Reply and message templates** (for example review replies, review-request scripts): translate them into the target language so the reader can use them, but keep placeholders such as `[Name]`, `<name>`, `{...}` unchanged and keep the tone polite and non-defensive.
+- **Product and platform names stay English**: Google Business Profile may use the glossary localisation, but `Bing Places`, `Apple Business Connect`, `Local Services Ads`, `Google Guaranteed` (a historical Google badge name), `Search Console`, `Merchant Center`, `Yelp`, `HomeStars`, `Facebook`, `Instagram`, `ChatGPT`, `Perplexity`, `Gemini`, `AI Overviews` stay as written.
+- **External links and cited publication titles** (the sources lists) stay in English. Translate only the surrounding sentence.
+- **Currency and measures**: keep `$` amounts and `CAD`/`USD` as written; keep Canadian context (BC, Langley, CRA).
+- If a sentence is a generic English idiom that does not work in the target language, express the same meaning plainly; do not leave English in place.

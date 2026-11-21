@@ -9,7 +9,7 @@ so structure, links, prices and structured data cannot drift. Run from the repo 
   python3 scripts/i18n.py extract-lang <lang...>   work chunks for new languages without regenerating segment ids
   python3 scripts/i18n.py merge <lang> <file.json>   merge {english: translation} into the memory
   python3 scripts/i18n.py merge-ids <lang> <file.json>  merge {id: translation} (ids from i18n/work/<lang>-N.json)
-  python3 scripts/i18n.py review-prep <lang>   write i18n/work/review-<lang>-N.json for an independent reviewer
+  python3 scripts/i18n.py review-prep <lang> [min_id]   write i18n/work/review-<lang>-N.json for an independent reviewer
   python3 scripts/i18n.py apply-review <lang> <file>   apply {id: {fix, why}} reviewer corrections
   python3 scripts/i18n.py check          validate memories (missing keys, tags/links preserved)
   python3 scripts/i18n.py build          (re)generate /<lang>/... pages, hreflang blocks, sitemap, llms.txt
@@ -40,7 +40,6 @@ LANGS = {
     "fr": dict(html="fr-CA", hreflang="fr-CA", og="fr_CA", name="Français"),
     "pt": dict(html="pt-BR", hreflang="pt-BR", og="pt_BR", name="Português"),
 }
-ACTIVE = {}  # languages complete enough to publish (set by cmd_build)
 NOTE = {
     "ko": "보고서, 고객 지원, 결제, 주문서 및 법적 문서는 영어로 제공됩니다.",
     "zh-hant": "我們的報告、客戶支援、結帳、訂購表單與法律文件均以英文提供。",
@@ -52,25 +51,34 @@ NOTE = {
 }
 SWITCH_LABEL = {"en": "Language", "ko": "언어", "zh-hant": "語言", "es": "Idioma", "ja": "言語", "ru": "Язык", "fr": "Langue", "pt": "Idioma"}
 
-# Core pages (step 1). Path of the English file -> its URL.
-CORE = ["index.html", "pricing/index.html", "ai-visibility/index.html", "seo-package/index.html",
-        "stay-visible/index.html", "landing-pages/index.html", "business-card-design/index.html",
-        "whats-included/index.html", "faq/index.html", "about/index.html"]
+# Pages that get translated: the core pages plus every live guide (and the guides index).
+CORE_STATIC = ["index.html", "pricing/index.html", "ai-visibility/index.html", "seo-package/index.html",
+               "stay-visible/index.html", "landing-pages/index.html", "business-card-design/index.html",
+               "whats-included/index.html", "faq/index.html", "about/index.html"]
 
 
 def page_url(path):
     return "/" if path == "index.html" else "/" + path[: -len("index.html")]
 
 
+def all_pages():
+    guides = ["guides/index.html"] + sorted(
+        os.path.relpath(x, ROOT).replace(os.sep, "/") for x in glob.glob(os.path.join(ROOT, "guides", "*", "index.html")))
+    return CORE_STATIC + [g for g in guides if os.path.exists(os.path.join(ROOT, g))]
+
+
+CORE = all_pages()
 CORE_URLS = {page_url(p) for p in CORE}
+PAGE_KEYS = {}   # page -> set of segment keys on it (filled by collect())
+READY = {}       # lang -> pages whose translation is complete
+AVAIL = {}       # lang -> pages that exist in that language (ready, or an older generated file kept)
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 INLINE = {"a", "abbr", "b", "bdi", "br", "cite", "em", "i", "img", "kbd", "mark", "q", "small", "span", "strong",
           "sub", "sup", "time", "u", "wbr", "svg", "s", "del", "ins"}
 SKIP = {"script", "style", "svg", "noscript", "code", "pre", "template"}
 ATTRS = ("alt", "title", "aria-label", "placeholder")
-LD_TRANSLATE_KEYS = {"text", "description", "headline", "serviceType", "name"}
-LD_NAME_TYPES = {"Question", "Service", "ListItem", "WebPage", "AboutPage", "Offer", "AggregateOffer"}
+LD_NAME_TYPES = {"Question", "Service", "ListItem", "WebPage", "AboutPage", "Offer", "AggregateOffer", "HowTo", "HowToStep", "Article"}
 
 TOKEN = re.compile(
     r"<!--.*?-->|<(script|style)\b[^>]*>.*?</\1\s*>|<!DOCTYPE[^>]*>|</?[A-Za-z][^>]*?>|[^<]+|<",
@@ -242,7 +250,7 @@ def ld_walk(o, fn, ptype=None):
         tl = t if isinstance(t, list) else [t]
         for k, v in list(o.items()):
             if isinstance(v, str):
-                ok = k in ("text", "description", "headline", "serviceType") or (k == "name" and any(x in LD_NAME_TYPES for x in tl))
+                ok = k in ("text", "description", "headline", "serviceType", "jobTitle") or (k == "name" and any(x in LD_NAME_TYPES for x in tl))
                 if ok and re.search(r"[A-Za-z]{3}", v) and not v.startswith("http"):
                     r = fn("ld", v, "ld:" + k)
                     if r is not None:
@@ -294,7 +302,10 @@ def collect():
         src = open(os.path.join(ROOT, p), encoding="utf-8").read()
         src = strip_i18n(src)
 
+        PAGE_KEYS[p] = set()
+
         def fn(kind, key, where, p=p):
+            PAGE_KEYS[p].add(key)
             e = seg.setdefault(key, {"kind": kind, "where": where, "pages": []})
             if p not in e["pages"]:
                 e["pages"].append(p)
@@ -315,19 +326,24 @@ def strip_i18n(src):
     return NOTE_RE.sub("", src)
 
 
+def langs_for(path):
+    return [l for l in LANGS if path in AVAIL.get(l, ())]
+
+
 def head_block(path, current):
     u = page_url(path)
     ver = hashlib.md5(open(os.path.join(ROOT, "assets", "i18n.css"), "rb").read()).hexdigest()[:6]
+    langs = langs_for(path)
     lines = ["<!-- i18n:head -->", '<link rel="stylesheet" href="/assets/i18n.css?v=%s">' % ver,
              '<link rel="alternate" hreflang="en-CA" href="%s%s">' % (SITE, u)]
-    for l, c in ACTIVE.items():
-        lines.append('<link rel="alternate" hreflang="%s" href="%s/%s%s">' % (c["hreflang"], SITE, l, u))
+    for l in langs:
+        lines.append('<link rel="alternate" hreflang="%s" href="%s/%s%s">' % (LANGS[l]["hreflang"], SITE, l, u))
     lines.append('<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, u))
     if current != "en":
         lines.append('<meta property="og:locale:alternate" content="en_CA">')
-    for l, c in ACTIVE.items():
+    for l in langs:
         if l != current:
-            lines.append('<meta property="og:locale:alternate" content="%s">' % c["og"])
+            lines.append('<meta property="og:locale:alternate" content="%s">' % LANGS[l]["og"])
     lines.append("<!-- /i18n:head -->")
     return "\n".join(lines) + "\n"
 
@@ -335,7 +351,8 @@ def head_block(path, current):
 def switch_block(path, current):
     u = page_url(path)
     items = ['<a href="%s" hreflang="en-CA" lang="en-CA"%s>English</a>' % (u, ' aria-current="true"' if current == "en" else "")]
-    for l, c in ACTIVE.items():
+    for l in langs_for(path):
+        c = LANGS[l]
         items.append('<a href="/%s%s" hreflang="%s" lang="%s"%s>%s</a>' % (
             l, u, c["hreflang"], c["html"], ' aria-current="true"' if current == l else "", c["name"]))
     if current == "en":
@@ -348,6 +365,8 @@ def switch_block(path, current):
 
 def patch_english(path, src):
     src = strip_i18n(src)
+    if not langs_for(path):
+        return src
     src = src.replace("</head>", head_block(path, "en") + "</head>", 1)
     src = src.replace('<div class="hdr-r">', '<div class="hdr-r">' + switch_block(path, "en"), 1)
     return src
@@ -356,8 +375,8 @@ def patch_english(path, src):
 # ---------------------------------------------------------------- build
 def rewrite_href(m, lang):
     url = m.group(2)
-    base = re.split(r"[?#]", url, 1)[0]
-    if base in CORE_URLS:
+    base = re.split(r"[?#]", url, maxsplit=1)[0]
+    if base in {page_url(p) for p in AVAIL.get(lang, ())}:
         return '%s/%s%s"' % (m.group(1), lang, url)
     return m.group(0)
 
@@ -370,7 +389,6 @@ def absolutize(out, path):
         v = m.group(2)
         if v.startswith(("/", "#", "?", "http:", "https:", "mailto:", "sms:", "tel:", "data:", "javascript:")) or not v:
             return m.group(0)
-        qs = ""
         mm = re.match(r"([^?#]*)([?#].*)?$", v)
         v, qs = mm.group(1), mm.group(2) or ""
         res = posixpath.normpath(posixpath.join(base, v))
@@ -400,11 +418,9 @@ def build_page(path, lang, mem, missing):
     out = out.replace('<link rel="canonical" href="%s">' % old_url, '<link rel="canonical" href="%s">' % new_url)
     out = out.replace('<meta property="og:url" content="%s">' % old_url, '<meta property="og:url" content="%s">' % new_url)
     out = out.replace('<meta property="og:locale" content="en_CA">', '<meta property="og:locale" content="%s">' % cfg["og"])
-    # JSON-LD: this page's own URL and language
     out = out.replace('"%s"' % old_url, '"%s"' % new_url).replace('"%s#' % old_url, '"%s#' % new_url)
     out = re.sub(r'"inLanguage":\s*"[^"]*"', '"inLanguage": "%s"' % cfg["hreflang"], out)
     out = absolutize(out, path)
-    # internal links to translated core pages (logo, nav, cards)
     out = re.sub(r'(href=")(/[^"]*)"', lambda m: rewrite_href(m, lang), out)
     out = out.replace("</head>", head_block(path, lang) + "</head>", 1)
     out = out.replace('<div class="hdr-r">', '<div class="hdr-r">' + switch_block(path, lang), 1)
@@ -418,26 +434,33 @@ def out_path(path, lang):
 
 
 def cmd_build(check=False):
-    global ACTIVE
-    cur = collect()
-    ACTIVE = {l: c for l, c in LANGS.items() if all(load_mem(l).get(k) for k in cur)}
-    skipped = [l for l in LANGS if l not in ACTIVE]
-    if skipped:
-        print("Not published yet (incomplete): " + ", ".join(skipped))
-    stale, missing_total = [], {}
+    global CORE, CORE_URLS
+    CORE = all_pages()
+    CORE_URLS = {page_url(p) for p in CORE}
+    collect()
+    stale_pages = {}
+    for l in LANGS:
+        mem = load_mem(l)
+        READY[l] = {p for p in CORE if all(mem.get(k) for k in PAGE_KEYS[p])}
+        AVAIL[l] = set(READY[l]) | {p for p in CORE if os.path.exists(out_path(p, l))}
+        old = sorted(AVAIL[l] - READY[l])
+        if old:
+            stale_pages[l] = old
+    partial = [("%s %d/%d" % (l, len(READY[l]), len(CORE))) for l in LANGS if len(READY[l]) < len(CORE)]
+    if partial:
+        print("Pages fully translated per language: " + ", ".join(partial))
+    for l, old in stale_pages.items():
+        print("WARNING %s: %d generated page(s) are out of date (English changed, not re-translated): %s" % (l, len(old), ", ".join(old[:6])))
     outputs = {}
-    for lang in ACTIVE:
+    for lang in LANGS:
         mem = load_mem(lang)
-        miss = set()
-        for p in CORE:
-            outputs[out_path(p, lang)] = build_page(p, lang, mem, miss)
-        if miss:
-            missing_total[lang] = len(miss)
+        for p in sorted(READY[lang]):
+            outputs[out_path(p, lang)] = build_page(p, lang, mem, set())
     for p in CORE:
         outputs[os.path.join(ROOT, p)] = patch_english(p, open(os.path.join(ROOT, p), encoding="utf-8").read())
-    # sitemap + llms.txt
     outputs[os.path.join(ROOT, "sitemap.xml")] = patch_sitemap(open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8").read())
     outputs[os.path.join(ROOT, "llms.txt")] = patch_llms(open(os.path.join(ROOT, "llms.txt"), encoding="utf-8").read())
+    stale = []
     for path, text in outputs.items():
         cur = open(path, encoding="utf-8").read() if os.path.exists(path) else None
         if cur != text:
@@ -445,8 +468,6 @@ def cmd_build(check=False):
             if not check:
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 open(path, "w", encoding="utf-8").write(text)
-    if missing_total:
-        print("Untranslated segments left in English: " + ", ".join("%s=%d" % kv for kv in missing_total.items()))
     if check:
         if stale:
             print("Out of date: " + ", ".join(stale[:20]) + (" ..." if len(stale) > 20 else ""))
@@ -460,19 +481,21 @@ def cmd_build(check=False):
 def patch_sitemap(s):
     s = re.sub(r"<!-- i18n:start -->.*?<!-- i18n:end -->\n?", "", s, flags=re.S)
     rows = []
-    for l in ACTIVE:
+    for l in LANGS:
         for p in CORE:
-            rows.append("<url><loc>%s/%s%s</loc></url>" % (SITE, l, page_url(p)))
+            if p in AVAIL.get(l, ()):
+                rows.append("<url><loc>%s/%s%s</loc></url>" % (SITE, l, page_url(p)))
     return s.replace("</urlset>", "<!-- i18n:start -->\n" + "\n".join(rows) + "\n<!-- i18n:end -->\n</urlset>")
 
 
 def patch_llms(s):
     s = re.sub(r"\n## Languages \(i18n\).*?<!-- /i18n -->\n?", "", s, flags=re.S)
+    langs = [l for l in LANGS if "index.html" in AVAIL.get(l, ())]
     lines = ["", "## Languages (i18n)", "",
-             "The main pages are also available in " + ", ".join(c["name"] for c in ACTIVE.values()) + ". "
+             "The main pages and guides are also available in " + ", ".join(LANGS[l]["name"] for l in langs) + ". "
              "Reports, support, checkout and legal documents are in English.", ""]
-    for l, c in ACTIVE.items():
-        lines.append("- %s: %s/%s/" % (c["name"], SITE, l))
+    for l in langs:
+        lines.append("- %s: %s/%s/ (guides: %s/%s/guides/)" % (LANGS[l]["name"], SITE, l, SITE, l))
     lines.append("<!-- /i18n -->")
     return s.rstrip("\n") + "\n" + "\n".join(lines) + "\n"
 
@@ -552,14 +575,14 @@ def cmd_merge(lang, path):
     return 0
 
 
-def cmd_review_prep(lang):
+def cmd_review_prep(lang, min_id=0):
     segs = json.load(open(os.path.join(I18N, "segments.json"), encoding="utf-8"))
     keys = list(segs)
     mem = load_mem(lang)
     os.makedirs(os.path.join(I18N, "work"), exist_ok=True)
     for f in glob.glob(os.path.join(I18N, "work", "review-%s-*.json" % lang)):
         os.remove(f)
-    ids = [i for i, k in enumerate(keys) if mem.get(k)]
+    ids = [i for i, k in enumerate(keys) if mem.get(k) and i >= min_id and not segs[k].get("stale")]
     chunks = [ids[i:i + 100] for i in range(0, len(ids), 100)]
     for n, ch in enumerate(chunks, 1):
         json.dump({str(i): {"en": keys[i], "tr": mem[keys[i]], "kind": segs[keys[i]]["kind"], "where": segs[keys[i]]["where"]} for i in ch},
@@ -640,7 +663,7 @@ def main():
     if a[0] == "extract-lang":
         return cmd_extract_lang(a[1:])
     if a[0] == "review-prep":
-        return cmd_review_prep(a[1])
+        return cmd_review_prep(a[1], int(a[2]) if len(a) > 2 else 0)
     if a[0] == "apply-review":
         return cmd_apply_review(a[1], a[2])
     if a[0] == "merge-ids":
