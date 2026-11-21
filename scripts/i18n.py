@@ -547,7 +547,7 @@ _SEEALL = re.compile(r"^See all (\d+) guides(.*)$")
 def autofill(lang, mem, keys):
     """Fill release-day-dependent strings (dates, 'See all N guides') from existing translations. Returns number filled."""
     filled = 0
-    have = [k for k in keys if mem.get(k)]
+    have = [k for k in list(mem) if mem.get(k)]  # whole memory: the older sibling string is no longer on any page
     for k in keys:
         if mem.get(k):
             continue
