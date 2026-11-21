@@ -98,6 +98,19 @@ var el = document.querySelector(".bv-cookie-banner");
 if (el && el.parentNode) el.parentNode.removeChild(el);
 }
 
+var L18 = {
+ko: ["쿠키 동의", "저희는 방문자가 이 사이트를 어떻게 이용하는지 파악하기 위해 쿠키를 사용합니다. 분석 쿠키는 수락하거나 거부하실 수 있으며, 어느 쪽을 선택하셔도 사이트는 동일하게 작동합니다. <a href=\"/privacy.html\">개인정보 처리방침</a>(영문)을 확인해 주세요.", "거부", "수락"],
+zh: ["Cookie 同意", "我們使用 Cookie 來了解訪客如何使用本網站。您可以接受或拒絕分析類 Cookie，無論選擇哪一種，網站的運作都相同。請參閱我們的<a href=\"/privacy.html\">隱私權政策</a>（英文）。", "拒絕", "接受"],
+es: ["Consentimiento de cookies", "Usamos cookies para entender cómo los visitantes usan este sitio. Puede aceptar o rechazar las cookies de análisis; el sitio funciona igual en ambos casos. Consulte nuestra <a href=\"/privacy.html\">Política de privacidad</a> (en inglés).", "Rechazar", "Aceptar"],
+ja: ["Cookieの同意", "当サイトでは、訪問者がサイトをどのように利用しているかを把握するためにCookieを使用します。分析用Cookieは承諾または拒否を選択でき、どちらを選んでもサイトの動作は変わりません。<a href=\"/privacy.html\">プライバシーポリシー</a>（英語）をご確認ください。", "拒否", "承諾"],
+ru: ["Согласие на использование cookie", "Мы используем файлы cookie, чтобы понимать, как посетители пользуются сайтом. Вы можете принять или отклонить аналитические cookie — сайт работает одинаково в обоих случаях. Подробнее — в нашей <a href=\"/privacy.html\">Политике конфиденциальности</a> (на английском).", "Отклонить", "Принять"],
+fr: ["Consentement aux témoins", "Nous utilisons des témoins (cookies) pour comprendre comment les visiteurs utilisent ce site. Vous pouvez accepter ou refuser les témoins d'analyse : le site fonctionne de la même façon dans les deux cas. Consultez notre <a href=\"/privacy.html\">Politique de confidentialité</a> (en anglais).", "Refuser", "Accepter"],
+pt: ["Consentimento de cookies", "Usamos cookies para entender como os visitantes usam este site. Você pode aceitar ou recusar os cookies de análise; o site funciona da mesma forma nos dois casos. Veja nossa <a href=\"/privacy.html\">Política de Privacidade</a> (em inglês).", "Recusar", "Aceitar"]
+};
+function pageLang() {
+var l = (document.documentElement.lang || "en").toLowerCase();
+return l.indexOf("zh") === 0 ? "zh" : l.slice(0, 2);
+}
 function showBanner() {
 if (document.querySelector(".bv-cookie-banner")) return;
 injectStyles();
@@ -106,13 +119,13 @@ var banner = document.createElement("div");
 banner.className = "bv-cookie-banner";
 banner.setAttribute("data-nosnippet", "");
 banner.setAttribute("role", "dialog");
-banner.setAttribute("aria-label", "Cookie consent");
+var T = L18[pageLang()] || ["Cookie consent", 'We use cookies to understand how visitors use this site. You can accept or decline analytics cookies — the site works the same either way. See our <a href="/privacy.html">Privacy Policy</a>.', "Decline", "Accept"];
+banner.setAttribute("aria-label", T[0]);
 banner.innerHTML =
-"<p>We use cookies to understand how visitors use this site. You can accept or decline " +
-'analytics cookies — the site works the same either way. See our <a href="/privacy.html">Privacy Policy</a>.</p>' +
+"<p>" + T[1] + "</p>" +
 '<div class="bv-cookie-actions">' +
-'<button type="button" class="bv-cookie-decline">Decline</button>' +
-'<button type="button" class="bv-cookie-accept">Accept</button>' +
+'<button type="button" class="bv-cookie-decline">' + T[2] + '</button>' +
+'<button type="button" class="bv-cookie-accept">' + T[3] + '</button>' +
 "</div>";
 document.body.appendChild(banner);
 

@@ -11,11 +11,12 @@ setTimeout(function(){rv.forEach(show)},2500);
 /* climb: DOM holds the final order (you 1st); "before" = transforms */
 var pk=d.getElementById('pack');
 if(pk){var R={};[].forEach.call(pk.children,function(r){R[r.dataset.k]=r});
+var RL=(d.documentElement.lang||'en').toLowerCase(),RK=({ko:['1위','3위'],zh:['第1名','第3名'],es:['1.º','3.º'],ja:['1位','3位'],ru:['1-е','3-е'],fr:['1er','3e'],pt:['1º','3º']})[RL.indexOf('zh')===0?'zh':RL.slice(0,2)]||['1st','3rd'];
 var rank=d.getElementById('rank'),baB=d.getElementById('ba-before'),baA=d.getElementById('ba-after'),st='after',tm=[];
 var T=function(s){var p=R.a.offsetTop-R.me.offsetTop;return s==='before'?{me:'translateY('+2*p+'px)',a:'translateY('+-p+'px)',b:'translateY('+-p+'px)'}:{me:'none',a:'none',b:'none'}};
 var go=function(s,an){var t=T(s),mv=an&&!off();st=s;
 Object.keys(R).forEach(function(k){var r=R[k],f=getComputedStyle(r).transform;r.style.transform=t[k];if(mv)r.animate([{transform:f},{transform:t[k]}],{duration:700,easing:'cubic-bezier(.65,0,.35,1)'})});
-rank.textContent=s==='after'?'1st':'3rd';if(s==='after'&&mv)rank.animate([{transform:'scale(.8)'},{transform:'none'}],{duration:400,delay:500,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
+rank.textContent=s==='after'?RK[0]:RK[1];if(s==='after'&&mv)rank.animate([{transform:'scale(.8)'},{transform:'none'}],{duration:400,delay:500,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
 if(s==='after'){baA.setAttribute('aria-current','true');baB.removeAttribute('aria-current')}else{baB.setAttribute('aria-current','true');baA.removeAttribute('aria-current')}};
 var clr=function(){tm.forEach(clearTimeout);tm=[]};
 var play=function(){clr();if(off()){go('after');return}go('before');tm.push(setTimeout(function(){go('after',1)},1000))};
@@ -45,7 +46,7 @@ var rs;addEventListener('resize',function(){clearTimeout(rs);rs=setTimeout(funct
 /* pause toggle (all [data-pause] buttons) */
 var pb=[].slice.call(d.querySelectorAll('[data-pause]'));
 var setP=function(v){if(v)h.dataset.motion='off';else delete h.dataset.motion;S('bv-motion',v?'off':'on');
-pb.forEach(function(b){b.setAttribute('aria-pressed',v);var l=v?'Resume animations':'Pause animations';b.setAttribute('aria-label',l);b.title=l});if(v&&pk){clr();halt()}else if(pk)arm()};
+pb.forEach(function(b){b.setAttribute('aria-pressed',v);var PL={ko:['애니메이션 재개','애니메이션 일시정지'],zh:['繼續動畫','暫停動畫'],es:['Reanudar animaciones','Pausar animaciones'],ja:['アニメーションを再開','アニメーションを一時停止'],ru:['Возобновить анимацию','Приостановить анимацию'],fr:['Reprendre les animations','Mettre les animations en pause'],pt:['Retomar animações','Pausar animações']},pk2=(d.documentElement.lang||'en').toLowerCase(),pt=PL[pk2.indexOf('zh')===0?'zh':pk2.slice(0,2)]||['Resume animations','Pause animations'];var l=v?pt[0]:pt[1];b.setAttribute('aria-label',l);b.title=l});if(v&&pk){clr();halt()}else if(pk)arm()};
 pb.forEach(function(b){b.onclick=function(){setP(h.dataset.motion!=='off')}});setP(S('bv-motion')==='off');
 /* fix-it pills: jump to the offer, tag it "Fits you" (text + outline) */
 var pills=[].slice.call(d.querySelectorAll('.pill'));

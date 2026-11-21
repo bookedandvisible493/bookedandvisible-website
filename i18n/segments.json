@@ -1,0 +1,5912 @@
+{
+ "Local SEO &amp; AI Visibility for Langley &amp; BC Businesses | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Done-for-you local SEO and AI-search visibility for Langley and BC businesses. Flat CAD prices from $79, no contracts, no per-lead fees.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Skip to main content": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Booked &amp; Visible, home": {
+  "kind": "attr",
+  "where": "a[aria-label]",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "B&amp;V": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Main": {
+  "kind": "attr",
+  "where": "nav[aria-label]",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Home": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Pricing": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Services": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "AI Visibility<small>Report $79 and Boost</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "SEO Package<small>Most complete</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Stay Visible<small>Month-to-month upkeep</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Landing pages<small>A website, from $329</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Business cards<small>5 custom designs, $99</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Starter Kit<small>Do it yourself, $129</small>": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Guides": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "About": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "FAQ": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Text (778) 779-9166": {
+  "kind": "attr",
+  "where": "a[aria-label]",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Start with the $79 Report": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "$79 Report": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Get found. <em class=\"l2\">Get booked.</em>": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Local SEO and AI visibility for Langley and BC businesses, from $79 CAD.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Booked &amp; Visible is a one-person business in Langley, BC. We fix Google Business Profiles, local SEO and AI-search visibility for independent local businesses: trades, clinics, salons, farms and more. Flat one-time prices in CAD, no contracts, no per-lead fees. Delivered remotely across BC and Canada.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "See all prices": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What are you trying to fix?": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "I don't know where I stand": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "ChatGPT never names me": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "My Google profile is weak": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "I have no website": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Keep it fresh for me": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "I'll do it myself": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Illustration: a search results list with fictional businesses": {
+  "kind": "attr",
+  "where": "div[aria-label]",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "search results": {
+  "kind": "text",
+  "where": "em",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Replay animation": {
+  "kind": "attr",
+  "where": "button[title]",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Pause animations": {
+  "kind": "attr",
+  "where": "button[title]",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Illustration, fictional businesses": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "plumber near me": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "2": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "3": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Your business": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1st": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Sample Plumbing Co.": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Example Heating &amp; Drains": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Illustration: your business moves from 3rd to 1st.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Before: 3rd place": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "&rarr;": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "After: 1st place": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "We never guarantee rankings, calls or revenue.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Price first": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What it costs: flat CAD prices, no contracts": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Every project is a one-time price. Boost and the SEO Package already include the Report, so if you know you want the fixes, start there. Not sure yet? Start with the $79 Report and see where you stand.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "AI Visibility Report": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "$79": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "AI Visibility Boost": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "$199": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "SEO Improvement Package": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "$449": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Starter Kit (DIY)": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "$129": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Landing pages": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "from $329<small>1, 3 or 5 pages</small>": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Stay Visible": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "$79/month": {
+  "kind": "text",
+  "where": "dd",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Fits you": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "One-time. Boost and the SEO Package already include a Report.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "A 0-100 score from real ChatGPT, Perplexity, Gemini and Google AI answers": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Prioritized fix list": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "90-day plan": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Delivered within 2 business days of your intake form.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "<b>Not included:</b> the fixes themselves. Those are Boost or the SEO Package.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Get the Report, $79": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "One-time. Includes the Report.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Everything in the Report": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html"
+  ]
+ },
+ "Schema, FAQ content and llms.txt, ready to add": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Business-details audit": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "30-day before/after re-test": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Ready within 5 business days.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "<b>Not included:</b> Google Business Profile tune-up, on-page SEO and directory listings. That is the SEO Package.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Get Boost, $199": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Most complete": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "One-time. Includes the Boost and the Report.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Everything in Boost": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Google Business Profile tune-up": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "On-page SEO for up to 5 pages": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "Help with key Canadian directories": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "Review system, and the Starter Kit included": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Ready within 7 business days of intake and profile access.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "<b>Not included:</b> a new website (it needs an existing one) or ad management.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Get the SEO Package, $449": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Stay Visible, optional": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "$79<span>/month</span>": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Month to month, cancel any time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "See Stay Visible": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html"
+  ]
+ },
+ "4 Google posts a month": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Every review answered": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Monthly check and report": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Starter Kit, do it yourself": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Six guides and templates plus a personalized profile review.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "See what's in the kit": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Google Business Profile walkthrough": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Review-generation system": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Social post templates": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Local directory checklist": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Project photo guide": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Follow-up and referral sequence": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Guarantee in numbers": {
+  "kind": "attr",
+  "where": "div[aria-label]",
+  "pages": [
+   "index.html"
+  ],
+  "stale": true
+ },
+ "2 days": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Report delivered within 2 business days of your intake form.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "$0": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Per-lead fees and contract fees. Flat one-time prices; Stay Visible is month to month.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Re-checked": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Every Boost and SEO engagement gets a 30-day score re-check, with the before-and-after shown in your report.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Yours": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Your domain, Google profile and files stay yours — no lock-in, no contract.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "No website yet? Landing pages from $329": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "A mobile-ready site with your logo, services, service area and photos, live in 3, 5 or 7 business days after you send your content. The domain is yours outright.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1 page · $329": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "3 pages · $429": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "5 pages · $529": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "See plans and what's included": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "One-time price. Domain registration +$60 if we register it for you. Extra page $99.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "yourbusiness.ca": {
+  "kind": "text",
+  "where": "em",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Your business, your town": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Same-week service · Free quotes": {
+  "kind": "text",
+  "where": "small",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Call now": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Reviews": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Recent work": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Local business websites we've rebuilt and optimized": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Visit impeccableclean.ca (opens in a new tab)": {
+  "kind": "attr",
+  "where": "a[aria-label]",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "impeccableclean.ca": {
+  "kind": "text",
+  "where": "em",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Impeccable Clean Magic": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "House and commercial cleaning, Langley BC": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Website design": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Domain purchase": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Google Business Profile setup": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "SEO optimization": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "A new website with a page for each service: post-construction, move-out, deep, regular, Airbnb and office cleaning": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Clear hourly prices on the homepage and a free-estimate button on every page": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "A page for the cities served, from Langley to Surrey, Abbotsford and Maple Ridge": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Structured data that tells Google it is a cleaning business, with its service area and hours": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "<b>Before:</b> a one-page site on a builder subdomain, with no prices, no service pages and no structured data for Google. <span class=\"bp-hint\">Hover or tap the picture to scroll the whole old page.</span>": {
+  "kind": "text",
+  "where": "figcaption",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "The whole old Impeccable Clean Magic page, scrollable": {
+  "kind": "attr",
+  "where": "div[aria-label]",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Read the case study →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Visit the live site →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Visit ellevenhair.ca (opens in a new tab)": {
+  "kind": "attr",
+  "where": "a[aria-label]",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "ellevenhair.ca": {
+  "kind": "text",
+  "where": "em",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Elleven Hair Studio": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Appointment-only hair salon, Langley BC": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Redesign": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Additional pages": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "A page for each service: keratin, balayage and hair extensions": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "A book-a-consultation button on every service page": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "A local page for Willoughby, Langley": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Structured data that tells Google it is a hair salon, with its services and hours": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Why not a pay-per-lead directory?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What you get elsewhere": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Booked &amp; Visible": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "$20-120 per lead, booked or not": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "One flat price per project": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "A listing you don't control": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Your domain, outright": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Contracts and recurring fees": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Pay once, own it — no contracts": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Agency retainers, $500-2,000 a month": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Optional upkeep from $79/month, month to month": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "How it works": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Order the Report<small>$79. Fill in the intake form; your score and fix list arrive within 2 business days.</small>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Pick the fix<small>Boost or the SEO Package, both of which include the Report. Or do it yourself with the Starter Kit.</small>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Re-check, then keep it up<small>A 30-day re-test shows the change. Stay Visible is optional, month to month.</small>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Honest limits": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What we do not promise": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "No ranking, call or revenue guarantees, and no promised score increase.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "No ad management and no lead resale.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "The SEO Package needs an existing website — if you don't have one yet, start with a landing page.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Who this is for": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Independent local businesses in Langley, the Fraser Valley and across BC: trades, clinics, salons, farms and equestrian. One owner, not an agency. Work is remote, across BC and Canada.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Who you deal with": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "One person, replies personally": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "You work with the person who does the work, not a call centre. Every message gets a personal reply within one business day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "hello@bookedandvisible.ca": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Or ask a question here": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Your name": {
+  "kind": "text",
+  "where": "label",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Email": {
+  "kind": "text",
+  "where": "label",
+  "pages": [
+   "index.html",
+   "faq/index.html"
+  ]
+ },
+ "Your question": {
+  "kind": "text",
+  "where": "label",
+  "pages": [
+   "index.html",
+   "faq/index.html"
+  ]
+ },
+ "Send question": {
+  "kind": "text",
+  "where": "button",
+  "pages": [
+   "index.html",
+   "faq/index.html"
+  ]
+ },
+ "By sending, you agree to our <a class=\"u\" href=\"/privacy.html\">Privacy Policy</a>. We reply within one business day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Questions people ask": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What is in the $79 AI Visibility Report?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "A 0-100 score built from real ChatGPT, Perplexity, Gemini and Google AI answers about your business, a prioritized fix list and a 90-day plan, delivered within 2 business days of your intake form.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Should I start with the Report or go straight to Boost?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Boost and the SEO Package both include the Report. If you already know you want the fixes, start with Boost or the SEO Package and you will not pay for a Report separately. If you would rather see your score first, start with the $79 Report.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "What if my score does not go up?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "We re-check your Boost or SEO score 30 days after the work is done and show you the before-and-after in your report, including anything still waiting on you. We do not guarantee a specific point increase, rankings, calls or revenue.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Do I need a website for the SEO Package?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Yes, the SEO Package works on an existing website. If you have none, landing pages start at $329 for one page.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "How long does each project take?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "The Report takes 2 business days from your intake form, Boost 5 business days, the SEO Package 7 business days from intake and profile access. Landing pages go live 3, 5 or 7 business days after we receive your content.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Are there contracts?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "No contracts and no per-lead fees. Every project is a one-time price, and Stay Visible is month to month, so you can stop any time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Free guides for local businesses": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "The Google Business Profile checklist every local business should run through": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "seo-package/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "How Google decides which local business shows up first": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html",
+   "about/index.html"
+  ]
+ },
+ "How to get your business recommended by ChatGPT, Gemini and other AI assistants": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "Do you actually need a website?": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "landing-pages/index.html",
+   "about/index.html"
+  ]
+ },
+ "Start with the $79 Report.": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "See where you stand in 2 business days. Flat CAD price, no contract.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "© 2026 Booked &amp; Visible<br>7635 198B St, Langley Township, BC V2Y 3X9, Canada": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Prices in CAD. <a href=\"mailto:hello@bookedandvisible.ca\">hello@bookedandvisible.ca</a> · <a href=\"sms:+17787799166\">Text (778) 779-9166</a>": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "SEO Package": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Terms": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Privacy": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Refunds": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Google third-party guide": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Instagram": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Facebook": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Cookie Preferences": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "index.html",
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Local SEO & AI Visibility, from $79 CAD": {
+  "kind": "ld",
+  "where": "ld:name",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "Starter Kit": {
+  "kind": "ld",
+  "where": "ld:name",
+  "pages": [
+   "index.html",
+   "pricing/index.html"
+  ]
+ },
+ "Local SEO &amp; AI Visibility Pricing in CAD | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Flat prices in CAD for the Visibility Report, AI Visibility Boost, SEO Improvement Package, Starter Kit and the optional Stay Visible monthly plan. No contracts, no per-lead fees.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Get the kit": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Flat pricing. No contracts, ever.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Start with a Report to see what's holding you back, or have us fix it for you. All prices shown in CAD.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "1 · Visibility Report": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "See exactly what's holding you back.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">AI Visibility Report — </span>$79 <span style=\"font-size:14px;font-weight:400;color:var(--muted);\">CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "One-time — report within 2 business days of your intake form": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "ChatGPT, Perplexity, Gemini &amp; Google's AI tested": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "0–100 visibility score": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Plain-English, prioritized fix list and a 90-day action plan": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "Included in both the Boost and the SEO Package": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Get the Report": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "2 · AI Visibility Boost": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "We fix how AI search sees you.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">AI Visibility Boost — </span>$199 <span style=\"font-size:14px;font-weight:400;color:var(--muted);\">CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "One-time — includes the Report": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Schema, FAQ content &amp; llms.txt, ready to add": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Business-details audit &amp; correction list": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Before/after re-test at 30 days": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get the Boost": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "3 · SEO Improvement Package": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "We fix Google, AI search, and your website.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">SEO Improvement Package — </span>$449 <span style=\"font-size:14px;font-weight:400;opacity:0.6;\">CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "One-time — includes the Boost and the Report": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Everything in the Boost": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Help with key Canadian directories, incl. Bing, Apple Maps, Yelp &amp; YellowPages": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "Review system + Starter Kit included": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "See the SEO Package": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Every product above is a flat, one-time price — no contracts, no per-lead fees.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Optional monthly plan and do-it-yourself kit": {
+  "kind": "attr",
+  "where": "section[aria-label]",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Want it kept up? Optional monthly plan": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "<b>$79</b> CAD / month": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Your Google profile and AI visibility, looked after every month. Month to month, cancel any time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "4 Google Business Profile posts a month, published for you": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "A reply to every new Google review within 3 business days": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "A monthly profile check and one-page score report": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "A 90-day plan refreshed each quarter": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Prefer to do it yourself?": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "<b>$129</b> CAD, one-time": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Six step-by-step guides and templates, plus a personalized profile review within 1 business day of your intake form. Yours to keep.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Review-generation system with a printable QR card": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Project photo guide, and a follow-up and referral sequence": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Get the Starter Kit": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Before you buy": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Questions people ask right here": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Is there a contract?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "pricing/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "No. Every product here is a flat, one-time price with no contract and no per-lead fees. The optional Stay Visible plan is month to month and you can cancel any time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Do I need any technical skills?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "pricing/index.html",
+   "faq/index.html"
+  ]
+ },
+ "No. Everything is written in plain language with step-by-step instructions. If you can use a smartphone, you can implement this.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html",
+   "faq/index.html"
+  ]
+ },
+ "See all FAQs →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Need business cards too?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "5 custom front-and-back designs in 1 business day, a QR code to your website, and print-ready files for any printer. <b style=\"color:var(--ink);\">$99 CAD</b>, one-time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "See business card design →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Just need a landing page?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "No website yet? A custom, mobile-ready page built for you — no kit required.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "See landing page plans →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Free guides": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "faq/index.html"
+  ]
+ },
+ "The Google Business Profile checklist every local business should run through →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "landing-pages/index.html",
+   "faq/index.html"
+  ]
+ },
+ "How to get more customer reviews without feeling awkward →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "seo-package/index.html",
+   "faq/index.html"
+  ]
+ },
+ "How Google decides which local business shows up first →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html"
+  ]
+ },
+ "Booked & Visible vs. pay-per-lead directories: what it actually costs →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "See all 25 guides →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "faq/index.html"
+  ]
+ },
+ "Related guides": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "How much should a local business actually spend on marketing?": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Booked & Visible vs. pay-per-lead directories: what it actually costs": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "How much does a small business website cost in Canada?": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "pricing/index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "© 2026 Booked & Visible<br>7635 198B St, Langley Township, BC V2Y 3X9, Canada": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "pricing/index.html",
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "landing-pages/index.html",
+   "business-card-design/index.html",
+   "whats-included/index.html",
+   "faq/index.html",
+   "about/index.html"
+  ]
+ },
+ "Fix your Google Business Profile yourself, once — six done-for-you guides, scripts, and templates plus a personalized profile review.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "See exactly what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your business right now, with a 0–100 visibility score and a plain-English fix list.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Everything in the AI Visibility Report, plus ready-to-add schema markup, FAQ content and llms.txt, a business-details correction list, and a before/after re-test at 30 days.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "Done-for-you local SEO for businesses that already have a website: Google Business Profile tune-up, on-page SEO for up to 5 pages, help with key Canadian directories (including Bing, Apple Maps, Yelp and YellowPages), AI visibility fixes, a review system, and Search Console setup, with a before/after report at 30 days.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "pricing/index.html"
+  ]
+ },
+ "AI Visibility Report for Local Businesses, $79 CAD | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Most local businesses are invisible to ChatGPT, Perplexity, and Google AI Overviews. Get a plain-English AI Visibility Report, or let us fix it for you.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "See the options": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Already purchased? <a href=\"/order/\">Start your intake form here →</a>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "New — AI search visibility": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "AI VISIBLE.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Customers are starting to ask ChatGPT, Perplexity, and Google AI Overviews for a \"best [service] near me\" instead of typing it into search. Studies from 2026 suggest many local businesses don't show up in the answer. Find out if yours does — and fix it.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "88%": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "of 1,700 businesses checked by hand did not appear in ChatGPT recommendations for their industry and city (Omni Eclipse, an AI-visibility firm, 2026 — U.S., Australia and UAE).": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "78%": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "is 5W's estimate of independent local operators — plumbers, electricians, HVAC, dentists and more — with effectively zero AI citations in their own city (5W, 2026 — 10 U.S. metros).": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "50/100": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "is the average AI-understanding score for Canadian businesses in a 2026 study spanning 50 North American markets — tied with the U.S. average (51).": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Sources: <a href=\"https://omnieclipse.ai/blog/ai-search-visibility-report-2026\" style=\"color:inherit;text-decoration:underline;\" rel=\"noopener\">Omni Eclipse, 2026 AI Search Visibility Report</a> · <a href=\"https://www.5wpr.com/research/local-services-ai-visibility-crisis-2026/\" style=\"color:inherit;text-decoration:underline;\" rel=\"noopener\">5W, Local Services AI Visibility Crisis 2026</a> · <a href=\"https://getcourtyard.ai/state-of-ai-visibility\" style=\"color:inherit;text-decoration:underline;\" rel=\"noopener\">Courtyard, State of AI Visibility 2026</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Two ways to get AI-visible": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "See your score first, or go straight to the fixes.": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Both are one-time, flat-price purchases — no contract, no per-lead fees, same as everything else here. The Boost includes the Report, so if you already know you want the fixes, start with the Boost.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "See exactly what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your business right now — or whether they say anything at all.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">AI Visibility Report — </span>$79 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Real answers from ChatGPT, Perplexity, Gemini &amp; Google's AI": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "A single 0–100 visibility score": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Schema, Google Business Profile &amp; citation check": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get my AI Visibility Report": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "We prepare the fixes — schema markup, FAQ content and llms.txt ready to add, plus an exact correction list for your business details — then re-test to see what moved.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">AI Visibility Boost — </span>$199 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "$199, one-time — includes a Report, fixes within 5 business days of your intake form": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Everything in the AI Visibility Report": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Ready-to-add schema markup, FAQ content &amp; llms.txt": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Business-details audit with an exact correction list": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get the AI Visibility Boost": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Already have the Starter Kit? The Boost builds directly on what you already have — no duplicate work. Want your Google profile and website fixed too? See the <a href=\"/seo-package/\" style=\"color:var(--accent-dark);font-weight:700;\">SEO Improvement Package</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "What we actually check and fix": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "01": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Real AI answers, not guesses": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "We ask ChatGPT, Perplexity, Gemini, and Google AI Overviews the exact questions your customers ask, and record precisely what each one says.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "02": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Schema markup": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "The structured data that tells AI systems what you do, where, and for whom — many small-business sites lack it.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "03": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Business detail consistency": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Your name, address, phone, and hours checked across your site, Google Business Profile, and the major directories AI tools can draw on.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "04": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "FAQ / direct-answer content": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Short, direct answers to the questions customers actually ask AI tools — a format AI answers often quote.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "05": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "Review signals": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Recent, detailed reviews are one of the signals AI tools draw on — we check volume, recency, and rating.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "06": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "whats-included/index.html"
+  ]
+ },
+ "A score you can watch move": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "One 0–100 number, shown before and after, with the literal AI answers behind it — not a vague \"we optimized things.\"": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Purchase, then <a href=\"/order/?product=boost\" style=\"color:var(--accent-dark);text-decoration:underline;\">tell us about your business</a> — a 2-5 minute form, nothing technical.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get your Report within 2 business days, or your Boost fixes within 5 business days.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "We re-check at 30 days and email you the result — AI engines re-crawl on their own schedule.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Common questions": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html",
+   "stay-visible/index.html",
+   "faq/index.html"
+  ]
+ },
+ "How is this different from the Starter Kit?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "The Starter Kit focuses on Google Search and your Google Business Profile. AI Visibility focuses specifically on how ChatGPT, Perplexity, Gemini, and Google AI Overviews describe and recommend you — a related but separate channel. Many of the fixes overlap, so having both is stronger than either alone.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "How fast will I see results?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "Your Report shows your current state right away. For the Boost, the schema, FAQ and llms.txt arrive ready to add, and we check at 30 days whether they are live. AI engines and business directories re-crawl on their own schedule, usually 1–6 weeks, so we re-check at 30 days and send you the result rather than promising an overnight change.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "What if my score doesn't improve?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "We re-check at 30 days using the same searches and AI assistants as your first report and email you a before/after result that explains what moved and what didn't. Some changes only count once they're live on your site, so if the schema, FAQ or llms.txt haven't been added yet, the report says so and we resend the steps. We can't guarantee a specific score increase.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Do I need a website for this?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "No. Google Business Profile and directory signals still count without one. If you'd like a website too, see <a href=\"/landing-pages/\" style=\"color:var(--accent);\">Landing Pages</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Do I need to give you access to my website?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "No — we never need logins or CMS access to your site. The schema markup and FAQ content from the Boost are delivered ready to paste in, so you (or whoever manages your site) can add them in minutes. Hands-on directory and Google Business Profile updates are part of the <a href=\"/seo-package/\" style=\"color:var(--accent);\">SEO Improvement Package</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "I just purchased — where do I go now?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "<a href=\"/order/?product=boost\" style=\"color:var(--accent);\">Fill out your intake form here</a> — that's what we use to actually run your Report or Boost. You'll get a confirmation once it's received.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get the Report — $79 CAD": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Get the Boost — $199 CAD": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "NAP consistency: why matching details everywhere actually matters →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html",
+   "seo-package/index.html"
+  ]
+ },
+ "Do you actually need a website? →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html",
+   "landing-pages/index.html"
+  ]
+ },
+ "Google AI Overviews: what they mean for a local business": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "No. Google Business Profile and directory signals still count without one. If you'd like a website too, see Landing Pages.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "No — we never need logins or CMS access to your site. The schema markup and FAQ content from the Boost are delivered ready to paste in, so you (or whoever manages your site) can add them in minutes. Hands-on directory and Google Business Profile updates are part of the SEO Improvement Package.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Fill out your intake form — that's what we use to actually run your Report or Boost. You'll get a confirmation once it's received.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "ai-visibility/index.html"
+  ]
+ },
+ "Local SEO Package for BC Businesses, $449 CAD | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Done-for-you local SEO for independent Canadian businesses: Google Business Profile, website pages, directories, reviews, and AI search, fixed for one flat price.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Get the package": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Already purchased? <a href=\"/order/?product=seo\">Start your intake form here →</a>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "FOUND FIRST.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "You have a website, but customers still call whoever shows up first on Google, Maps, or ChatGPT. We fix the signals that decide who that is — once, for one flat price.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Your Google profile, AI search signals, and website changes — set up for you or ready to paste in, then re-tested to see what moved.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">SEO Improvement Package — </span>$449 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "$449, one-time — includes the Boost and the Report, delivered within 7 business days of your intake form": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Google Business Profile is free from Google. This price covers our work on your profile, not the profile itself.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Everything in the AI Visibility Boost": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Review system set up": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Search Console &amp; Bing Webmaster Tools setup": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Before/after report at 30 days": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Starter Kit included ($129 value)": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Get the SEO Package": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "How it compares": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Pay-per-lead directories charge <strong>$20–120 per lead</strong>, booked or not.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "This package is <strong>one flat price</strong>. No contract, no monthly fee, and everything we set up stays yours.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Not sure yet? Start with the <a href=\"/ai-visibility/\" style=\"color:var(--accent-dark);font-weight:700;\">$79 Visibility Report</a> . The SEO Package already includes everything in the Report, so if you know you want the fixes, start here.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "What we fix": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "AI Visibility Boost, included": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Your AI Visibility Report, plus schema markup and FAQ content that make your details easy for search engines and AI assistants to read — and llms.txt, an optional emerging standard.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Categories, services, description, attributes, and 4 ready-to-publish posts, applied once you add us as a Manager on your profile. Photos are the ones you send us. We only change your business name, address or phone if they're wrong.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "On-page SEO, up to 5 pages": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Page titles, meta descriptions, headings, local keywords, internal links, and image alt text, rewritten for the searches your customers actually make and delivered ready to paste in.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Your name, address, and phone set up or corrected where Google and AI tools look — Bing, Apple Maps, Yelp, YellowPages and more. We do what we can on our side and walk you through any step only the owner can do, like registering or entering a verification code.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Review system": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Your Google review link, a printable QR card, request scripts, and reply templates — to help reviews keep coming in after we're done.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Search Console &amp; Bing setup": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Step-by-step setup for Google Search Console and Bing Webmaster Tools, which you own, so you can see your own search traffic. Add us as a user and we'll submit your sitemap; otherwise the steps include it.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Purchase, then <a href=\"/order/?product=seo\" style=\"color:var(--accent-dark);text-decoration:underline;\">tell us about your business</a> — a 2-5 minute form, nothing technical. Add us as a Manager on your Google profile.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Delivered within 7 business days of your intake form and profile access: Google profile updated, directories submitted or guided, website changes ready to paste in.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "We re-check at 30 days and email you a before/after report.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "What we never do": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Ask for your passwords. You add us as a Manager on your Google profile, and website changes arrive ready to paste in.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Create a listing or account you can't walk away with: everything is set up under your business email, and the handover lists where each one lives.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Change your business name, address or phone unless they're wrong, or add keywords or city names to your business name.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Buy, fake or gate reviews, or offer anything in exchange for one.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Use stock photos or AI-generated pictures of your work.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Run or manage ads.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Promise rankings, calls or revenue.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Do it yourself, or hand it over?": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Most of this package is something you could do yourself: tidy your Google profile, claim your listings, tune your page titles. The basics cost nothing. What costs you is the hours and knowing what to fix first. If you'd rather do it yourself, the <a href=\"/whats-included/\" style=\"color:var(--accent-dark);text-decoration:underline;\">Starter Kit</a> ($129, also included in this package) and our <a href=\"/guides/\" style=\"color:var(--accent-dark);text-decoration:underline;\">free guides</a> walk you through it. This package is for when you'd rather have it done and checked.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Who is this for?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "Independent local businesses that already have a website but don't show up when customers search Google, Google Maps, or ask an AI assistant. No website yet? Pair a <a href=\"/landing-pages/\" style=\"color:var(--accent);\">Landing Page</a> with this package.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "How is this different from the AI Visibility Boost?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "The Boost fixes how AI assistants like ChatGPT and Perplexity understand your business. The SEO Improvement Package includes everything in the Boost, plus your Google Business Profile, the pages of your website, help with key Canadian directories (including Bing, Apple Maps, Yelp and YellowPages), and a review system — the full set of signals Google and AI search both use.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "No. Website changes — page titles, descriptions, headings, schema, and FAQ content — are delivered ready to paste in, page by page, so you or whoever manages your site can add them. If we built your site, we make the changes directly. For your Google Business Profile, you add us as a manager from your own account; you never share a password.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Everything is delivered within 7 business days of your intake form and Google Business Profile access. Directories that need you to confirm a code can take a little longer — we keep you posted. Google, directories, and AI engines re-crawl on their own schedule, usually 1–6 weeks, and visible movement in local results can take a few months, so we send you a before/after report at 30 days rather than promising an overnight change.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Will I need to do anything for the directory listings?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Sometimes. A few directories, like Apple Maps, Bing, and Yelp, only let the business owner register or verify, often with a code sent to your business phone or email. We handle what we can, then give you step-by-step directions for the rest and tell you when a code is coming so you can forward it to us. Which directories apply depends on your industry and location.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "At 30 days we re-check using the same searches and AI assistants as your first report and email you a before/after report that explains what moved, what didn't, and why. Some things depend on you, like a directory code you haven't forwarded yet or website changes you haven't pasted in, and the report flags those so you know what is still open. We can't guarantee a specific score increase, rankings, calls or revenue.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Who is this not for?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html",
+   "stay-visible/index.html"
+  ]
+ },
+ "No website yet? Start with a landing page. Looking for ads, social media management or monthly content? That isn't this package. And if you want a guaranteed ranking, we can't promise one, and neither can anyone honest.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Can you use my results as an example?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Only if you want to. We'd love to share your before/after score as an example (with or without your business name). It's optional and doesn't change your price.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Get the SEO Package — $449 CAD": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Start with a $79 Report": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "5 Google Business Profile mistakes that are costing you customers →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Choosing the right Google Business Profile category": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "NAP consistency: why matching details everywhere actually matters": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Local SEO": {
+  "kind": "ld",
+  "where": "ld:serviceType",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Done-for-you local SEO for independent local businesses: Google Business Profile tune-up, on-page SEO for up to 5 pages, help with key Canadian directories (including Bing, Apple Maps, Yelp and YellowPages), AI visibility fixes, a review system, and Search Console setup, with a before/after report at 30 days.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Independent local businesses that already have a website but don't show up when customers search Google, Google Maps, or ask an AI assistant. No website yet? Pair a Landing Page with this package.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "seo-package/index.html"
+  ]
+ },
+ "Stay Visible: Monthly Google Business Profile Upkeep | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Month-to-month upkeep for your Google Business Profile and AI search visibility: weekly Google posts, every review answered, a monthly score report. No contract, cancel any time.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Start the plan": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Already subscribed? <a href=\"/order/?product=stay\">Start your intake form here →</a>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Stay Visible monthly plan": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "STAY FOUND.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Getting found is a one-time fix. Staying found takes fresh posts, answered reviews and details that stay correct. We do that for you every month. No contract, cancel any time.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Your Google profile and AI visibility, looked after every month.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "<span class=\"sr-only\">Stay Visible — </span>$79 <span>CAD / month</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "$79 a month, month to month, no contract": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Monthly profile and business-details check, with fixes": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Monthly 0–100 score from public sources, full AI check every 3 months": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "One-page monthly report": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "90-day plan, refreshed every quarter": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Start Stay Visible": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Agencies typically charge <strong>$500–$2,000 a month</strong> for profile management, often with a minimum term.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Stay Visible is <strong>$79 a month, cancel any time</strong>. Everything we post and fix stays yours.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Haven't fixed the basics yet? Start with the <a href=\"/ai-visibility/\" style=\"color:var(--accent-dark);font-weight:700;\">AI Visibility Boost</a> or <a href=\"/seo-package/\" style=\"color:var(--accent-dark);font-weight:700;\">SEO Improvement Package</a>, then keep it up with Stay Visible.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "What we do every month": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Google posts, every week": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "4 posts a month written for your services and area, published to your profile for you. Fresh posts show Google and customers you&#x27;re open and active.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "We reply to every new Google review within 3 business days. For reviews of 3 stars or less, we send you the draft within 3 business days and post it once you say yes.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Profile watch": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Each month we check your profile for unwanted edits, wrong hours, duplicate listings and business details that no longer match, and fix what we can.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Your score, every month": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Your 0–100 score re-checked monthly from public sources, with the full AI check (ChatGPT, Perplexity, Gemini, Google&#x27;s AI) every 3 months.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "A one-page monthly report": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "What we did this month, your score, new reviews, and what&#x27;s next. Plain English, readable on your phone in two minutes.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "A 90-day plan, refreshed": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Every quarter we update your 90-day plan: the next 3 things that will move your visibility most, and who does each one.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Subscribe, then <a href=\"/order/?product=stay\" style=\"color:var(--accent-dark);text-decoration:underline;\">tell us about your business</a> and add us as a Manager on your Google profile.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Within 5 business days of adding us as a Manager you get your starting score and your first 90-day plan, and your first post goes live. The rest of your first month's posts follow.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Every month after that: posts, review replies, a profile check and a one-page report in your inbox.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Ask for your Google password. You add us as a Manager from your own account, and you can remove us any time.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Post a reply to a review of 3 stars or less without your yes.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Publish an offer, price or claim you haven't confirmed, or a photo that isn't yours.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Change your business name, category or address without your written yes.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Run or spend money on ads.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Everything in Stay Visible is something you can do yourself: posting to your profile, replying to reviews, checking that your details are right. The basics cost nothing. What costs you is the hours, and busy season is when it slips. If you'd rather do it yourself, the <a href=\"/whats-included/\" style=\"color:var(--accent-dark);text-decoration:underline;\">Starter Kit</a> and our <a href=\"/guides/\" style=\"color:var(--accent-dark);text-decoration:underline;\">free guides</a> show you how. Stay Visible is for when you'd rather it just got done.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Independent local businesses that already have a Google Business Profile and want it kept fresh, answered and accurate every month without doing it themselves. It works best after an AI Visibility Boost or SEO Improvement Package, but you don&#x27;t need one first.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "No. Stay Visible is month to month. Cancel any time by replying to any of our emails or writing to hello@bookedandvisible.ca, and your plan ends at the end of the month you&#x27;ve paid for. Nothing is held back: every post, reply and listing stays yours.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Do you need my Google password?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "No. You add us as a Manager on your Google Business Profile from your own account, and you can remove us any time. We never ask for passwords.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Who writes the posts and review replies?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "We do, using your services, your area and photos you send us. Replies to reviews of 3 stars or less are sent to you first, and we post them once you say yes.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "How is the score checked every month?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Each month we re-check the parts of your 0–100 score we can verify from public sources: your Google profile, business details, directories and reviews. Every 3 months we also re-ask ChatGPT, Perplexity, Gemini and Google&#x27;s AI the same searches as your first check, so the numbers stay comparable.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "What isn&#x27;t included?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "New directory listings, website changes, new pages and paid ads. If you need one of those, we quote it as a one-time job first. You never get billed for extra work you didn&#x27;t approve.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Stay Visible isn&#x27;t ads or social media management, and it can&#x27;t guarantee rankings, calls or revenue. If you don&#x27;t have a Google Business Profile yet, start with the SEO Improvement Package, or tell us on the intake form and we&#x27;ll help you set one up first.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "How soon will I see a difference?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Posts and review replies show on your profile as soon as they go live. Search results move on the schedule of Google and the AI assistants, usually weeks to months, which is why we report your score every month instead of promising a result.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Can you remove a bad review?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "No. Only Google can remove a review, and only if it breaks Google&#x27;s policies. If one looks like it does, we&#x27;ll show you how to report it. For an honest bad review, a calm, professional reply that you&#x27;ve approved is the best response, because people judge how you handle it.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Start Stay Visible — $79 CAD / month": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Compare all prices": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "How to respond to reviews: templates for every situation →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Seasonal business? How to stay visible in your off-season →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "How many reviews do you actually need to compete? →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Google Business Profile suspended? Why it happens and how to get it back →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Staying visible in your off-season": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "How to get more customer reviews without feeling awkward": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html",
+   "business-card-design/index.html"
+  ]
+ },
+ "How to respond to reviews: templates for every situation": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Local SEO maintenance": {
+  "kind": "ld",
+  "where": "ld:serviceType",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Month-to-month upkeep for a local business's Google Business Profile and AI search visibility: 4 Google posts a month, replies to every new Google review, a monthly profile and business-details check, a monthly score report, and a refreshed 90-day plan every quarter. No contract.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Independent local businesses that already have a Google Business Profile and want it kept fresh, answered and accurate every month without doing it themselves. It works best after an AI Visibility Boost or SEO Improvement Package, but you don't need one first.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "No. Stay Visible is month to month. Cancel any time by replying to any of our emails or writing to hello@bookedandvisible.ca, and your plan ends at the end of the month you've paid for. Nothing is held back: every post, reply and listing stays yours.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Each month we re-check the parts of your 0–100 score we can verify from public sources: your Google profile, business details, directories and reviews. Every 3 months we also re-ask ChatGPT, Perplexity, Gemini and Google's AI the same searches as your first check, so the numbers stay comparable.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "What isn't included?": {
+  "kind": "ld",
+  "where": "ld:name",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "New directory listings, website changes, new pages and paid ads. If you need one of those, we quote it as a one-time job first. You never get billed for extra work you didn't approve.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Stay Visible isn't ads or social media management, and it can't guarantee rankings, calls or revenue. If you don't have a Google Business Profile yet, start with the SEO Improvement Package, or tell us on the intake form and we'll help you set one up first.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "No. Only Google can remove a review, and only if it breaks Google's policies. If one looks like it does, we'll show you how to report it. For an honest bad review, a calm, professional reply that you've approved is the best response, because people judge how you handle it.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "stay-visible/index.html"
+  ]
+ },
+ "Small Business Website in BC, from $329 CAD | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "No website yet? Get a custom, mobile-ready site built for you — 1, 3, or 5 pages — live within 3-7 business days of receiving your content.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "No website yet?": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Get a landing page built for you.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "A custom, mobile-ready site — your logo and colors, services, service area, photos, and testimonials. Choose 1 page, a 3-page small business site, or a full 5-page site — live within 3–7 business days of receiving your content, depending on size. No kit required.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Domain option": {
+  "kind": "attr",
+  "where": "div[aria-label]",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Bring your own domain": {
+  "kind": "text",
+  "where": "button",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "I need a domain": {
+  "kind": "text",
+  "where": "button",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Single Page": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "One page covering everything — best for a focused, single-service business.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$329 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$389 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Your own domain": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "We register &amp; hand over your domain": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "1 page included": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Live within 3 business days of your content": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "One round of revisions": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Get my landing page": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Recommended": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Small Business Site": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "3 pages — room for services, about, and a dedicated contact page.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$429 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$489 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Domain included": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "3 pages included": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Live within 5 business days of your content": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Full Website": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "5 pages — home, services, about, reviews/FAQ, and contact.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$529 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "$589 <span>CAD</span>": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "5 pages included": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Live within 7 business days of your content": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Need a different number of pages? Additional pages are $99 CAD each on any tier — just tell us how many in your intake form.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Service-area business? Here's how to set up your Google profile correctly →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "landing-pages/index.html"
+  ]
+ },
+ "Referrals vs. search: where new customers actually come from": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "landing-pages/index.html",
+   "about/index.html"
+  ]
+ },
+ "Custom Business Card Design, $99 CAD | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Custom business card design in Canada: 5 original front-and-back designs in 1 business day, a QR code to your website and print-ready files. $99 CAD flat.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "5 original front-and-back designs in 1 business day, a QR code to your website, and print-ready files for any printer. Made for your business, not picked from a template.": {
+  "kind": "attr",
+  "where": "meta:og:description",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "5 original front-and-back designs in 1 business day, a QR code to your website, and print-ready files for any printer.": {
+  "kind": "attr",
+  "where": "meta:twitter:description",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Business card design · $99 CAD": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Custom business cards, <em>designed for you.</em> Not picked from a template.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get 5 original front-and-back business card designs within 1 business day, built around your logo, colours and services. Each card has a QR code that sends people to your website or Google reviews, and you get print-ready files for Vistaprint, Staples or your local print shop.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get my 5 designs, $99": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "See how it works": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<b>5 concepts</b>, front and back": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "1 business day": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<b>1 round</b> of changes": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Files <b>you own</b>": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "best local business near me": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get found. Get booked.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Our own business card, front. Press to flip it over.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Our own card, the one we picked. Tap it to see the back.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "What you get: 5 real concepts": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "These are the 5 designs we made for our own card": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Same brief, same logo, five different directions. That's what lands in your inbox: enough range to compare, all of it on-brand. We picked number 4. Tap any card to turn it over.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Show all backs": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Concept 1, Clean Classic. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "1 · Clean Classic": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Light, logo-led": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Concept 2, After Dark. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "2 · After Dark": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Dark, premium": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Concept 3, Blue Panel. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "3 · Blue Panel": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "QR front and centre": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Concept 4, Top Result, the one we chose. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "4 · Top Result": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Tells the story": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Concept 5, Pin Field. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "5 · Pin Field": {
+  "kind": "text",
+  "where": "strong",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Pattern-led": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Every business gets its own look": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Sample styles for different kinds of businesses": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "A landscaper, a plumber and a salon shouldn't hand out the same card. These are sample designs for made-up businesses, to show the range. Yours starts from your logo, your colours and the way you talk to customers.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Sample design for a made-up landscaping company. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<strong>Landscaping</strong><span class=\"sample-flag\">Sample · made-up business</span><br>Earthy colours, a serif name, QR straight to a quote form.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Sample design for a made-up plumbing company. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<strong>Trades</strong><span class=\"sample-flag\">Sample · made-up business</span><br>Big phone number, high contrast, readable in a work truck.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Sample design for a made-up hair salon. Press to flip.": {
+  "kind": "attr",
+  "where": "button[aria-label]",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<strong>Salons &amp; wellness</strong><span class=\"sample-flag\">Sample · made-up business</span><br>Soft palette, elegant type, QR to online booking.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Why not just use a template?": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "A card that matches the rest of your business": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Templates in Canva or Vistaprint are fine if you have time to design. The catch is that thousands of businesses start from the same layouts, and nobody checks that your card matches your Google profile and website. That matching is what we do every day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Comparing a do-it-yourself template, a print shop design add-on, and Booked &amp; Visible business card design": {
+  "kind": "text",
+  "where": "caption",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Feature": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "DIY template": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Print shop add-on": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Who designs it": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "You do": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "A designer, usually from one of their layouts": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "We design 5 original options for you": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Options to choose from": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Whatever you make": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Usually 1": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "5, front and back": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Details checked": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "No": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Spelling only": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Matched to your Google profile and website": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "QR code": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Plain link": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Plain link, if asked": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Scan-tested; website links tracked in your analytics": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Printer": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Locked to that site": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Locked to that shop": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Any printer, files set up for it": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Price": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Free, plus your time": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Varies, plus printing": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "$99 CAD flat, plus printing": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "From order to print-ready files in about 2 business days": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "The clock starts when your intake form is in. If you need a change, add 1 more business day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Today": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Order online": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Pay the flat $99 CAD. No call needed.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "About 5 minutes": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Fill in the intake form": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Your details as you want them printed, where you'll print, your logo situation, and any materials or cards you like.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Within 1 business day": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get your 5 concepts": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Five front-and-back designs on a private preview link, so you can compare them side by side.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "4": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Pick one, ask for changes": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "One round of changes on the design you choose: wording, colours, layout, which QR destination.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "5": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Same day you approve": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Print-ready files": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Front and back as PDF and 300 dpi PNG with bleed, set up for your printer, plus upload steps. QR scan-tested.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Your materials, your printer": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Send us what you have. We'll make it work.": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "The more of your business we can see, the more your cards will feel like you. Nothing here is required except your contact details.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "What you can send": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Upload files or paste links in the intake form.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Your logo, in any format you have": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Brand colours, or a link to your website and we'll pick them up from there": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Photos of your work, shop or sign": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Your old card, if you have one": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Cards or brands you like the look of": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Where the QR code should go: website, booking page or Google reviews": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "No logo yet?": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "We'll ask in the intake form and give you options. Pick what suits you:": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "A clean text logo": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Your business name set in a typeface and colour that fit you. Included.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Work from what you have": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Your sign, storefront or social media picture becomes the starting point.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Pause and come back": {
+  "kind": "text",
+  "where": "b",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get a logo made first; we'll start your cards when it's ready.": {
+  "kind": "text",
+  "where": "span",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Print anywhere": {
+  "kind": "text",
+  "where": "h3",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Tell us where you plan to print and we'll set up the files for that printer's card size and bleed, so nothing important gets trimmed off.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Vistaprint": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Staples": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Your local print shop": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "MOO": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Any other printer": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Printing 250 standard cards usually costs about $25 to $80 CAD, paid straight to the printer.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "One flat price": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Business card design price": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "$99<small>CAD</small>": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "One-time. No subscription, no per-card fees. Printing is paid to your printer.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Get my 5 designs": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Questions? Text us": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>5 original front-and-back concepts": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Concepts within 1 business day": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>1 round of changes on your pick": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Scan-tested QR code, tracked when it points to your website": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Details matched to your Google profile and website": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Files set up for your printer, with bleed": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>PDF and 300 dpi PNG, front and back": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Step-by-step upload instructions": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>You own the final files": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "<svg aria-hidden=\"true\"><use href=\"#i-check\"/></svg>Simple text logo if you don't have one": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Not included: printing, and full logo design.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Questions": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Business card design FAQ": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "How much does custom business card design cost?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "$99 CAD, one flat price. It includes 5 original front-and-back designs, one round of changes on the design you pick, a scan-tested QR code, and print-ready files. Printing is paid separately to the printer you choose.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "How is this different from a Canva or Vistaprint template?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "A template is a layout thousands of other businesses can use, and you fill it in yourself. We design 5 options around your own logo, colours and services, check your details against your Google Business Profile and website, and set up the files for your printer so nothing gets cut off.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "How long does it take?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "You get 5 concepts within 1 business day of sending the intake form. After you pick one and send your changes, the revised card comes back within 1 business day, and the final files are sent the same business day you approve it.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "I don't have a logo. Can you still design my card?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Yes. In the intake form we ask what you'd like to do and give you options: a clean text logo set from your business name (included), working from the best image you already have, such as your sign or social media picture, or pausing your order while you get a logo made.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Which printers do the files work with?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Any printer. You tell us where you plan to print (Vistaprint, Staples, a local print shop or another service) and we set up the files for that printer's card size and bleed, with step-by-step upload instructions.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Can the QR code go to my Google reviews instead of my website?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Yes. The QR code can open your website, your booking page or your Google review link. Links to your website or booking page get a tracking tag, so your website statistics can show how many visits came from your cards. Google review links can't carry a tracking tag, so the sign those cards are working is new reviews coming in. We scan-test every QR code before sending the files. Need the review link? See our guide to <a href=\"/guides/google-review-link-and-qr-code/\" style=\"color:var(--accent-dark);text-decoration:underline;\">finding your Google review link and QR code</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "How do I see how many people used the QR code on my card?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "If the QR code points to your website or booking page, the visits show up in your website statistics. In Google Analytics, open Reports, then Acquisition, then Traffic acquisition, switch the table to Session source / medium, and look for card / print. Wix, Squarespace and Shopify show it in their own traffic reports. It counts website visits rather than scans, so treat it as a minimum. No analytics yet? The tag starts counting as soon as you add analytics, with no reprint needed.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Do you print the cards?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "No. You get print-ready files and order the printing yourself, so you choose the paper, quantity and price. Printing 250 standard cards usually costs between about $25 and $80 CAD.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Who owns the design?": {
+  "kind": "text",
+  "where": "summary",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "You do. You get the final files to reprint wherever and whenever you like, with no extra fees.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "How to find your Google review link and make a QR code": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "NAP consistency: why matching details everywhere matters": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Custom business card design": {
+  "kind": "ld",
+  "where": "ld:name",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Business card design": {
+  "kind": "ld",
+  "where": "ld:serviceType",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Five original front-and-back business card designs within 1 business day of the intake form, one round of changes on the chosen design, a QR code (links to the customer's website carry a tracking tag for their analytics; Google review links cannot be tracked), contact details matched to the Google Business Profile and website, and print-ready files (PDF and 300 dpi PNG with bleed) set up for the customer's printer. Printing is not included.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Yes. The QR code can open your website, your booking page or your Google review link. Links to your website or booking page get a tracking tag, so your website statistics can show how many visits came from your cards. Google review links can't carry a tracking tag, so the sign those cards are working is new reviews coming in. We scan-test every QR code before sending the files.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "business-card-design/index.html"
+  ]
+ },
+ "Local SEO Starter Kit, $129 CAD: What's Included | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "What's in the $129 Starter Kit: six step-by-step guides and templates plus a personalized profile review, and how it compares to a pay-per-lead directory.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "The problem": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "You're great at the work. Getting found is a different job entirely.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Most independent, local businesses lose customers not on price or quality, but on visibility — the next customer just calls or books whoever shows up first.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Missed calls, missed jobs": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "A missed call sends the customer to the next business on Google — nothing beats a fast reply.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "A half-finished profile": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Your Google Business Profile is doing less than it could — missing categories, no recent photos or reviews.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "No time for marketing": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "You're busy running the business, not writing posts or chasing reviews. This takes it off your plate.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "The starter kit — six pieces, one purchase": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Step-by-step optimization guide, including surfacing your credentials.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Ready-to-send scripts plus a printable QR card.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Ready-made before/after and promo templates.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Consistent name, address, and phone number everywhere.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Simple techniques for photos that show off finished work.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Follow-up & referral sequence": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "A ready-to-send thank-you, review ask, and referral request.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Get your kit — lands in your inbox within minutes.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Get your report — a personalized look within 1 business day of your intake form.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Get the next step — implement it yourself, or add AI Visibility when you're ready.": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Not another lead directory": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Pay-per-lead directories": {
+  "kind": "text",
+  "where": "th",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "What you pay": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "$20–120 per lead, booked or not": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "One flat price, no per-lead fees": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "What you own": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Your profile, your domain, your files — outright": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Ongoing cost": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "Per-lead fees continue indefinitely": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "$0 — nothing more to pay unless you choose a monthly plan": {
+  "kind": "text",
+  "where": "td",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "See pricing →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "5 Google Business Profile mistakes that are costing you customers": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "whats-included/index.html"
+  ]
+ },
+ "FAQ: Local SEO, AI Visibility, Refunds &amp; Landing Pages | Booked &amp; Visible": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Plain answers about the Starter Kit, AI Visibility Report, refunds and landing pages, from a small independent business in Langley, BC.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Questions you might have": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "What kind of businesses is this for?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Any independent, local business that competes on showing up first when someone searches for what you do — from home service trades to clinics to recreation and agriculture businesses.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "How long until I see results?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Most of the Starter Kit's items — like optimizing your Google Business Profile — can be done the same week. Visibility improvements typically build over the following weeks.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "What if I don't have a website?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "That's fine — the Starter Kit doesn't require one. Add a custom site starting at $329 CAD (own domain) or $389 CAD (we register one) for 1 page, with 3- and 5-page options available too. Details on the <a href=\"/landing-pages/\" style=\"color:var(--accent);\">Landing Pages</a> page.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "How many pages do I get?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Our Landing Page tiers start at 1 page and go up to 5 (Single Page, Small Business Site, or Full Website — see the <a href=\"/landing-pages/\" style=\"color:var(--accent);\">Landing Pages</a> page for details). Need a different number? Additional pages are $99 CAD each on any tier — just tell us how many in your intake form.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Can I add pages or make changes after my page is live?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Yes. Every tier includes one round of revisions within 7 days of delivery. After that, you can add a page any time for $99 CAD, or email us for a quote on a one-off content update.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "How is this different from a lead directory?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Nothing is ever held hostage — any page we build for you ends up on a domain you own outright, and you can leave any time. Directories charge per lead, often $20–120 each, and typically lock you into a listing you don't control. See our <a href=\"/guides/booked-visible-vs-pay-per-lead-directories/\" style=\"color:var(--accent);\">full cost comparison</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Can I get a refund?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Yes — you can cancel for a full refund any time before we send your first deliverable, and if we ever miss a stated delivery time you choose a refund or a free fix. Full details in our <a href=\"/refund-policy.html\" style=\"color:var(--accent);\">Refund Policy</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Questions first?": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Have a question before you buy?": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Your email": {
+  "kind": "text",
+  "where": "label",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "We personally read every message and reply within one business day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Prefer to text or email instead? <a href=\"sms:+17787799166\" style=\"color:var(--accent);\">778-779-9166</a> or <a href=\"mailto:hello@bookedandvisible.ca\" style=\"color:var(--accent);\">hello@bookedandvisible.ca</a>.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "How much should a local business actually spend on marketing? →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Can you get in trouble for asking customers for reviews? →": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "How many reviews do you actually need to compete?": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Can you get in trouble for asking customers for reviews?": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Google Business Profile suspended? Why it happens and how to get it back": {
+  "kind": "text",
+  "where": "a",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "That's fine — the Starter Kit doesn't require one. Add a custom site starting at $329 CAD (own domain) or $389 CAD (we register one) for 1 page, with 3- and 5-page options available too.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Our Landing Page tiers start at 1 page and go up to 5 (Single Page, Small Business Site, or Full Website). Need a different number? Additional pages are $99 CAD each on any tier — just tell us how many in your intake form.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Nothing is ever held hostage — any page we build for you ends up on a domain you own outright, and you can leave any time. Directories charge per lead, often $20–120 each, and typically lock you into a listing you don't control.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "Yes — you can cancel for a full refund any time before we send your first deliverable, and if we ever miss a stated delivery time you choose a refund or a free fix. Full details are in our Refund Policy.": {
+  "kind": "ld",
+  "where": "ld:text",
+  "pages": [
+   "faq/index.html"
+  ]
+ },
+ "About Booked &amp; Visible: Independent Local SEO in Langley, BC": {
+  "kind": "text",
+  "where": "title",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Booked &amp; Visible is a small, independent local SEO and AI visibility business in Langley, BC, run by owner Victor. Flat CAD prices, no contracts.": {
+  "kind": "attr",
+  "where": "meta:description",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Who you're dealing with": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Not a call center. Not an agency with account managers.": {
+  "kind": "text",
+  "where": "h1",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Booked & Visible is a small, independent operation based in British Columbia, Canada. Every message through this site is read and answered by the same person within one business day.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "How Booked &amp; Visible started": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Booked &amp; Visible began in the summer of 2026. Victor was helping with the website for a family business, a hair studio, that wasn't getting traffic. To find out why, he spent time learning how Google search works, what helps AI assistants find a website, how to make pages easier to read, and how to make a site simple to use. Fixing the gaps he found brought good results.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "He wanted to help other small local businesses in the same position: people who are very good at what they do, but don't have the time or the technical know-how to set up a website that gets them found and booked. That's where the name and the service come from. Booked &amp; Visible is for local trades, medical and dental clinics and other businesses that rely on their website to stay visible to customers nearby.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "That first project shaped how we work: instead of generic &quot;local services&quot; advice, we build around the daily reality of one specific business. That approach has since opened up to other independent, local businesses. Booked &amp; Visible currently also works with a denture and implant clinic and an equestrian boarding facility, and every job is built around the specific business, not a template with the name swapped in.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Who runs it": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Booked &amp; Visible is run by Victor from Langley, BC. He is the person you text, call or email: <a href=\"sms:+17787799166\">(778) 779-9166</a> or <a href=\"mailto:hello@bookedandvisible.ca\">hello@bookedandvisible.ca</a>. You can check the business on <a href=\"https://maps.google.com/?cid=8035192425770088943\" rel=\"noopener\">Google Maps</a> at 7635 198B St, Langley Township. We work remotely with independent businesses across the Lower Mainland, the Fraser Valley and the rest of British Columbia.": {
+  "kind": "text",
+  "where": "p",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "How we work": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Flat prices in CAD, listed on the <a href=\"/pricing/\">pricing page</a>. Projects are one-time; the optional <a href=\"/stay-visible/\">Stay Visible</a> plan is month to month.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "No contracts and no per-lead fees.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "No guarantees on rankings, calls or revenue. Every Boost and SEO Improvement Package gets a 30-day re-check with a before/after report, and we can't promise a specific score increase. See the <a href=\"/refund-policy.html\">refund policy</a> and <a href=\"/terms.html\">terms</a>.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Our free <a href=\"/guides/\">guides</a> explain the same steps we do for clients, so you can do them yourself if you prefer.": {
+  "kind": "text",
+  "where": "li",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Businesses we work with": {
+  "kind": "text",
+  "where": "h2",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Home service trades — plumbing, electrical, HVAC": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Health & personal care — hair studios, dental, denture and wellness clinics": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Recreation & agriculture — equestrian, farms, outdoor facilities": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Any independent, local business that competes on being found first": {
+  "kind": "text",
+  "where": "div",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "About Booked & Visible: Independent Local SEO in Langley, BC": {
+  "kind": "ld",
+  "where": "ld:name",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "Booked & Visible is a small, independent local SEO and AI visibility business in Langley, BC, run by owner Victor. Flat CAD prices, no contracts.": {
+  "kind": "ld",
+  "where": "ld:description",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "At a glance": {
+  "kind": "attr",
+  "where": "div[aria-label]",
+  "pages": [
+   "index.html"
+  ]
+ }
+}

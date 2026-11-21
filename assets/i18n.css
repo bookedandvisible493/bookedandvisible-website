@@ -1,0 +1,60 @@
+/* Language switcher, "service is in English" note, and CJK/Cyrillic typography for translated pages. */
+.lang{position:relative}
+.lang summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;padding:0 12px;border:1.5px solid var(--line);border-radius:6px;font-size:13px;font-weight:700;background:var(--paper);color:var(--ink);white-space:nowrap}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.lang[open] summary{border-color:var(--accent)}
+.lang-panel{position:absolute;right:0;top:calc(100% + 6px);min-width:160px;background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:6px;z-index:70;box-shadow:0 18px 34px -20px rgba(20,20,19,.5)}
+.lang-panel a{display:block;box-sizing:border-box;padding:10px 12px;border-radius:4px;min-height:44px;font-size:14px;color:var(--ink);text-decoration:none}
+.lang-panel a:hover{background:var(--wash);color:var(--accent-dark)}
+.lang-panel a[aria-current]{font-weight:700;color:var(--accent-dark)}
+.lang-note{margin:0;padding:10px 0;font-size:13px;line-height:1.5;color:var(--muted);border-bottom:1.5px solid var(--line)}
+
+html:lang(ko) body,html:lang(ko) h1,html:lang(ko) h2,html:lang(ko) h3,html:lang(ko) .logo{font-family:'Inter','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+html:lang(zh) body,html:lang(zh) h1,html:lang(zh) h2,html:lang(zh) h3,html:lang(zh) .logo{font-family:'Inter','PingFang TC','Microsoft JhengHei','Noto Sans TC',sans-serif}
+html:lang(ja) body,html:lang(ja) h1,html:lang(ja) h2,html:lang(ja) h3,html:lang(ja) .logo{font-family:'Inter','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo','Noto Sans JP',sans-serif}
+html:lang(ko) body{word-break:keep-all;overflow-wrap:break-word}
+html:lang(zh) body,html:lang(ja) body{line-break:strict;overflow-wrap:break-word}
+
+/* Tight display tracking and heavy weights are tuned for Latin: relax them for CJK */
+html:lang(ko) h1,html:lang(ko) h2,html:lang(ko) h3,html:lang(ko) .display,html:lang(ko) .h1-sub,html:lang(ko) .strip b,html:lang(ko) .tier-price,
+html:lang(zh) h1,html:lang(zh) h2,html:lang(zh) h3,html:lang(zh) .display,html:lang(zh) .h1-sub,html:lang(zh) .strip b,html:lang(zh) .tier-price,
+html:lang(ja) h1,html:lang(ja) h2,html:lang(ja) h3,html:lang(ja) .display,html:lang(ja) .h1-sub,html:lang(ja) .strip b,html:lang(ja) .tier-price{letter-spacing:0;font-weight:800}
+html:lang(ko) .display,html:lang(zh) .display,html:lang(ja) .display{line-height:1.15;text-transform:none}
+html:lang(ko) h1,html:lang(zh) h1,html:lang(ja) h1,html:lang(ko) h2,html:lang(zh) h2,html:lang(ja) h2,html:lang(ko) h3,html:lang(zh) h3,html:lang(ja) h3{line-height:1.3}
+html:lang(ko) p,html:lang(zh) p,html:lang(ja) p,html:lang(ko) li,html:lang(zh) li,html:lang(ja) li{line-height:1.75}
+html:lang(ko) .eyebrow,html:lang(zh) .eyebrow,html:lang(ja) .eyebrow{letter-spacing:.02em}
+
+/* Cyrillic and Spanish run longer than English: loosen the tightest display settings */
+html:lang(ru) h1,html:lang(ru) h2,html:lang(ru) h3,html:lang(ru) .display,html:lang(ru) .h1-sub{letter-spacing:-0.015em;overflow-wrap:break-word}
+html:lang(es) h1,html:lang(es) h2,html:lang(es) h3,html:lang(es) .display,html:lang(es) .h1-sub,html:lang(fr) h1,html:lang(fr) h2,html:lang(fr) h3,html:lang(fr) .display,html:lang(fr) .h1-sub,html:lang(pt) h1,html:lang(pt) h2,html:lang(pt) h3,html:lang(pt) .display,html:lang(pt) .h1-sub{letter-spacing:-0.02em;overflow-wrap:break-word}
+html:lang(ru) .display,html:lang(es) .display,html:lang(fr) .display,html:lang(pt) .display{line-height:1}
+
+/* English caps the sub-heading at 30ch, which splits CJK sentences mid-word: let it run to a readable width and balance the lines */
+html:lang(ko) .h1-sub,html:lang(zh) .h1-sub,html:lang(ja) .h1-sub{max-width:24em;text-wrap:balance;line-height:1.4}
+html:lang(ko) .lede,html:lang(zh) .lede,html:lang(ja) .lede{max-width:34em}
+
+/* Longer words in Russian, Spanish, French and Portuguese: smaller hero display type, and let the second line wrap on narrow screens */
+html:lang(ru) .display,html:lang(es) .display,html:lang(fr) .display,html:lang(pt) .display{font-size:clamp(30px,4.2vw,62px)}
+html:lang(ru) .display em,html:lang(es) .display em,html:lang(fr) .display em,html:lang(pt) .display em{white-space:normal}
+
+/* Longer nav labels: keep the header on one row at laptop widths */
+html:lang(ru) header nav,html:lang(es) header nav,html:lang(fr) header nav,html:lang(pt) header nav{gap:0 12px;font-size:14px}
+html:lang(ru) .hdr-r,html:lang(es) .hdr-r,html:lang(fr) .hdr-r,html:lang(pt) .hdr-r{gap:10px}
+html:lang(ru) .hdr-r .btn,html:lang(es) .hdr-r .btn,html:lang(fr) .hdr-r .btn,html:lang(pt) .hdr-r .btn{padding-left:14px;padding-right:14px;font-size:14px}
+
+/* Phones: short language code, tighter nav, so the sticky header stays two rows */
+.lang-short{display:none}
+@media (max-width:640px){
+.lang-long{display:none}.lang-short{display:inline}
+.lang summary{padding:0 10px}
+html:not(:lang(en)) header nav{font-size:13px;gap:0 8px}
+html:not(:lang(en)) .hdr-r{gap:8px}
+html:not(:lang(en)) .hdr-r .btn{padding-left:10px;padding-right:10px;font-size:13px}
+}
+
+/* Use the short header button text below wide desktop widths in the languages with longer words */
+@media (max-width:1279px){
+html:lang(ru) .hdr-r .btn .long,html:lang(es) .hdr-r .btn .long,html:lang(fr) .hdr-r .btn .long,html:lang(pt) .hdr-r .btn .long{display:none}
+html:lang(ru) .hdr-r .btn .short,html:lang(es) .hdr-r .btn .short,html:lang(fr) .hdr-r .btn .short,html:lang(pt) .hdr-r .btn .short{display:inline}
+}
